@@ -5,9 +5,7 @@ Figma-first, AI-optimized design system. 59 components, all derived from `figma-
 ## Quick Start
 
 ```bash
-npm install ./igt-design-system-v4-0.1.0.tgz
-# or (after npm publish)
-npm install igt-design-system-v4
+npm install github:sikisiki-ignite/igt-design-system-v4
 ```
 
 Wrap your app root with theme attributes:
