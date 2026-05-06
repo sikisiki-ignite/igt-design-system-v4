@@ -1,0 +1,213 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2015:23525",
+    "componentName": "Chip",
+    "extractedAt": "2026-05-03T06:23:29.218Z"
+  },
+  "componentPropertyDefinitions": {
+    "Layout": {
+      "type": "VARIANT",
+      "defaultValue": "wrap",
+      "variantOptions": [
+        "wrap",
+        "scroll"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Item 1",
+      "type": "INSTANCE",
+      "componentName": "Item 1",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "Item 2",
+      "type": "INSTANCE",
+      "componentName": "Item 2",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "Item 3",
+      "type": "INSTANCE",
+      "componentName": "Item 3",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "Item 4",
+      "type": "INSTANCE",
+      "componentName": "Item 4",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "Item 5",
+      "type": "INSTANCE",
+      "componentName": "Item 5",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "Item 6",
+      "type": "INSTANCE",
+      "componentName": "Item 6",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "Item 7",
+      "type": "INSTANCE",
+      "componentName": "Item 7",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 8,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 8,
+      "token": "--spacing-8",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Layout": {
+      "tsProp": "layout",
+      "tsType": "'wrap' | 'scroll'",
+      "figmaToCode": {
+        "wrap": "wrap",
+        "scroll": "scroll"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md"
+      }
+    }
+  },
+  "gaps": []
+}

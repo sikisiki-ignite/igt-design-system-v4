@@ -1,0 +1,74 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "683:19183",
+    "componentName": "Backdrop",
+    "extractedAt": "2026-05-04T06:30:17.990Z"
+  },
+  "componentPropertyDefinitions": {
+    "Strength": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default",
+        "strong"
+      ]
+    }
+  },
+  "layerInventory": [],
+  "layoutSpec": null,
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(0,0,0,0.4)",
+      "token": "--sys-overlay-container-dark-disabled",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Strength=default",
+      "variantProps": {
+        "Strength": "default"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,0,0,0.4)",
+            "token": "--sys-overlay-container-dark-disabled",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Strength=strong",
+      "variantProps": {
+        "Strength": "strong"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,0,0,0.6)",
+            "token": "--sys-overlay-backdrop-strong",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Strength": {
+      "tsProp": "strength",
+      "tsType": "'default' | 'strong'",
+      "figmaToCode": {
+        "default": "default",
+        "strong": "strong"
+      }
+    }
+  },
+  "gaps": []
+}

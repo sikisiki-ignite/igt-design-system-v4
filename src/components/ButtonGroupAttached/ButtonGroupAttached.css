@@ -1,0 +1,68 @@
+/* ── ButtonGroupAttached ── */
+
+.bga {
+  --bga-container:  transparent;
+  --bga-border:     transparent;
+  --bga-divider:    transparent;
+  --bga-radius:     var(--action-buttonGroupAttached-size-radius-md);
+  --bga-div-inset:  var(--action-buttonGroupAttached-size-dividerInset-md);
+  --bga-div-width:  var(--action-buttonGroupAttached-size-dividerWidth);
+
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: stretch;
+  border-radius: var(--bga-radius);
+  border: 1px solid var(--bga-border);
+  background: var(--bga-container);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Dividers between children ── */
+.bga > :not(:last-child) {
+  position: relative;
+}
+.bga > :not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: var(--bga-div-inset);
+  bottom: var(--bga-div-inset);
+  width: var(--bga-div-width);
+  background: var(--bga-divider);
+  pointer-events: none;
+}
+
+/* ── Flatten child borders and radii ── */
+.bga > * {
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+/* ── Size ── */
+.bga[data-size="xs"] {
+  --bga-radius:    var(--action-buttonGroupAttached-size-radius-xs);
+  --bga-div-inset: var(--action-buttonGroupAttached-size-dividerInset-xs);
+}
+.bga[data-size="sm"] {
+  --bga-radius:    var(--action-buttonGroupAttached-size-radius-sm);
+  --bga-div-inset: var(--action-buttonGroupAttached-size-dividerInset-sm);
+}
+.bga[data-size="md"] {
+  --bga-radius:    var(--action-buttonGroupAttached-size-radius-md);
+  --bga-div-inset: var(--action-buttonGroupAttached-size-dividerInset-md);
+}
+
+/* ── Variant: soft ── */
+.bga[data-variant="soft"] {
+  --bga-container: var(--action-buttonGroupAttached-color-soft-container-normal);
+  --bga-border:    var(--action-buttonGroupAttached-color-soft-border-normal);
+  --bga-divider:   var(--action-buttonGroupAttached-color-soft-divider-normal);
+}
+
+/* ── Variant: outline ── */
+.bga[data-variant="outline"] {
+  --bga-container: var(--action-buttonGroupAttached-color-outline-container-normal);
+  --bga-border:    var(--action-buttonGroupAttached-color-outline-border-normal);
+  --bga-divider:   var(--action-buttonGroupAttached-color-outline-divider-normal);
+}

@@ -1,0 +1,549 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2254:77581",
+    "componentName": "StateView",
+    "extractedAt": "2026-05-04T04:48:31.544Z"
+  },
+  "componentPropertyDefinitions": {
+    "* Density": {
+      "type": "VARIANT",
+      "defaultValue": "STANDARD",
+      "variantOptions": [
+        "STANDARD",
+        "COMPACT"
+      ]
+    },
+    "Variant": {
+      "type": "VARIANT",
+      "defaultValue": "error",
+      "variantOptions": [
+        "empry",
+        "error",
+        "empty"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Icon",
+      "type": "INSTANCE",
+      "componentName": "Icon",
+      "conditional": null,
+      "dimensions": {
+        "width": 40,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(3,24,50,0.46)",
+          "token": "--sys-border-neutral-default",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "igt_core_icon_warning",
+          "type": "INSTANCE",
+          "componentName": "igt_core_icon_warning",
+          "conditional": null,
+          "dimensions": {
+            "width": 40,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(3,24,50,0.46)",
+              "token": "--sys-border-neutral-default",
+              "resolved": true
+            }
+          ],
+          "children": [
+            {
+              "layerName": "stroke",
+              "type": "FRAME",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 40,
+                "height": 40
+              },
+              "children": []
+            },
+            {
+              "layerName": "grid",
+              "type": "INSTANCE",
+              "componentName": "grid",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 40,
+                "height": 40
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(255,41,41,0.1)",
+                  "token": null,
+                  "resolved": false
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "\bGuide",
+                  "type": "GROUP",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 40,
+                    "height": 40
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "text",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 400,
+        "height": 74
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 0,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "Headline",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 400,
+            "height": 28
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 0,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "일시적으로 정보를 불러오지 못했어요",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 289,
+                "height": 28
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(25,31,40,1)",
+                  "token": "--sys-surface-floating",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(25,31,40,1)",
+                  "token": "--sys-surface-floating",
+                  "resolved": true
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "20-700",
+                  "token": "--semantic-heading-20-bold",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "Body",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 400,
+            "height": 46
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 2,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "시스템에 문제가 생겨 정보를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 400,
+                "height": 44
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,19,43,0.58)",
+                  "token": "--sys-content-neutral-muted",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,19,43,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "15-400",
+                  "token": "--semantic-body-15-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "action",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 400,
+        "height": 32
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 10,
+        "paddingTop": 0,
+        "paddingRight": 10,
+        "paddingBottom": 0,
+        "paddingLeft": 10,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "Button",
+          "type": "INSTANCE",
+          "componentName": "Button",
+          "conditional": "hasTrailing",
+          "dimensions": {
+            "width": 100,
+            "height": 32
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(2,32,71,0.05)",
+              "token": "--sys-border-neutral-weak",
+              "resolved": true
+            },
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "tone": "secondary",
+            "appearance": "fill",
+            "emphasis": "weak",
+            "iconOnly": "false",
+            "size": "sm",
+            "state": "normal",
+            "isLoading": "false",
+            "isDisabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "LeadingIcon",
+              "type": "INSTANCE",
+              "componentName": "LeadingIcon",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 14,
+                "height": 14
+              },
+              "children": [
+                {
+                  "layerName": "igt_core_icon_blank_outline_1dp",
+                  "type": "INSTANCE",
+                  "componentName": "igt_core_icon_blank_outline_1dp",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  }
+                }
+              ]
+            },
+            {
+              "layerName": "label + trailing",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 84,
+                "height": 16
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 0,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "flex-start"
+              },
+              "children": [
+                {
+                  "layerName": "label-padding",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 84,
+                    "height": 16
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 4,
+                    "paddingBottom": 0,
+                    "paddingLeft": 4,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": []
+                },
+                {
+                  "layerName": "TrailingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "TrailingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  }
+                }
+              ]
+            },
+            {
+              "layerName": "focusRing",
+              "type": "FRAME",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 104,
+                "height": 36
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 10,
+                "paddingTop": 2,
+                "paddingRight": 2,
+                "paddingBottom": 2,
+                "paddingLeft": 2,
+                "alignItems": "flex-start",
+                "justifyContent": "flex-start",
+                "borderRadius": 10
+              },
+              "styleValues": [
+                {
+                  "property": "border-color",
+                  "figmaValue": "rgba(0,0,0,1)",
+                  "token": "--sys-interactive-focus-ring-default",
+                  "resolved": true
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 20,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 20,
+      "token": "--spacing-20",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "일시적으로 정보를 불러오지 못했어요",
+      "figmaValue": "20-700",
+      "token": "--semantic-heading-20-bold",
+      "resolved": true
+    },
+    {
+      "layerName": "시스템에 문제가 생겨 정보를 불러오지 못했어요. 잠시 후 다시 시도해 주세요.",
+      "figmaValue": "15-400",
+      "token": "--semantic-body-15-regular",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "* Density=COMPACT,Variant=empry",
+      "variantProps": {
+        "* Density": "COMPACT",
+        "Variant": "empry"
+      },
+      "layerStyles": {
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "* Density=COMPACT,Variant=error",
+      "variantProps": {
+        "* Density": "COMPACT",
+        "Variant": "error"
+      },
+      "layerStyles": {
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "* Density=STANDARD,Variant=empty",
+      "variantProps": {
+        "* Density": "STANDARD",
+        "Variant": "empty"
+      },
+      "layerStyles": {
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "* Density=STANDARD,Variant=error",
+      "variantProps": {
+        "* Density": "STANDARD",
+        "Variant": "error"
+      },
+      "layerStyles": {
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "variantSlotMap": {
+    "Icon": {
+      "Density=STANDARD,Variant=error": "igt_core_icon_warning",
+      "Density=STANDARD,Variant=empty": "igt_core_icon_document_paper_solid",
+      "Density=COMPACT,Variant=empry": "igt_core_icon_document_paper_solid",
+      "Density=COMPACT,Variant=error": "igt_core_icon_warning"
+    }
+  },
+  "propMapping": {
+    "* Density": {
+      "tsProp": "density",
+      "tsType": "'standard' | 'compact'",
+      "figmaToCode": {
+        "STANDARD": "standard",
+        "COMPACT": "compact"
+      }
+    },
+    "Variant": {
+      "tsProp": "variant",
+      "tsType": "'empry' | 'error' | 'empty'",
+      "figmaToCode": {
+        "empry": "empry",
+        "error": "error",
+        "empty": "empty"
+      }
+    }
+  },
+  "gaps": []
+}

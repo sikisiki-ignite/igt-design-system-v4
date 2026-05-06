@@ -1,0 +1,12 @@
+{
+  "name": "igt-design-system",
+  "version": "0.1.0",
+  "package": "igt-design-system-v4",
+  "themeAttributes": {
+    "data-theme": ["light", "dark"],
+    "data-radius": ["default", "soft", "friendly", "playful", "formal"],
+    "data-size": ["comfortable", "compact"],
+    "data-brand": "string (brand name)"
+  },
+  "components": []
+}

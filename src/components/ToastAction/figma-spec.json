@@ -1,0 +1,138 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "670:19487",
+    "componentName": "ToastAction",
+    "extractedAt": "2026-05-04T04:08:39.945Z"
+  },
+  "componentPropertyDefinitions": {
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "버튼명",
+      "type": "TEXT",
+      "conditional": null,
+      "dimensions": {
+        "width": 37,
+        "height": 20
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0.72)",
+          "token": "--sys-contentOn-dark-subtle",
+          "resolved": true
+        },
+        {
+          "property": "color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "text-style",
+          "figmaValue": "14-600",
+          "token": "--semantic-label-14-semibold",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "hitArea",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 45,
+        "height": 32
+      },
+      "children": []
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 4,
+    "paddingBottom": 0,
+    "paddingLeft": 4,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding-block",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding-inline",
+      "figmaValue": 4,
+      "token": "--spacing-4",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "버튼명",
+      "figmaValue": "14-600",
+      "token": "--semantic-label-14-semibold",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "",
+      "variantProps": {},
+      "layerStyles": {
+        "버튼명": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0.72)",
+            "token": "--sys-contentOn-dark-subtle",
+            "resolved": true
+          },
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600",
+            "token": "--semantic-label-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed"
+      }
+    }
+  },
+  "gaps": []
+}

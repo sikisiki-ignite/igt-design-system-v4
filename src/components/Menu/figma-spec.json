@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2159:24525",
+    "componentName": "Menu",
+    "extractedAt": "2026-05-01T17:47:18.197Z"
+  },
+  "componentPropertyDefinitions": {},
+  "layerInventory": [],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 20,
+    "paddingTop": 100,
+    "paddingRight": 100,
+    "paddingBottom": 100,
+    "paddingLeft": 100,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 20,
+      "token": "--spacing-20",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 100,
+      "token": null,
+      "resolved": false
+    }
+  ],
+  "propMapping": {},
+  "gaps": [
+    {
+      "priority": "P1",
+      "property": "padding",
+      "figmaValue": 100,
+      "status": "open",
+      "note": "토큰 미매핑 — 토큰 추가 또는 수동 확인 필요"
+    }
+  ]
+}

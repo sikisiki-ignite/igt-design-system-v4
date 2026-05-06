@@ -1,0 +1,145 @@
+/* ── MenuItem ── */
+
+.menu-item {
+  --mi-text:           currentColor;
+  --mi-icon:           currentColor;
+  --mi-container:      transparent;
+  --mi-height:         var(--action-menu-menuItem-size-height-md);
+  --mi-icon-size:      var(--action-menu-menuItem-size-iconSize-md);
+  --mi-padding-inline: var(--action-menu-menuItem-size-spacing-paddingInline-md);
+  --mi-padding-block:  var(--action-menu-menuItem-size-spacing-paddingBlock-md);
+  --mi-gap:            var(--action-menu-menuItem-size-spacing-gapInline-md);
+  --mi-radius:         var(--action-menu-menuItem-size-radius-md);
+
+  display: flex;
+  align-items: center;
+  gap: var(--mi-gap);
+  width: 100%;
+  min-height: var(--mi-height);
+  padding: var(--mi-padding-block) var(--mi-padding-inline);
+  border-radius: var(--mi-radius);
+  border: none;
+  background: var(--mi-container);
+  color: var(--mi-text);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Icon slots ── */
+.menu-item__leading-icon,
+.menu-item__trailing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--mi-icon-size);
+  height: var(--mi-icon-size);
+  flex-shrink: 0;
+  color: var(--mi-icon);
+  pointer-events: none;
+}
+.menu-item__leading-icon > span,
+.menu-item__leading-icon svg,
+.menu-item__trailing-icon > span,
+.menu-item__trailing-icon svg { width: 100%; height: 100%; }
+
+.menu-item__trailing-icon { margin-inline-start: auto; }
+
+/* ── Label ── */
+.menu-item__label {
+  font-family: var(--semantic-label-14-medium-fontFamily);
+  font-size: var(--semantic-label-14-medium-fontSize);
+  line-height: var(--semantic-label-14-medium-lineHeight);
+  font-weight: var(--semantic-label-14-medium-fontWeight);
+  color: var(--mi-text);
+  flex: 1;
+  pointer-events: none;
+}
+
+/* ── Disabled ── */
+.menu-item:disabled { cursor: not-allowed; pointer-events: none; }
+
+/* ── Size ── */
+.menu-item[data-size="sm"] {
+  --mi-height:         var(--action-menu-menuItem-size-height-sm);
+  --mi-icon-size:      var(--action-menu-menuItem-size-iconSize-sm);
+  --mi-padding-inline: var(--action-menu-menuItem-size-spacing-paddingInline-sm);
+  --mi-padding-block:  var(--action-menu-menuItem-size-spacing-paddingBlock-sm);
+  --mi-gap:            var(--action-menu-menuItem-size-spacing-gapInline-sm);
+  --mi-radius:         var(--action-menu-menuItem-size-radius-sm);
+}
+.menu-item[data-size="md"] {
+  --mi-height:         var(--action-menu-menuItem-size-height-md);
+  --mi-icon-size:      var(--action-menu-menuItem-size-iconSize-md);
+  --mi-padding-inline: var(--action-menu-menuItem-size-spacing-paddingInline-md);
+  --mi-padding-block:  var(--action-menu-menuItem-size-spacing-paddingBlock-md);
+  --mi-gap:            var(--action-menu-menuItem-size-spacing-gapInline-md);
+  --mi-radius:         var(--action-menu-menuItem-size-radius-md);
+}
+
+/* ── Tone: neutral ── */
+.menu-item[data-tone="neutral"] {
+  --mi-container: var(--action-menu-menuItem-color-neutral-container-normal);
+  --mi-text:      var(--action-menu-menuItem-color-neutral-text-normal);
+  --mi-icon:      var(--action-menu-menuItem-color-neutral-icon-normal);
+}
+.menu-item[data-tone="neutral"]:hover {
+  --mi-container: var(--action-menu-menuItem-color-neutral-container-hover);
+  --mi-text:      var(--action-menu-menuItem-color-neutral-text-hover);
+  --mi-icon:      var(--action-menu-menuItem-color-neutral-icon-hover);
+}
+.menu-item[data-tone="neutral"]:active {
+  --mi-container: var(--action-menu-menuItem-color-neutral-container-pressed);
+  --mi-text:      var(--action-menu-menuItem-color-neutral-text-pressed);
+  --mi-icon:      var(--action-menu-menuItem-color-neutral-icon-pressed);
+}
+.menu-item[data-tone="neutral"]:disabled {
+  --mi-container: var(--action-menu-menuItem-color-neutral-container-disabled);
+  --mi-text:      var(--action-menu-menuItem-color-neutral-text-disabled);
+  --mi-icon:      var(--action-menu-menuItem-color-neutral-icon-disabled);
+}
+
+/* ── Tone: accent ── */
+.menu-item[data-tone="accent"] {
+  --mi-container: var(--action-menu-menuItem-color-accent-container-normal);
+  --mi-text:      var(--action-menu-menuItem-color-accent-text-normal);
+  --mi-icon:      var(--action-menu-menuItem-color-accent-icon-normal);
+}
+.menu-item[data-tone="accent"]:hover {
+  --mi-container: var(--action-menu-menuItem-color-accent-container-hover);
+  --mi-text:      var(--action-menu-menuItem-color-accent-text-hover);
+  --mi-icon:      var(--action-menu-menuItem-color-accent-icon-hover);
+}
+.menu-item[data-tone="accent"]:active {
+  --mi-container: var(--action-menu-menuItem-color-accent-container-pressed);
+  --mi-text:      var(--action-menu-menuItem-color-accent-text-pressed);
+  --mi-icon:      var(--action-menu-menuItem-color-accent-icon-pressed);
+}
+.menu-item[data-tone="accent"]:disabled {
+  --mi-container: var(--action-menu-menuItem-color-accent-container-disabled);
+  --mi-text:      var(--action-menu-menuItem-color-accent-text-disabled);
+  --mi-icon:      var(--action-menu-menuItem-color-accent-icon-disabled);
+}
+
+/* ── Tone: danger ── */
+.menu-item[data-tone="danger"] {
+  --mi-container: var(--action-menu-menuItem-color-danger-container-normal);
+  --mi-text:      var(--action-menu-menuItem-color-danger-text-normal);
+  --mi-icon:      var(--action-menu-menuItem-color-danger-icon-normal);
+}
+.menu-item[data-tone="danger"]:hover {
+  --mi-container: var(--action-menu-menuItem-color-danger-container-hover);
+  --mi-text:      var(--action-menu-menuItem-color-danger-text-hover);
+  --mi-icon:      var(--action-menu-menuItem-color-danger-icon-hover);
+}
+.menu-item[data-tone="danger"]:active {
+  --mi-container: var(--action-menu-menuItem-color-danger-container-pressed);
+  --mi-text:      var(--action-menu-menuItem-color-danger-text-pressed);
+  --mi-icon:      var(--action-menu-menuItem-color-danger-icon-pressed);
+}
+.menu-item[data-tone="danger"]:disabled {
+  --mi-container: var(--action-menu-menuItem-color-danger-container-disabled);
+  --mi-text:      var(--action-menu-menuItem-color-danger-text-disabled);
+  --mi-icon:      var(--action-menu-menuItem-color-danger-icon-disabled);
+}

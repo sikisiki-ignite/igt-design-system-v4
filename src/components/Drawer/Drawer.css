@@ -1,0 +1,239 @@
+/* ── Drawer ── */
+
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--sys-overlay-container-dark-disabled);
+  z-index: 200;
+  animation: drawer-overlay-in 0.2s ease-out;
+}
+
+@keyframes drawer-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sys-surface-static);
+  z-index: 201;
+  outline: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.drawer[data-size="lg"] {
+  width: 640px;
+}
+
+.drawer[data-placement="left"] {
+  left: 0;
+  animation: drawer-slide-in-left 0.25s ease-out;
+}
+
+.drawer[data-placement="right"] {
+  right: 0;
+  animation: drawer-slide-in-right 0.25s ease-out;
+}
+
+@keyframes drawer-slide-in-left {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes drawer-slide-in-right {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+/* ── Header ── */
+
+.drawer__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--spacing-24) var(--spacing-24) var(--spacing-20);
+  gap: var(--spacing-16);
+  flex-shrink: 0;
+}
+
+.drawer__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  flex: 1;
+  min-width: 0;
+}
+
+.drawer__title {
+  font-family: var(--semantic-heading-17-semibold-fontFamily);
+  font-size: var(--semantic-heading-17-semibold-fontSize);
+  line-height: var(--semantic-heading-17-semibold-lineHeight);
+  font-weight: var(--semantic-heading-17-semibold-fontWeight);
+  color: var(--sys-content-neutral-strong);
+  margin: 0;
+}
+
+.drawer__subtitle {
+  font-family: var(--semantic-body-14-regular-fontFamily);
+  font-size: var(--semantic-body-14-regular-fontSize);
+  line-height: var(--semantic-body-14-regular-lineHeight);
+  font-weight: var(--semantic-body-14-regular-fontWeight);
+  color: var(--sys-content-neutral-muted);
+  margin: 0;
+}
+
+.drawer__dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-8);
+  color: var(--sys-content-neutral-subtle);
+  cursor: pointer;
+  flex-shrink: 0;
+  outline: none;
+  transition: background-color 0.1s;
+}
+
+.drawer__dismiss:hover {
+  background-color: var(--sys-container-neutral-tint-default);
+}
+
+/* ── Body ── */
+
+.drawer__body {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 0 var(--spacing-24);
+}
+
+/* header 없을 때 body가 첫 번째 자식 → 상단 패딩 보정 */
+.drawer__body:first-child {
+  padding-top: var(--spacing-24);
+}
+
+/* ── Footer ── */
+
+.drawer__footer {
+  flex-shrink: 0;
+}
+
+.drawer__footer-divider {
+  height: 1px;
+  background-color: var(--sys-border-neutral-subtle);
+}
+
+.drawer__footer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--spacing-16) var(--spacing-24) var(--spacing-24);
+}
+
+.drawer__footer-end-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+/* Layout: stack — buttons stacked vertically, full width */
+.drawer__footer-actions[data-layout="stack"] {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.drawer__footer-actions[data-layout="stack"] .drawer__footer-end-group {
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.drawer__footer-actions[data-layout="stack"] .drawer__btn {
+  width: 100%;
+}
+
+/* Layout: between — tertiary (left) + [secondary + primary] (right) */
+.drawer__footer-actions[data-layout="between"] {
+  justify-content: space-between;
+}
+
+/* ── Button base ── */
+
+.drawer__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 var(--spacing-16);
+  border-radius: var(--radius-8);
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  transition: background-color 0.1s;
+}
+
+/* ── Tertiary button (between layout, left side) ── */
+
+.drawer__btn--tertiary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--sys-contentOn-status-danger-tint-default);
+}
+
+.drawer__btn--tertiary:hover {
+  background-color: var(--sys-container-status-danger-tint-default);
+}
+
+/* ── Secondary button ── */
+
+.drawer__btn--secondary {
+  background-color: var(--sys-border-neutral-weak);
+  color: var(--sys-content-neutral-default);
+}
+
+.drawer__btn--secondary:hover {
+  background-color: var(--sys-container-neutral-tint-default);
+}
+
+/* ── Primary button — variation: primary (default) ── */
+
+.drawer__btn--primary {
+  background-color: var(--sys-border-brand-default);
+  color: var(--sys-surface-static);
+}
+
+.drawer__btn--primary:hover {
+  background-color: var(--sys-container-brand-solid-strong);
+}
+
+/* variation: neutral — primary button looks like secondary */
+.drawer__footer-actions[data-variation="neutral"] .drawer__btn--primary {
+  background-color: var(--sys-border-neutral-weak);
+  color: var(--sys-content-neutral-default);
+}
+
+.drawer__footer-actions[data-variation="neutral"] .drawer__btn--primary:hover {
+  background-color: var(--sys-container-neutral-tint-default);
+}
+
+/* variation: danger — primary button is danger red */
+.drawer__footer-actions[data-variation="danger"] .drawer__btn--primary {
+  background-color: var(--sys-border-status-danger-default);
+  color: var(--sys-surface-static);
+}
+
+.drawer__footer-actions[data-variation="danger"] .drawer__btn--primary:hover {
+  background-color: var(--sys-container-status-danger-solid-strong);
+}

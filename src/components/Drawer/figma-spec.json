@@ -1,0 +1,566 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "730:21010",
+    "componentName": "Drawer",
+    "extractedAt": "2026-05-04T06:30:13.844Z"
+  },
+  "componentPropertyDefinitions": {
+    "Placement": {
+      "type": "VARIANT",
+      "defaultValue": "left",
+      "variantOptions": [
+        "left",
+        "right"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Backdrop",
+      "type": "INSTANCE",
+      "componentName": "Backdrop",
+      "conditional": null,
+      "dimensions": {
+        "width": 1280,
+        "height": 1024
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(0,0,0,0.4)",
+          "token": "--sys-overlay-container-dark-disabled",
+          "resolved": true
+        }
+      ],
+      "instanceProps": {
+        "Strength": "default"
+      }
+    },
+    {
+      "layerName": "DrawerPanel",
+      "type": "INSTANCE",
+      "componentName": "DrawerPanel",
+      "conditional": null,
+      "dimensions": {
+        "width": 360,
+        "height": 1024
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ],
+      "instanceProps": {
+        "Size": "sm"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Header",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Header",
+          "conditional": "hasDescription",
+          "dimensions": {
+            "width": 360,
+            "height": 106
+          },
+          "children": [
+            {
+              "layerName": "content",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 280,
+                "height": 62
+              },
+              "layoutSpec": {
+                "direction": "vertical",
+                "gap": 6,
+                "paddingTop": 3,
+                "paddingRight": 0,
+                "paddingBottom": 3,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "center"
+              },
+              "children": [
+                {
+                  "layerName": "타이틀",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 280,
+                    "height": 26
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(25,31,40,1)",
+                      "token": "--sys-surface-floating",
+                      "resolved": true
+                    },
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(25,31,40,1)",
+                      "token": "--sys-surface-floating",
+                      "resolved": true
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "17-600",
+                      "token": "--semantic-label-17-semibold",
+                      "resolved": true
+                    }
+                  ]
+                },
+                {
+                  "layerName": "간단한 설명 표시",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 280,
+                    "height": 20
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(0,19,43,0.58)",
+                      "token": "--sys-content-neutral-muted",
+                      "resolved": true
+                    },
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(0,19,43,1)",
+                      "token": null,
+                      "resolved": false
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "14-400",
+                      "token": "--semantic-body-14-regular",
+                      "resolved": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layerName": "dismissControl",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 32,
+                "height": 32
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 10,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "flex-start",
+                "justifyContent": "flex-end"
+              },
+              "children": [
+                {
+                  "layerName": "◇ Part / DismissControl",
+                  "type": "INSTANCE",
+                  "componentName": "◇ Part / DismissControl",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 32,
+                    "height": 32
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "State": "normal"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "◇ Part / Body",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Body",
+          "conditional": null,
+          "dimensions": {
+            "width": 360,
+            "height": 838
+          },
+          "children": [
+            {
+              "layerName": "content",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 312,
+                "height": 62
+              },
+              "layoutSpec": {
+                "direction": "vertical",
+                "gap": 6,
+                "paddingTop": 3,
+                "paddingRight": 0,
+                "paddingBottom": 3,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "center"
+              },
+              "children": [
+                {
+                  "layerName": "섹션 헤더",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 312,
+                    "height": 20
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(25,31,40,1)",
+                      "token": "--sys-surface-floating",
+                      "resolved": true
+                    },
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(25,31,40,1)",
+                      "token": "--sys-surface-floating",
+                      "resolved": true
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "14-400",
+                      "token": "--semantic-body-14-regular",
+                      "resolved": true
+                    }
+                  ]
+                },
+                {
+                  "layerName": "컨텐츠",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 312,
+                    "height": 20
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(0,19,43,0.58)",
+                      "token": "--sys-content-neutral-muted",
+                      "resolved": true
+                    },
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(0,19,43,1)",
+                      "token": null,
+                      "resolved": false
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "14-400",
+                      "token": "--semantic-body-14-regular",
+                      "resolved": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "◇ Part / Footer",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Footer",
+          "conditional": null,
+          "dimensions": {
+            "width": 360,
+            "height": 80
+          },
+          "instanceProps": {
+            "Variation": "primary",
+            "Layout": "inlineEnd"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 312,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 8,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "flex-start"
+              },
+              "children": [
+                {
+                  "layerName": "SecondaryAction",
+                  "type": "INSTANCE",
+                  "componentName": "SecondaryAction",
+                  "conditional": "isFocused",
+                  "dimensions": {
+                    "width": 152,
+                    "height": 40
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(2,32,71,0.05)",
+                      "token": "--sys-border-neutral-weak",
+                      "resolved": true
+                    },
+                    {
+                      "property": "border-color",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "tone": "secondary",
+                    "appearance": "fill",
+                    "emphasis": "weak",
+                    "iconOnly": "false",
+                    "size": "md",
+                    "state": "normal",
+                    "isLoading": "false",
+                    "isDisabled": "false"
+                  }
+                },
+                {
+                  "layerName": "PrimaryAction",
+                  "type": "INSTANCE",
+                  "componentName": "PrimaryAction",
+                  "conditional": "isFocused",
+                  "dimensions": {
+                    "width": 152,
+                    "height": 40
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(49,130,246,1)",
+                      "token": "--sys-border-brand-default",
+                      "resolved": true
+                    },
+                    {
+                      "property": "border-color",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "tone": "primary",
+                    "appearance": "fill",
+                    "emphasis": "strong",
+                    "iconOnly": "false",
+                    "size": "md",
+                    "state": "normal",
+                    "isLoading": "false",
+                    "isDisabled": "false"
+                  }
+                }
+              ]
+            },
+            {
+              "layerName": "Divider",
+              "type": "INSTANCE",
+              "componentName": "Divider",
+              "conditional": null,
+              "dimensions": {
+                "width": 360,
+                "height": 1
+              },
+              "instanceProps": {
+                "Tone": "neutral",
+                "Style": "solid",
+                "Emphasis": "weak",
+                "Orientation": "horizontal",
+                "Inset": "lg"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "타이틀",
+      "figmaValue": "17-600",
+      "token": "--semantic-label-17-semibold",
+      "resolved": true
+    },
+    {
+      "layerName": "간단한 설명 표시",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "섹션 헤더",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "컨텐츠",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Placement=left",
+      "variantProps": {
+        "Placement": "left"
+      },
+      "layerStyles": {
+        "Backdrop": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,0,0,0.4)",
+            "token": "--sys-overlay-container-dark-disabled",
+            "resolved": true
+          }
+        ],
+        "DrawerPanel": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Placement=right",
+      "variantProps": {
+        "Placement": "right"
+      },
+      "layerStyles": {
+        "Backdrop": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,0,0,0.4)",
+            "token": "--sys-overlay-container-dark-disabled",
+            "resolved": true
+          }
+        ],
+        "DrawerPanel": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Placement": {
+      "tsProp": "placement",
+      "tsType": "'left' | 'right'",
+      "figmaToCode": { "left": "left", "right": "right" }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md' | 'lg'",
+      "figmaToCode": { "sm": "sm", "md": "md", "lg": "lg" },
+      "sourceNode": "730:21031"
+    },
+    "FooterVariation": {
+      "tsProp": "footerVariation",
+      "tsType": "'primary' | 'neutral' | 'danger'",
+      "figmaToCode": { "primary": "primary", "neutral": "neutral", "danger": "danger" },
+      "sourceNode": "2302:43353"
+    },
+    "FooterLayout": {
+      "tsProp": "footerLayout",
+      "tsType": "'inlineEnd' | 'stack' | 'between'",
+      "figmaToCode": { "inlineEnd": "inlineEnd", "stack": "stack", "between": "between" },
+      "sourceNode": "2302:43353",
+      "note": "between = 3버튼 구조. tertiaryLabel prop 필요. 출처: 2302:43782~43776."
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P2",
+      "figmaProp": "color (description text)",
+      "figmaValue": "rgba(0,19,43,1)",
+      "status": "fixed",
+      "note": "토큰 미존재 — --sys-content-neutral-muted 사용. full-opacity는 토큰 없음."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "title text-style",
+      "figmaValue": "17-600-26 → --semantic-heading-17-semibold",
+      "status": "fixed",
+      "note": "기존 --semantic-label-17-semibold(lineHeight 20px) → --semantic-heading-17-semibold(lineHeight 26px) 정정. 출처: 730:21031, 2301:42939."
+    },
+    {
+      "priority": "P2",
+      "figmaProp": "dismiss icon color",
+      "figmaValue": "rgba(3,24,50,0.46) → --sys-content-neutral-subtle",
+      "status": "fixed",
+      "note": "기존 --sys-content-neutral-muted → --sys-content-neutral-subtle 정정. 출처: 2301:42939."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "FooterLayout=between",
+      "figmaValue": "3-button layout (left: danger/outline ghost + right: secondary+primary)",
+      "status": "fixed",
+      "note": "tertiaryLabel/onTertiary prop 추가. between 레이아웃 = 왼쪽 ghost/danger-outline 버튼 + 오른쪽 secondary+primary 그룹. 출처: 2302:43782, 2302:43779, 2302:43776."
+    }
+  ]
+}

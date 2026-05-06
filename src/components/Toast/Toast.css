@@ -1,0 +1,106 @@
+/* ── Toast ── */
+
+.toast {
+  --toast-icon: var(--sys-contentOn-dark-default);
+
+  display: inline-flex;
+  padding: var(--spacing-10) var(--spacing-12);
+  border-radius: var(--radius-12);
+  background-color: var(--sys-surface-floating);
+  box-shadow: var(--sys-elevation-floating);
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* ── Icon color per type ── */
+
+.toast[data-type="error"]   { --toast-icon: var(--sys-border-status-danger-default); }
+.toast[data-type="warning"] { --toast-icon: var(--sys-container-status-warning-solid-default); }
+.toast[data-type="info"]    { --toast-icon: var(--sys-border-brand-default); }
+.toast[data-type="success"] { --toast-icon: var(--sys-border-status-success-default); }
+.toast[data-type="neutral"] { --toast-icon: var(--sys-contentOn-dark-default); }
+
+/* ── Content ── */
+
+.toast__content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-10);
+}
+
+.toast__icon {
+  color: var(--toast-icon);
+  flex-shrink: 0;
+  display: flex;
+}
+
+.toast__text {
+  flex: 1;
+  min-width: 0;
+  padding-inline: var(--spacing-4);
+}
+
+.toast__message {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  color: var(--sys-contentOn-dark-default);
+}
+
+.toast__action {
+  flex-shrink: 0;
+}
+
+/* Parts / Action — 다크 배경 전용 텍스트 버튼 (node 670:19487) */
+.toast__action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--spacing-4);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  color: var(--sys-contentOn-dark-subtle);
+  border-radius: var(--radius-4);
+  transition: color 0.1s;
+  min-height: 20px;
+}
+
+.toast__action-btn:hover {
+  color: var(--sys-contentOn-dark-default);
+}
+
+.toast__action-btn:active {
+  color: var(--sys-contentOn-dark-default);
+}
+
+/* ── Dismiss ── */
+
+.toast__dismiss {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  padding: var(--spacing-4);
+  cursor: pointer;
+  color: var(--sys-contentOn-dark-default);
+  border-radius: var(--radius-4);
+  transition: background-color 0.1s;
+}
+
+.toast__dismiss:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.toast__dismiss:active {
+  background-color: rgba(255, 255, 255, 0.20);
+}

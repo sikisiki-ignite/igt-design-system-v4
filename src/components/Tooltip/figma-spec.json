@@ -1,0 +1,2256 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "270:8165",
+    "componentName": "Tooltip",
+    "extractedAt": "2026-05-05T01:55:49.420Z"
+  },
+  "componentPropertyDefinitions": {
+    "Title#2167:14": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "Variant": {
+      "type": "VARIANT",
+      "defaultValue": "basic",
+      "variantOptions": [
+        "basic",
+        "rich"
+      ]
+    },
+    "Tone": {
+      "type": "VARIANT",
+      "defaultValue": "surface",
+      "variantOptions": [
+        "inverse",
+        "surface",
+        "accent"
+      ]
+    },
+    "Placement": {
+      "type": "VARIANT",
+      "defaultValue": "top",
+      "variantOptions": [
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "none"
+      ]
+    },
+    "Arrow": {
+      "type": "VARIANT",
+      "defaultValue": "true",
+      "variantOptions": [
+        "true",
+        "false"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "body",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 73,
+        "height": 32
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 10,
+        "paddingTop": 6,
+        "paddingRight": 10,
+        "paddingBottom": 6,
+        "paddingLeft": 10,
+        "alignItems": "center",
+        "justifyContent": "center",
+        "borderRadius": 8
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(25,31,40,1)",
+          "token": "--sys-surface-floating",
+          "resolved": true
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "알림 설정",
+          "type": "TEXT",
+          "conditional": null,
+          "dimensions": {
+            "width": 53,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(255,255,255,0.9)",
+              "token": "--sys-contentOn-dark-default",
+              "resolved": true
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "14-600-20",
+              "token": "--semantic-body-14-semibold",
+              "resolved": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "◇ Part / arrow",
+      "type": "INSTANCE",
+      "componentName": "◇ Part / arrow",
+      "conditional": null,
+      "dimensions": {
+        "width": 8,
+        "height": 32
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(25,31,40,1)",
+          "token": "--sys-content-neutral-strong",
+          "resolved": true
+        }
+      ],
+      "instanceProps": {
+        "Direction": "center"
+      },
+      "children": [
+        {
+          "layerName": "maskContainer",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 8,
+            "height": 18
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "box-shadow",
+      "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+      "token": "--sys-elevation-subtle",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "flex-direction",
+      "figmaValue": "horizontal",
+      "cssValue": "row",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "align-items",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "justify-content",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "알림 설정",
+      "figmaValue": "14-600-20",
+      "token": "--semantic-body-14-semibold",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Arrow=false,Placement=none,Tone=accent,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "accent",
+        "Placement": "none",
+        "Arrow": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=false,Placement=none,Tone=accent,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "accent",
+        "Placement": "none",
+        "Arrow": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.84)",
+            "token": "--sys-contentOn-brand-solid-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=false,Placement=none,Tone=inverse,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "inverse",
+        "Placement": "none",
+        "Arrow": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=false,Placement=none,Tone=inverse,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "inverse",
+        "Placement": "none",
+        "Arrow": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.72)",
+            "token": "--sys-contentOn-dark-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=false,Placement=none,Tone=surface,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "surface",
+        "Placement": "none",
+        "Arrow": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=false,Placement=none,Tone=surface,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "surface",
+        "Placement": "none",
+        "Arrow": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=bottom,Tone=accent,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "accent",
+        "Placement": "bottom",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=bottom,Tone=accent,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "accent",
+        "Placement": "bottom",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.84)",
+            "token": "--sys-contentOn-brand-solid-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=bottom,Tone=inverse,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "inverse",
+        "Placement": "bottom",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=bottom,Tone=inverse,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "inverse",
+        "Placement": "bottom",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.72)",
+            "token": "--sys-contentOn-dark-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=bottom,Tone=surface,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "surface",
+        "Placement": "bottom",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=bottom,Tone=surface,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "surface",
+        "Placement": "bottom",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=left,Tone=accent,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "accent",
+        "Placement": "left",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=left,Tone=accent,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "accent",
+        "Placement": "left",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.84)",
+            "token": "--sys-contentOn-brand-solid-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=left,Tone=inverse,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "inverse",
+        "Placement": "left",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=left,Tone=inverse,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "inverse",
+        "Placement": "left",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.72)",
+            "token": "--sys-contentOn-dark-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=left,Tone=surface,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "surface",
+        "Placement": "left",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=left,Tone=surface,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "surface",
+        "Placement": "left",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=right,Tone=accent,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "accent",
+        "Placement": "right",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=right,Tone=accent,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "accent",
+        "Placement": "right",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.84)",
+            "token": "--sys-contentOn-brand-solid-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=right,Tone=inverse,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "inverse",
+        "Placement": "right",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=right,Tone=inverse,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "inverse",
+        "Placement": "right",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.72)",
+            "token": "--sys-contentOn-dark-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=right,Tone=surface,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "surface",
+        "Placement": "right",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=right,Tone=surface,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "surface",
+        "Placement": "right",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=top,Tone=accent,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "accent",
+        "Placement": "top",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=top,Tone=accent,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "accent",
+        "Placement": "top",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.84)",
+            "token": "--sys-contentOn-brand-solid-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=top,Tone=inverse,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "inverse",
+        "Placement": "top",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=top,Tone=inverse,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "inverse",
+        "Placement": "top",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.9)",
+            "token": "--sys-contentOn-dark-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,0.72)",
+            "token": "--sys-contentOn-dark-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=top,Tone=surface,Variant=basic",
+      "variantProps": {
+        "Variant": "basic",
+        "Tone": "surface",
+        "Placement": "top",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Arrow=true,Placement=top,Tone=surface,Variant=rich",
+      "variantProps": {
+        "Variant": "rich",
+        "Tone": "surface",
+        "Placement": "top",
+        "Arrow": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+            "token": "--sys-elevation-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-radius",
+            "figmaValue": 16,
+            "token": "--radius-16",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "vertical",
+            "cssValue": "column",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "align-items",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          },
+          {
+            "property": "justify-content",
+            "figmaValue": "flex-start",
+            "cssValue": "flex-start",
+            "token": null,
+            "resolved": true
+          }
+        ],
+        "body": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "알림 설정": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ],
+        "중요한 변경 사항을 놓치지 않도록 도와드려요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Title": {
+      "tsProp": "title",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Variant": {
+      "tsProp": "variant",
+      "tsType": "'basic' | 'rich'",
+      "figmaToCode": {
+        "basic": "basic",
+        "rich": "rich"
+      }
+    },
+    "Tone": {
+      "tsProp": "tone",
+      "tsType": "'inverse' | 'surface' | 'accent'",
+      "figmaToCode": {
+        "inverse": "inverse",
+        "surface": "surface",
+        "accent": "accent"
+      }
+    },
+    "Placement": {
+      "tsProp": "placement",
+      "tsType": "'top' | 'bottom' | 'left' | 'right' | 'none'",
+      "figmaToCode": {
+        "top": "top",
+        "bottom": "bottom",
+        "left": "left",
+        "right": "right",
+        "none": "none"
+      }
+    },
+    "Arrow": {
+      "tsProp": "arrow",
+      "tsType": "'true' | 'false'",
+      "figmaToCode": {
+        "true": "true",
+        "false": "false"
+      }
+    }
+  },
+  "gaps": []
+}

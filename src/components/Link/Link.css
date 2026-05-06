@@ -1,0 +1,68 @@
+/* ── Link ── */
+
+.link {
+  --link-text: currentColor;
+
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  color: var(--link-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  outline: none;
+  border-radius: var(--radius-2);
+  transition: color 0.1s;
+}
+
+/* ── Focus ring ── */
+.link__focus-ring {
+  display: none;
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--radius-2) + 2px);
+  outline: 2px solid var(--sys-border-brand-default);
+  pointer-events: none;
+}
+.link:focus-visible .link__focus-ring { display: block; }
+
+/* ── Underline variants ── */
+.link[data-underline="always"] { text-decoration: underline; }
+.link[data-underline="auto"] { text-decoration: none; }
+.link[data-underline="auto"]:hover { text-decoration: underline; }
+.link[data-underline="none"] { text-decoration: none; }
+
+/* ── Disabled ── */
+.link[aria-disabled="true"] { cursor: not-allowed; pointer-events: none; }
+
+/* ── Tone — brand ── */
+.link[data-tone="brand"] {
+  --link-text: var(--action-link-color-brand-text-normal);
+}
+.link[data-tone="brand"]:hover {
+  --link-text: var(--action-link-color-brand-text-hover);
+}
+.link[data-tone="brand"]:active {
+  --link-text: var(--action-link-color-brand-text-pressed);
+}
+.link[data-tone="brand"][aria-disabled="true"] {
+  --link-text: var(--action-link-color-brand-text-disabled);
+}
+
+/* ── Tone — neutral ── */
+.link[data-tone="neutral"] {
+  --link-text: var(--action-link-color-neutral-text-normal);
+}
+.link[data-tone="neutral"]:hover {
+  --link-text: var(--action-link-color-neutral-text-hover);
+}
+.link[data-tone="neutral"]:active {
+  --link-text: var(--action-link-color-neutral-text-pressed);
+}
+.link[data-tone="neutral"][aria-disabled="true"] {
+  --link-text: var(--action-link-color-neutral-text-disabled);
+}

@@ -1,0 +1,182 @@
+/* ── FloatingButton (FAB) ── */
+
+.fab {
+  --fab-container:    transparent;
+  --fab-border:       transparent;
+  --fab-text:         currentColor;
+  --fab-icon:         currentColor;
+  --fab-height:       var(--action-floatingButton-size-height-lg);
+  --fab-icon-size:    var(--action-floatingButton-size-iconSize-lg);
+  --fab-padding-inline: var(--action-floatingButton-size-spacing-paddingInline-lg);
+  --fab-radius:       var(--action-floatingButton-size-radius-circle);
+  --fab-border-width: var(--action-button-size-borderWidth-lg);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--action-floatingButton-size-spacing-gapInline-lg);
+  height: var(--fab-height);
+  padding-inline: var(--fab-padding-inline);
+  border-radius: var(--fab-radius);
+  border: var(--fab-border-width) solid var(--fab-border);
+  background: var(--fab-container);
+  color: var(--fab-text);
+  box-shadow: var(--sys-elevation-subtle);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  white-space: nowrap;
+  transition: background 0.1s, border-color 0.1s, box-shadow 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* icon variant — square */
+.fab[data-variant="icon"] {
+  width: var(--fab-height);
+  padding-inline: 0;
+}
+
+/* ── Focus ring ── */
+.fab__focus-ring {
+  display: none;
+  position: absolute;
+  inset: -3px;
+  border-radius: calc(var(--fab-radius) + 2px);
+  outline: 2px solid var(--sys-border-brand-default);
+  pointer-events: none;
+}
+.fab:focus-visible .fab__focus-ring { display: block; }
+
+/* ── Slots ── */
+.fab__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--fab-icon-size);
+  height: var(--fab-icon-size);
+  flex-shrink: 0;
+  pointer-events: none;
+}
+/* SVG/Icon 컴포넌트가 고정 px을 갖더라도 컨테이너 크기에 맞춤 */
+.fab__icon > span,
+.fab__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.fab__label {
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-15-semibold-letterSpacing);
+  color: var(--fab-text);
+  padding-inline: var(--action-floatingButton-size-spacing-labelInsetInline-lg);
+  pointer-events: none;
+}
+
+/* ── States ── */
+.fab[data-loading] { cursor: wait; }
+.fab:disabled { cursor: not-allowed; pointer-events: none; }
+
+/* ── Size ── */
+.fab[data-size="md"] {
+  --fab-height:         var(--action-floatingButton-size-height-md);
+  --fab-icon-size:      var(--action-floatingButton-size-iconSize-md);
+  --fab-padding-inline: var(--action-floatingButton-size-spacing-paddingInline-md);
+}
+.fab[data-size="md"] .fab__label {
+  padding-inline: var(--action-floatingButton-size-spacing-labelInsetInline-md);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+}
+.fab[data-size="lg"] {
+  --fab-height:         var(--action-floatingButton-size-height-lg);
+  --fab-icon-size:      var(--action-floatingButton-size-iconSize-lg);
+  --fab-padding-inline: var(--action-floatingButton-size-spacing-paddingInline-lg);
+}
+.fab[data-size="lg"] .fab__label {
+  padding-inline: var(--action-floatingButton-size-spacing-labelInsetInline-lg);
+  font-size: var(--semantic-label-17-semibold-fontSize);
+  line-height: var(--semantic-label-17-semibold-lineHeight);
+  font-weight: var(--semantic-label-17-semibold-fontWeight);
+}
+
+/* ── Color — primaryFill ── */
+.fab[data-priority="primaryFill"] {
+  --fab-container: var(--action-floatingButton-color-tone-primary-fill-strong-container-normal);
+  --fab-border:    var(--action-floatingButton-color-tone-primary-fill-strong-border-normal);
+  --fab-text:      var(--action-floatingButton-color-tone-primary-fill-strong-text-normal);
+  --fab-icon:      var(--action-floatingButton-color-tone-primary-fill-strong-icon-normal);
+}
+.fab[data-priority="primaryFill"]:hover {
+  --fab-container: var(--action-floatingButton-color-tone-primary-fill-strong-container-hover);
+  --fab-border:    var(--action-floatingButton-color-tone-primary-fill-strong-border-hover);
+  --fab-text:      var(--action-floatingButton-color-tone-primary-fill-strong-text-hover);
+  --fab-icon:      var(--action-floatingButton-color-tone-primary-fill-strong-icon-hover);
+}
+.fab[data-priority="primaryFill"]:active {
+  --fab-container: var(--action-floatingButton-color-tone-primary-fill-strong-container-pressed);
+  --fab-border:    var(--action-floatingButton-color-tone-primary-fill-strong-border-pressed);
+  --fab-text:      var(--action-floatingButton-color-tone-primary-fill-strong-text-pressed);
+  --fab-icon:      var(--action-floatingButton-color-tone-primary-fill-strong-icon-pressed);
+}
+.fab[data-priority="primaryFill"]:disabled {
+  --fab-container: var(--action-floatingButton-color-tone-primary-fill-strong-container-disabled);
+  --fab-border:    var(--action-floatingButton-color-tone-primary-fill-strong-border-disabled);
+  --fab-text:      var(--action-floatingButton-color-tone-primary-fill-strong-text-disabled);
+  --fab-icon:      var(--action-floatingButton-color-tone-primary-fill-strong-icon-disabled);
+}
+
+/* ── Color — secondaryFill ── */
+.fab[data-priority="secondaryFill"] {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-fill-strong-container-normal);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-fill-strong-border-normal);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-fill-strong-text-normal);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-fill-strong-icon-normal);
+}
+.fab[data-priority="secondaryFill"]:hover {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-fill-strong-container-hover);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-fill-strong-border-hover);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-fill-strong-text-hover);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-fill-strong-icon-hover);
+}
+.fab[data-priority="secondaryFill"]:active {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-fill-strong-container-pressed);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-fill-strong-border-pressed);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-fill-strong-text-pressed);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-fill-strong-icon-pressed);
+}
+.fab[data-priority="secondaryFill"]:disabled {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-fill-strong-container-disabled);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-fill-strong-border-disabled);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-fill-strong-text-disabled);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-fill-strong-icon-disabled);
+}
+
+/* ── Color — secondaryOutline ── */
+.fab[data-priority="secondaryOutline"] {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-outline-strong-container-normal);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-outline-strong-border-normal);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-outline-strong-text-normal);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-outline-strong-icon-normal);
+}
+.fab[data-priority="secondaryOutline"]:hover {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-outline-strong-container-hover);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-outline-strong-border-hover);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-outline-strong-text-hover);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-outline-strong-icon-hover);
+}
+.fab[data-priority="secondaryOutline"]:active {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-outline-strong-container-pressed);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-outline-strong-border-pressed);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-outline-strong-text-pressed);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-outline-strong-icon-pressed);
+}
+.fab[data-priority="secondaryOutline"]:disabled {
+  --fab-container: var(--action-floatingButton-color-tone-secondary-outline-strong-container-disabled);
+  --fab-border:    var(--action-floatingButton-color-tone-secondary-outline-strong-border-disabled);
+  --fab-text:      var(--action-floatingButton-color-tone-secondary-outline-strong-text-disabled);
+  --fab-icon:      var(--action-floatingButton-color-tone-secondary-outline-strong-icon-disabled);
+}

@@ -1,0 +1,57 @@
+/* ── Rating ── */
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--input-rating-size-gapInline-md);
+}
+
+.rating[data-size="xs"] { gap: var(--input-rating-size-gapInline-xs); }
+.rating[data-size="sm"] { gap: var(--input-rating-size-gapInline-sm); }
+
+/* ── Star button ── */
+.rating__star {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  color: var(--input-rating-color-unselected-icon-normal);
+}
+
+.rating__star[data-filled] {
+  color: var(--input-rating-color-selected-icon-normal);
+}
+
+/* ── Hover (interactive) ── */
+.rating[data-hovering] .rating__star[data-filled] {
+  color: var(--input-rating-color-selected-icon-hover);
+}
+
+.rating[data-hovering] .rating__star:not([data-filled]) {
+  color: var(--input-rating-color-unselected-icon-hover);
+}
+
+/* ── Disabled ── */
+.rating[data-disabled] .rating__star {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.rating[data-disabled] .rating__star {
+  color: var(--input-rating-color-unselected-icon-disabled);
+}
+
+.rating[data-disabled] .rating__star[data-filled] {
+  color: var(--input-rating-color-selected-icon-disabled);
+}
+
+/* ── Focus ring ── */
+.rating__star:focus-visible {
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

@@ -1,0 +1,109 @@
+/* ── Switch ── */
+
+.switch {
+  --sw-track-w:  var(--input-switch-size-track-width-md);
+  --sw-track-h:  var(--input-switch-size-track-height-md);
+  --sw-thumb-w:  var(--input-switch-size-thumb-width-md);
+  --sw-thumb-h:  var(--input-switch-size-thumb-height-md);
+  --sw-radius:   var(--input-switch-size-radius-md);
+  --sw-inset:    2px;
+
+  --sw-track-bg:   var(--input-switch-color-off-track-normal);
+  --sw-thumb-bg:   var(--input-switch-color-off-thumb-normal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ── Size ── */
+.switch[data-size="sm"] {
+  --sw-track-w:  var(--input-switch-size-track-width-sm);
+  --sw-track-h:  var(--input-switch-size-track-height-sm);
+  --sw-thumb-w:  var(--input-switch-size-thumb-width-sm);
+  --sw-thumb-h:  var(--input-switch-size-thumb-height-sm);
+  --sw-radius:   var(--input-switch-size-radius-sm);
+}
+
+/* ── Visually hidden native input (overlays entire hit area) ── */
+.switch__input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: inherit;
+  margin: 0;
+}
+
+/* ── Track ── */
+.switch__track {
+  position: relative;
+  width: var(--sw-track-w);
+  height: var(--sw-track-h);
+  border-radius: var(--sw-radius);
+  background: var(--sw-track-bg);
+  transition: background 0.15s;
+  flex-shrink: 0;
+}
+
+/* ── Thumb ── */
+.switch__thumb {
+  position: absolute;
+  top: 50%;
+  left: var(--sw-inset);
+  transform: translateY(-50%);
+  width: var(--sw-thumb-w);
+  height: var(--sw-thumb-h);
+  border-radius: var(--sw-radius);
+  background: var(--sw-thumb-bg);
+  transition: left 0.15s;
+}
+
+/* ── On state ── */
+.switch[data-on="true"] {
+  --sw-track-bg: var(--input-switch-color-on-track-normal);
+  --sw-thumb-bg: var(--input-switch-color-on-thumb-normal);
+}
+.switch[data-on="true"] .switch__thumb {
+  left: calc(var(--sw-track-w) - var(--sw-thumb-w) - var(--sw-inset));
+}
+
+/* ── Hover ── */
+.switch:not([data-disabled]):hover {
+  --sw-track-bg: var(--input-switch-color-off-track-hover);
+  --sw-thumb-bg: var(--input-switch-color-off-thumb-hover);
+}
+.switch[data-on="true"]:not([data-disabled]):hover {
+  --sw-track-bg: var(--input-switch-color-on-track-hover);
+  --sw-thumb-bg: var(--input-switch-color-on-thumb-hover);
+}
+
+/* ── Pressed ── */
+.switch:not([data-disabled]):active {
+  --sw-track-bg: var(--input-switch-color-off-track-pressed);
+  --sw-thumb-bg: var(--input-switch-color-off-thumb-pressed);
+}
+.switch[data-on="true"]:not([data-disabled]):active {
+  --sw-track-bg: var(--input-switch-color-on-track-pressed);
+  --sw-thumb-bg: var(--input-switch-color-on-thumb-pressed);
+}
+
+/* ── Disabled ── */
+.switch[data-disabled] {
+  --sw-track-bg: var(--input-switch-color-off-track-disabled);
+  --sw-thumb-bg: var(--input-switch-color-off-thumb-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.switch[data-on="true"][data-disabled] {
+  --sw-track-bg: var(--input-switch-color-on-track-disabled);
+  --sw-thumb-bg: var(--input-switch-color-on-thumb-disabled);
+}
+
+/* ── Focus ring (focusRing layer) ── */
+.switch__input:focus-visible ~ .switch__track {
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: 2px;
+}

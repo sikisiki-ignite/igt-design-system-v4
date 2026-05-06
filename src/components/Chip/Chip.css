@@ -1,0 +1,447 @@
+/* ── Chip base ─────────────────────────────────────────────────────────────── */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  height: var(--input-chip-size-shared-height-md);
+  padding-block: var(--spacing-4);
+  padding-inline: var(--input-chip-size-shared-spacing-paddingInline-md);
+  border-radius: var(--input-chip-size-shared-radius-md);
+  border: var(--borderWidth-1) solid var(--chip-border);
+  background-color: var(--chip-container);
+  color: var(--chip-text);
+
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-15-semibold-letterSpacing);
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  outline: none;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* ── Size overrides ──────────────────────────────────────────────────────── */
+
+.chip[data-size="xs"] {
+  height: var(--input-chip-size-shared-height-xs);
+  padding-inline: var(--input-chip-size-shared-spacing-paddingInline-xs);
+  border-radius: var(--input-chip-size-shared-radius-xs);
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  line-height: var(--semantic-label-12-semibold-lineHeight);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-12-semibold-letterSpacing);
+}
+
+.chip[data-size="sm"] {
+  height: var(--input-chip-size-shared-height-sm);
+  padding-inline: var(--input-chip-size-shared-spacing-paddingInline-sm);
+  border-radius: var(--input-chip-size-shared-radius-sm);
+  font-family: var(--semantic-label-13-semibold-fontFamily);
+  font-size: var(--semantic-label-13-semibold-fontSize);
+  line-height: var(--semantic-label-13-semibold-lineHeight);
+  font-weight: var(--semantic-label-13-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-13-semibold-letterSpacing);
+}
+
+/* ── Icon & label spacing ─────────────────────────────────────────────────── */
+/* Matches Figma's labelPadding (paddingLeft/Right: 6px on label wrapper)     */
+
+.chip__label {
+  padding-inline: var(--spacing-6);
+}
+
+.chip__icon {
+  color: var(--chip-icon);
+  flex-shrink: 0;
+}
+
+/* Trailing icon has same -2px inset as Figma's gap: -2 on labelTrailing */
+.chip__icon--trailing {
+  margin-inline-start: -2px;
+}
+
+/* ── Focus ring ──────────────────────────────────────────────────────────── */
+
+.chip:focus-visible {
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: var(--spacing-2);
+}
+
+/* ── Disabled ────────────────────────────────────────────────────────────── */
+
+.chip:disabled,
+.chip[data-disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── ActionChip ──────────────────────────────────────────────────────────── */
+
+.chip--action {
+  --chip-container: var(--input-chip-color-action-container-normal);
+  --chip-border:    var(--input-chip-color-action-border-normal);
+  --chip-text:      var(--input-chip-color-action-text-normal);
+  --chip-icon:      var(--input-chip-color-action-icon-normal);
+}
+
+.chip--action:not(:disabled):hover {
+  --chip-container: var(--input-chip-color-action-container-hover);
+  --chip-border:    var(--input-chip-color-action-border-hover);
+  --chip-text:      var(--input-chip-color-action-text-hover);
+  --chip-icon:      var(--input-chip-color-action-icon-hover);
+}
+
+.chip--action:not(:disabled):active {
+  --chip-container: var(--input-chip-color-action-container-pressed);
+  --chip-border:    var(--input-chip-color-action-border-pressed);
+  --chip-text:      var(--input-chip-color-action-text-pressed);
+  --chip-icon:      var(--input-chip-color-action-icon-pressed);
+}
+
+.chip--action:disabled {
+  --chip-container: var(--input-chip-color-action-container-disabled);
+  --chip-border:    var(--input-chip-color-action-border-disabled);
+  --chip-text:      var(--input-chip-color-action-text-disabled);
+  --chip-icon:      var(--input-chip-color-action-icon-disabled);
+}
+
+/* ── ChoiceChip ──────────────────────────────────────────────────────────── */
+
+.chip--choice {
+  --chip-container: var(--input-chip-color-choice-multiple-unselected-container-normal);
+  --chip-border:    var(--input-chip-color-choice-multiple-unselected-border-normal);
+  --chip-text:      var(--input-chip-color-choice-multiple-unselected-text-normal);
+  --chip-icon:      var(--input-chip-color-choice-multiple-unselected-icon-normal);
+}
+
+.chip--choice:not(:disabled):hover {
+  --chip-container: var(--input-chip-color-choice-multiple-unselected-container-hover);
+  --chip-border:    var(--input-chip-color-choice-multiple-unselected-border-hover);
+  --chip-text:      var(--input-chip-color-choice-multiple-unselected-text-hover);
+  --chip-icon:      var(--input-chip-color-choice-multiple-unselected-icon-hover);
+}
+
+.chip--choice:not(:disabled):active {
+  --chip-container: var(--input-chip-color-choice-multiple-unselected-container-pressed);
+  --chip-border:    var(--input-chip-color-choice-multiple-unselected-border-pressed);
+  --chip-text:      var(--input-chip-color-choice-multiple-unselected-text-pressed);
+  --chip-icon:      var(--input-chip-color-choice-multiple-unselected-icon-pressed);
+}
+
+.chip--choice:disabled {
+  --chip-container: var(--input-chip-color-choice-multiple-unselected-container-disabled);
+  --chip-border:    var(--input-chip-color-choice-multiple-unselected-border-disabled);
+  --chip-text:      var(--input-chip-color-choice-multiple-unselected-text-disabled);
+  --chip-icon:      var(--input-chip-color-choice-multiple-unselected-icon-disabled);
+}
+
+.chip--choice[data-selected] {
+  --chip-container: var(--input-chip-color-choice-multiple-selected-container-normal);
+  --chip-border:    var(--input-chip-color-choice-multiple-selected-border-normal);
+  --chip-text:      var(--input-chip-color-choice-multiple-selected-text-normal);
+  --chip-icon:      var(--input-chip-color-choice-multiple-selected-icon-normal);
+}
+
+.chip--choice[data-selected]:not(:disabled):hover {
+  --chip-container: var(--input-chip-color-choice-multiple-selected-container-hover);
+  --chip-border:    var(--input-chip-color-choice-multiple-selected-border-hover);
+  --chip-text:      var(--input-chip-color-choice-multiple-selected-text-hover);
+  --chip-icon:      var(--input-chip-color-choice-multiple-selected-icon-hover);
+}
+
+.chip--choice[data-selected]:not(:disabled):active {
+  --chip-container: var(--input-chip-color-choice-multiple-selected-container-pressed);
+  --chip-border:    var(--input-chip-color-choice-multiple-selected-border-pressed);
+  --chip-text:      var(--input-chip-color-choice-multiple-selected-text-pressed);
+  --chip-icon:      var(--input-chip-color-choice-multiple-selected-icon-pressed);
+}
+
+.chip--choice[data-selected]:disabled {
+  --chip-container: var(--input-chip-color-choice-multiple-selected-container-disabled);
+  --chip-border:    var(--input-chip-color-choice-multiple-selected-border-disabled);
+  --chip-text:      var(--input-chip-color-choice-multiple-selected-text-disabled);
+  --chip-icon:      var(--input-chip-color-choice-multiple-selected-icon-disabled);
+}
+
+/* ── FilterChip ──────────────────────────────────────────────────────────── */
+
+.chip--filter {
+  --chip-container: var(--input-chip-color-filter-unselected-container-normal);
+  --chip-border:    var(--input-chip-color-filter-unselected-border-normal);
+  --chip-text:      var(--input-chip-color-filter-unselected-text-normal);
+  --chip-icon:      var(--input-chip-color-filter-unselected-icon-normal);
+}
+
+.chip--filter:not(:disabled):hover {
+  --chip-container: var(--input-chip-color-filter-unselected-container-hover);
+  --chip-border:    var(--input-chip-color-filter-unselected-border-hover);
+  --chip-text:      var(--input-chip-color-filter-unselected-text-hover);
+  --chip-icon:      var(--input-chip-color-filter-unselected-icon-hover);
+}
+
+.chip--filter:not(:disabled):active {
+  --chip-container: var(--input-chip-color-filter-unselected-container-pressed);
+  --chip-border:    var(--input-chip-color-filter-unselected-border-pressed);
+  --chip-text:      var(--input-chip-color-filter-unselected-text-pressed);
+  --chip-icon:      var(--input-chip-color-filter-unselected-icon-pressed);
+}
+
+.chip--filter:disabled {
+  --chip-container: var(--input-chip-color-filter-unselected-container-disabled);
+  --chip-border:    var(--input-chip-color-filter-unselected-border-disabled);
+  --chip-text:      var(--input-chip-color-filter-unselected-text-disabled);
+  --chip-icon:      var(--input-chip-color-filter-unselected-icon-disabled);
+}
+
+.chip--filter[data-selected] {
+  --chip-container: var(--input-chip-color-filter-selected-container-normal);
+  --chip-border:    var(--input-chip-color-filter-selected-border-normal);
+  --chip-text:      var(--input-chip-color-filter-selected-text-normal);
+  --chip-icon:      var(--input-chip-color-filter-selected-icon-normal);
+}
+
+.chip--filter[data-selected]:not(:disabled):hover {
+  --chip-container: var(--input-chip-color-filter-selected-container-hover);
+  --chip-border:    var(--input-chip-color-filter-selected-border-hover);
+  --chip-text:      var(--input-chip-color-filter-selected-text-hover);
+  --chip-icon:      var(--input-chip-color-filter-selected-icon-hover);
+}
+
+.chip--filter[data-selected]:not(:disabled):active {
+  --chip-container: var(--input-chip-color-filter-selected-container-pressed);
+  --chip-border:    var(--input-chip-color-filter-selected-border-pressed);
+  --chip-text:      var(--input-chip-color-filter-selected-text-pressed);
+  --chip-icon:      var(--input-chip-color-filter-selected-icon-pressed);
+}
+
+.chip--filter[data-selected]:disabled {
+  --chip-container: var(--input-chip-color-filter-selected-container-disabled);
+  --chip-border:    var(--input-chip-color-filter-selected-border-disabled);
+  --chip-text:      var(--input-chip-color-filter-selected-text-disabled);
+  --chip-icon:      var(--input-chip-color-filter-selected-icon-disabled);
+}
+
+.chip--filter .chip__value {
+  color: var(--input-chip-color-filter-selected-text-normal);
+  padding-inline-start: 0;
+  padding-inline-end: var(--spacing-6);
+}
+
+/* ── InputChip ───────────────────────────────────────────────────────────── */
+
+.chip--input {
+  --chip-container: var(--input-chip-color-input-neutral-container-normal);
+  --chip-border:    var(--input-chip-color-input-neutral-border-normal);
+  --chip-text:      var(--input-chip-color-input-neutral-text-normal);
+  --chip-icon:      var(--input-chip-color-input-neutral-icon-normal);
+  --chip-remove-container: var(--input-chip-color-input-remove-neutral-container-normal);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-neutral-icon-normal);
+
+  padding-inline-end: var(--input-chip-size-inputChip-paddingInlineEnd-md);
+  cursor: default;
+}
+
+.chip--input[data-size="xs"] {
+  padding-inline-end: var(--input-chip-size-inputChip-paddingInlineEnd-xs);
+}
+
+.chip--input[data-size="sm"] {
+  padding-inline-end: var(--input-chip-size-inputChip-paddingInlineEnd-sm);
+}
+
+.chip--input:not([data-disabled]):hover {
+  --chip-container: var(--input-chip-color-input-neutral-container-hover);
+  --chip-border:    var(--input-chip-color-input-neutral-border-hover);
+  --chip-text:      var(--input-chip-color-input-neutral-text-hover);
+  --chip-icon:      var(--input-chip-color-input-neutral-icon-hover);
+  --chip-remove-container: var(--input-chip-color-input-remove-neutral-container-hover);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-neutral-icon-hover);
+}
+
+.chip--input:not([data-disabled]):active {
+  --chip-container: var(--input-chip-color-input-neutral-container-pressed);
+  --chip-border:    var(--input-chip-color-input-neutral-border-pressed);
+  --chip-text:      var(--input-chip-color-input-neutral-text-pressed);
+  --chip-icon:      var(--input-chip-color-input-neutral-icon-pressed);
+  --chip-remove-container: var(--input-chip-color-input-remove-neutral-container-pressed);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-neutral-icon-pressed);
+}
+
+.chip--input[data-disabled] {
+  --chip-container: var(--input-chip-color-input-neutral-container-disabled);
+  --chip-border:    var(--input-chip-color-input-neutral-border-disabled);
+  --chip-text:      var(--input-chip-color-input-neutral-text-disabled);
+  --chip-icon:      var(--input-chip-color-input-neutral-icon-disabled);
+  --chip-remove-container: var(--input-chip-color-input-remove-neutral-container-disabled);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-neutral-icon-disabled);
+}
+
+.chip--input[data-tone="accent"] {
+  --chip-container: var(--input-chip-color-input-accent-container-normal);
+  --chip-border:    var(--input-chip-color-input-accent-border-normal);
+  --chip-text:      var(--input-chip-color-input-accent-text-normal);
+  --chip-icon:      var(--input-chip-color-input-accent-icon-normal);
+  --chip-remove-container: var(--input-chip-color-input-remove-accent-container-normal);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-accent-icon-normal);
+}
+
+.chip--input[data-tone="accent"]:not([data-disabled]):hover {
+  --chip-container: var(--input-chip-color-input-accent-container-hover);
+  --chip-border:    var(--input-chip-color-input-accent-border-hover);
+  --chip-text:      var(--input-chip-color-input-accent-text-hover);
+  --chip-icon:      var(--input-chip-color-input-accent-icon-hover);
+  --chip-remove-container: var(--input-chip-color-input-remove-accent-container-hover);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-accent-icon-hover);
+}
+
+.chip--input[data-tone="accent"]:not([data-disabled]):active {
+  --chip-container: var(--input-chip-color-input-accent-container-pressed);
+  --chip-border:    var(--input-chip-color-input-accent-border-pressed);
+  --chip-text:      var(--input-chip-color-input-accent-text-pressed);
+  --chip-icon:      var(--input-chip-color-input-accent-icon-pressed);
+  --chip-remove-container: var(--input-chip-color-input-remove-accent-container-pressed);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-accent-icon-pressed);
+}
+
+.chip--input[data-tone="accent"][data-disabled] {
+  --chip-container: var(--input-chip-color-input-accent-container-disabled);
+  --chip-border:    var(--input-chip-color-input-accent-border-disabled);
+  --chip-text:      var(--input-chip-color-input-accent-text-disabled);
+  --chip-icon:      var(--input-chip-color-input-accent-icon-disabled);
+  --chip-remove-container: var(--input-chip-color-input-remove-accent-container-disabled);
+  --chip-remove-icon:      var(--input-chip-color-input-remove-accent-icon-disabled);
+}
+
+/* Remove button */
+.chip__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--input-chip-size-inputChip-remove-container-md);
+  height: var(--input-chip-size-inputChip-remove-container-md);
+  border-radius: var(--input-chip-size-inputChip-remove-radius-md);
+  border: none;
+  background-color: var(--chip-remove-container);
+  color: var(--chip-remove-icon);
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  flex-shrink: 0;
+  margin-inline-start: var(--input-chip-size-inputChip-gapTextTrailing-md);
+}
+
+.chip--input[data-size="xs"] .chip__remove {
+  width: var(--input-chip-size-inputChip-remove-container-xs);
+  height: var(--input-chip-size-inputChip-remove-container-xs);
+  border-radius: var(--input-chip-size-inputChip-remove-radius-xs);
+  margin-inline-start: var(--input-chip-size-inputChip-gapTextTrailing-xs);
+}
+
+.chip--input[data-size="sm"] .chip__remove {
+  width: var(--input-chip-size-inputChip-remove-container-sm);
+  height: var(--input-chip-size-inputChip-remove-container-sm);
+  border-radius: var(--input-chip-size-inputChip-remove-radius-sm);
+  margin-inline-start: var(--input-chip-size-inputChip-gapTextTrailing-sm);
+}
+
+.chip__remove:focus-visible {
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: var(--spacing-1);
+}
+
+.chip__remove-icon {
+  width: var(--input-chip-size-inputChip-remove-icon-md);
+  height: var(--input-chip-size-inputChip-remove-icon-md);
+}
+
+.chip--input[data-size="xs"] .chip__remove-icon {
+  width: var(--input-chip-size-inputChip-remove-icon-xs);
+  height: var(--input-chip-size-inputChip-remove-icon-xs);
+}
+
+.chip--input[data-size="sm"] .chip__remove-icon {
+  width: var(--input-chip-size-inputChip-remove-icon-sm);
+  height: var(--input-chip-size-inputChip-remove-icon-sm);
+}
+
+/* ── MetaChip ────────────────────────────────────────────────────────────── */
+
+.chip--meta {
+  --chip-container: var(--input-chip-color-meta-container-normal);
+  --chip-border:    var(--input-chip-color-meta-border-normal);
+  --chip-text:      var(--input-chip-color-meta-text-normal);
+  --chip-icon:      var(--input-chip-color-meta-icon-normal);
+
+  border-radius: var(--input-chip-size-metaChip-radius);
+}
+
+.chip--meta:not(:disabled):hover {
+  --chip-container: var(--input-chip-color-meta-container-hover);
+  --chip-border:    var(--input-chip-color-meta-border-hover);
+  --chip-text:      var(--input-chip-color-meta-text-hover);
+  --chip-icon:      var(--input-chip-color-meta-icon-hover);
+}
+
+.chip--meta:not(:disabled):active {
+  --chip-container: var(--input-chip-color-meta-container-pressed);
+  --chip-border:    var(--input-chip-color-meta-border-pressed);
+  --chip-text:      var(--input-chip-color-meta-text-pressed);
+  --chip-icon:      var(--input-chip-color-meta-icon-pressed);
+}
+
+.chip--meta:disabled {
+  --chip-container: var(--input-chip-color-meta-container-disabled);
+  --chip-border:    var(--input-chip-color-meta-border-disabled);
+  --chip-text:      var(--input-chip-color-meta-text-disabled);
+  --chip-icon:      var(--input-chip-color-meta-icon-disabled);
+}
+
+.chip--meta .chip__value {
+  color: var(--input-chip-color-meta-value-normal);
+  padding-inline-start: 0;
+  padding-inline-end: var(--spacing-6);
+}
+
+.chip--meta:disabled .chip__value {
+  color: var(--input-chip-color-meta-value-disabled);
+}
+
+/* MetaChip size overrides: radius stays pill for all sizes */
+.chip--meta[data-size="xs"],
+.chip--meta[data-size="sm"] {
+  border-radius: var(--input-chip-size-metaChip-radius);
+}
+
+/* ── ChipGroup ───────────────────────────────────────────────────────────── */
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--input-chip-size-group-spacing-gapStack-md) var(--input-chip-size-group-spacing-gapInline-md);
+}
+
+.chip-group[data-layout="scroll"] {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.chip-group[data-layout="scroll"]::-webkit-scrollbar {
+  display: none;
+}
+
+.chip-group[data-size="xs"] {
+  gap: var(--input-chip-size-group-spacing-gapStack-xs) var(--input-chip-size-group-spacing-gapInline-xs);
+}
+
+.chip-group[data-size="sm"] {
+  gap: var(--input-chip-size-group-spacing-gapStack-sm) var(--input-chip-size-group-spacing-gapInline-sm);
+}

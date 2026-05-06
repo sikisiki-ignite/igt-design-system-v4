@@ -1,0 +1,468 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "649:256039",
+    "componentName": "Badge",
+    "extractedAt": "2026-05-04T08:50:53.513Z"
+  },
+  "componentPropertyDefinitions": {
+    "Tone": {
+      "type": "VARIANT",
+      "defaultValue": "urgent",
+      "variantOptions": [
+        "neutral",
+        "accent",
+        "urgent"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "lg",
+      "variantOptions": [
+        "sm",
+        "md",
+        "lg"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "9",
+      "type": "TEXT",
+      "conditional": null,
+      "dimensions": {
+        "width": 9,
+        "height": 16
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-content-inverse-strong",
+          "resolved": true
+        },
+        {
+          "property": "text-style",
+          "figmaValue": "12-600-16",
+          "token": "--semantic-label-12-semibold",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 9,
+          "height": 16
+        },
+        "lg": {
+          "width": 10,
+          "height": 16
+        },
+        "sm": {
+          "width": 8,
+          "height": 14
+        }
+      },
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "12-600-16",
+          "token": "--semantic-label-12-semibold",
+          "resolved": true
+        },
+        "lg": {
+          "figmaValue": "14-600-16",
+          "token": "--semantic-label-14-semibold",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "11-600-14",
+          "token": "--semantic-caption-11-semibold",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 4,
+    "paddingRight": 7,
+    "paddingBottom": 4,
+    "paddingLeft": 7,
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": 9999
+  },
+  "layoutSpecBySize": {
+    "md": {
+      "direction": "horizontal",
+      "gap": 10,
+      "paddingTop": 4,
+      "paddingRight": 7,
+      "paddingBottom": 4,
+      "paddingLeft": 7,
+      "alignItems": "center",
+      "justifyContent": "center",
+      "borderRadius": 9999,
+      "containerWidth": 24,
+      "containerHeight": 24,
+      "styleValues": [
+        {
+          "property": "gap",
+          "figmaValue": 10,
+          "token": "--spacing-10",
+          "resolved": true
+        },
+        {
+          "property": "padding-block",
+          "figmaValue": 4,
+          "token": "--spacing-4",
+          "resolved": true
+        },
+        {
+          "property": "padding-inline",
+          "figmaValue": 7,
+          "token": "--spacing-7",
+          "resolved": true
+        },
+        {
+          "property": "border-radius",
+          "figmaValue": 9999,
+          "token": "--radius-9999",
+          "resolved": true
+        },
+        {
+          "property": "flex-direction",
+          "figmaValue": "horizontal",
+          "cssValue": "row",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "align-items",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "justify-content",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        }
+      ]
+    },
+    "lg": {
+      "direction": "horizontal",
+      "gap": 10,
+      "paddingTop": 4,
+      "paddingRight": 8,
+      "paddingBottom": 4,
+      "paddingLeft": 8,
+      "alignItems": "center",
+      "justifyContent": "center",
+      "borderRadius": 9999,
+      "containerWidth": 28,
+      "containerHeight": 28,
+      "styleValues": [
+        {
+          "property": "gap",
+          "figmaValue": 10,
+          "token": "--spacing-10",
+          "resolved": true
+        },
+        {
+          "property": "padding-block",
+          "figmaValue": 4,
+          "token": "--spacing-4",
+          "resolved": true
+        },
+        {
+          "property": "padding-inline",
+          "figmaValue": 8,
+          "token": "--spacing-8",
+          "resolved": true
+        },
+        {
+          "property": "border-radius",
+          "figmaValue": 9999,
+          "token": "--radius-9999",
+          "resolved": true
+        },
+        {
+          "property": "flex-direction",
+          "figmaValue": "horizontal",
+          "cssValue": "row",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "align-items",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "justify-content",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        }
+      ]
+    },
+    "sm": {
+      "direction": "horizontal",
+      "gap": 10,
+      "paddingTop": 4,
+      "paddingRight": 6,
+      "paddingBottom": 4,
+      "paddingLeft": 6,
+      "alignItems": "center",
+      "justifyContent": "center",
+      "borderRadius": 9999,
+      "containerWidth": 20,
+      "containerHeight": 20,
+      "styleValues": [
+        {
+          "property": "gap",
+          "figmaValue": 10,
+          "token": "--spacing-10",
+          "resolved": true
+        },
+        {
+          "property": "padding-block",
+          "figmaValue": 4,
+          "token": "--spacing-4",
+          "resolved": true
+        },
+        {
+          "property": "padding-inline",
+          "figmaValue": 6,
+          "token": "--spacing-6",
+          "resolved": true
+        },
+        {
+          "property": "border-radius",
+          "figmaValue": 9999,
+          "token": "--radius-9999",
+          "resolved": true
+        },
+        {
+          "property": "flex-direction",
+          "figmaValue": "horizontal",
+          "cssValue": "row",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "align-items",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "justify-content",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        }
+      ]
+    }
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(228,41,57,1)",
+      "token": "--sys-border-status-danger-strong",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding-block",
+      "figmaValue": 4,
+      "token": "--spacing-4",
+      "resolved": true
+    },
+    {
+      "property": "padding-inline",
+      "figmaValue": 7,
+      "token": "--spacing-7",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 9999,
+      "token": "--radius-9999",
+      "resolved": true
+    },
+    {
+      "property": "flex-direction",
+      "figmaValue": "horizontal",
+      "cssValue": "row",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "align-items",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "justify-content",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "9",
+      "figmaValue": "12-600-16",
+      "token": "--semantic-label-12-semibold",
+      "resolved": true,
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "12-600-16",
+          "token": "--semantic-label-12-semibold",
+          "resolved": true
+        },
+        "lg": {
+          "figmaValue": "14-600-16",
+          "token": "--semantic-label-14-semibold",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "11-600-14",
+          "token": "--semantic-caption-11-semibold",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Tone=accent",
+      "variantProps": {
+        "Tone": "accent"
+      },
+      "layerStyles": {
+        "9": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "12-600-16",
+            "token": "--semantic-label-12-semibold",
+            "resolved": true
+          }
+        ],
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(34,114,235,1)",
+            "token": "--sys-border-brand-strong",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral"
+      },
+      "layerStyles": {
+        "9": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(51,61,75,1)",
+            "token": "--sys-contentOn-neutral-tint-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "12-600-16",
+            "token": "--semantic-label-12-semibold",
+            "resolved": true
+          }
+        ],
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Tone=urgent",
+      "variantProps": {
+        "Tone": "urgent"
+      },
+      "layerStyles": {
+        "9": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-content-inverse-strong",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "12-600-16",
+            "token": "--semantic-label-12-semibold",
+            "resolved": true
+          }
+        ],
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(228,41,57,1)",
+            "token": "--sys-border-status-danger-strong",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Tone": {
+      "tsProp": "tone",
+      "tsType": "'neutral' | 'accent' | 'urgent'",
+      "figmaToCode": {
+        "neutral": "neutral",
+        "accent": "accent",
+        "urgent": "urgent"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md' | 'lg'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md",
+        "lg": "lg"
+      }
+    }
+  },
+  "gaps": []
+}

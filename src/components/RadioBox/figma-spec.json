@@ -1,0 +1,504 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2125:24541",
+    "componentName": "RadioBox",
+    "extractedAt": "2026-05-03T14:36:31.340Z"
+  },
+  "componentPropertyDefinitions": {
+    "Invalid#2125:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Focus#2225:813": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Selected": {
+      "type": "VARIANT",
+      "defaultValue": "true",
+      "variantOptions": [
+        "true",
+        "false"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed"
+      ]
+    },
+    "Disabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "ReadOnly": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Radio",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "center",
+        "justifyContent": "flex-start",
+        "borderRadius": 9999
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,29,58,0.16)",
+          "token": "--sys-border-neutral-muted",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "igt_core_icon_circle_small_solid",
+          "type": "INSTANCE",
+          "componentName": "igt_core_icon_circle_small_solid",
+          "conditional": null,
+          "dimensions": {
+            "width": 12,
+            "height": 12
+          },
+          "dimensionsBySize": {
+            "sm": {
+              "width": 12,
+              "height": 12
+            },
+            "md": {
+              "width": 16,
+              "height": 16
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 16,
+          "height": 16
+        },
+        "md": {
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "layerName": "Invalid",
+      "type": "FRAME",
+      "conditional": "Invalid",
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(240,68,82,1)",
+          "token": "--sys-border-status-danger-default",
+          "resolved": true
+        }
+      ],
+      "children": [],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 16,
+          "height": 16
+        },
+        "md": {
+          "width": 20,
+          "height": 20
+        }
+      }
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "Focus",
+      "dimensions": {
+        "width": 20,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 9999
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-interactive-focus-ring-default",
+          "resolved": true
+        }
+      ],
+      "children": [],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 20,
+          "height": 20
+        },
+        "md": {
+          "width": 24,
+          "height": 24
+        }
+      }
+    },
+    {
+      "layerName": "hitArea",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 28,
+        "height": 28
+      },
+      "children": [],
+      "dimensionsBySize": {
+        "md": {
+          "width": 28,
+          "height": 28
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Disabled=false,ReadOnly=false,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "false",
+        "ReadOnly": "false"
+      },
+      "layerStyles": {
+        "Radio": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ],
+        "Invalid": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Disabled=false,ReadOnly=false,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "false",
+        "ReadOnly": "false"
+      },
+      "layerStyles": {
+        "Radio": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Invalid": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Disabled=false,ReadOnly=true,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "false",
+        "ReadOnly": "true"
+      },
+      "layerStyles": {
+        "Radio": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Invalid": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Disabled=false,ReadOnly=true,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "false",
+        "ReadOnly": "true"
+      },
+      "layerStyles": {
+        "Radio": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Invalid": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Disabled=true,ReadOnly=false,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "true",
+        "ReadOnly": "false"
+      },
+      "layerStyles": {
+        "Radio": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,23,51,0.02)",
+            "token": "--sys-border-neutral-disabled",
+            "resolved": true
+          }
+        ],
+        "Invalid": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Disabled=true,ReadOnly=false,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "true",
+        "ReadOnly": "false"
+      },
+      "layerStyles": {
+        "Radio": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Invalid": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Invalid": {
+      "tsProp": "invalid",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Focus": {
+      "tsProp": "focus",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Selected": {
+      "tsProp": "selected",
+      "tsType": "'true' | 'false'",
+      "figmaToCode": {
+        "true": "true",
+        "false": "false"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed"
+      }
+    },
+    "Disabled": {
+      "tsProp": "disabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "ReadOnly": {
+      "tsProp": "readOnly",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": []
+}

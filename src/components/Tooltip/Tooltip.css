@@ -1,0 +1,151 @@
+/* ── Tooltip ── */
+
+.tooltip {
+  --tooltip-bg: var(--sys-surface-floating);
+  --tooltip-border: transparent;
+  --tooltip-label-color: var(--sys-contentOn-dark-default);
+  --tooltip-desc-color: var(--sys-contentOn-dark-subtle);
+
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacing-none);
+  padding: var(--spacing-6) var(--spacing-10);
+  background-color: var(--tooltip-bg);
+  border: 1px solid var(--tooltip-border);
+  border-radius: var(--radius-16);
+  box-shadow: var(--sys-elevation-subtle);
+  max-width: 240px;
+  box-sizing: border-box;
+  z-index: 100;
+  animation-duration: 0.15s;
+  animation-timing-function: ease-out;
+}
+
+/* ── Tone variants ── */
+
+.tooltip[data-tone="surface"] {
+  --tooltip-bg: var(--sys-surface-static);
+  --tooltip-border: var(--sys-border-neutral-muted);
+  --tooltip-label-color: var(--sys-content-neutral-default);
+  --tooltip-desc-color: var(--sys-content-neutral-muted);
+}
+
+/* caret 접합부 border 제거 (fill이 seamless하게 이어지도록) */
+.tooltip[data-tone="surface"][data-has-arrow="true"][data-side="top"]    { border-bottom: none; }
+.tooltip[data-tone="surface"][data-has-arrow="true"][data-side="bottom"] { border-top: none; }
+.tooltip[data-tone="surface"][data-has-arrow="true"][data-side="left"]   { border-right: none; }
+.tooltip[data-tone="surface"][data-has-arrow="true"][data-side="right"]  { border-left: none; }
+
+/* drop-shadow: box-shadow과 달리 자식 요소(caret SVG) 포함한 전체 실루엣에 적용 → 접합부 그림자 이음새 제거 */
+.tooltip[data-tone="surface"][data-has-arrow="true"] {
+  box-shadow: none;
+  filter: drop-shadow(0px 2px 8px #0220470f);
+}
+
+
+.tooltip[data-tone="accent"] {
+  --tooltip-bg: var(--sys-border-brand-default);
+  --tooltip-border: transparent;
+  --tooltip-label-color: var(--sys-surface-static);
+  --tooltip-desc-color: var(--sys-contentOn-brand-solid-subtle);
+}
+
+/* ── Rich variant ── */
+
+.tooltip[data-variant="rich"] {
+  gap: var(--spacing-4);
+}
+
+/* ── Content ── */
+
+.tooltip__label {
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  color: var(--tooltip-label-color);
+}
+
+.tooltip__description {
+  font-family: var(--semantic-body-13-regular-fontFamily);
+  font-size: var(--semantic-body-13-regular-fontSize);
+  line-height: var(--semantic-body-13-regular-lineHeight);
+  font-weight: var(--semantic-body-13-regular-fontWeight);
+  color: var(--tooltip-desc-color);
+}
+
+/* ── Caret ── */
+
+.tooltip__caret {
+  position: absolute;
+  overflow: visible; /* stroke 끝부분이 viewBox 밖으로 잘리지 않도록 */
+}
+
+/* fill: tooltip 배경색으로 삼각형 채움 */
+.tooltip__caret-fill {
+  fill: var(--tooltip-bg);
+}
+
+/* stroke: V면(외곽 두 면)만 윤곽선 */
+.tooltip__caret-stroke {
+  fill: none;
+  stroke: var(--tooltip-border);
+  stroke-width: 1;
+}
+
+/* 방향별 위치 — 18×9(수직) / 9×18(수평) */
+
+/* tip↓  tooltip 아래 배치 */
+.tooltip[data-side="top"] .tooltip__caret {
+  top: 100%;
+  left: 50%;
+  margin-left: -9px;
+}
+
+/* tip↑  tooltip 위 배치 */
+.tooltip[data-side="bottom"] .tooltip__caret {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -9px;
+}
+
+/* tip→  tooltip 오른쪽 배치 */
+.tooltip[data-side="left"] .tooltip__caret {
+  left: 100%;
+  top: 50%;
+  margin-top: -9px;
+}
+
+/* tip←  tooltip 왼쪽 배치 */
+.tooltip[data-side="right"] .tooltip__caret {
+  right: 100%;
+  top: 50%;
+  margin-top: -9px;
+}
+
+/* align start/end 위치 보정 */
+.tooltip[data-side="top"][data-align="start"] .tooltip__caret,
+.tooltip[data-side="bottom"][data-align="start"] .tooltip__caret {
+  left: calc(var(--spacing-10) + 8px);
+  margin-left: 0;
+}
+
+.tooltip[data-side="top"][data-align="end"] .tooltip__caret,
+.tooltip[data-side="bottom"][data-align="end"] .tooltip__caret {
+  left: auto;
+  right: calc(var(--spacing-10) + 8px);
+  margin-left: 0;
+}
+
+.tooltip[data-side="left"][data-align="start"] .tooltip__caret,
+.tooltip[data-side="right"][data-align="start"] .tooltip__caret {
+  top: calc(var(--spacing-6) + 8px);
+  margin-top: 0;
+}
+
+.tooltip[data-side="left"][data-align="end"] .tooltip__caret,
+.tooltip[data-side="right"][data-align="end"] .tooltip__caret {
+  top: auto;
+  bottom: calc(var(--spacing-6) + 8px);
+  margin-top: 0;
+}

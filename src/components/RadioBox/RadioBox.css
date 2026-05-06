@@ -1,0 +1,132 @@
+/* ── RadioBox (Radio) ── */
+
+.radio {
+  --rb-container: var(--input-radio-size-container-md);
+  --rb-icon-size: var(--input-radio-size-iconSize-md);
+  --rb-radius:    var(--input-radio-size-radius-md);
+  --rb-border-w:  var(--input-radio-size-borderWidth-md);
+  --rb-hit-area:  var(--pattern-selectionControlBase-hitArea-md);
+
+  --rb-bg:     var(--input-radio-color-unselected-container-normal);
+  --rb-border: var(--input-radio-color-unselected-border-normal);
+  --rb-icon:   var(--input-radio-color-unselected-icon-normal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rb-hit-area);
+  height: var(--rb-hit-area);
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ── Size ── */
+.radio[data-size="sm"] {
+  --rb-container: var(--input-radio-size-container-sm);
+  --rb-icon-size: var(--input-radio-size-iconSize-sm);
+  --rb-radius:    var(--input-radio-size-radius-sm);
+  --rb-border-w:  var(--input-radio-size-borderWidth-sm);
+  --rb-hit-area:  var(--pattern-selectionControlBase-hitArea-sm);
+}
+
+/* ── Visually hidden native input (overlays entire hit area) ── */
+.radio__input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: inherit;
+  margin: 0;
+}
+
+/* ── Custom visual control ── */
+.radio__control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rb-container);
+  height: var(--rb-container);
+  border-radius: var(--rb-radius);
+  border: var(--rb-border-w) solid var(--rb-border);
+  background: var(--rb-bg);
+  color: var(--rb-icon);
+  transition: background 0.1s, border-color 0.1s;
+  flex-shrink: 0;
+}
+
+.radio__icon {
+  width: var(--rb-icon-size);
+  height: var(--rb-icon-size);
+  flex-shrink: 0;
+}
+
+/* ── Selected ── */
+.radio[data-checked="true"] {
+  --rb-bg:     var(--input-radio-color-selected-container-normal);
+  --rb-border: var(--input-radio-color-selected-border-normal);
+  --rb-icon:   var(--input-radio-color-selected-icon-normal);
+}
+
+/* ── Hover ── */
+.radio:not([data-disabled]):not([data-readonly]):hover {
+  --rb-bg:     var(--input-radio-color-unselected-container-hover);
+  --rb-border: var(--input-radio-color-unselected-border-hover);
+  --rb-icon:   var(--input-radio-color-unselected-icon-hover);
+}
+.radio[data-checked="true"]:not([data-disabled]):not([data-readonly]):hover {
+  --rb-bg:     var(--input-radio-color-selected-container-hover);
+  --rb-border: var(--input-radio-color-selected-border-hover);
+  --rb-icon:   var(--input-radio-color-selected-icon-hover);
+}
+
+/* ── Pressed ── */
+.radio:not([data-disabled]):not([data-readonly]):active {
+  --rb-bg:     var(--input-radio-color-unselected-container-pressed);
+  --rb-border: var(--input-radio-color-unselected-border-pressed);
+  --rb-icon:   var(--input-radio-color-unselected-icon-pressed);
+}
+.radio[data-checked="true"]:not([data-disabled]):not([data-readonly]):active {
+  --rb-bg:     var(--input-radio-color-selected-container-pressed);
+  --rb-border: var(--input-radio-color-selected-border-pressed);
+  --rb-icon:   var(--input-radio-color-selected-icon-pressed);
+}
+
+/* ── Disabled ── */
+.radio[data-disabled] {
+  --rb-bg:     var(--input-radio-color-unselected-container-disabled);
+  --rb-border: var(--input-radio-color-unselected-border-disabled);
+  --rb-icon:   var(--input-radio-color-unselected-icon-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.radio[data-checked="true"][data-disabled] {
+  --rb-bg:     var(--input-radio-color-selected-container-disabled);
+  --rb-border: var(--input-radio-color-selected-border-disabled);
+  --rb-icon:   var(--input-radio-color-selected-icon-disabled);
+}
+
+/* ── ReadOnly ── */
+.radio[data-readonly] {
+  --rb-bg:     var(--input-radio-color-unselected-container-readOnly);
+  --rb-border: var(--input-radio-color-unselected-border-readOnly);
+  --rb-icon:   var(--input-radio-color-unselected-icon-readOnly);
+  cursor: default;
+  pointer-events: none;
+}
+.radio[data-checked="true"][data-readonly] {
+  --rb-bg:     var(--input-radio-color-selected-container-readOnly);
+  --rb-border: var(--input-radio-color-selected-border-readOnly);
+  --rb-icon:   var(--input-radio-color-selected-icon-readOnly);
+}
+
+/* ── Invalid ── */
+/* variantStyleMatrix 근거:
+   unselected+invalid → Invalid FRAME에 red strokes → red border
+   selected+invalid   → Invalid FRAME(Radio 안에 중첩)에 red fills → red bg로 교체 */
+.radio[data-invalid] {
+  --rb-border: var(--input-radio-color-invalid-border);
+}
+.radio[data-checked="true"][data-invalid] {
+  --rb-bg:     var(--input-radio-color-selected-container-invalid);
+  --rb-border: var(--input-radio-color-selected-border-normal);
+}

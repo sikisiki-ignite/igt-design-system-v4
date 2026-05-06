@@ -1,0 +1,223 @@
+/* ── TextButton ── */
+
+.text-btn {
+  --tb-text:      currentColor;
+  --tb-icon:      currentColor;
+  --tb-container: transparent;
+  --tb-height:    var(--action-textButton-size-height-lg);
+  --tb-icon-size: var(--action-textButton-size-iconSize-lg);
+  --tb-padding:   var(--action-textButton-size-spacing-paddingInline-lg);
+  --tb-gap-trailing: var(--action-textButton-size-spacing-gapTextTrailing-lg);
+  --tb-text-inset: var(--action-textButton-size-spacing-textInsetInline-lg);
+  --tb-radius:    var(--action-textButton-size-radius-lg);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--action-textButton-size-spacing-gapInline-lg);
+  height: var(--tb-height);
+  padding: var(--action-textButton-size-spacing-paddingBlock-lg) var(--tb-padding);
+  border-radius: var(--tb-radius);
+  border: none;
+  background: var(--tb-container);
+  color: var(--tb-text);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  white-space: nowrap;
+  transition: background 0.1s, color 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Focus ring ── */
+.text-btn__focus-ring {
+  display: none;
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--tb-radius) + 2px);
+  outline: 2px solid var(--sys-border-brand-default);
+  pointer-events: none;
+}
+.text-btn:focus-visible .text-btn__focus-ring { display: block; }
+
+/* ── Leading icon ── */
+.text-btn__leading-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tb-icon-size);
+  height: var(--tb-icon-size);
+  flex-shrink: 0;
+  color: var(--tb-icon);
+  pointer-events: none;
+}
+.text-btn__leading-icon > span,
+.text-btn__leading-icon svg { width: 100%; height: 100%; }
+
+/* ── Label + trailing ── */
+.text-btn__label-trailing {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tb-gap-trailing);
+  pointer-events: none;
+}
+
+.text-btn__label {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  padding-inline: var(--tb-text-inset);
+  color: var(--tb-text);
+}
+
+/* underline variant */
+.text-btn[data-variant="underline"] .text-btn__label {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Trailing icon (chevron variant) ── */
+.text-btn__trailing-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tb-icon-size);
+  height: var(--tb-icon-size);
+  flex-shrink: 0;
+  color: var(--tb-icon);
+}
+.text-btn__trailing-icon > span,
+.text-btn__trailing-icon svg { width: 100%; height: 100%; }
+
+/* ── Disabled ── */
+.text-btn:disabled { cursor: not-allowed; pointer-events: none; }
+
+/* ── Size ── */
+.text-btn[data-size="xs"] {
+  --tb-height:       var(--action-textButton-size-height-xs);
+  --tb-icon-size:    var(--action-textButton-size-iconSize-xs);
+  --tb-padding:      var(--action-textButton-size-spacing-paddingInline-xs);
+  --tb-gap-trailing: var(--action-textButton-size-spacing-gapTextTrailing-xs);
+  --tb-text-inset:   var(--action-textButton-size-spacing-textInsetInline-xs);
+  --tb-radius:       var(--action-textButton-size-radius-xs);
+  gap: var(--action-textButton-size-spacing-gapInline-xs);
+  padding: var(--action-textButton-size-spacing-paddingBlock-xs) var(--action-textButton-size-spacing-paddingInline-xs);
+}
+.text-btn[data-size="sm"] {
+  --tb-height:       var(--action-textButton-size-height-sm);
+  --tb-icon-size:    var(--action-textButton-size-iconSize-sm);
+  --tb-padding:      var(--action-textButton-size-spacing-paddingInline-sm);
+  --tb-gap-trailing: var(--action-textButton-size-spacing-gapTextTrailing-sm);
+  --tb-text-inset:   var(--action-textButton-size-spacing-textInsetInline-sm);
+  --tb-radius:       var(--action-textButton-size-radius-sm);
+  gap: var(--action-textButton-size-spacing-gapInline-sm);
+  padding: var(--action-textButton-size-spacing-paddingBlock-sm) var(--action-textButton-size-spacing-paddingInline-sm);
+}
+.text-btn[data-size="md"] {
+  --tb-height:       var(--action-textButton-size-height-md);
+  --tb-icon-size:    var(--action-textButton-size-iconSize-md);
+  --tb-padding:      var(--action-textButton-size-spacing-paddingInline-md);
+  --tb-gap-trailing: var(--action-textButton-size-spacing-gapTextTrailing-md);
+  --tb-text-inset:   var(--action-textButton-size-spacing-textInsetInline-md);
+  --tb-radius:       var(--action-textButton-size-radius-md);
+  gap: var(--action-textButton-size-spacing-gapInline-md);
+  padding: var(--action-textButton-size-spacing-paddingBlock-md) var(--action-textButton-size-spacing-paddingInline-md);
+}
+.text-btn[data-size="lg"] {
+  --tb-height:       var(--action-textButton-size-height-lg);
+  --tb-icon-size:    var(--action-textButton-size-iconSize-lg);
+  --tb-padding:      var(--action-textButton-size-spacing-paddingInline-lg);
+  --tb-gap-trailing: var(--action-textButton-size-spacing-gapTextTrailing-lg);
+  --tb-text-inset:   var(--action-textButton-size-spacing-textInsetInline-lg);
+  --tb-radius:       var(--action-textButton-size-radius-lg);
+  gap: var(--action-textButton-size-spacing-gapInline-lg);
+  padding: var(--action-textButton-size-spacing-paddingBlock-lg) var(--action-textButton-size-spacing-paddingInline-lg);
+}
+
+/* ── Tone — neutral ── */
+.text-btn[data-tone="neutral"] {
+  --tb-text: var(--action-textButton-color-neutral-text-normal);
+  --tb-icon: var(--action-textButton-color-neutral-icon-normal);
+  --tb-container: var(--action-textButton-color-neutral-container-normal);
+}
+.text-btn[data-tone="neutral"]:hover {
+  --tb-text: var(--action-textButton-color-neutral-text-hover);
+  --tb-icon: var(--action-textButton-color-neutral-icon-hover);
+  --tb-container: var(--action-textButton-color-neutral-container-hover);
+}
+.text-btn[data-tone="neutral"]:active {
+  --tb-text: var(--action-textButton-color-neutral-text-pressed);
+  --tb-icon: var(--action-textButton-color-neutral-icon-pressed);
+  --tb-container: var(--action-textButton-color-neutral-container-pressed);
+}
+.text-btn[data-tone="neutral"]:disabled {
+  --tb-text: var(--action-textButton-color-neutral-text-disabled);
+  --tb-icon: var(--action-textButton-color-neutral-icon-disabled);
+  --tb-container: var(--action-textButton-color-neutral-container-disabled);
+}
+
+/* ── Tone — neutralMuted ── */
+.text-btn[data-tone="neutralMuted"] {
+  --tb-text: var(--action-textButton-color-neutralMuted-text-normal);
+  --tb-icon: var(--action-textButton-color-neutralMuted-icon-normal);
+  --tb-container: var(--action-textButton-color-neutralMuted-container-normal);
+}
+.text-btn[data-tone="neutralMuted"]:hover {
+  --tb-text: var(--action-textButton-color-neutralMuted-text-hover);
+  --tb-icon: var(--action-textButton-color-neutralMuted-icon-hover);
+  --tb-container: var(--action-textButton-color-neutralMuted-container-hover);
+}
+.text-btn[data-tone="neutralMuted"]:active {
+  --tb-text: var(--action-textButton-color-neutralMuted-text-pressed);
+  --tb-icon: var(--action-textButton-color-neutralMuted-icon-pressed);
+  --tb-container: var(--action-textButton-color-neutralMuted-container-pressed);
+}
+.text-btn[data-tone="neutralMuted"]:disabled {
+  --tb-text: var(--action-textButton-color-neutralMuted-text-disabled);
+  --tb-icon: var(--action-textButton-color-neutralMuted-icon-disabled);
+  --tb-container: var(--action-textButton-color-neutralMuted-container-disabled);
+}
+
+/* ── Tone — accent ── */
+.text-btn[data-tone="accent"] {
+  --tb-text: var(--action-textButton-color-accent-text-normal);
+  --tb-icon: var(--action-textButton-color-accent-icon-normal);
+  --tb-container: var(--action-textButton-color-accent-container-normal);
+}
+.text-btn[data-tone="accent"]:hover {
+  --tb-text: var(--action-textButton-color-accent-text-hover);
+  --tb-icon: var(--action-textButton-color-accent-icon-hover);
+  --tb-container: var(--action-textButton-color-accent-container-hover);
+}
+.text-btn[data-tone="accent"]:active {
+  --tb-text: var(--action-textButton-color-accent-text-pressed);
+  --tb-icon: var(--action-textButton-color-accent-icon-pressed);
+  --tb-container: var(--action-textButton-color-accent-container-pressed);
+}
+.text-btn[data-tone="accent"]:disabled {
+  --tb-text: var(--action-textButton-color-accent-text-disabled);
+  --tb-icon: var(--action-textButton-color-accent-icon-disabled);
+  --tb-container: var(--action-textButton-color-accent-container-disabled);
+}
+
+/* ── Tone — danger ── */
+.text-btn[data-tone="danger"] {
+  --tb-text: var(--action-textButton-color-danger-text-normal);
+  --tb-icon: var(--action-textButton-color-danger-icon-normal);
+  --tb-container: var(--action-textButton-color-danger-container-normal);
+}
+.text-btn[data-tone="danger"]:hover {
+  --tb-text: var(--action-textButton-color-danger-text-hover);
+  --tb-icon: var(--action-textButton-color-danger-icon-hover);
+  --tb-container: var(--action-textButton-color-danger-container-hover);
+}
+.text-btn[data-tone="danger"]:active {
+  --tb-text: var(--action-textButton-color-danger-text-pressed);
+  --tb-icon: var(--action-textButton-color-danger-icon-pressed);
+  --tb-container: var(--action-textButton-color-danger-container-pressed);
+}
+.text-btn[data-tone="danger"]:disabled {
+  --tb-text: var(--action-textButton-color-danger-text-disabled);
+  --tb-icon: var(--action-textButton-color-danger-icon-disabled);
+  --tb-container: var(--action-textButton-color-danger-container-disabled);
+}

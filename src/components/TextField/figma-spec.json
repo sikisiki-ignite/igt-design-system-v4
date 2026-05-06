@@ -1,0 +1,5527 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "330:4827",
+    "componentName": "TextField",
+    "extractedAt": "2026-05-04T07:57:30.519Z"
+  },
+  "componentPropertyDefinitions": {
+    "hasLabel#394:0": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "hasMessage#394:61": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "label#2069:71": {
+      "type": "TEXT",
+      "defaultValue": "이름"
+    },
+    "message#2069:192": {
+      "type": "TEXT",
+      "defaultValue": "성과 이름은 띄어쓰기 없이 입력해 주세요"
+    },
+    "isInvalid#2069:313": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "placeholder#2069:434": {
+      "type": "TEXT",
+      "defaultValue": "이름"
+    },
+    "value#2069:676": {
+      "type": "TEXT",
+      "defaultValue": "이그나이트"
+    },
+    "hasPrefixText#2191:0": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "hasSuffixText#2191:121": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "isFocused#2213:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "appearance": {
+      "type": "VARIANT",
+      "defaultValue": "outline",
+      "variantOptions": [
+        "outline",
+        "fill"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "lg",
+      "variantOptions": [
+        "sm",
+        "md",
+        "lg"
+      ]
+    },
+    "hasValue": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "state": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "active"
+      ]
+    },
+    "isDisabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "isReadOnly": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "label",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 320,
+        "height": 18
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "이름",
+          "type": "TEXT",
+          "conditional": null,
+          "dimensions": {
+            "width": 26,
+            "height": 18
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,19,43,0.58)",
+              "token": "--sys-content-neutral-muted",
+              "resolved": true
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "15-500-18",
+              "token": "--semantic-label-15-medium",
+              "resolved": true
+            }
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 26,
+              "height": 18
+            },
+            "md": {
+              "width": 25,
+              "height": 16
+            },
+            "sm": {
+              "width": 23,
+              "height": 16
+            }
+          },
+          "textStylesBySize": {
+            "lg": {
+              "figmaValue": "15-500-18",
+              "token": "--semantic-label-15-medium",
+              "resolved": true
+            },
+            "md": {
+              "figmaValue": "14-500-16",
+              "token": "--semantic-label-14-medium",
+              "resolved": true
+            },
+            "sm": {
+              "figmaValue": "13-500-16",
+              "token": "--semantic-label-13-medium",
+              "resolved": true
+            }
+          }
+        },
+        {
+          "layerName": "Parts / LabelIndicator",
+          "type": "INSTANCE",
+          "componentName": "Parts / LabelIndicator",
+          "conditional": null,
+          "dimensions": {
+            "width": 1,
+            "height": 18
+          },
+          "instanceProps": {
+            "requiredIndicator": "none"
+          },
+          "dimensionsBySize": {
+            "lg": {
+              "width": 1,
+              "height": 18
+            },
+            "md": {
+              "width": 1,
+              "height": 16
+            },
+            "sm": {
+              "width": 1,
+              "height": 16
+            }
+          }
+        },
+        {
+          "layerName": "이름",
+          "type": "TEXT",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 320,
+            "height": 18
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(240,68,82,1)",
+              "token": "--sys-content-status-danger-default",
+              "resolved": true
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "15-500-18",
+              "token": "--semantic-label-15-medium",
+              "resolved": true
+            }
+          ],
+          "sizeConditional": [
+            "lg"
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 26,
+              "height": 18
+            },
+            "md": {
+              "width": 25,
+              "height": 16
+            },
+            "sm": {
+              "width": 23,
+              "height": 16
+            }
+          },
+          "textStylesBySize": {
+            "lg": {
+              "figmaValue": "15-500-18",
+              "token": "--semantic-label-15-medium",
+              "resolved": true
+            },
+            "md": {
+              "figmaValue": "14-500-16",
+              "token": "--semantic-label-14-medium",
+              "resolved": true
+            },
+            "sm": {
+              "figmaValue": "13-500-16",
+              "token": "--semantic-label-13-medium",
+              "resolved": true
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "lg": {
+          "width": 320,
+          "height": 18
+        },
+        "md": {
+          "width": 320,
+          "height": 16
+        },
+        "sm": {
+          "width": 320,
+          "height": 16
+        }
+      }
+    },
+    {
+      "layerName": "container",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 320,
+        "height": 48
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 5,
+        "paddingTop": 12,
+        "paddingRight": 10,
+        "paddingBottom": 12,
+        "paddingLeft": 10,
+        "alignItems": "center",
+        "justifyContent": "flex-start",
+        "borderRadius": 12
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "textInsetX",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 300,
+            "height": 24
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 0,
+            "paddingRight": 5,
+            "paddingBottom": 0,
+            "paddingLeft": 5,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "이름",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 290,
+                "height": 24
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,25,54,0.31)",
+                  "token": "--sys-content-neutral-weak",
+                  "resolved": true
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "17-400-24",
+                  "token": "--semantic-body-17-regular",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 26,
+                  "height": 18
+                },
+                "md": {
+                  "width": 25,
+                  "height": 16
+                },
+                "sm": {
+                  "width": 23,
+                  "height": 16
+                }
+              },
+              "textStylesBySize": {
+                "lg": {
+                  "figmaValue": "15-500-18",
+                  "token": "--semantic-label-15-medium",
+                  "resolved": true
+                },
+                "md": {
+                  "figmaValue": "14-500-16",
+                  "token": "--semantic-label-14-medium",
+                  "resolved": true
+                },
+                "sm": {
+                  "figmaValue": "13-500-16",
+                  "token": "--semantic-label-13-medium",
+                  "resolved": true
+                }
+              }
+            },
+            {
+              "layerName": "이그나이트",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 290,
+                "height": 24
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,12,30,0.8)",
+                  "token": "--sys-content-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "17-400-24",
+                  "token": "--semantic-body-17-regular",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 290,
+                  "height": 24
+                },
+                "md": {
+                  "width": 294,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 298,
+                  "height": 20
+                }
+              },
+              "textStylesBySize": {
+                "lg": {
+                  "figmaValue": "17-400-24",
+                  "token": "--semantic-body-17-regular",
+                  "resolved": true
+                },
+                "md": {
+                  "figmaValue": "15-400-22",
+                  "token": "--semantic-body-15-regular",
+                  "resolved": true
+                },
+                "sm": {
+                  "figmaValue": "14-400-20",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              }
+            },
+            {
+              "layerName": "◇ Part / Cursor",
+              "type": "INSTANCE",
+              "componentName": "◇ Part / Cursor",
+              "conditional": null,
+              "dimensions": {
+                "width": 1,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,12,30,0.8)",
+                  "token": "--sys-content-neutral-default",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 1,
+                  "height": 20
+                },
+                "md": {
+                  "width": 1,
+                  "height": 20
+                },
+                "sm": {
+                  "width": 1,
+                  "height": 20
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 300,
+              "height": 24
+            },
+            "md": {
+              "width": 302,
+              "height": 22
+            },
+            "sm": {
+              "width": 304,
+              "height": 20
+            }
+          }
+        },
+        {
+          "layerName": "borderNormal",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 320,
+            "height": 48
+          },
+          "styleValues": [
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(0,27,55,0.1)",
+              "token": "--sys-border-neutral-subtle",
+              "resolved": true
+            }
+          ],
+          "children": [],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 320,
+              "height": 48
+            },
+            "md": {
+              "width": 320,
+              "height": 40
+            },
+            "sm": {
+              "width": 320,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "borderError",
+          "type": "FRAME",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 320,
+            "height": 48
+          },
+          "styleValues": [
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(240,68,82,1)",
+              "token": "--sys-border-status-danger-default",
+              "resolved": true
+            }
+          ],
+          "children": [],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 320,
+              "height": 48
+            },
+            "md": {
+              "width": 320,
+              "height": 40
+            },
+            "sm": {
+              "width": 320,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "focusRing",
+          "type": "FRAME",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 324,
+            "height": 52
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 2,
+            "paddingRight": 2,
+            "paddingBottom": 2,
+            "paddingLeft": 2,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start",
+            "borderRadius": 14
+          },
+          "styleValues": [
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(0,0,0,1)",
+              "token": "--sys-interactive-focus-ring-default",
+              "resolved": true
+            }
+          ],
+          "children": [],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 324,
+              "height": 52
+            },
+            "md": {
+              "width": 324,
+              "height": 44
+            },
+            "sm": {
+              "width": 324,
+              "height": 36
+            }
+          }
+        },
+        {
+          "layerName": "borderHover",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 320,
+            "height": 48
+          },
+          "styleValues": [
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(100,168,255,0.52)",
+              "token": "--sys-border-brand-subtle",
+              "resolved": true
+            }
+          ],
+          "children": [],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 320,
+              "height": 48
+            },
+            "md": {
+              "width": 320,
+              "height": 40
+            },
+            "sm": {
+              "width": 320,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "◇ Part / Cursor",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Cursor",
+          "conditional": null,
+          "dimensions": {
+            "width": 1,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(0,12,30,0.8)",
+              "token": "--sys-content-neutral-default",
+              "resolved": true
+            }
+          ],
+          "sizeConditional": [
+            "lg",
+            "md"
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 1,
+              "height": 20
+            },
+            "md": {
+              "width": 1,
+              "height": 20
+            },
+            "sm": {
+              "width": 1,
+              "height": 20
+            }
+          }
+        },
+        {
+          "layerName": "borderFocus",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 320,
+            "height": 48
+          },
+          "styleValues": [
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(49,130,246,1)",
+              "token": "--sys-border-brand-default",
+              "resolved": true
+            }
+          ],
+          "children": [],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 320,
+              "height": 48
+            },
+            "md": {
+              "width": 320,
+              "height": 40
+            },
+            "sm": {
+              "width": 320,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "Parts / Clear",
+          "type": "INSTANCE",
+          "componentName": "Parts / Clear",
+          "conditional": null,
+          "dimensions": {
+            "width": 28,
+            "height": 28
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_x_circle_solid",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_x_circle_solid",
+              "conditional": null,
+              "dimensions": {
+                "width": 18,
+                "height": 18
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-content-neutral-subtle",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 18,
+                    "height": 18
+                  },
+                  "children": [],
+                  "sizeConditional": [
+                    "lg",
+                    "md"
+                  ],
+                  "dimensionsBySize": {
+                    "lg": {
+                      "width": 18,
+                      "height": 18
+                    },
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 18,
+                    "height": 18
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ],
+                  "sizeConditional": [
+                    "lg",
+                    "md"
+                  ],
+                  "dimensionsBySize": {
+                    "lg": {
+                      "width": 18,
+                      "height": 18
+                    },
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "sizeConditional": [
+                "lg",
+                "md"
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 18,
+                  "height": 18
+                },
+                "md": {
+                  "width": 16,
+                  "height": 16
+                },
+                "sm": {
+                  "width": 14,
+                  "height": 14
+                }
+              }
+            },
+            {
+              "layerName": "hitArea",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 36,
+                "height": 36
+              },
+              "children": [],
+              "sizeConditional": [
+                "lg",
+                "md"
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 36,
+                  "height": 36
+                },
+                "md": {
+                  "width": 32,
+                  "height": 32
+                },
+                "sm": {
+                  "width": 24,
+                  "height": 24
+                }
+              }
+            }
+          ],
+          "sizeConditional": [
+            "lg",
+            "md"
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 28,
+              "height": 28
+            },
+            "md": {
+              "width": 24,
+              "height": 24
+            },
+            "sm": {
+              "width": 20,
+              "height": 18
+            }
+          },
+          "interactionStates": [
+            "hover",
+            "pressed"
+          ]
+        },
+        {
+          "layerName": "trailing",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 36,
+            "height": 36
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "Parts / Clear",
+              "type": "INSTANCE",
+              "componentName": "Parts / Clear",
+              "conditional": null,
+              "dimensions": {
+                "width": 18,
+                "height": 18
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(255,255,255,0)",
+                  "token": "--sys-border-none",
+                  "resolved": true
+                }
+              ],
+              "instanceProps": {
+                "State": "normal"
+              },
+              "children": [
+                {
+                  "layerName": "igt_core_icon_x_circle_solid",
+                  "type": "INSTANCE",
+                  "componentName": "igt_core_icon_x_circle_solid",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "dimensionsBySize": {
+                    "lg": {
+                      "width": 18,
+                      "height": 18
+                    },
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "hitArea",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 24,
+                    "height": 24
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "lg": {
+                      "width": 36,
+                      "height": 36
+                    },
+                    "md": {
+                      "width": 32,
+                      "height": 32
+                    },
+                    "sm": {
+                      "width": 24,
+                      "height": 24
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 28,
+                  "height": 28
+                },
+                "md": {
+                  "width": 24,
+                  "height": 24
+                },
+                "sm": {
+                  "width": 20,
+                  "height": 18
+                }
+              },
+              "interactionStates": [
+                "hover",
+                "pressed"
+              ]
+            }
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 36,
+              "height": 36
+            },
+            "md": {
+              "width": 32,
+              "height": 32
+            },
+            "sm": {
+              "width": 20,
+              "height": 18
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "lg": {
+          "width": 320,
+          "height": 48
+        },
+        "md": {
+          "width": 320,
+          "height": 40
+        },
+        "sm": {
+          "width": 320,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "message",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 320,
+        "height": 22
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "성과 이름은 띄어쓰기 없이 입력해 주세요",
+          "type": "TEXT",
+          "conditional": null,
+          "dimensions": {
+            "width": 320,
+            "height": 22
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(3,24,50,0.46)",
+              "token": "--sys-content-neutral-subtle",
+              "resolved": true
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "15-400-22",
+              "token": "--semantic-body-15-regular",
+              "resolved": true
+            }
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 320,
+              "height": 22
+            },
+            "md": {
+              "width": 320,
+              "height": 20
+            },
+            "sm": {
+              "width": 320,
+              "height": 18
+            }
+          },
+          "textStylesBySize": {
+            "lg": {
+              "figmaValue": "15-400-22",
+              "token": "--semantic-body-15-regular",
+              "resolved": true
+            },
+            "md": {
+              "figmaValue": "14-400-20",
+              "token": "--semantic-body-14-regular",
+              "resolved": true
+            },
+            "sm": {
+              "figmaValue": "13-400-18",
+              "token": "--semantic-body-13-regular",
+              "resolved": true
+            }
+          }
+        },
+        {
+          "layerName": "성과 이름은 띄어쓰기 없이 입력해 주세요",
+          "type": "TEXT",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 320,
+            "height": 22
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(240,68,82,1)",
+              "token": "--sys-content-status-danger-default",
+              "resolved": true
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "15-400-22",
+              "token": "--semantic-body-15-regular",
+              "resolved": true
+            }
+          ],
+          "sizeConditional": [
+            "lg"
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 320,
+              "height": 22
+            },
+            "md": {
+              "width": 320,
+              "height": 20
+            },
+            "sm": {
+              "width": 320,
+              "height": 18
+            }
+          },
+          "textStylesBySize": {
+            "lg": {
+              "figmaValue": "15-400-22",
+              "token": "--semantic-body-15-regular",
+              "resolved": true
+            },
+            "md": {
+              "figmaValue": "14-400-20",
+              "token": "--semantic-body-14-regular",
+              "resolved": true
+            },
+            "sm": {
+              "figmaValue": "13-400-18",
+              "token": "--semantic-body-13-regular",
+              "resolved": true
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "lg": {
+          "width": 320,
+          "height": 22
+        },
+        "md": {
+          "width": 320,
+          "height": 20
+        },
+        "sm": {
+          "width": 320,
+          "height": 18
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 6,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 6,
+      "token": "--spacing-6",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "flex-direction",
+      "figmaValue": "vertical",
+      "cssValue": "column",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "align-items",
+      "figmaValue": "flex-start",
+      "cssValue": "flex-start",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "justify-content",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "이름",
+      "figmaValue": "15-500-18",
+      "token": "--semantic-label-15-medium",
+      "resolved": true,
+      "textStylesBySize": {
+        "lg": {
+          "figmaValue": "15-500-18",
+          "token": "--semantic-label-15-medium",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "14-500-16",
+          "token": "--semantic-label-14-medium",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-500-16",
+          "token": "--semantic-label-13-medium",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "이름",
+      "figmaValue": "15-500-18",
+      "token": "--semantic-label-15-medium",
+      "resolved": true,
+      "textStylesBySize": {
+        "lg": {
+          "figmaValue": "15-500-18",
+          "token": "--semantic-label-15-medium",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "14-500-16",
+          "token": "--semantic-label-14-medium",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-500-16",
+          "token": "--semantic-label-13-medium",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "이름",
+      "figmaValue": "17-400-24",
+      "token": "--semantic-body-17-regular",
+      "resolved": true,
+      "textStylesBySize": {
+        "lg": {
+          "figmaValue": "15-500-18",
+          "token": "--semantic-label-15-medium",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "14-500-16",
+          "token": "--semantic-label-14-medium",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-500-16",
+          "token": "--semantic-label-13-medium",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "이그나이트",
+      "figmaValue": "17-400-24",
+      "token": "--semantic-body-17-regular",
+      "resolved": true,
+      "textStylesBySize": {
+        "lg": {
+          "figmaValue": "17-400-24",
+          "token": "--semantic-body-17-regular",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "15-400-22",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "14-400-20",
+          "token": "--semantic-body-14-regular",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "성과 이름은 띄어쓰기 없이 입력해 주세요",
+      "figmaValue": "15-400-22",
+      "token": "--semantic-body-15-regular",
+      "resolved": true,
+      "textStylesBySize": {
+        "lg": {
+          "figmaValue": "15-400-22",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "14-400-20",
+          "token": "--semantic-body-14-regular",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-400-18",
+          "token": "--semantic-body-13-regular",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "성과 이름은 띄어쓰기 없이 입력해 주세요",
+      "figmaValue": "15-400-22",
+      "token": "--semantic-body-15-regular",
+      "resolved": true,
+      "textStylesBySize": {
+        "lg": {
+          "figmaValue": "15-400-22",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "14-400-20",
+          "token": "--semantic-body-14-regular",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-400-18",
+          "token": "--semantic-body-13-regular",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=lg,state=active",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "◇ Part / Cursor": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=lg,state=hover",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=md,state=active",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "false",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "◇ Part / Cursor": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=md,state=hover",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "false",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=sm,state=active",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=sm,state=hover",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=true,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=true,size=md,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=false,isReadOnly=true,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=true,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=true,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=false,isDisabled=true,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=lg,state=active",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=lg,state=hover",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=md,state=active",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "true",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=md,state=hover",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "true",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=sm,state=active",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=sm,state=hover",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=true,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=true,size=md,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=false,isReadOnly=true,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=true,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=true,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "md",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=fill,hasValue=true,isDisabled=true,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "fill",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=lg,state=active",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "◇ Part / Cursor": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=lg,state=hover",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=md,state=active",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "false",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=md,state=hover",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "false",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=sm,state=active",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=sm,state=hover",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=true,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=true,size=md,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=false,isReadOnly=true,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=true,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,23,51,0.02)",
+            "token": "--sys-border-neutral-disabled",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=true,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,23,51,0.02)",
+            "token": "--sys-border-neutral-disabled",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=false,isDisabled=true,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "false",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,23,51,0.02)",
+            "token": "--sys-border-neutral-disabled",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=lg,state=active",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "Parts / Clear": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=lg,state=hover",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=md,state=active",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "true",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "Parts / Clear": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=md,state=hover",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "true",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=sm,state=active",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "active",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderFocus": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=sm,state=hover",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "hover",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderHover": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "borderNormal": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "borderError": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-content-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=true,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=true,size=md,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=false,isReadOnly=true,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "false",
+        "isReadOnly": "true"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,19,43,0.58)",
+            "token": "--sys-content-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=true,isReadOnly=false,size=lg,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "lg",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-500-18",
+            "token": "--semantic-label-15-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,23,51,0.02)",
+            "token": "--sys-border-neutral-disabled",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400-22",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=true,isReadOnly=false,size=md,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "md",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-500-16",
+            "token": "--semantic-label-14-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,23,51,0.02)",
+            "token": "--sys-border-neutral-disabled",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-400-20",
+            "token": "--semantic-body-14-regular",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "appearance=outline,hasValue=true,isDisabled=true,isReadOnly=false,size=sm,state=normal",
+      "variantProps": {
+        "appearance": "outline",
+        "size": "sm",
+        "hasValue": "true",
+        "state": "normal",
+        "isDisabled": "true",
+        "isReadOnly": "false"
+      },
+      "layerStyles": {
+        "이름": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(3,24,50,0.46)",
+            "token": "--sys-content-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-500-16",
+            "token": "--semantic-label-13-medium",
+            "resolved": true
+          }
+        ],
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(242,244,246,1)",
+            "token": "--sys-surface-subtle",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,23,51,0.02)",
+            "token": "--sys-border-neutral-disabled",
+            "resolved": true
+          }
+        ],
+        "성과 이름은 띄어쓰기 없이 입력해 주세요": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-content-neutral-disabled",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "13-400-18",
+            "token": "--semantic-body-13-regular",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "hasLabel": {
+      "tsProp": "hasLabel",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "hasMessage": {
+      "tsProp": "hasMessage",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "label": {
+      "tsProp": "label",
+      "tsType": "string",
+      "figmaToCode": {}
+    },
+    "message": {
+      "tsProp": "message",
+      "tsType": "string",
+      "figmaToCode": {}
+    },
+    "isInvalid": {
+      "tsProp": "isInvalid",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "placeholder": {
+      "tsProp": "placeholder",
+      "tsType": "string",
+      "figmaToCode": {}
+    },
+    "value": {
+      "tsProp": "value",
+      "tsType": "string",
+      "figmaToCode": {}
+    },
+    "hasPrefixText": {
+      "tsProp": "hasPrefixText",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "hasSuffixText": {
+      "tsProp": "hasSuffixText",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "isFocused": {
+      "tsProp": "isFocused",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "appearance": {
+      "tsProp": "appearance",
+      "tsType": "'outline' | 'fill'",
+      "figmaToCode": {
+        "outline": "outline",
+        "fill": "fill"
+      }
+    },
+    "size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md' | 'lg'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md",
+        "lg": "lg"
+      }
+    },
+    "hasValue": {
+      "tsProp": "hasValue",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "state": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'active'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "active": "active"
+      }
+    },
+    "isDisabled": {
+      "tsProp": "isDisabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "isReadOnly": {
+      "tsProp": "isReadOnly",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "figmaProp": "이름 (size 조건부 레이어)",
+      "figmaValue": "size=[lg] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "◇ Part / Cursor (size 조건부 레이어)",
+      "figmaValue": "size=[lg, md] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg, md] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "Parts / Clear (size 조건부 레이어)",
+      "figmaValue": "size=[lg, md] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg, md] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "igt_core_icon_x_circle_solid (size 조건부 레이어)",
+      "figmaValue": "size=[lg, md] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg, md] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "stroke (size 조건부 레이어)",
+      "figmaValue": "size=[lg, md] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg, md] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "grid (size 조건부 레이어)",
+      "figmaValue": "size=[lg, md] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg, md] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "hitArea (size 조건부 레이어)",
+      "figmaValue": "size=[lg, md] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg, md] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "성과 이름은 띄어쓰기 없이 입력해 주세요 (size 조건부 레이어)",
+      "figmaValue": "size=[lg] 에만 존재",
+      "status": "open",
+      "note": "레이어가 [lg] 사이즈에서만 존재. 해당 size에서의 조건부 렌더링 또는 boolean prop 추가 필요."
+    }
+  ]
+}

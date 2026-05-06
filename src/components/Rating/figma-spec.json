@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "730:24228",
+    "componentName": "Rating",
+    "extractedAt": "2026-05-04T00:46:44.012Z"
+  },
+  "componentPropertyDefinitions": {
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md"
+      ]
+    },
+    "Value": {
+      "type": "VARIANT",
+      "defaultValue": "5",
+      "variantOptions": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "disabled"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "◇ Part / Star",
+      "type": "INSTANCE",
+      "componentName": "◇ Part / Star",
+      "conditional": null,
+      "dimensions": {
+        "width": 24,
+        "height": 24
+      },
+      "dimensionsBySize": {
+        "xs": {
+          "width": 24,
+          "height": 24
+        },
+        "sm": {
+          "width": 28,
+          "height": 28
+        },
+        "md": {
+          "width": 32,
+          "height": 32
+        }
+      },
+      "interactionStates": [
+        "hover",
+        "pressed"
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Value=0",
+      "variantProps": {
+        "Value": "0"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Value=1",
+      "variantProps": {
+        "Value": "1"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Value=2",
+      "variantProps": {
+        "Value": "2"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Value=3",
+      "variantProps": {
+        "Value": "3"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Value=4",
+      "variantProps": {
+        "Value": "4"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Value=5",
+      "variantProps": {
+        "Value": "5"
+      },
+      "layerStyles": {}
+    }
+  ],
+  "propMapping": {
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "Value": {
+      "tsProp": "value",
+      "tsType": "'0' | '1' | '2' | '3' | '4' | '5'",
+      "figmaToCode": {
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'disabled'",
+      "figmaToCode": {
+        "normal": "normal",
+        "disabled": "disabled"
+      }
+    }
+  },
+  "gaps": []
+}

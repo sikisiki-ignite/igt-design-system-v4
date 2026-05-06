@@ -1,0 +1,188 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "710:20230",
+    "componentName": "ButtonGroupAttached",
+    "extractedAt": "2026-05-01T17:47:22.526Z"
+  },
+  "componentPropertyDefinitions": {
+    "* DENSITY": {
+      "type": "VARIANT",
+      "defaultValue": "STANDARD",
+      "variantOptions": [
+        "STANDARD",
+        "COMPACT"
+      ]
+    },
+    "Variant": {
+      "type": "VARIANT",
+      "defaultValue": "soft",
+      "variantOptions": [
+        "soft",
+        "outline"
+      ]
+    },
+    "Width": {
+      "type": "VARIANT",
+      "defaultValue": "content",
+      "variantOptions": [
+        "content",
+        "equal"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md"
+      ]
+    },
+    "Items": {
+      "type": "VARIANT",
+      "defaultValue": "2",
+      "variantOptions": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Button",
+      "type": "INSTANCE",
+      "componentName": "Button",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "divider",
+      "type": "FRAME",
+      "conditional": null,
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 8,
+        "paddingRight": 0,
+        "paddingBottom": 8,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": []
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "flex-start",
+    "borderRadius": 8
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,1)",
+      "token": null,
+      "resolved": false
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 8,
+      "token": "--radius-8",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "* DENSITY": {
+      "tsProp": "*DENSITY",
+      "tsType": "'STANDARD' | 'COMPACT'",
+      "figmaToCode": {
+        "STANDARD": "standard",
+        "COMPACT": "compact"
+      }
+    },
+    "Variant": {
+      "tsProp": "variant",
+      "tsType": "'soft' | 'outline'",
+      "figmaToCode": {
+        "soft": "soft",
+        "outline": "outline"
+      }
+    },
+    "Width": {
+      "tsProp": "width",
+      "tsType": "'content' | 'equal'",
+      "figmaToCode": {
+        "content": "content",
+        "equal": "equal"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "Items": {
+      "tsProp": "items",
+      "tsType": "'2' | '3' | '4' | '5'",
+      "figmaToCode": {
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,1)",
+      "status": "open",
+      "note": "토큰 미매핑 — 토큰 추가 또는 수동 확인 필요"
+    }
+  ]
+}

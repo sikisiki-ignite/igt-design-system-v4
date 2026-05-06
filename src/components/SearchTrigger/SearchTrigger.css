@@ -1,0 +1,149 @@
+/* ── SearchTrigger ── */
+
+.search-trigger {
+  --st-container:   transparent;
+  --st-border:      transparent;
+  --st-icon:        currentColor;
+  --st-text:        currentColor;
+  --st-height:      var(--action-searchTrigger-size-shared-height-md);
+  --st-icon-size:   var(--action-searchTrigger-size-extended-iconSize-md);
+  --st-padding:     var(--action-searchTrigger-size-shared-spacing-paddingInline-md);
+  --st-gap:         var(--action-searchTrigger-size-shared-spacing-gapInline-md);
+  --st-radius:      var(--action-searchTrigger-size-shared-radius-md);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--st-gap);
+  height: var(--st-height);
+  padding-inline: var(--st-padding);
+  border-radius: var(--st-radius);
+  border: 1px solid var(--st-border);
+  background: var(--st-container);
+  color: var(--st-text);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  white-space: nowrap;
+  transition: background 0.1s, border-color 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* icon-only variant: square */
+.search-trigger[data-variant="icon"] {
+  width: var(--st-height);
+  padding-inline: 0;
+  justify-content: center;
+}
+
+/* field variant: full width */
+.search-trigger[data-variant="field"] {
+  width: 100%;
+}
+
+/* ── Focus ring ── */
+.search-trigger__focus-ring {
+  display: none;
+  position: absolute;
+  inset: -3px;
+  border-radius: calc(var(--st-radius) + 2px);
+  outline: 2px solid var(--sys-border-brand-default);
+  pointer-events: none;
+}
+.search-trigger:focus-visible .search-trigger__focus-ring { display: block; }
+
+/* ── Icon slot ── */
+.search-trigger__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--st-icon-size);
+  height: var(--st-icon-size);
+  flex-shrink: 0;
+  color: var(--st-icon);
+  pointer-events: none;
+}
+.search-trigger__icon > span,
+.search-trigger__icon svg { width: 100%; height: 100%; }
+
+/* ── Placeholder text ── */
+.search-trigger__placeholder {
+  font-family: var(--semantic-label-14-medium-fontFamily);
+  font-size: var(--semantic-label-14-medium-fontSize);
+  line-height: var(--semantic-label-14-medium-lineHeight);
+  font-weight: var(--semantic-label-14-medium-fontWeight);
+  color: var(--st-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+/* ── Disabled ── */
+.search-trigger:disabled { cursor: not-allowed; pointer-events: none; }
+
+/* ── Size ── */
+.search-trigger[data-size="sm"] {
+  --st-height:    var(--action-searchTrigger-size-shared-height-sm);
+  --st-icon-size: var(--action-searchTrigger-size-extended-iconSize-sm);
+  --st-padding:   var(--action-searchTrigger-size-shared-spacing-paddingInline-sm);
+  --st-gap:       var(--action-searchTrigger-size-shared-spacing-gapInline-sm);
+  --st-radius:    var(--action-searchTrigger-size-shared-radius-sm);
+}
+.search-trigger[data-size="md"] {
+  --st-height:    var(--action-searchTrigger-size-shared-height-md);
+  --st-icon-size: var(--action-searchTrigger-size-extended-iconSize-md);
+  --st-padding:   var(--action-searchTrigger-size-shared-spacing-paddingInline-md);
+  --st-gap:       var(--action-searchTrigger-size-shared-spacing-gapInline-md);
+  --st-radius:    var(--action-searchTrigger-size-shared-radius-md);
+}
+
+/* ── Appearance — default (fill) ── */
+.search-trigger[data-appearance="default"] {
+  --st-container: var(--action-searchTrigger-color-fill-container-normal);
+  --st-border:    var(--action-searchTrigger-color-fill-border-normal);
+  --st-icon:      var(--action-searchTrigger-color-fill-icon-normal);
+  --st-text:      var(--action-searchTrigger-color-fill-text-normal);
+}
+.search-trigger[data-appearance="default"]:hover {
+  --st-container: var(--action-searchTrigger-color-fill-container-hover);
+  --st-border:    var(--action-searchTrigger-color-fill-border-hover);
+  --st-icon:      var(--action-searchTrigger-color-fill-icon-hover);
+  --st-text:      var(--action-searchTrigger-color-fill-text-hover);
+}
+.search-trigger[data-appearance="default"]:active {
+  --st-container: var(--action-searchTrigger-color-fill-container-pressed);
+  --st-border:    var(--action-searchTrigger-color-fill-border-pressed);
+  --st-icon:      var(--action-searchTrigger-color-fill-icon-pressed);
+  --st-text:      var(--action-searchTrigger-color-fill-text-pressed);
+}
+.search-trigger[data-appearance="default"]:disabled {
+  --st-container: var(--action-searchTrigger-color-fill-container-disabled);
+  --st-border:    var(--action-searchTrigger-color-fill-border-disabled);
+  --st-icon:      var(--action-searchTrigger-color-fill-icon-disabled);
+  --st-text:      var(--action-searchTrigger-color-fill-text-disabled);
+}
+
+/* ── Appearance — subtle (outline) ── */
+.search-trigger[data-appearance="subtle"] {
+  --st-container: var(--action-searchTrigger-color-outline-container-normal);
+  --st-border:    var(--action-searchTrigger-color-outline-border-normal);
+  --st-icon:      var(--action-searchTrigger-color-outline-icon-normal);
+  --st-text:      var(--action-searchTrigger-color-outline-text-normal);
+}
+.search-trigger[data-appearance="subtle"]:hover {
+  --st-container: var(--action-searchTrigger-color-outline-container-hover);
+  --st-border:    var(--action-searchTrigger-color-outline-border-hover);
+  --st-icon:      var(--action-searchTrigger-color-outline-icon-hover);
+  --st-text:      var(--action-searchTrigger-color-outline-text-hover);
+}
+.search-trigger[data-appearance="subtle"]:active {
+  --st-container: var(--action-searchTrigger-color-outline-container-pressed);
+  --st-border:    var(--action-searchTrigger-color-outline-border-pressed);
+  --st-icon:      var(--action-searchTrigger-color-outline-icon-pressed);
+  --st-text:      var(--action-searchTrigger-color-outline-text-pressed);
+}
+.search-trigger[data-appearance="subtle"]:disabled {
+  --st-container: var(--action-searchTrigger-color-outline-container-disabled);
+  --st-border:    var(--action-searchTrigger-color-outline-border-disabled);
+  --st-icon:      var(--action-searchTrigger-color-outline-icon-disabled);
+  --st-text:      var(--action-searchTrigger-color-outline-text-disabled);
+}

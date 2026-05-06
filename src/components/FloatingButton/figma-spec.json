@@ -1,0 +1,218 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "502:11152",
+    "componentName": "FloatingButton",
+    "extractedAt": "2026-05-01T16:53:54.668Z"
+  },
+  "componentPropertyDefinitions": {
+    "hasIcon#129:35": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "isFocused#502:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Variant": {
+      "type": "VARIANT",
+      "defaultValue": "icon",
+      "variantOptions": [
+        "icon",
+        "extended"
+      ]
+    },
+    "priority": {
+      "type": "VARIANT",
+      "defaultValue": "primaryFill",
+      "variantOptions": [
+        "primaryFill",
+        "secondaryFill",
+        "secondaryOutline"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "lg",
+      "variantOptions": [
+        "md",
+        "lg"
+      ]
+    },
+    "isDisabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "isLoading": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "state": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Icon",
+      "type": "INSTANCE",
+      "componentName": "Icon",
+      "conditional": null
+    },
+    {
+      "layerName": "label-frame",
+      "type": "FRAME",
+      "conditional": "variant === 'extended'",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 0,
+        "paddingRight": 6,
+        "paddingBottom": 0,
+        "paddingLeft": 6,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        { "layerName": "label", "type": "TEXT", "conditional": null }
+      ]
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "__hidden__",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 9999
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-contentOn-status-success-solid-default",
+          "resolved": true
+        }
+      ],
+      "children": []
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 4,
+    "paddingRight": 12,
+    "paddingBottom": 4,
+    "paddingLeft": 12,
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": 9999
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "background",
+      "figmaValue": "rgba(49,130,246,1)",
+      "token": "--color-blue-500",
+      "resolved": true
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "box-shadow",
+      "figmaValue": "0px 2px 8px 0px rgba(2,32,71,0.06)",
+      "token": "--sys-elevation-subtle",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding-block",
+      "figmaValue": 4,
+      "token": "--spacing-4",
+      "resolved": true
+    },
+    {
+      "property": "padding-inline",
+      "figmaValue": 12,
+      "token": "--spacing-12",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 9999,
+      "token": "--radius-9999",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Variant": {
+      "tsProp": "variant",
+      "tsType": "'icon' | 'extended'",
+      "figmaToCode": { "icon": "icon", "extended": "extended" }
+    },
+    "priority": {
+      "tsProp": "priority",
+      "tsType": "'primaryFill' | 'secondaryFill' | 'secondaryOutline'",
+      "figmaToCode": {
+        "primaryFill": "primaryFill",
+        "secondaryFill": "secondaryFill",
+        "secondaryOutline": "secondaryOutline"
+      },
+      "_tokenNote": "primaryFill→tone-primary-fill-strong, secondaryFill→tone-secondary-fill-strong, secondaryOutline→tone-secondary-outline-strong"
+    },
+    "size": {
+      "tsProp": "size",
+      "tsType": "'lg' | 'md'",
+      "figmaToCode": { "lg": "lg", "md": "md" }
+    },
+    "hasIcon": {
+      "tsProp": "icon",
+      "tsType": "ReactNode",
+      "_note": "extended variant에서 선택적 아이콘. icon variant는 항상 아이콘 필수"
+    },
+    "isDisabled": {
+      "tsProp": "disabled",
+      "tsType": "boolean",
+      "figmaToCode": { "false": false, "true": true }
+    },
+    "isLoading": {
+      "tsProp": "isLoading",
+      "tsType": "boolean",
+      "figmaToCode": { "false": false, "true": true }
+    }
+  },
+  "gaps": []
+}

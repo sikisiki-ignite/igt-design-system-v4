@@ -1,0 +1,12 @@
+/* ── Backdrop ── */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--sys-overlay-container-dark-disabled);
+  z-index: 40;
+}
+
+.backdrop[data-strength="strong"] {
+  background-color: var(--sys-overlay-backdrop-strong);
+}

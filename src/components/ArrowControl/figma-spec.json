@@ -1,0 +1,203 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2020:24703",
+    "componentName": "ArrowControl",
+    "extractedAt": "2026-05-01T17:23:46.123Z"
+  },
+  "componentPropertyDefinitions": {
+    "Focus#2221:507": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Direction": {
+      "type": "VARIANT",
+      "defaultValue": "prev",
+      "variantOptions": [
+        "prev",
+        "next"
+      ]
+    },
+    "Variant": {
+      "type": "VARIANT",
+      "defaultValue": "surfaceFill",
+      "variantOptions": [
+        "surfaceOutline",
+        "overlayLight",
+        "surfaceFill",
+        "overlayDark"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed"
+      ]
+    },
+    "Disabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "mono/chevron/left",
+      "type": "INSTANCE",
+      "componentName": "mono/chevron/left",
+      "conditional": null
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "Focus",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 9999
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-contentOn-status-success-solid-default",
+          "resolved": true
+        }
+      ],
+      "children": []
+    },
+    {
+      "layerName": "iconnew",
+      "type": "INSTANCE",
+      "componentName": "iconnew",
+      "conditional": null
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": 9999
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(2,32,71,1)",
+      "token": null,
+      "resolved": false
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 9999,
+      "token": "--radius-9999",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Focus": {
+      "tsProp": "focus",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Direction": {
+      "tsProp": "direction",
+      "tsType": "'prev' | 'next'",
+      "figmaToCode": {
+        "prev": "prev",
+        "next": "next"
+      }
+    },
+    "Variant": {
+      "tsProp": "variant",
+      "tsType": "'surfaceOutline' | 'overlayLight' | 'surfaceFill' | 'overlayDark'",
+      "figmaToCode": {
+        "surfaceOutline": "surfaceoutline",
+        "overlayLight": "overlaylight",
+        "surfaceFill": "surfacefill",
+        "overlayDark": "overlaydark"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed"
+      }
+    },
+    "Disabled": {
+      "tsProp": "disabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "property": "background",
+      "figmaValue": "rgba(2,32,71,1)",
+      "status": "open",
+      "note": "토큰 미매핑 — 토큰 추가 또는 수동 확인 필요"
+    }
+  ]
+}

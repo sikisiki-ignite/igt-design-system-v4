@@ -1,0 +1,60 @@
+/* ── Popover ── */
+
+.popover {
+  --popover-bg: var(--sys-surface-static);
+  --popover-border: var(--sys-border-neutral-subtle);
+  --popover-title-color: var(--sys-content-neutral-strong);
+  --popover-body-color: var(--sys-content-neutral-default);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+  padding: var(--spacing-24);
+  background-color: var(--popover-bg);
+  border: var(--borderWidth-1) solid var(--popover-border);
+  border-radius: var(--radius-20);
+  box-shadow: var(--sys-elevation-popover);
+  box-sizing: border-box;
+  outline: none;
+}
+
+.popover[data-emphasis="inverse"] {
+  --popover-bg: var(--sys-surface-floating);
+  --popover-border: transparent;
+  --popover-title-color: var(--sys-contentOn-dark-default);
+  --popover-body-color: var(--sys-contentOn-dark-subtle);
+}
+
+/* ── Section ── */
+
+.popover__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+/* ── Header ── */
+
+.popover__header {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-14-semibold-letterSpacing);
+  color: var(--popover-title-color);
+}
+
+/* ── Body ── */
+
+.popover__body {
+  width: 100%;
+  font-family: var(--semantic-reading-14-regular-fontFamily);
+  font-size: var(--semantic-reading-14-regular-fontSize);
+  line-height: var(--semantic-reading-14-regular-lineHeight);
+  font-weight: var(--semantic-reading-14-regular-fontWeight);
+  letter-spacing: var(--semantic-reading-14-regular-letterSpacing);
+  color: var(--popover-body-color);
+  white-space: pre-line;
+}

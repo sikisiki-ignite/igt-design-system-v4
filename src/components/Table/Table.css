@@ -1,0 +1,77 @@
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ── Header ── */
+.table__header-row {
+  background: var(--sys-surface-grouped-default);
+}
+
+.table__th {
+  padding-block: var(--dataDisplay-table-size-paddingBlock-md);
+  padding-inline: var(--dataDisplay-table-size-paddingInline);
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  color: var(--sys-content-neutral-default);
+  border-bottom: 1px solid var(--sys-border-neutral-weak);
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* ── Rows ── */
+.table__row {
+  border-bottom: 1px solid var(--sys-border-neutral-weak);
+  transition: background 0.1s ease;
+}
+.table__row:hover {
+  background: var(--sys-interactive-hover-overlay-neutral);
+}
+.table__row[data-selected] {
+  background: var(--sys-container-brand-tint-default);
+}
+
+/* ── Cells ── */
+.table__td {
+  padding-block: var(--dataDisplay-table-size-paddingBlock-lg);
+  padding-inline: var(--dataDisplay-table-size-paddingInline);
+  font-family: var(--semantic-body-14-regular-fontFamily);
+  font-size: var(--semantic-body-14-regular-fontSize);
+  line-height: var(--semantic-body-14-regular-lineHeight);
+  font-weight: var(--semantic-body-14-regular-fontWeight);
+  color: var(--sys-content-neutral-default);
+  vertical-align: middle;
+}
+
+.table-wrapper[data-size="md"] .table__td {
+  padding-block: var(--dataDisplay-table-size-paddingBlock-md);
+}
+
+/* ── Empty state ── */
+.table__td--empty {
+  padding-block: var(--dataDisplay-table-size-paddingBlock-lg);
+  text-align: center;
+  border-bottom: none;
+}
+
+/* ── Checkbox columns ── */
+.table__th--check,
+.table__td--check {
+  width: 56px;
+  padding-block: 0;
+  padding-inline: var(--dataDisplay-table-size-paddingInline);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.table-wrapper[data-size="md"] .table__td--check {
+  padding-block: 0;
+}

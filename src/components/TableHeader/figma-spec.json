@@ -1,0 +1,999 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "375:7986",
+    "componentName": "TableHeader",
+    "extractedAt": "2026-05-04T10:26:56.112Z"
+  },
+  "componentPropertyDefinitions": {
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "none",
+        "default",
+        "check-box"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "xl",
+      "variantOptions": [
+        "md",
+        "lg",
+        "xl"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Frame 1321320276",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 160,
+        "height": 32
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 6,
+        "paddingRight": 0,
+        "paddingBottom": 6,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "타이틀",
+          "type": "TEXT",
+          "conditional": null,
+          "dimensions": {
+            "width": 37,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,12,30,0.8)",
+              "token": "--sys-content-neutral-default",
+              "resolved": true
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "14-600-20",
+              "token": "--semantic-body-14-semibold",
+              "resolved": true
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 37,
+              "height": 20
+            },
+            "xl": {
+              "width": 37,
+              "height": 20
+            },
+            "lg": {
+              "width": 37,
+              "height": 20
+            }
+          },
+          "textStylesBySize": {
+            "md": {
+              "figmaValue": "14-600-20",
+              "token": "--semantic-body-14-semibold",
+              "resolved": true
+            },
+            "xl": {
+              "figmaValue": "14-600-20",
+              "token": "--semantic-body-14-semibold",
+              "resolved": true
+            },
+            "lg": {
+              "figmaValue": "14-600-20",
+              "token": "--semantic-body-14-semibold",
+              "resolved": true
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 160,
+          "height": 32
+        },
+        "xl": {
+          "width": 160,
+          "height": 32
+        },
+        "lg": {
+          "width": 160,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "container",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 32
+      },
+      "children": [
+        {
+          "layerName": "CheckBox",
+          "type": "INSTANCE",
+          "componentName": "CheckBox",
+          "conditional": "Focused",
+          "dimensions": {
+            "width": 20,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(49,130,246,1)",
+              "token": "--sys-border-brand-default",
+              "resolved": true
+            },
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Size": "md",
+            "Checked": "true",
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_check_outline_3dp",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_check_outline_3dp",
+              "conditional": null,
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(255,255,255,1)",
+                  "token": "--sys-content-inverse-strong",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 24,
+                    "height": 24
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 24,
+                      "height": 24
+                    },
+                    "xl": {
+                      "width": 24,
+                      "height": 24
+                    },
+                    "lg": {
+                      "width": 24,
+                      "height": 24
+                    }
+                  }
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "xl": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "lg": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 16,
+                  "height": 16
+                },
+                "xl": {
+                  "width": 16,
+                  "height": 16
+                },
+                "lg": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "layerName": "focusRing",
+              "type": "FRAME",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 24,
+                "height": 24
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 10,
+                "paddingTop": 2,
+                "paddingRight": 2,
+                "paddingBottom": 2,
+                "paddingLeft": 2,
+                "alignItems": "flex-start",
+                "justifyContent": "flex-start",
+                "borderRadius": 6
+              },
+              "styleValues": [
+                {
+                  "property": "border-color",
+                  "figmaValue": "rgba(0,0,0,1)",
+                  "token": "--sys-interactive-focus-ring-default",
+                  "resolved": true
+                }
+              ],
+              "children": [],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 24,
+                  "height": 24
+                },
+                "xl": {
+                  "width": 24,
+                  "height": 24
+                },
+                "lg": {
+                  "width": 24,
+                  "height": 24
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 20,
+              "height": 20
+            },
+            "xl": {
+              "width": 20,
+              "height": 20
+            },
+            "lg": {
+              "width": 20,
+              "height": 20
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 16,
+          "height": 32
+        },
+        "xl": {
+          "width": 16,
+          "height": 32
+        },
+        "lg": {
+          "width": 16,
+          "height": 32
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 10,
+    "paddingTop": 4,
+    "paddingRight": 20,
+    "paddingBottom": 4,
+    "paddingLeft": 20,
+    "alignItems": "flex-start",
+    "justifyContent": "center"
+  },
+  "layoutSpecBySize": {
+    "md": {
+      "direction": "vertical",
+      "gap": 10,
+      "paddingTop": 4,
+      "paddingRight": 20,
+      "paddingBottom": 4,
+      "paddingLeft": 20,
+      "alignItems": "flex-start",
+      "justifyContent": "center",
+      "containerWidth": 200,
+      "containerHeight": 40,
+      "styleValues": [
+        {
+          "property": "gap",
+          "figmaValue": 10,
+          "token": "--spacing-10",
+          "resolved": true
+        },
+        {
+          "property": "padding-block",
+          "figmaValue": 4,
+          "token": "--spacing-4",
+          "resolved": true
+        },
+        {
+          "property": "padding-inline",
+          "figmaValue": 20,
+          "token": "--spacing-20",
+          "resolved": true
+        },
+        {
+          "property": "flex-direction",
+          "figmaValue": "vertical",
+          "cssValue": "column",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "align-items",
+          "figmaValue": "flex-start",
+          "cssValue": "flex-start",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "justify-content",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        }
+      ]
+    },
+    "xl": {
+      "direction": "vertical",
+      "gap": 10,
+      "paddingTop": 12,
+      "paddingRight": 20,
+      "paddingBottom": 12,
+      "paddingLeft": 20,
+      "alignItems": "flex-start",
+      "justifyContent": "center",
+      "containerWidth": 200,
+      "containerHeight": 56,
+      "styleValues": [
+        {
+          "property": "gap",
+          "figmaValue": 10,
+          "token": "--spacing-10",
+          "resolved": true
+        },
+        {
+          "property": "padding-block",
+          "figmaValue": 12,
+          "token": "--spacing-12",
+          "resolved": true
+        },
+        {
+          "property": "padding-inline",
+          "figmaValue": 20,
+          "token": "--spacing-20",
+          "resolved": true
+        },
+        {
+          "property": "flex-direction",
+          "figmaValue": "vertical",
+          "cssValue": "column",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "align-items",
+          "figmaValue": "flex-start",
+          "cssValue": "flex-start",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "justify-content",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        }
+      ]
+    },
+    "lg": {
+      "direction": "vertical",
+      "gap": 10,
+      "paddingTop": 8,
+      "paddingRight": 20,
+      "paddingBottom": 8,
+      "paddingLeft": 20,
+      "alignItems": "flex-start",
+      "justifyContent": "center",
+      "containerWidth": 200,
+      "containerHeight": 48,
+      "styleValues": [
+        {
+          "property": "gap",
+          "figmaValue": 10,
+          "token": "--spacing-10",
+          "resolved": true
+        },
+        {
+          "property": "padding-block",
+          "figmaValue": 8,
+          "token": "--spacing-8",
+          "resolved": true
+        },
+        {
+          "property": "padding-inline",
+          "figmaValue": 20,
+          "token": "--spacing-20",
+          "resolved": true
+        },
+        {
+          "property": "flex-direction",
+          "figmaValue": "vertical",
+          "cssValue": "column",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "align-items",
+          "figmaValue": "flex-start",
+          "cssValue": "flex-start",
+          "token": null,
+          "resolved": true
+        },
+        {
+          "property": "justify-content",
+          "figmaValue": "center",
+          "cssValue": "center",
+          "token": null,
+          "resolved": true
+        }
+      ]
+    }
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(249,250,251,1)",
+      "token": "--sys-surface-grouped-default",
+      "resolved": true
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(2,32,71,0.05)",
+      "token": "--sys-border-neutral-weak",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding-block",
+      "figmaValue": 4,
+      "token": "--spacing-4",
+      "resolved": true
+    },
+    {
+      "property": "padding-inline",
+      "figmaValue": 20,
+      "token": "--spacing-20",
+      "resolved": true
+    },
+    {
+      "property": "flex-direction",
+      "figmaValue": "vertical",
+      "cssValue": "column",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "align-items",
+      "figmaValue": "flex-start",
+      "cssValue": "flex-start",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "justify-content",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "타이틀",
+      "figmaValue": "14-600-20",
+      "token": "--semantic-body-14-semibold",
+      "resolved": true,
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "14-600-20",
+          "token": "--semantic-body-14-semibold",
+          "resolved": true
+        },
+        "xl": {
+          "figmaValue": "14-600-20",
+          "token": "--semantic-body-14-semibold",
+          "resolved": true
+        },
+        "lg": {
+          "figmaValue": "14-600-20",
+          "token": "--semantic-body-14-semibold",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "size=lg,type=check-box",
+      "variantProps": {
+        "type": "check-box",
+        "size": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 20,
+            "token": "--spacing-20",
+            "resolved": true
+          }
+        ],
+        "CheckBox": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=lg,type=default",
+      "variantProps": {
+        "type": "default",
+        "size": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 20,
+            "token": "--spacing-20",
+            "resolved": true
+          }
+        ],
+        "타이틀": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=lg,type=none",
+      "variantProps": {
+        "type": "none",
+        "size": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 20,
+            "token": "--spacing-20",
+            "resolved": true
+          }
+        ],
+        "타이틀": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-16",
+            "token": "--semantic-label-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=md,type=check-box",
+      "variantProps": {
+        "type": "check-box",
+        "size": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "CheckBox": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=md,type=default",
+      "variantProps": {
+        "type": "default",
+        "size": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "타이틀": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=md,type=none",
+      "variantProps": {
+        "type": "none",
+        "size": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "타이틀": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-16",
+            "token": "--semantic-label-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=xl,type=check-box",
+      "variantProps": {
+        "type": "check-box",
+        "size": "xl"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "padding-block",
+            "figmaValue": 12,
+            "token": "--spacing-12",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 20,
+            "token": "--spacing-20",
+            "resolved": true
+          }
+        ],
+        "CheckBox": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=xl,type=default",
+      "variantProps": {
+        "type": "default",
+        "size": "xl"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "padding-block",
+            "figmaValue": 12,
+            "token": "--spacing-12",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 20,
+            "token": "--spacing-20",
+            "resolved": true
+          }
+        ],
+        "타이틀": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-20",
+            "token": "--semantic-body-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "size=xl,type=none",
+      "variantProps": {
+        "type": "none",
+        "size": "xl"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(249,250,251,1)",
+            "token": "--sys-surface-grouped-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          },
+          {
+            "property": "padding-block",
+            "figmaValue": 12,
+            "token": "--spacing-12",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 20,
+            "token": "--spacing-20",
+            "resolved": true
+          }
+        ],
+        "타이틀": [
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,12,30,0.8)",
+            "token": "--sys-content-neutral-default",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "14-600-16",
+            "token": "--semantic-label-14-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "type": {
+      "tsProp": "type",
+      "tsType": "'none' | 'default' | 'check-box'",
+      "figmaToCode": {
+        "none": "none",
+        "default": "default",
+        "check-box": "check-box"
+      }
+    },
+    "size": {
+      "tsProp": "size",
+      "tsType": "'md' | 'lg' | 'xl'",
+      "figmaToCode": {
+        "md": "md",
+        "lg": "lg",
+        "xl": "xl"
+      }
+    }
+  },
+  "gaps": []
+}

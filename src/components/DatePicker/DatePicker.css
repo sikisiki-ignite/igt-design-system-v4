@@ -1,0 +1,327 @@
+/* ── DatePicker Field ── */
+
+.dp {
+  --dp-message: var(--sys-content-neutral-muted);
+
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--input-datePicker-dateField-size-gapStack-lg);
+}
+
+.dp[data-size="md"] {
+  gap: var(--input-datePicker-dateField-size-gapStack-md);
+}
+
+/* ── Label ── */
+
+.dp__label {
+  font-family: var(--semantic-label-15-medium-fontFamily);
+  font-size: var(--semantic-label-15-medium-fontSize);
+  line-height: var(--semantic-label-15-medium-lineHeight);
+  font-weight: var(--semantic-label-15-medium-fontWeight);
+  color: var(--sys-content-neutral-muted);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-10);
+}
+
+.dp[data-size="md"] .dp__label {
+  font-family: var(--semantic-label-14-medium-fontFamily);
+  font-size: var(--semantic-label-14-medium-fontSize);
+  line-height: var(--semantic-label-14-medium-lineHeight);
+  font-weight: var(--semantic-label-14-medium-fontWeight);
+}
+
+.dp__label-error {
+  color: var(--sys-border-status-danger-default);
+}
+
+/* ── Trigger field button ── */
+
+.dp__field {
+  --df-container:   var(--input-datePicker-dateField-color-container-normal);
+  --df-border:      var(--input-datePicker-dateField-color-border-normal);
+  --df-text:        var(--input-datePicker-dateField-color-text-normal);
+  --df-placeholder: var(--input-datePicker-dateField-color-placeholder-normal);
+  --df-icon:        var(--input-datePicker-dateField-color-icon-normal);
+  --df-sep:         var(--input-datePicker-dateField-color-dateSeparator-normal);
+  --df-range-sep:   var(--input-datePicker-dateField-color-rangeSeparator-normal);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  height: var(--input-datePicker-dateField-size-height-lg);
+  padding-inline: var(--input-datePicker-dateField-size-paddingInline-lg);
+  border-radius: var(--input-datePicker-dateField-size-radius-lg);
+  border: var(--borderWidth-1) solid var(--df-border);
+  background-color: var(--df-container);
+  cursor: pointer;
+  box-sizing: border-box;
+  text-align: left;
+  transition: border-color 0.12s, background-color 0.12s;
+}
+
+.dp__field[data-size="md"] {
+  height: var(--input-datePicker-dateField-size-height-md);
+  padding-inline: var(--input-datePicker-dateField-size-paddingInline-md);
+  border-radius: var(--input-datePicker-dateField-size-radius-md);
+}
+
+/* Hover */
+.dp__field:not([data-disabled]):not([data-readonly]):hover {
+  --df-container:   var(--input-datePicker-dateField-color-container-hover);
+  --df-border:      var(--input-datePicker-dateField-color-border-hover);
+  --df-text:        var(--input-datePicker-dateField-color-text-hover);
+  --df-placeholder: var(--input-datePicker-dateField-color-placeholder-hover);
+  --df-icon:        var(--input-datePicker-dateField-color-icon-hover);
+}
+
+/* Focus */
+.dp__field:not([data-disabled]):not([data-readonly]):focus {
+  --df-container:   var(--input-datePicker-dateField-color-container-focused);
+  --df-border:      var(--input-datePicker-dateField-color-border-focus);
+  --df-text:        var(--input-datePicker-dateField-color-text-focused);
+  --df-placeholder: var(--input-datePicker-dateField-color-placeholder-focused);
+  --df-icon:        var(--input-datePicker-dateField-color-icon-focused);
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: var(--spacing-2);
+}
+
+/* Invalid */
+.dp__field[data-invalid] {
+  --df-border: var(--sys-border-status-danger-default);
+}
+
+/* Disabled */
+.dp__field[data-disabled],
+.dp__field:disabled {
+  --df-container:   var(--input-datePicker-dateField-color-container-disabled);
+  --df-border:      var(--input-datePicker-dateField-color-border-disabled);
+  --df-text:        var(--input-datePicker-dateField-color-text-disabled);
+  --df-placeholder: var(--input-datePicker-dateField-color-placeholder-disabled);
+  --df-icon:        var(--input-datePicker-dateField-color-icon-disabled);
+  --df-sep:         var(--input-datePicker-dateField-color-dateSeparator-disabled);
+  --df-range-sep:   var(--input-datePicker-dateField-color-rangeSeparator-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ReadOnly */
+.dp__field[data-readonly] {
+  --df-container:   var(--input-datePicker-dateField-color-container-readOnly);
+  --df-border:      var(--input-datePicker-dateField-color-border-readOnly);
+  --df-text:        var(--input-datePicker-dateField-color-text-readOnly);
+  --df-placeholder: var(--input-datePicker-dateField-color-placeholder-readOnly);
+  --df-icon:        var(--input-datePicker-dateField-color-icon-readOnly);
+  --df-sep:         var(--input-datePicker-dateField-color-dateSeparator-readOnly);
+  --df-range-sep:   var(--input-datePicker-dateField-color-rangeSeparator-readOnly);
+  pointer-events: none;
+}
+
+/* ── Date area ── */
+
+.dp__date-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+  overflow: hidden;
+}
+
+.dp__date-text {
+  font-family: var(--semantic-label-17-semibold-fontFamily);
+  font-size: var(--semantic-label-17-semibold-fontSize);
+  line-height: var(--semantic-label-17-semibold-lineHeight);
+  font-weight: var(--semantic-label-17-semibold-fontWeight);
+  color: var(--df-text);
+  white-space: nowrap;
+}
+
+.dp__field[data-size="md"] .dp__date-text {
+  font-family: var(--semantic-label-15-medium-fontFamily);
+  font-size: var(--semantic-label-15-medium-fontSize);
+  line-height: var(--semantic-label-15-medium-lineHeight);
+  font-weight: var(--semantic-label-15-medium-fontWeight);
+}
+
+.dp__placeholder {
+  color: var(--df-placeholder);
+  font-weight: var(--semantic-body-17-regular-fontWeight);
+}
+
+.dp__range-sep {
+  color: var(--df-range-sep);
+  font-family: var(--semantic-body-17-regular-fontFamily);
+  font-size: var(--semantic-body-17-regular-fontSize);
+  flex-shrink: 0;
+}
+
+/* ── Trailing calendar icon action ── */
+
+.dp__trailing-action {
+  --ta-container: var(--input-datePicker-dateField-color-trailing-action-container-normal);
+  --ta-icon:      var(--input-datePicker-dateField-color-trailing-action-icon-normal);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--input-datePicker-dateField-size-trailing-action-hitArea-lg);
+  height: var(--input-datePicker-dateField-size-trailing-action-height-lg);
+  border-radius: var(--pattern-overlayBase-radius-hint);
+  background-color: var(--ta-container);
+  color: var(--ta-icon);
+  flex-shrink: 0;
+  transition: background-color 0.12s;
+}
+
+.dp__field[data-size="md"] .dp__trailing-action {
+  width: var(--input-datePicker-dateField-size-trailing-action-hitArea-md);
+  height: var(--input-datePicker-dateField-size-trailing-action-height-md);
+}
+
+.dp__field:not([data-disabled]):not([data-readonly]):hover .dp__trailing-action {
+  --ta-container: var(--input-datePicker-dateField-color-trailing-action-container-hover);
+  --ta-icon:      var(--input-datePicker-dateField-color-trailing-action-icon-hover);
+}
+
+.dp__trailing-action[data-disabled] {
+  --ta-icon: var(--input-datePicker-dateField-color-trailing-action-icon-disabled);
+}
+
+/* ── Popover ── */
+
+.dp__popover {
+  background-color: var(--pattern-overlayBase-container-default);
+  border: var(--borderWidth-1) solid var(--pattern-overlayBase-border-default);
+  border-radius: var(--pattern-overlayBase-radius-floating);
+  box-shadow: var(--sys-elevation-floating);
+  z-index: 50;
+  padding: var(--spacing-16);
+  outline: none;
+}
+
+/* ── Calendar ── */
+
+.dp__calendar {
+  width: 280px; /* 캘린더 팝오버 전용 토큰 없음 — Figma 미정의 */
+}
+
+.dp__calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-12);
+}
+
+.dp__month-label {
+  font-family: var(--semantic-label-15-medium-fontFamily);
+  font-size: var(--semantic-label-15-medium-fontSize);
+  font-weight: var(--semantic-label-15-medium-fontWeight);
+  color: var(--sys-content-neutral-default);
+}
+
+.dp__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-28);
+  height: var(--spacing-28);
+  border: none;
+  background: none;
+  border-radius: var(--pattern-overlayBase-radius-hint);
+  cursor: pointer;
+  color: var(--sys-content-neutral-muted);
+  padding: 0;
+  transition: background-color 0.1s;
+}
+
+.dp__nav-btn:hover {
+  background-color: var(--sys-surface-action-neutral-hover);
+}
+
+/* ── Weekday headers ── */
+
+.dp__weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: var(--spacing-4);
+}
+
+.dp__weekday {
+  text-align: center;
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+  color: var(--sys-content-neutral-subtle);
+  padding: var(--spacing-4) 0;
+}
+
+/* ── Day grid ── */
+
+.dp__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--spacing-2);
+}
+
+.dp__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--spacing-32);
+  border: none;
+  background: none;
+  border-radius: var(--pattern-overlayBase-radius-hint);
+  cursor: pointer;
+  font-family: var(--semantic-body-13-regular-fontFamily);
+  font-size: var(--semantic-body-13-regular-fontSize);
+  color: var(--sys-content-neutral-default);
+  padding: 0;
+  transition: background-color 0.1s;
+}
+
+.dp__day--empty {
+  pointer-events: none;
+}
+
+.dp__day:not(.dp__day--selected):not(.dp__day--empty):hover {
+  background-color: var(--sys-surface-action-neutral-hover);
+}
+
+.dp__day--today {
+  font-weight: 600;
+  color: var(--sys-content-brand-default);
+}
+
+.dp__day--selected {
+  background-color: var(--sys-color-primary);
+  color: var(--sys-content-on-primary);
+  font-weight: 600;
+  border-radius: var(--pattern-overlayBase-radius-hint);
+}
+
+.dp__day--in-range {
+  background-color: var(--sys-surface-brand-subtle);
+  color: var(--sys-content-brand-default);
+  border-radius: 0;
+}
+
+.dp__day--in-range:first-child,
+.dp__day--selected + .dp__day--in-range {
+  border-radius: var(--pattern-overlayBase-radius-hint) 0 0 var(--pattern-overlayBase-radius-hint);
+}
+
+/* ── Message ── */
+
+.dp__message {
+  margin: 0;
+  color: var(--dp-message);
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+}
+
+.dp[data-invalid] {
+  --dp-message: var(--sys-border-status-danger-default);
+}

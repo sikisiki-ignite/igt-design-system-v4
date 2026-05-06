@@ -1,0 +1,77 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "673:19624",
+    "componentName": "Skeleton",
+    "extractedAt": "2026-05-04T02:32:02.160Z"
+  },
+  "componentPropertyDefinitions": {
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "xl",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ]
+    }
+  },
+  "layerInventory": [],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "",
+      "variantProps": {},
+      "layerStyles": {
+        "Ellipse": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md' | 'lg' | 'xl'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md",
+        "lg": "lg",
+        "xl": "xl"
+      }
+    }
+  },
+  "gaps": []
+}

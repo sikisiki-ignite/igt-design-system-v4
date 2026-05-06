@@ -1,0 +1,161 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "702:22263",
+    "componentName": "OrgTreeBullet",
+    "extractedAt": "2026-05-04T06:07:21.175Z"
+  },
+  "componentPropertyDefinitions": {
+    "Leading": {
+      "type": "VARIANT",
+      "defaultValue": "blank",
+      "variantOptions": [
+        "blank",
+        "trailDefault",
+        "trailCenter",
+        "trailEnd"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "igt_core_icon_circle_tiny_solid",
+      "type": "INSTANCE",
+      "componentName": "igt_core_icon_circle_tiny_solid",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(0,12,30,0.8)",
+          "token": "--sys-content-neutral-default",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "stroke",
+          "type": "FRAME",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "children": []
+        },
+        {
+          "layerName": "grid",
+          "type": "INSTANCE",
+          "componentName": "grid",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,41,41,0.1)",
+              "token": null,
+              "resolved": false
+            }
+          ],
+          "children": [
+            {
+              "layerName": "\bGuide",
+              "type": "GROUP",
+              "conditional": null,
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "children": [
+                {
+                  "layerName": "padding",
+                  "type": "GROUP",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "flex-end"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Leading=blank",
+      "variantProps": {
+        "Leading": "blank"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=trailCenter",
+      "variantProps": {
+        "Leading": "trailCenter"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=trailDefault",
+      "variantProps": {
+        "Leading": "trailDefault"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=trailEnd",
+      "variantProps": {
+        "Leading": "trailEnd"
+      },
+      "layerStyles": {}
+    }
+  ],
+  "propMapping": {
+    "Leading": {
+      "tsProp": "leading",
+      "tsType": "'blank' | 'traildefault' | 'trailcenter' | 'trailend'",
+      "figmaToCode": {
+        "blank": "blank",
+        "trailDefault": "traildefault",
+        "trailCenter": "trailcenter",
+        "trailEnd": "trailend"
+      }
+    }
+  },
+  "gaps": []
+}

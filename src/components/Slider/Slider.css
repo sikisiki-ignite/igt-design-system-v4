@@ -1,0 +1,73 @@
+/* ── Slider wrapper ── */
+.slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--input-slider-size-gap);
+}
+
+.slider-wrap__icon {
+  color: var(--input-slider-color-icon-default);
+  flex-shrink: 0;
+}
+
+.slider-wrap[data-disabled] .slider-wrap__icon {
+  color: var(--input-slider-color-icon-disabled);
+}
+
+/* ── Radix Slider Root ── */
+.slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  touch-action: none;
+  flex: 1;
+  height: var(--input-slider-size-height);
+}
+
+/* ── Track ── */
+.slider__track {
+  background-color: var(--input-slider-color-track-default);
+  position: relative;
+  flex-grow: 1;
+  border-radius: 9999px;
+  height: var(--input-slider-size-track-height);
+}
+
+.slider[data-disabled] .slider__track {
+  background-color: var(--input-slider-color-track-disabled);
+}
+
+/* ── Range (filled portion) ── */
+.slider__range {
+  position: absolute;
+  background-color: var(--input-slider-color-range-default);
+  border-radius: 9999px;
+  height: 100%;
+}
+
+.slider[data-disabled] .slider__range {
+  background-color: var(--input-slider-color-range-disabled);
+}
+
+/* ── Thumb (knob) ── */
+.slider__thumb {
+  display: block;
+  width: var(--input-slider-size-thumb-size);
+  height: var(--input-slider-size-thumb-size);
+  background-color: var(--input-slider-color-thumb-bg);
+  box-shadow: var(--input-slider-color-thumb-shadow);
+  border-radius: 9999px;
+  cursor: pointer;
+  outline: none;
+}
+
+.slider__thumb:focus-visible {
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: 2px;
+}
+
+.slider[data-disabled] .slider__thumb {
+  cursor: not-allowed;
+  pointer-events: none;
+}

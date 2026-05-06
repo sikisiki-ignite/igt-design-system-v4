@@ -1,0 +1,367 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2043:90061",
+    "componentName": "PageIndicator",
+    "extractedAt": "2026-05-04T06:04:59.224Z"
+  },
+  "componentPropertyDefinitions": {
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "1",
+      "type": "TEXT",
+      "conditional": null,
+      "dimensions": {
+        "width": 8,
+        "height": 22
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "text-style",
+          "figmaValue": "15-600",
+          "token": "--semantic-label-15-semibold",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 8,
+          "height": 22
+        },
+        "sm": {
+          "width": 7,
+          "height": 18
+        }
+      },
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "15-600",
+          "token": "--semantic-label-15-semibold",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-600",
+          "token": "--semantic-label-13-semibold",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "/",
+      "type": "TEXT",
+      "conditional": null,
+      "dimensions": {
+        "width": 5,
+        "height": 22
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "text-style",
+          "figmaValue": "15-400",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 5,
+          "height": 22
+        },
+        "sm": {
+          "width": 5,
+          "height": 18
+        }
+      },
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "15-400",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-400",
+          "token": "--semantic-body-13-regular",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "9",
+      "type": "TEXT",
+      "conditional": null,
+      "dimensions": {
+        "width": 11,
+        "height": 22
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        },
+        {
+          "property": "text-style",
+          "figmaValue": "15-600",
+          "token": "--semantic-label-15-semibold",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 11,
+          "height": 22
+        },
+        "sm": {
+          "width": 9,
+          "height": 18
+        }
+      },
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "15-600",
+          "token": "--semantic-label-15-semibold",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-600",
+          "token": "--semantic-label-13-semibold",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 4,
+    "paddingTop": 6,
+    "paddingRight": 12,
+    "paddingBottom": 6,
+    "paddingLeft": 12,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start",
+    "borderRadius": 999
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(0,0,0,0.4)",
+      "token": "--sys-overlay-container-dark-disabled",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 4,
+      "token": "--spacing-4",
+      "resolved": true
+    },
+    {
+      "property": "padding-block",
+      "figmaValue": 6,
+      "token": "--spacing-6",
+      "resolved": true
+    },
+    {
+      "property": "padding-inline",
+      "figmaValue": 12,
+      "token": "--spacing-12",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 999,
+      "token": null,
+      "resolved": false
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "1",
+      "figmaValue": "15-600",
+      "token": "--semantic-label-15-semibold",
+      "resolved": true,
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "15-600",
+          "token": "--semantic-label-15-semibold",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-600",
+          "token": "--semantic-label-13-semibold",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "/",
+      "figmaValue": "15-400",
+      "token": "--semantic-body-15-regular",
+      "resolved": true,
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "15-400",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-400",
+          "token": "--semantic-body-13-regular",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "9",
+      "figmaValue": "15-600",
+      "token": "--semantic-label-15-semibold",
+      "resolved": true,
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "15-600",
+          "token": "--semantic-label-15-semibold",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "13-600",
+          "token": "--semantic-label-13-semibold",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "",
+      "variantProps": {},
+      "layerStyles": {
+        "1": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-600",
+            "token": "--semantic-label-15-semibold",
+            "resolved": true
+          }
+        ],
+        "9": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-600",
+            "token": "--semantic-label-15-semibold",
+            "resolved": true
+          }
+        ],
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,0,0,0.4)",
+            "token": "--sys-overlay-container-dark-disabled",
+            "resolved": true
+          }
+        ],
+        "/": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "color",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-400",
+            "token": "--semantic-body-15-regular",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "property": "border-radius",
+      "figmaValue": 999,
+      "status": "open",
+      "note": "토큰 미매핑 — 토큰 추가 또는 수동 확인 필요"
+    }
+  ]
+}

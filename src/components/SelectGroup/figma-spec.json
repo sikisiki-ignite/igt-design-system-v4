@@ -1,0 +1,487 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "556:29571",
+    "componentName": "SelectGroup",
+    "extractedAt": "2026-05-04T02:13:21.548Z"
+  },
+  "componentPropertyDefinitions": {
+    "Show Scroll bar#556:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Item 1",
+      "type": "INSTANCE",
+      "componentName": "Item 1",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 2",
+      "type": "INSTANCE",
+      "componentName": "Item 2",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 3",
+      "type": "INSTANCE",
+      "componentName": "Item 3",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 4",
+      "type": "INSTANCE",
+      "componentName": "Item 4",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 5",
+      "type": "INSTANCE",
+      "componentName": "Item 5",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 6",
+      "type": "INSTANCE",
+      "componentName": "Item 6",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 7",
+      "type": "INSTANCE",
+      "componentName": "Item 7",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 8",
+      "type": "INSTANCE",
+      "componentName": "Item 8",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Item 9",
+      "type": "INSTANCE",
+      "componentName": "Item 9",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 148,
+        "height": 40
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 148,
+          "height": 40
+        },
+        "sm": {
+          "width": 148,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "scrollBar",
+      "type": "INSTANCE",
+      "componentName": "scrollBar",
+      "conditional": "Show Scroll bar",
+      "dimensions": {
+        "width": 6,
+        "height": 53
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(0,29,58,0.16)",
+          "token": "--sys-border-neutral-muted",
+          "resolved": true
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 6,
+          "height": 53
+        },
+        "sm": {
+          "width": 6,
+          "height": 53
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 0,
+    "paddingTop": 8,
+    "paddingRight": 6,
+    "paddingBottom": 8,
+    "paddingLeft": 6,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start",
+    "borderRadius": 12
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,0.1)",
+      "token": "--sys-border-neutral-subtle",
+      "resolved": true
+    },
+    {
+      "property": "box-shadow",
+      "figmaValue": "0px 10px 40px 0px rgba(2,32,71,0.02), 0px 20px 50px 0px rgba(2,32,71,0.02), 2px 70px 80px 0px rgba(2,32,71,0.02)",
+      "token": "--sys-elevation-popover",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding-block",
+      "figmaValue": 8,
+      "token": "--spacing-8",
+      "resolved": true
+    },
+    {
+      "property": "padding-inline",
+      "figmaValue": 6,
+      "token": "--spacing-6",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 12,
+      "token": "--radius-12",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "",
+      "variantProps": {},
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 10px 40px 0px rgba(2,32,71,0.02), 0px 20px 50px 0px rgba(2,32,71,0.02), 2px 70px 80px 0px rgba(2,32,71,0.02)",
+            "token": "--sys-elevation-popover",
+            "resolved": true
+          }
+        ],
+        "Item 1": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 2": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 3": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 4": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 5": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 6": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 7": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 8": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Item 9": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "scrollBar": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Show Scroll bar": {
+      "tsProp": "showScrollBar",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    }
+  },
+  "gaps": []
+}

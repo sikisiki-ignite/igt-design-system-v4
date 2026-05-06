@@ -1,0 +1,530 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2125:24863",
+    "componentName": "RadioField",
+    "extractedAt": "2026-05-03T14:47:22.411Z"
+  },
+  "componentPropertyDefinitions": {
+    "Description#342:0": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "Selected": {
+      "type": "VARIANT",
+      "defaultValue": "true",
+      "variantOptions": [
+        "true",
+        "false"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    },
+    "Disabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "ReadOnly": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "Invalid": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Radio",
+      "type": "INSTANCE",
+      "componentName": "Radio",
+      "conditional": "Focus",
+      "dimensions": {
+        "width": 20,
+        "height": 20
+      },
+      "dimensionsBySize": {
+        "md": {
+          "width": 20,
+          "height": 20
+        },
+        "sm": {
+          "width": 16,
+          "height": 16
+        }
+      }
+    },
+    {
+      "layerName": "text",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 70,
+        "height": 42
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 0,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "label",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 70,
+            "height": 22
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 0,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "텍스트",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 70,
+                "height": 22
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,12,30,0.8)",
+                  "token": "--sys-content-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,12,30,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "15-600",
+                  "token": "--semantic-label-15-semibold",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 70,
+                  "height": 22
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 70,
+              "height": 22
+            },
+            "sm": {
+              "width": 74,
+              "height": 20
+            }
+          }
+        },
+        {
+          "layerName": "description",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 70,
+            "height": 20
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "간단한 설명",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 70,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,19,43,0.58)",
+                  "token": "--sys-content-neutral-muted",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,19,43,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 70,
+                  "height": 20
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 70,
+              "height": 20
+            },
+            "sm": {
+              "width": 74,
+              "height": 18
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 70,
+          "height": 42
+        },
+        "sm": {
+          "width": 74,
+          "height": 38
+        }
+      }
+    },
+    {
+      "layerName": "Icon",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 18
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 0,
+        "paddingTop": 2,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "center"
+      },
+      "children": [
+        {
+          "layerName": "Radio",
+          "type": "INSTANCE",
+          "componentName": "Radio",
+          "conditional": "Focus",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "dimensionsBySize": {
+            "md": {
+              "width": 20,
+              "height": 20
+            },
+            "sm": {
+              "width": 16,
+              "height": 16
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 16,
+          "height": 18
+        }
+      }
+    },
+    {
+      "layerName": "Checkbox",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 18
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 0,
+        "paddingTop": 2,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "Radio",
+          "type": "INSTANCE",
+          "componentName": "Radio",
+          "conditional": "Focus",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "dimensionsBySize": {
+            "md": {
+              "width": 20,
+              "height": 20
+            },
+            "sm": {
+              "width": 16,
+              "height": 16
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 16,
+          "height": 18
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 8,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 8,
+      "token": "--spacing-8",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Disabled=false,Invalid=false,ReadOnly=false,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "false",
+        "ReadOnly": "false",
+        "Invalid": "false"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=false,Invalid=false,ReadOnly=false,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "false",
+        "ReadOnly": "false",
+        "Invalid": "false"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=false,Invalid=false,ReadOnly=true,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "false",
+        "ReadOnly": "true",
+        "Invalid": "false"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=false,Invalid=false,ReadOnly=true,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "false",
+        "ReadOnly": "true",
+        "Invalid": "false"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=false,Invalid=true,ReadOnly=false,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "false",
+        "ReadOnly": "false",
+        "Invalid": "true"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=false,Invalid=true,ReadOnly=false,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "false",
+        "ReadOnly": "false",
+        "Invalid": "true"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=false,Invalid=true,ReadOnly=true,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "false",
+        "ReadOnly": "true",
+        "Invalid": "true"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=false,Invalid=true,ReadOnly=true,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "false",
+        "ReadOnly": "true",
+        "Invalid": "true"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=true,Invalid=false,ReadOnly=false,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "true",
+        "ReadOnly": "false",
+        "Invalid": "false"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=true,Invalid=false,ReadOnly=false,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "true",
+        "ReadOnly": "false",
+        "Invalid": "false"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=true,Invalid=true,ReadOnly=false,Selected=false",
+      "variantProps": {
+        "Selected": "false",
+        "Disabled": "true",
+        "ReadOnly": "false",
+        "Invalid": "true"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Disabled=true,Invalid=true,ReadOnly=false,Selected=true",
+      "variantProps": {
+        "Selected": "true",
+        "Disabled": "true",
+        "ReadOnly": "false",
+        "Invalid": "true"
+      },
+      "layerStyles": {}
+    }
+  ],
+  "propMapping": {
+    "Description": {
+      "tsProp": "description",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Selected": {
+      "tsProp": "selected",
+      "tsType": "'true' | 'false'",
+      "figmaToCode": {
+        "true": "true",
+        "false": "false"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "Disabled": {
+      "tsProp": "disabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "ReadOnly": {
+      "tsProp": "readOnly",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "Invalid": {
+      "tsProp": "invalid",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": []
+}

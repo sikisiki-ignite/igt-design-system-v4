@@ -1,0 +1,28 @@
+/* ── ButtonGroup ── */
+
+.btn-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--action-buttonGroup-size-spacing-gapInline-lg);
+}
+
+/* ── Direction ── */
+.btn-group[data-direction="vertical"] {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ── Size ── */
+.btn-group[data-size="xs"] { gap: var(--action-buttonGroup-size-spacing-gapInline-xs); }
+.btn-group[data-size="sm"] { gap: var(--action-buttonGroup-size-spacing-gapInline-sm); }
+.btn-group[data-size="md"] { gap: var(--action-buttonGroup-size-spacing-gapInline-md); }
+.btn-group[data-size="lg"] { gap: var(--action-buttonGroup-size-spacing-gapInline-lg); }
+
+.btn-group[data-direction="vertical"][data-size="xs"] { gap: var(--action-buttonGroup-size-spacing-gapStack-xs); }
+.btn-group[data-direction="vertical"][data-size="sm"] { gap: var(--action-buttonGroup-size-spacing-gapStack-sm); }
+.btn-group[data-direction="vertical"][data-size="md"] { gap: var(--action-buttonGroup-size-spacing-gapStack-md); }
+.btn-group[data-direction="vertical"][data-size="lg"] { gap: var(--action-buttonGroup-size-spacing-gapStack-lg); }
+
+/* ── Distribution: equal ── */
+.btn-group[data-distribution="equal"] { flex-wrap: nowrap; width: 100%; }
+.btn-group[data-distribution="equal"] > * { flex: 1; }

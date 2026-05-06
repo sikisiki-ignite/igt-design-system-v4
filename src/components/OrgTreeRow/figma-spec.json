@@ -1,0 +1,3580 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "514:18551",
+    "componentName": "OrgTreeRow",
+    "extractedAt": "2026-05-04T06:07:04.778Z"
+  },
+  "componentPropertyDefinitions": {
+    "depth": {
+      "type": "VARIANT",
+      "defaultValue": "1",
+      "variantOptions": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    },
+    "state": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed",
+        "selected",
+        "disabled"
+      ]
+    },
+    "treeGuide": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "disabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "selected": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "◇ Part / Bullet",
+      "type": "INSTANCE",
+      "componentName": "◇ Part / Bullet",
+      "conditional": null,
+      "dimensions": {
+        "width": 20,
+        "height": 32
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(3,24,50,0.46)",
+          "token": "--sys-border-neutral-default",
+          "resolved": true
+        }
+      ],
+      "instanceProps": {
+        "Leading": "open"
+      },
+      "children": [
+        {
+          "layerName": "Icon",
+          "type": "INSTANCE",
+          "componentName": "Icon",
+          "conditional": null,
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(3,24,50,0.46)",
+              "token": "--sys-border-neutral-default",
+              "resolved": true
+            }
+          ],
+          "children": [
+            {
+              "layerName": "stroke",
+              "type": "FRAME",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "children": [],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 16,
+                  "height": 16
+                },
+                "md": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "layerName": "grid",
+              "type": "INSTANCE",
+              "componentName": "grid",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(255,41,41,0.1)",
+                  "token": null,
+                  "resolved": false
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "\bGuide",
+                  "type": "GROUP",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 16,
+                  "height": 16
+                },
+                "md": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "sm": {
+              "width": 16,
+              "height": 16
+            },
+            "md": {
+              "width": 16,
+              "height": 16
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 20,
+          "height": 32
+        },
+        "md": {
+          "width": 20,
+          "height": 40
+        }
+      }
+    },
+    {
+      "layerName": "container",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 194,
+        "height": 32
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 4,
+        "paddingTop": 6,
+        "paddingRight": 6,
+        "paddingBottom": 6,
+        "paddingLeft": 6,
+        "alignItems": "center",
+        "justifyContent": "flex-start",
+        "borderRadius": 8
+      },
+      "children": [
+        {
+          "layerName": "label",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 52,
+            "height": 20
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 6,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "아이템",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 37,
+                "height": 16
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,12,30,0.8)",
+                  "token": "--sys-content-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,12,30,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-500",
+                  "token": "--semantic-label-14-medium",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 37,
+                  "height": 16
+                },
+                "md": {
+                  "width": 39,
+                  "height": 18
+                }
+              },
+              "textStylesBySize": {
+                "sm": {
+                  "figmaValue": "14-500",
+                  "token": "--semantic-label-14-medium",
+                  "resolved": true
+                },
+                "md": {
+                  "figmaValue": "15-500",
+                  "token": "--semantic-label-15-medium",
+                  "resolved": true
+                }
+              }
+            },
+            {
+              "layerName": "9",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 9,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-border-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 9,
+                  "height": 20
+                },
+                "md": {
+                  "width": 10,
+                  "height": 22
+                }
+              },
+              "textStylesBySize": {
+                "sm": {
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                },
+                "md": {
+                  "figmaValue": "15-400",
+                  "token": "--semantic-body-15-regular",
+                  "resolved": true
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "sm": {
+              "width": 52,
+              "height": 20
+            },
+            "md": {
+              "width": 55,
+              "height": 22
+            }
+          }
+        },
+        {
+          "layerName": "Category",
+          "type": "INSTANCE",
+          "componentName": "Category",
+          "conditional": "Show Leading",
+          "dimensions": {
+            "width": 35,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(100,168,255,0.16)",
+              "token": "--sys-border-brand-disabled",
+              "resolved": true
+            },
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Size": "md",
+            "Color": "blue",
+            "Tone": "subtle"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_bell_outline_2dp",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_bell_outline_2dp",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 11,
+                "height": 11
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(27,100,218,1)",
+                  "token": "--sys-interactive-pressed-container-accent",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 24,
+                    "height": 24
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 11,
+                    "height": 11
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ],
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 11,
+                  "height": 11
+                },
+                "md": {
+                  "width": 11,
+                  "height": 11
+                }
+              }
+            },
+            {
+              "layerName": "label-padding",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 20,
+                "height": 14
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 10,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "center"
+              },
+              "children": [
+                {
+                  "layerName": "인기",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 20,
+                    "height": 14
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(27,100,218,1)",
+                      "token": "--sys-interactive-pressed-container-accent",
+                      "resolved": true
+                    },
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(27,100,218,1)",
+                      "token": "--sys-interactive-pressed-container-accent",
+                      "resolved": true
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "11-600",
+                      "token": "--semantic-caption-11-semibold",
+                      "resolved": true
+                    }
+                  ],
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 20,
+                      "height": 14
+                    },
+                    "md": {
+                      "width": 20,
+                      "height": 14
+                    }
+                  },
+                  "textStylesBySize": {
+                    "sm": {
+                      "figmaValue": "11-600",
+                      "token": "--semantic-caption-11-semibold",
+                      "resolved": true
+                    },
+                    "md": {
+                      "figmaValue": "11-600",
+                      "token": "--semantic-caption-11-semibold",
+                      "resolved": true
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 20,
+                  "height": 14
+                },
+                "md": {
+                  "width": 20,
+                  "height": 14
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "sm": {
+              "width": 35,
+              "height": 20
+            },
+            "md": {
+              "width": 35,
+              "height": 20
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 194,
+          "height": 32
+        },
+        "md": {
+          "width": 214,
+          "height": 40
+        }
+      }
+    },
+    {
+      "layerName": "◇ Part / Trail",
+      "type": "INSTANCE",
+      "componentName": "◇ Part / Trail",
+      "conditional": null,
+      "dimensions": {
+        "width": 20,
+        "height": 32
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(0,12,30,0.8)",
+          "token": "--sys-content-neutral-default",
+          "resolved": true
+        }
+      ],
+      "instanceProps": {
+        "Leading": "blank"
+      },
+      "children": [
+        {
+          "layerName": "igt_core_icon_circle_tiny_solid",
+          "type": "INSTANCE",
+          "componentName": "igt_core_icon_circle_tiny_solid",
+          "conditional": null,
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,12,30,0.8)",
+              "token": "--sys-content-neutral-default",
+              "resolved": true
+            }
+          ],
+          "children": [
+            {
+              "layerName": "stroke",
+              "type": "FRAME",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "children": [],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 16,
+                  "height": 16
+                },
+                "md": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            },
+            {
+              "layerName": "grid",
+              "type": "INSTANCE",
+              "componentName": "grid",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(255,41,41,0.1)",
+                  "token": null,
+                  "resolved": false
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "\bGuide",
+                  "type": "GROUP",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 16,
+                  "height": 16
+                },
+                "md": {
+                  "width": 16,
+                  "height": 16
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "sm": {
+              "width": 16,
+              "height": 16
+            },
+            "md": {
+              "width": 16,
+              "height": 16
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 20,
+          "height": 32
+        },
+        "md": {
+          "width": 20,
+          "height": 38
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start",
+    "borderRadius": 6
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,0)",
+      "token": "--sys-border-none",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 6,
+      "token": "--radius-6",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "아이템",
+      "figmaValue": "14-500",
+      "token": "--semantic-label-14-medium",
+      "resolved": true,
+      "textStylesBySize": {
+        "sm": {
+          "figmaValue": "14-500",
+          "token": "--semantic-label-14-medium",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "15-500",
+          "token": "--semantic-label-15-medium",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "9",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true,
+      "textStylesBySize": {
+        "sm": {
+          "figmaValue": "14-400",
+          "token": "--semantic-body-14-regular",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "15-400",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        }
+      }
+    },
+    {
+      "layerName": "인기",
+      "figmaValue": "11-600",
+      "token": "--semantic-caption-11-semibold",
+      "resolved": true,
+      "textStylesBySize": {
+        "sm": {
+          "figmaValue": "11-600",
+          "token": "--semantic-caption-11-semibold",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "11-600",
+          "token": "--semantic-caption-11-semibold",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=md,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=md,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=md,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=md,state=pressed,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=sm,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=sm,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=sm,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=false,size=sm,state=selected,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "selected",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=true,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=true,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=true,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=false,selected=true,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=true,selected=false,size=md,state=disabled,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=true,selected=false,size=md,state=disabled,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=true,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=1,disabled=true,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "1",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=md,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=md,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=md,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=md,state=pressed,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=sm,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=sm,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=sm,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=false,size=sm,state=selected,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "selected",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=true,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=true,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=true,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=false,selected=true,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=true,selected=false,size=md,state=disabled,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=true,selected=false,size=md,state=disabled,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=true,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=2,disabled=true,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "2",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=md,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=md,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=md,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=md,state=pressed,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=sm,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=sm,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=sm,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=false,size=sm,state=selected,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "selected",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=true,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=true,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=true,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=false,selected=true,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=true,selected=false,size=md,state=disabled,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=true,selected=false,size=md,state=disabled,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=true,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=3,disabled=true,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "3",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=md,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=md,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=md,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=md,state=pressed,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=sm,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=sm,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=sm,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=false,size=sm,state=selected,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "selected",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=true,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=true,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=true,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=false,selected=true,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=true,selected=false,size=md,state=disabled,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=true,selected=false,size=md,state=disabled,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=true,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=4,disabled=true,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "4",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=md,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=md,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=md,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=md,state=pressed,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "pressed",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=sm,state=hover,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=sm,state=hover,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "hover",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=sm,state=pressed,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "pressed",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=false,size=sm,state=selected,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "selected",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=true,size=md,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=true,size=md,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=true,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=false,selected=true,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "false",
+        "selected": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=true,selected=false,size=md,state=disabled,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=true,selected=false,size=md,state=disabled,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "md",
+        "state": "disabled",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=true,selected=false,size=sm,state=normal,treeGuide=false",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "false",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "Category": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "depth=5,disabled=true,selected=false,size=sm,state=normal,treeGuide=true",
+      "variantProps": {
+        "depth": "5",
+        "size": "sm",
+        "state": "normal",
+        "treeGuide": "true",
+        "disabled": "true",
+        "selected": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "depth": {
+      "tsProp": "depth",
+      "tsType": "'1' | '2' | '3' | '4' | '5'",
+      "figmaToCode": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    "size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "state": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed' | 'selected' | 'disabled'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed",
+        "selected": "selected",
+        "disabled": "disabled"
+      }
+    },
+    "treeGuide": {
+      "tsProp": "treeGuide",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "disabled": {
+      "tsProp": "disabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "selected": {
+      "tsProp": "selected",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": []
+}

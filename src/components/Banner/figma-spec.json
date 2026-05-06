@@ -1,0 +1,413 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "4096:26467",
+    "componentName": "Banner",
+    "extractedAt": "2026-05-04T02:31:55.067Z"
+  },
+  "componentPropertyDefinitions": {
+    "hasDescription#401:12": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "dismissible#664:0": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "hasAction#4096:11": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "error",
+      "variantOptions": [
+        "error",
+        "warning",
+        "info",
+        "success"
+      ]
+    },
+    "variant": {
+      "type": "VARIANT",
+      "defaultValue": "subtle",
+      "variantOptions": [
+        "subtle",
+        "solid"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "content",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 412,
+        "height": 80
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 16,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "content",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 412,
+            "height": 80
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 8,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_failure_solid",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_failure_solid",
+              "conditional": null,
+              "dimensions": {
+                "width": 20,
+                "height": 20
+              }
+            },
+            {
+              "layerName": "stack",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 356,
+                "height": 80
+              },
+              "layoutSpec": {
+                "direction": "vertical",
+                "gap": 10,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "flex-start",
+                "justifyContent": "flex-start"
+              },
+              "children": [
+                {
+                  "layerName": "text",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 356,
+                    "height": 38
+                  },
+                  "layoutSpec": {
+                    "direction": "vertical",
+                    "gap": 2,
+                    "paddingTop": 0,
+                    "paddingRight": 6,
+                    "paddingBottom": 0,
+                    "paddingLeft": 6,
+                    "alignItems": "flex-start",
+                    "justifyContent": "flex-start"
+                  },
+                  "children": []
+                },
+                {
+                  "layerName": "action",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 184,
+                    "height": 32
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 6,
+                    "paddingTop": 0,
+                    "paddingRight": 0,
+                    "paddingBottom": 0,
+                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "justifyContent": "flex-start"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "layerName": "Parts / DismissControl",
+              "type": "INSTANCE",
+              "componentName": "Parts / DismissControl",
+              "conditional": null,
+              "dimensions": {
+                "width": 20,
+                "height": 20
+              },
+              "interactionStates": [
+                "hover",
+                "pressed"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 16,
+    "paddingTop": 14,
+    "paddingRight": 14,
+    "paddingBottom": 14,
+    "paddingLeft": 14,
+    "alignItems": "center",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "background",
+      "figmaValue": "rgba(251,136,144,0.34)",
+      "token": "--sys-border-status-danger-weak",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 16,
+      "token": "--spacing-16",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 14,
+      "token": "--spacing-14",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "type=error,variant=solid",
+      "variantProps": {
+        "type": "error",
+        "variant": "solid"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=error,variant=subtle",
+      "variantProps": {
+        "type": "error",
+        "variant": "subtle"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "background",
+            "figmaValue": "rgba(251,136,144,0.34)",
+            "token": "--sys-border-status-danger-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=info,variant=solid",
+      "variantProps": {
+        "type": "info",
+        "variant": "solid"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=info,variant=subtle",
+      "variantProps": {
+        "type": "info",
+        "variant": "subtle"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.34)",
+            "token": "--sys-border-brand-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=success,variant=solid",
+      "variantProps": {
+        "type": "success",
+        "variant": "solid"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(3,178,108,1)",
+            "token": "--sys-border-status-success-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=success,variant=subtle",
+      "variantProps": {
+        "type": "success",
+        "variant": "subtle"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "background",
+            "figmaValue": "rgba(63,213,153,0.34)",
+            "token": "--sys-container-status-success-tint-strong",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=warning,variant=solid",
+      "variantProps": {
+        "type": "warning",
+        "variant": "solid"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,195,66,1)",
+            "token": "--sys-container-status-warning-solid-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=warning,variant=subtle",
+      "variantProps": {
+        "type": "warning",
+        "variant": "subtle"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,195,66,0.35)",
+            "token": "--sys-container-status-warning-tint-strong",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "hasDescription": {
+      "tsProp": "hasDescription",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "dismissible": {
+      "tsProp": "dismissible",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "hasAction": {
+      "tsProp": "hasAction",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "type": {
+      "tsProp": "type",
+      "tsType": "'error' | 'warning' | 'info' | 'success'",
+      "figmaToCode": {
+        "error": "error",
+        "warning": "warning",
+        "info": "info",
+        "success": "success"
+      }
+    },
+    "variant": {
+      "tsProp": "variant",
+      "tsType": "'subtle' | 'solid'",
+      "figmaToCode": {
+        "subtle": "subtle",
+        "solid": "solid"
+      }
+    }
+  },
+  "gaps": []
+}

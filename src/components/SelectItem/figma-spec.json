@@ -1,0 +1,354 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "280:5073",
+    "componentName": "SelectItem",
+    "extractedAt": "2026-05-04T02:06:31.831Z"
+  },
+  "componentPropertyDefinitions": {
+    "Leading#445:21": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "* Density": {
+      "type": "VARIANT",
+      "defaultValue": "STANDARD",
+      "variantOptions": [
+        "STANDARD"
+      ]
+    },
+    "Selected": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "true",
+        "false"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed",
+        "none"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "LeadingIcon",
+      "type": "INSTANCE",
+      "componentName": "LeadingIcon",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "dimensionsBySize": {
+        "md": {
+          "width": 16,
+          "height": 16
+        },
+        "sm": {
+          "width": 14,
+          "height": 14
+        }
+      }
+    },
+    {
+      "layerName": "textInset",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 52,
+        "height": 18
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 0,
+        "paddingRight": 2,
+        "paddingBottom": 0,
+        "paddingLeft": 2,
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "children": [
+        {
+          "layerName": "아이템",
+          "type": "TEXT",
+          "conditional": null,
+          "dimensions": {
+            "width": 48,
+            "height": 18
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(0,12,30,0.8)",
+              "token": "--sys-content-neutral-default",
+              "resolved": true
+            },
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,12,30,1)",
+              "token": null,
+              "resolved": false
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "15-600",
+              "token": "--semantic-label-15-semibold",
+              "resolved": true
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 48,
+              "height": 18
+            },
+            "sm": {
+              "width": 64,
+              "height": 16
+            }
+          },
+          "textStylesBySize": {
+            "md": {
+              "figmaValue": "15-600",
+              "token": "--semantic-label-15-semibold",
+              "resolved": true
+            },
+            "sm": {
+              "figmaValue": "14-600",
+              "token": "--semantic-label-14-semibold",
+              "resolved": true
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 52,
+          "height": 18
+        },
+        "sm": {
+          "width": 68,
+          "height": 16
+        }
+      }
+    },
+    {
+      "layerName": "iconnew",
+      "type": "INSTANCE",
+      "componentName": "iconnew",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "dimensionsBySize": {
+        "md": {
+          "width": 16,
+          "height": 16
+        },
+        "sm": {
+          "width": 14,
+          "height": 14
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 6,
+    "paddingTop": 11,
+    "paddingRight": 12,
+    "paddingBottom": 11,
+    "paddingLeft": 12,
+    "alignItems": "center",
+    "justifyContent": "flex-start",
+    "borderRadius": 8
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,0)",
+      "token": "--sys-border-none",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 6,
+      "token": "--spacing-6",
+      "resolved": true
+    },
+    {
+      "property": "padding-block",
+      "figmaValue": 11,
+      "token": "--spacing-11",
+      "resolved": true
+    },
+    {
+      "property": "padding-inline",
+      "figmaValue": 12,
+      "token": "--spacing-12",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 8,
+      "token": "--radius-8",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "아이템",
+      "figmaValue": "15-600",
+      "token": "--semantic-label-15-semibold",
+      "resolved": true,
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "15-600",
+          "token": "--semantic-label-15-semibold",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "14-600",
+          "token": "--semantic-label-14-semibold",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "* Density=STANDARD,Selected=false",
+      "variantProps": {
+        "* Density": "STANDARD",
+        "Selected": "false"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ],
+        "아이템": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,29,58,0.16)",
+            "token": "--sys-border-neutral-muted",
+            "resolved": true
+          },
+          {
+            "property": "color",
+            "figmaValue": "rgba(0,29,58,1)",
+            "token": null,
+            "resolved": false
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-600",
+            "token": "--semantic-label-15-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "* Density=STANDARD,Selected=true",
+      "variantProps": {
+        "* Density": "STANDARD",
+        "Selected": "true"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ],
+        "아이템": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.34)",
+            "token": "--sys-border-brand-weak",
+            "resolved": true
+          },
+          {
+            "property": "color",
+            "figmaValue": "rgba(100,168,255,1)",
+            "token": "--color-blue-300",
+            "resolved": true
+          },
+          {
+            "property": "text-style",
+            "figmaValue": "15-600",
+            "token": "--semantic-label-15-semibold",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Leading": {
+      "tsProp": "leading",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "* Density": {
+      "tsProp": "*Density",
+      "tsType": "'STANDARD'",
+      "figmaToCode": {
+        "STANDARD": "standard"
+      }
+    },
+    "Selected": {
+      "tsProp": "selected",
+      "tsType": "'true' | 'false'",
+      "figmaToCode": {
+        "true": "true",
+        "false": "false"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed' | 'none'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed",
+        "none": "none"
+      }
+    }
+  },
+  "gaps": []
+}

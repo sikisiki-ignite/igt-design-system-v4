@@ -1,0 +1,167 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "517:36669",
+    "componentName": "IconToggle",
+    "extractedAt": "2026-05-01T17:47:17.060Z"
+  },
+  "componentPropertyDefinitions": {
+    "Focus#2221:637": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Intent": {
+      "type": "VARIANT",
+      "defaultValue": "reaction",
+      "variantOptions": [
+        "reaction",
+        "accent",
+        "neutral"
+      ]
+    },
+    "Selected": {
+      "type": "VARIANT",
+      "defaultValue": "true",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md"
+      ]
+    },
+    "Interaction": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed",
+        "disabled"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Icon",
+      "type": "INSTANCE",
+      "componentName": "Icon",
+      "conditional": null
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "Focus",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 12
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-contentOn-status-success-solid-default",
+          "resolved": true
+        }
+      ],
+      "children": []
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": 10
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 10,
+      "token": "--radius-10",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Focus": {
+      "tsProp": "focus",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Intent": {
+      "tsProp": "intent",
+      "tsType": "'reaction' | 'accent' | 'neutral'",
+      "figmaToCode": {
+        "reaction": "reaction",
+        "accent": "accent",
+        "neutral": "neutral"
+      }
+    },
+    "Selected": {
+      "tsProp": "selected",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "Interaction": {
+      "tsProp": "interaction",
+      "tsType": "'normal' | 'hover' | 'pressed' | 'disabled'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed",
+        "disabled": "disabled"
+      }
+    }
+  },
+  "gaps": []
+}

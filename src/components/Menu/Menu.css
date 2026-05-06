@@ -1,0 +1,28 @@
+/* ── Menu ── */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background: var(--action-menu-menuPopover-color-container-background);
+  border: var(--action-menu-menuPopover-size-borderWidth) solid var(--sys-border-neutral-subtle);
+  border-radius: var(--action-menu-menuPopover-size-radius-md);
+  padding: var(--action-menu-menuPopover-size-paddingBlock-md) var(--action-menu-menuPopover-size-paddingInline-md);
+  gap: var(--action-menu-menuPopover-size-gapInline-md);
+  min-width: 160px;
+  max-height: var(--action-menu-menuPopover-size-maxHeight-md);
+  overflow-y: auto;
+}
+
+.menu[data-size="sm"] {
+  border-radius: var(--action-menu-menuPopover-size-radius-sm);
+  padding: var(--action-menu-menuPopover-size-paddingBlock-sm) var(--action-menu-menuPopover-size-paddingInline-sm);
+  gap: var(--action-menu-menuPopover-size-gapInline-sm);
+  max-height: var(--action-menu-menuPopover-size-maxHeight-sm);
+}
+
+.menu[data-size="md"] {
+  border-radius: var(--action-menu-menuPopover-size-radius-md);
+  padding: var(--action-menu-menuPopover-size-paddingBlock-md) var(--action-menu-menuPopover-size-paddingInline-md);
+  gap: var(--action-menu-menuPopover-size-gapInline-md);
+  max-height: var(--action-menu-menuPopover-size-maxHeight-md);
+}

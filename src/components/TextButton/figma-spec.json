@@ -1,0 +1,275 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "268:3654",
+    "componentName": "TextButton",
+    "extractedAt": "2026-05-01T17:35:23.075Z"
+  },
+  "componentPropertyDefinitions": {
+    "Focus#412:85": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "hasLeading#2073:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Text#2109:290": {
+      "type": "TEXT",
+      "defaultValue": "버튼명"
+    },
+    "Variant": {
+      "type": "VARIANT",
+      "defaultValue": "chevron",
+      "variantOptions": [
+        "chevron",
+        "underline",
+        "plain"
+      ]
+    },
+    "Tone": {
+      "type": "VARIANT",
+      "defaultValue": "neutral",
+      "variantOptions": [
+        "neutral",
+        "neutralMuted",
+        "accent",
+        "danger"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "lg",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md",
+        "lg"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed",
+        "disabled"
+      ]
+    },
+    "Disabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "LeadingIcon",
+      "type": "INSTANCE",
+      "componentName": "LeadingIcon",
+      "conditional": "__hidden__"
+    },
+    {
+      "layerName": "labelTrailing",
+      "type": "FRAME",
+      "conditional": null,
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": -4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "label",
+          "type": "FRAME",
+          "conditional": null,
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 0,
+            "paddingRight": 3,
+            "paddingBottom": 0,
+            "paddingLeft": 3,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "버튼명",
+              "type": "TEXT",
+              "conditional": null,
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(34,114,235,1)",
+                  "token": "--color-blue-600",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(34,114,235,1)",
+                  "token": "--color-blue-600",
+                  "resolved": true
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-600",
+                  "token": "--semantic-label-14-semibold",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "TrailingIcon",
+          "type": "INSTANCE",
+          "componentName": "TrailingIcon",
+          "conditional": null
+        }
+      ]
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "Focus",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 8
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-contentOn-status-success-solid-default",
+          "resolved": true
+        }
+      ],
+      "children": []
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 2,
+    "paddingRight": 2,
+    "paddingBottom": 2,
+    "paddingLeft": 2,
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": 6
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 2,
+      "token": "--spacing-2",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 6,
+      "token": "--radius-6",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Focus": {
+      "tsProp": "focus",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "hasLeading": {
+      "tsProp": "hasLeading",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Text": {
+      "tsProp": "text",
+      "tsType": "string",
+      "figmaToCode": {}
+    },
+    "Variant": {
+      "tsProp": "variant",
+      "tsType": "'chevron' | 'underline' | 'plain'",
+      "figmaToCode": {
+        "chevron": "chevron",
+        "underline": "underline",
+        "plain": "plain"
+      }
+    },
+    "Tone": {
+      "tsProp": "tone",
+      "tsType": "'neutral' | 'neutralMuted' | 'accent' | 'danger'",
+      "figmaToCode": {
+        "neutral": "neutral",
+        "neutralMuted": "neutralmuted",
+        "accent": "accent",
+        "danger": "danger"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md' | 'lg'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md",
+        "lg": "lg"
+      }
+    },
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed' | 'disabled'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed",
+        "disabled": "disabled"
+      }
+    },
+    "Disabled": {
+      "tsProp": "disabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": []
+}

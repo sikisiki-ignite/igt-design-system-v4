@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "622:36622",
+    "componentName": "OrgTreeChevronIcon",
+    "extractedAt": "2026-05-04T06:57:31.685Z"
+  },
+  "componentPropertyDefinitions": {},
+  "layerInventory": [
+    {
+      "layerName": "grid",
+      "type": "INSTANCE",
+      "componentName": "grid",
+      "conditional": "__hidden__",
+      "dimensions": {
+        "width": 24,
+        "height": 24
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,41,41,0.1)",
+          "token": null,
+          "resolved": false
+        }
+      ],
+      "children": [
+        {
+          "layerName": "\bGuide",
+          "type": "GROUP",
+          "conditional": null,
+          "dimensions": {
+            "width": 24,
+            "height": 24
+          },
+          "children": [
+            {
+              "layerName": "padding",
+              "type": "GROUP",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 24,
+                "height": 24
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": null,
+  "styleValues": [],
+  "textStyles": [],
+  "variantStyleMatrix": [],
+  "propMapping": {},
+  "gaps": []
+}

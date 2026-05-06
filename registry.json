@@ -1,0 +1,103 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "igt-design-system",
+  "homepage": "https://github.com/ignite/igt-design-system-v2",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:component",
+      "title": "Button",
+      "description": "Primary interactive element with fill/outline/ghost variants.",
+      "dependencies": ["igt-design-system-v2"],
+      "files": []
+    },
+    {
+      "name": "text-field",
+      "type": "registry:component",
+      "title": "TextField",
+      "description": "Text input with label, helper text, icons, and error state.",
+      "dependencies": ["igt-design-system-v2"],
+      "files": []
+    },
+    {
+      "name": "select",
+      "type": "registry:component",
+      "title": "Select",
+      "description": "Accessible dropdown using Radix UI.",
+      "dependencies": ["igt-design-system-v2", "@radix-ui/react-select"],
+      "files": []
+    },
+    {
+      "name": "dialog",
+      "type": "registry:component",
+      "title": "Dialog",
+      "description": "Modal dialog with header, scrollable body, and footer.",
+      "dependencies": ["igt-design-system-v2", "@radix-ui/react-dialog"],
+      "files": []
+    },
+    {
+      "name": "drawer",
+      "type": "registry:component",
+      "title": "Drawer",
+      "description": "Side-panel drawer (left/right) built on Radix Dialog.",
+      "dependencies": ["igt-design-system-v2", "@radix-ui/react-dialog"],
+      "files": []
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:component",
+      "title": "Tooltip",
+      "description": "Accessible tooltip — inverse, surface, accent styles.",
+      "dependencies": ["igt-design-system-v2", "@radix-ui/react-tooltip"],
+      "files": []
+    },
+    {
+      "name": "popover",
+      "type": "registry:component",
+      "title": "Popover",
+      "description": "Accessible popover panel — surface and inverse styles.",
+      "dependencies": ["igt-design-system-v2", "@radix-ui/react-popover"],
+      "files": []
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Alert",
+      "description": "Inline alert with neutral/success/danger/warning/info tones.",
+      "dependencies": ["igt-design-system-v2"],
+      "files": []
+    },
+    {
+      "name": "toast",
+      "type": "registry:component",
+      "title": "Toast",
+      "description": "Floating dark toast notification.",
+      "dependencies": ["igt-design-system-v2"],
+      "files": []
+    },
+    {
+      "name": "tab",
+      "type": "registry:component",
+      "title": "Tab",
+      "description": "Horizontal tab navigation with underline indicator.",
+      "dependencies": ["igt-design-system-v2"],
+      "files": []
+    },
+    {
+      "name": "pagination",
+      "type": "registry:component",
+      "title": "Pagination",
+      "description": "Page number navigation with ellipsis.",
+      "dependencies": ["igt-design-system-v2"],
+      "files": []
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:component",
+      "title": "Skeleton",
+      "description": "Animated loading placeholder.",
+      "dependencies": ["igt-design-system-v2"],
+      "files": []
+    }
+  ]
+}

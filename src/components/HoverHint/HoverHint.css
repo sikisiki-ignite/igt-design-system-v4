@@ -1,0 +1,35 @@
+/* ── HoverHint ── */
+
+.hover-hint {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  padding: var(--spacing-10);
+  background-color: var(--sys-surface-floating);
+  border-radius: var(--radius-12);
+  max-width: 200px;
+  box-sizing: border-box;
+}
+
+.hover-hint[data-layout="inline"] {
+  padding: var(--spacing-4) var(--spacing-8);
+  border-radius: var(--radius-8);
+  align-items: center;
+  justify-content: center;
+}
+
+.hover-hint__headline {
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  line-height: var(--semantic-label-12-semibold-lineHeight);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+  color: var(--sys-contentOn-dark-default);
+}
+
+.hover-hint__description {
+  font-family: var(--semantic-caption-12-regular-fontFamily);
+  font-size: var(--semantic-caption-12-regular-fontSize);
+  line-height: var(--semantic-caption-12-regular-lineHeight);
+  font-weight: var(--semantic-caption-12-regular-fontWeight);
+  color: var(--sys-contentOn-dark-subtle);
+}

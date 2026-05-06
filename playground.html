@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko" data-brand="default" data-theme="light" data-radius="default" data-size="comfortable">
+<!-- data-theme은 JS가 OS 설정을 읽어 "light" 또는 "dark"로 자동 세팅 -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IGT Design System — Theme Playground</title>
+
+  <!-- 토큰 CSS (Tailwind 없이 순수 CSS 변수만 로드) -->
+  <link rel="stylesheet" href="./src/fonts/fonts.css">
+  <link rel="stylesheet" href="./src/tokens/primitives.css">
+  <link rel="stylesheet" href="./src/tokens/semantic.css">
+  <link rel="stylesheet" href="./src/tokens/themes.css">
+  <link rel="stylesheet" href="./src/tokens/typography.css">
+  <link rel="stylesheet" href="./src/tokens/effects.css">
+  <link rel="stylesheet" href="./src/tokens/component.css">
+
+  <style>
+    /* ── 기본 리셋 & 폰트 ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--typography-fontFamily-primary), -apple-system, sans-serif;
+      font-size: 14px;
+      background: #f0f0f0;
+      min-height: 100vh;
+    }
+
+    /* ── 컨트롤 패널 ── */
+    .panel {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 12px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .panel-title {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+    }
+    .controls-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .control-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #666;
+    }
+    .seg {
+      display: flex;
+      background: #2a2a2a;
+      border-radius: 6px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .seg button {
+      padding: 4px 10px;
+      border: none;
+      border-radius: 4px;
+      background: transparent;
+      color: #888;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.12s, color 0.12s;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    .seg button:hover { color: #ccc; background: #333; }
+    .seg button.active { background: #fff; color: #000; font-weight: 600; }
+
+    /* 프리셋 행 */
+    .preset-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .preset-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #555;
+    }
+    .preset-btn {
+      padding: 4px 12px;
+      border: 1px solid #333;
+      border-radius: 4px;
+      background: transparent;
+      color: #888;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.12s, color 0.12s;
+      font-family: inherit;
+    }
+    .preset-btn:hover { border-color: #666; color: #ccc; }
+    .preset-btn.active { border-color: #fff; color: #fff; }
+
+    /* ── 미리보기 영역 ── */
+    .preview-wrap {
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* 미리보기 카드 (실제 토큰 적용 영역) */
+    .preview-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .preview-inner {
+      background: var(--sys-background-base);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      transition: background 0.2s;
+    }
+
+    /* 섹션 헤더 */
+    .section-title {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sys-content-neutral-muted);
+      margin-bottom: 2px;
+    }
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--sys-border-neutral-subtle);
+      margin: 4px 0 12px;
+    }
+
+    /* ── 컴포넌트 미리보기 스타일 ── */
+
+    /* 버튼 */
+    .ds-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 600;
+      transition: background 0.12s, box-shadow 0.12s;
+      white-space: nowrap;
+    }
+
+    /* size: comfortable */
+    .ds-btn-xs { height: var(--pattern-actionBase-common-height-xs); padding: 0 var(--pattern-actionBase-buttonLike-spacing-paddingInline-xs); font-size: 12px; border-radius: var(--pattern-actionBase-buttonLike-radius-xs); }
+    .ds-btn-sm { height: var(--pattern-actionBase-common-height-sm); padding: 0 var(--pattern-actionBase-buttonLike-spacing-paddingInline-sm); font-size: 13px; border-radius: var(--pattern-actionBase-buttonLike-radius-sm); }
+    .ds-btn-md { height: var(--pattern-actionBase-common-height-md); padding: 0 var(--pattern-actionBase-buttonLike-spacing-paddingInline-md); font-size: 14px; border-radius: var(--pattern-actionBase-buttonLike-radius-md); }
+    .ds-btn-lg { height: var(--pattern-actionBase-common-height-lg); padding: 0 var(--pattern-actionBase-buttonLike-spacing-paddingInline-lg); font-size: 15px; border-radius: var(--pattern-actionBase-buttonLike-radius-lg); }
+
+    /* 버튼 variant */
+    .ds-btn-primary {
+      background: var(--sys-container-brand-solid-default);
+      color: var(--sys-contentOn-brand-solid-default);
+    }
+    .ds-btn-primary:hover { background: var(--sys-container-brand-solid-strong); }
+
+    .ds-btn-secondary {
+      background: var(--sys-container-neutral-tint-default);
+      color: var(--sys-content-neutral-default);
+    }
+    .ds-btn-secondary:hover { background: var(--sys-container-neutral-tint-strong); }
+
+    .ds-btn-outline {
+      background: transparent;
+      border-color: var(--sys-border-neutral-default);
+      color: var(--sys-content-neutral-default);
+    }
+    .ds-btn-outline:hover { background: var(--sys-container-neutral-tint-default); }
+
+    .ds-btn-danger {
+      background: var(--sys-container-status-danger-solid-default);
+      color: var(--sys-contentOn-status-danger-solid-default);
+    }
+
+    /* 인풋 */
+    .ds-input {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 320px;
+      height: var(--pattern-actionBase-common-height-md);
+      padding: 0 12px;
+      border: 1px solid var(--sys-border-neutral-default);
+      border-radius: var(--pattern-actionBase-buttonLike-radius-md);
+      background: var(--sys-surface-base);
+      color: var(--sys-content-neutral-default);
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.12s;
+    }
+    .ds-input::placeholder { color: var(--sys-content-neutral-subtle); }
+    .ds-input:focus { border-color: var(--sys-border-brand-default); box-shadow: 0 0 0 3px var(--sys-border-brand-weak); }
+
+    /* 배지 */
+    .ds-badge {
+      display: inline-flex;
+      align-items: center;
+      height: 20px;
+      padding: 0 8px;
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .ds-badge-brand { background: var(--sys-container-brand-solid-default); color: var(--sys-contentOn-brand-solid-default); }
+    .ds-badge-success { background: var(--sys-container-status-success-solid-default); color: var(--sys-contentOn-status-success-solid-default); }
+    .ds-badge-danger  { background: var(--sys-container-status-danger-solid-default);  color: var(--sys-contentOn-status-danger-solid-default); }
+    .ds-badge-warning { background: var(--sys-container-status-warning-solid-default); color: var(--sys-contentOn-status-warning-solid-default); }
+    .ds-badge-neutral { background: var(--sys-container-neutral-tint-default); color: var(--sys-content-neutral-default); }
+
+    /* 카드 */
+    .ds-card {
+      background: var(--sys-surface-raised);
+      border: 1px solid var(--sys-border-neutral-subtle);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--sys-elevation-subtle);
+    }
+    .ds-card-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--sys-content-neutral-strong);
+      margin-bottom: 6px;
+    }
+    .ds-card-body {
+      font-size: 13px;
+      color: var(--sys-content-neutral-muted);
+      line-height: 1.6;
+    }
+
+    /* 테이블 (compact 확인용) */
+    .ds-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .ds-table th {
+      text-align: left;
+      padding: 0 12px;
+      height: var(--pattern-actionBase-common-height-sm);
+      background: var(--sys-surface-subtle);
+      color: var(--sys-content-neutral-muted);
+      font-weight: 600;
+      font-size: 12px;
+      border-bottom: 1px solid var(--sys-border-neutral-subtle);
+    }
+    .ds-table td {
+      padding: 0 12px;
+      height: var(--pattern-actionBase-common-height-md);
+      color: var(--sys-content-neutral-default);
+      border-bottom: 1px solid var(--sys-border-neutral-subtle);
+    }
+    .ds-table tr:last-child td { border-bottom: none; }
+    .ds-table tr:hover td { background: var(--sys-surface-subtle); }
+
+    /* 레이아웃 헬퍼 */
+    .row   { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .col   { display: flex; flex-direction: column; gap: 8px; }
+    .col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* ── 코드 스니펫 ── */
+    .code-box {
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .code-box code {
+      font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+      font-size: 13px;
+      color: #e0e0e0;
+      word-break: break-all;
+    }
+    .code-box code .attr-name  { color: #9ecbff; }
+    .code-box code .attr-value { color: #f8c555; }
+    .copy-btn {
+      flex-shrink: 0;
+      padding: 6px 14px;
+      border: 1px solid #444;
+      border-radius: 6px;
+      background: transparent;
+      color: #888;
+      font-size: 12px;
+      cursor: pointer;
+      transition: border-color 0.12s, color 0.12s;
+      font-family: inherit;
+    }
+    .copy-btn:hover { border-color: #888; color: #ccc; }
+    .copy-btn.copied { border-color: #4caf50; color: #4caf50; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ── 컨트롤 패널 ── -->
+  <div class="panel">
+    <div class="controls-row">
+
+      <div class="control-group">
+        <div class="control-label">Brand</div>
+        <div class="seg" data-attr="brand">
+          <button data-val="default" class="active">Default</button>
+          <button data-val="finance">Finance</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">Theme</div>
+        <div class="seg" data-attr="theme">
+          <button data-val="system" class="active">System <span id="system-indicator"></span></button>
+          <button data-val="light">Light 고정</button>
+          <button data-val="dark">Dark 고정</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">Radius</div>
+        <div class="seg" data-attr="radius">
+          <button data-val="default" class="active">Default</button>
+          <button data-val="soft">Soft</button>
+          <button data-val="friendly">Friendly</button>
+          <button data-val="playful">Playful</button>
+          <button data-val="formal">Formal</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="control-label">Size</div>
+        <div class="seg" data-attr="size">
+          <button data-val="comfortable" class="active">Comfortable</button>
+          <button data-val="compact">Compact</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="preset-row">
+      <span class="preset-label">프리셋</span>
+      <button class="preset-btn" data-preset="backoffice">Backoffice</button>
+      <button class="preset-btn" data-preset="saas">SaaS</button>
+      <button class="preset-btn" data-preset="commerce">Commerce</button>
+      <button class="preset-btn" data-preset="finance">Finance</button>
+      <button class="preset-btn" data-preset="media">Media</button>
+    </div>
+  </div>
+
+  <!-- ── 미리보기 ── -->
+  <div class="preview-wrap">
+
+    <div class="preview-card">
+      <div class="preview-inner">
+
+        <!-- 버튼 섹션 -->
+        <div>
+          <div class="section-title">Buttons</div>
+          <div class="section-divider"></div>
+          <div class="col" style="gap:10px">
+            <div class="row">
+              <button class="ds-btn ds-btn-primary ds-btn-xs">Extra Small</button>
+              <button class="ds-btn ds-btn-primary ds-btn-sm">Small</button>
+              <button class="ds-btn ds-btn-primary ds-btn-md">Medium</button>
+              <button class="ds-btn ds-btn-primary ds-btn-lg">Large</button>
+            </div>
+            <div class="row">
+              <button class="ds-btn ds-btn-secondary ds-btn-md">Secondary</button>
+              <button class="ds-btn ds-btn-outline ds-btn-md">Outline</button>
+              <button class="ds-btn ds-btn-danger ds-btn-md">Danger</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 인풋 섹션 -->
+        <div>
+          <div class="section-title">Input</div>
+          <div class="section-divider"></div>
+          <div class="row">
+            <input class="ds-input" placeholder="텍스트를 입력하세요" style="max-width:280px">
+            <button class="ds-btn ds-btn-primary ds-btn-md">확인</button>
+          </div>
+        </div>
+
+        <!-- 배지 섹션 -->
+        <div>
+          <div class="section-title">Badges</div>
+          <div class="section-divider"></div>
+          <div class="row">
+            <span class="ds-badge ds-badge-brand">Primary</span>
+            <span class="ds-badge ds-badge-success">Success</span>
+            <span class="ds-badge ds-badge-danger">Error</span>
+            <span class="ds-badge ds-badge-warning">Warning</span>
+            <span class="ds-badge ds-badge-neutral">Neutral</span>
+          </div>
+        </div>
+
+        <!-- 카드 섹션 -->
+        <div>
+          <div class="section-title">Cards</div>
+          <div class="section-divider"></div>
+          <div class="col-2">
+            <div class="ds-card">
+              <div class="ds-card-title">카드 제목</div>
+              <div class="ds-card-body">카드의 본문 내용이 여기에 들어갑니다. 색상과 라운딩을 확인하세요.</div>
+            </div>
+            <div class="ds-card">
+              <div class="ds-card-title" style="display:flex;align-items:center;justify-content:space-between">
+                상태 카드
+                <span class="ds-badge ds-badge-success">Active</span>
+              </div>
+              <div class="ds-card-body">배지와 조합된 카드 예시입니다.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 테이블 섹션 -->
+        <div>
+          <div class="section-title">Table (size 확인용)</div>
+          <div class="section-divider"></div>
+          <div style="border:1px solid var(--sys-border-neutral-subtle); border-radius: var(--radius-md); overflow:hidden;">
+            <table class="ds-table">
+              <thead>
+                <tr>
+                  <th>이름</th>
+                  <th>상태</th>
+                  <th>역할</th>
+                  <th>마지막 접속</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>김민준</td>
+                  <td><span class="ds-badge ds-badge-success">Active</span></td>
+                  <td>Admin</td>
+                  <td>2026-04-30</td>
+                </tr>
+                <tr>
+                  <td>이서연</td>
+                  <td><span class="ds-badge ds-badge-neutral">Inactive</span></td>
+                  <td>Editor</td>
+                  <td>2026-04-28</td>
+                </tr>
+                <tr>
+                  <td>박도현</td>
+                  <td><span class="ds-badge ds-badge-warning">Pending</span></td>
+                  <td>Viewer</td>
+                  <td>2026-04-25</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 코드 스니펫 -->
+    <div class="code-box">
+      <code id="code-snippet"></code>
+      <button class="copy-btn" id="copy-btn">복사</button>
+    </div>
+
+  </div>
+
+  <script>
+    const html = document.documentElement
+    const sysMQ = window.matchMedia('(prefers-color-scheme: dark)')
+
+    // 현재 테마 선택: 'system' | 'light' | 'dark'
+    let currentThemeChoice = 'system'
+
+    const presets = {
+      backoffice: { brand: 'default', theme: 'system', radius: 'default',  size: 'compact'     },
+      saas:       { brand: 'default', theme: 'system', radius: 'default',  size: 'comfortable' },
+      commerce:   { brand: 'default', theme: 'system', radius: 'friendly', size: 'comfortable' },
+      finance:    { brand: 'finance', theme: 'system', radius: 'formal',   size: 'comfortable' },
+      media:      { brand: 'default', theme: 'system', radius: 'soft',     size: 'comfortable' },
+    }
+
+    function resolveTheme(choice) {
+      if (choice === 'system') return sysMQ.matches ? 'dark' : 'light'
+      return choice
+    }
+
+    function updateSystemIndicator() {
+      const indicator = document.getElementById('system-indicator')
+      if (!indicator) return
+      const resolved = sysMQ.matches ? '🌙' : '☀️'
+      indicator.textContent = currentThemeChoice === 'system' ? resolved : ''
+    }
+
+    function applyThemeChoice(choice) {
+      currentThemeChoice = choice
+      html.dataset.theme = resolveTheme(choice)
+      document.querySelectorAll('.seg[data-attr="theme"] button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.val === choice)
+      })
+      updateSystemIndicator()
+      updateCode()
+    }
+
+    function applyAttr(attr, val) {
+      if (attr === 'theme') {
+        applyThemeChoice(val)
+        return
+      }
+      html.dataset[attr] = val
+      document.querySelectorAll(`.seg[data-attr="${attr}"] button`).forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.val === val)
+      })
+      updateCode()
+    }
+
+    function updateCode() {
+      const brand  = html.dataset.brand  || 'default'
+      const radius = html.dataset.radius || 'default'
+      const size   = html.dataset.size   || 'comfortable'
+
+      const snippet = document.getElementById('code-snippet')
+
+      if (currentThemeChoice === 'system') {
+        // system: applyTheme() 호출 코드로 표시
+        snippet.innerHTML =
+          `<span class="attr-name">applyTheme</span>({ ` +
+          `<span class="attr-name">brand</span>: "<span class="attr-value">${brand}</span>", ` +
+          `<span class="attr-name">mode</span>: "<span class="attr-value">system</span>", ` +
+          `<span class="attr-name">radius</span>: "<span class="attr-value">${radius}</span>", ` +
+          `<span class="attr-name">size</span>: "<span class="attr-value">${size}</span>" })`
+      } else {
+        snippet.innerHTML =
+          `&lt;<span class="attr-name">html</span> ` +
+          `<span class="attr-name">data-brand</span>="<span class="attr-value">${brand}</span>" ` +
+          `<span class="attr-name">data-theme</span>="<span class="attr-value">${currentThemeChoice}</span>" ` +
+          `<span class="attr-name">data-radius</span>="<span class="attr-value">${radius}</span>" ` +
+          `<span class="attr-name">data-size</span>="<span class="attr-value">${size}</span>"&gt;`
+      }
+
+      // 프리셋 active 동기화
+      document.querySelectorAll('.preset-btn').forEach(btn => {
+        const p = presets[btn.dataset.preset]
+        const match =
+          p.brand  === (html.dataset.brand  || 'default') &&
+          p.theme  === currentThemeChoice &&
+          p.radius === (html.dataset.radius || 'default') &&
+          p.size   === (html.dataset.size   || 'comfortable')
+        btn.classList.toggle('active', match)
+      })
+    }
+
+    // OS 테마 변경 감지 → system 모드일 때 자동 반영
+    sysMQ.addEventListener('change', () => {
+      if (currentThemeChoice === 'system') {
+        html.dataset.theme = resolveTheme('system')
+        updateSystemIndicator()
+      }
+    })
+
+    // 세그먼트 컨트롤 클릭
+    document.querySelectorAll('.seg button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const attr = btn.closest('.seg').dataset.attr
+        applyAttr(attr, btn.dataset.val)
+      })
+    })
+
+    // 프리셋 클릭
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const p = presets[btn.dataset.preset]
+        Object.entries(p).forEach(([attr, val]) => applyAttr(attr, val))
+      })
+    })
+
+    // 복사 버튼
+    document.getElementById('copy-btn').addEventListener('click', function() {
+      const brand  = html.dataset.brand  || 'default'
+      const radius = html.dataset.radius || 'default'
+      const size   = html.dataset.size   || 'comfortable'
+      let text
+      if (currentThemeChoice === 'system') {
+        text = `applyTheme({ brand: "${brand}", mode: "system", radius: "${radius}", size: "${size}" })`
+      } else {
+        text = `<html data-brand="${brand}" data-theme="${currentThemeChoice}" data-radius="${radius}" data-size="${size}">`
+      }
+      navigator.clipboard.writeText(text)
+      this.textContent = '복사됨 ✓'
+      this.classList.add('copied')
+      setTimeout(() => { this.textContent = '복사'; this.classList.remove('copied') }, 1500)
+    })
+
+    // 초기화 — system 모드로 시작
+    applyThemeChoice('system')
+  </script>
+</body>
+</html>

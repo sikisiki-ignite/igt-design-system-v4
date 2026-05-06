@@ -1,0 +1,726 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "296:4813",
+    "componentName": "Navigation",
+    "extractedAt": "2026-05-04T06:30:02.644Z"
+  },
+  "componentPropertyDefinitions": {
+    "Scrolled#2090:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "LayoutMode": {
+      "type": "VARIANT",
+      "defaultValue": "full",
+      "variantOptions": [
+        "narrow",
+        "wide",
+        "full",
+        "ful"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "logout",
+      "variantOptions": [
+        "logout",
+        "login"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "sm",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Background",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 1600,
+        "height": 56
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Surface",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Surface",
+          "conditional": null,
+          "dimensions": {
+            "width": 1600,
+            "height": 56
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,1)",
+              "token": "--sys-surface-static",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Variant": "default"
+          },
+          "dimensionsBySize": {
+            "sm": {
+              "width": 1600,
+              "height": 56
+            },
+            "md": {
+              "width": 1600,
+              "height": 64
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 1600,
+          "height": 56
+        },
+        "md": {
+          "width": 1600,
+          "height": 64
+        }
+      }
+    },
+    {
+      "layerName": "Scrolled",
+      "type": "FRAME",
+      "conditional": "Scrolled",
+      "dimensions": {
+        "width": 1600,
+        "height": 56
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ],
+      "children": [],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 1600,
+          "height": 56
+        },
+        "md": {
+          "width": 1600,
+          "height": 64
+        }
+      }
+    },
+    {
+      "layerName": "content",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 1440,
+        "height": 56
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 40,
+        "paddingTop": 0,
+        "paddingRight": 24,
+        "paddingBottom": 0,
+        "paddingLeft": 24,
+        "alignItems": "center",
+        "justifyContent": "space-between"
+      },
+      "children": [
+        {
+          "layerName": "leading",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 387,
+            "height": 56
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 28,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "◇ Part / Logo",
+              "type": "INSTANCE",
+              "componentName": "◇ Part / Logo",
+              "conditional": null,
+              "dimensions": {
+                "width": 44,
+                "height": 56
+              },
+              "instanceProps": {
+                "Brand": "mgWrap"
+              },
+              "children": [
+                {
+                  "layerName": "Service / igt_core_logo_mgwrap_light",
+                  "type": "INSTANCE",
+                  "componentName": "Service / igt_core_logo_mgwrap_light",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 28,
+                    "height": 28
+                  },
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 28,
+                      "height": 28
+                    },
+                    "md": {
+                      "width": 28,
+                      "height": 28
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 44,
+                  "height": 56
+                },
+                "md": {
+                  "width": 44,
+                  "height": 64
+                }
+              }
+            },
+            {
+              "layerName": "navGroup",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 315,
+                "height": 56
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 0,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "flex-start"
+              },
+              "children": [
+                {
+                  "layerName": "◇ Part / NavItem",
+                  "type": "INSTANCE",
+                  "componentName": "◇ Part / NavItem",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 63,
+                    "height": 32
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "Tone": "neutral",
+                    "State": "current",
+                    "Size": "sm"
+                  },
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 63,
+                      "height": 32
+                    },
+                    "md": {
+                      "width": 76,
+                      "height": 40
+                    }
+                  }
+                },
+                {
+                  "layerName": "◇ Part / NavItem",
+                  "type": "INSTANCE",
+                  "componentName": "◇ Part / NavItem",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 63,
+                    "height": 32
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "Tone": "neutral",
+                    "State": "normal",
+                    "Size": "sm"
+                  },
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 63,
+                      "height": 32
+                    },
+                    "md": {
+                      "width": 76,
+                      "height": 40
+                    }
+                  }
+                },
+                {
+                  "layerName": "◇ Part / NavItem",
+                  "type": "INSTANCE",
+                  "componentName": "◇ Part / NavItem",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 63,
+                    "height": 32
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "Tone": "neutral",
+                    "State": "normal",
+                    "Size": "sm"
+                  },
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 63,
+                      "height": 32
+                    },
+                    "md": {
+                      "width": 76,
+                      "height": 40
+                    }
+                  }
+                },
+                {
+                  "layerName": "◇ Part / NavItem",
+                  "type": "INSTANCE",
+                  "componentName": "◇ Part / NavItem",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 63,
+                    "height": 32
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "Tone": "neutral",
+                    "State": "normal",
+                    "Size": "sm"
+                  },
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 63,
+                      "height": 32
+                    },
+                    "md": {
+                      "width": 76,
+                      "height": 40
+                    }
+                  }
+                },
+                {
+                  "layerName": "◇ Part / NavItem",
+                  "type": "INSTANCE",
+                  "componentName": "◇ Part / NavItem",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 63,
+                    "height": 32
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,255,255,0)",
+                      "token": "--sys-border-none",
+                      "resolved": true
+                    }
+                  ],
+                  "instanceProps": {
+                    "Tone": "neutral",
+                    "State": "normal",
+                    "Size": "sm"
+                  },
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 63,
+                      "height": 32
+                    },
+                    "md": {
+                      "width": 76,
+                      "height": 40
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 315,
+                  "height": 56
+                },
+                "md": {
+                  "width": 380,
+                  "height": 64
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "sm": {
+              "width": 387,
+              "height": 56
+            },
+            "md": {
+              "width": 452,
+              "height": 64
+            }
+          }
+        },
+        {
+          "layerName": "center",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 885,
+            "height": 56
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 28,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "flex-start"
+          },
+          "children": [],
+          "dimensionsBySize": {
+            "sm": {
+              "width": 885,
+              "height": 56
+            },
+            "md": {
+              "width": 820,
+              "height": 64
+            }
+          }
+        },
+        {
+          "layerName": "trailing",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 120,
+            "height": 56
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 20,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "◇ Part / TrailingActionGroup",
+              "type": "INSTANCE",
+              "componentName": "◇ Part / TrailingActionGroup",
+              "conditional": null,
+              "dimensions": {
+                "width": 120,
+                "height": 32
+              },
+              "instanceProps": {
+                "Variant": "userActions/iconButton+avatar"
+              },
+              "children": [
+                {
+                  "layerName": "button",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 72,
+                    "height": 32
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 8,
+                    "paddingTop": 0,
+                    "paddingRight": 0,
+                    "paddingBottom": 0,
+                    "paddingLeft": 0,
+                    "alignItems": "center",
+                    "justifyContent": "flex-start"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 72,
+                      "height": 32
+                    },
+                    "md": {
+                      "width": 72,
+                      "height": 32
+                    }
+                  }
+                },
+                {
+                  "layerName": "Avatar",
+                  "type": "INSTANCE",
+                  "componentName": "Avatar",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 32,
+                    "height": 32
+                  },
+                  "instanceProps": {
+                    "Size": "sm",
+                    "Shape": "circle",
+                    "StatusBadge": "false"
+                  },
+                  "dimensionsBySize": {
+                    "sm": {
+                      "width": 32,
+                      "height": 32
+                    },
+                    "md": {
+                      "width": 32,
+                      "height": 32
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "sm": {
+                  "width": 120,
+                  "height": 32
+                },
+                "md": {
+                  "width": 120,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "sm": {
+              "width": 120,
+              "height": 56
+            },
+            "md": {
+              "width": 120,
+              "height": 64
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "sm": {
+          "width": 1440,
+          "height": 56
+        },
+        "md": {
+          "width": 1440,
+          "height": 64
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 40,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 40,
+      "token": "--spacing-40",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "LayoutMode=ful",
+      "variantProps": {
+        "LayoutMode": "ful"
+      },
+      "layerStyles": {
+        "◇ Part / Surface": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "Scrolled": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "LayoutMode=full",
+      "variantProps": {
+        "LayoutMode": "full"
+      },
+      "layerStyles": {
+        "◇ Part / Surface": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "Scrolled": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "LayoutMode=narrow",
+      "variantProps": {
+        "LayoutMode": "narrow"
+      },
+      "layerStyles": {
+        "◇ Part / Surface": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "Scrolled": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "LayoutMode=wide",
+      "variantProps": {
+        "LayoutMode": "wide"
+      },
+      "layerStyles": {
+        "◇ Part / Surface": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "Scrolled": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Scrolled": {
+      "tsProp": "scrolled",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "LayoutMode": {
+      "tsProp": "layoutMode",
+      "tsType": "'narrow' | 'wide' | 'full' | 'ful'",
+      "figmaToCode": {
+        "narrow": "narrow",
+        "wide": "wide",
+        "full": "full",
+        "ful": "ful"
+      }
+    },
+    "State": {
+      "tsProp": "state",
+      "tsType": "'logout' | 'login'",
+      "figmaToCode": {
+        "logout": "logout",
+        "login": "login"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    }
+  },
+  "gaps": []
+}

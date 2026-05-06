@@ -1,0 +1,265 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "505:17247",
+    "componentName": "SwitchField",
+    "extractedAt": "2026-05-03T14:52:42.188Z"
+  },
+  "componentPropertyDefinitions": {
+    "Description#342:10": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "text",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 78,
+        "height": 40
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "label",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 78,
+            "height": 20
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "텍스트",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 78,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,12,30,0.8)",
+                  "token": "--sys-content-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,12,30,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-600",
+                  "token": "--semantic-label-14-semibold",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 78,
+                  "height": 20
+                },
+                "sm": {
+                  "width": 86,
+                  "height": 18
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 78,
+              "height": 20
+            },
+            "sm": {
+              "width": 86,
+              "height": 18
+            }
+          }
+        },
+        {
+          "layerName": "description",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 78,
+            "height": 16
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "간단한 설명",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 78,
+                "height": 16
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,19,43,0.58)",
+                  "token": "--sys-content-neutral-muted",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,19,43,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "12-400",
+                  "token": "--semantic-caption-12-regular",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 78,
+                  "height": 16
+                },
+                "sm": {
+                  "width": 86,
+                  "height": 14
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 78,
+              "height": 16
+            },
+            "sm": {
+              "width": 86,
+              "height": 14
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 78,
+          "height": 40
+        },
+        "sm": {
+          "width": 86,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "Switch",
+      "type": "INSTANCE",
+      "componentName": "Switch",
+      "conditional": "isFocused",
+      "dimensions": {
+        "width": 34,
+        "height": 20
+      },
+      "dimensionsBySize": {
+        "md": {
+          "width": 34,
+          "height": 20
+        },
+        "sm": {
+          "width": 26,
+          "height": 16
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 8,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 8,
+      "token": "--spacing-8",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "",
+      "variantProps": {},
+      "layerStyles": {}
+    }
+  ],
+  "propMapping": {
+    "Description": {
+      "tsProp": "description",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    }
+  },
+  "gaps": []
+}

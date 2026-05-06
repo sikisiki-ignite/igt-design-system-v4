@@ -1,0 +1,477 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "300:5596",
+    "componentName": "Alert",
+    "extractedAt": "2026-05-04T02:31:41.123Z"
+  },
+  "componentPropertyDefinitions": {
+    "hasDescription#401:12": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "dismissible#664:0": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "hasLeading#2089:19": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "hasAction#4096:11": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "type": {
+      "type": "VARIANT",
+      "defaultValue": "error",
+      "variantOptions": [
+        "error",
+        "warning",
+        "info",
+        "success",
+        "neutral"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "content",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 332,
+        "height": 38
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 8,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "igt_core_icon_failure_solid",
+          "type": "INSTANCE",
+          "componentName": "igt_core_icon_failure_solid",
+          "conditional": null,
+          "dimensions": {
+            "width": 20,
+            "height": 20
+          }
+        },
+        {
+          "layerName": "text",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 276,
+            "height": 38
+          },
+          "layoutSpec": {
+            "direction": "vertical",
+            "gap": 2,
+            "paddingTop": 0,
+            "paddingRight": 6,
+            "paddingBottom": 0,
+            "paddingLeft": 6,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "진행 상태가 변경되었어요",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 264,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(25,31,40,1)",
+                  "token": "--sys-surface-floating",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(25,31,40,1)",
+                  "token": "--sys-surface-floating",
+                  "resolved": true
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-600",
+                  "token": "--semantic-label-14-semibold",
+                  "resolved": true
+                }
+              ]
+            },
+            {
+              "layerName": "변경된 내용을 확인 후 필요한 조치를 진행해 주세요",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 264,
+                "height": 16
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,19,43,0.58)",
+                  "token": "--sys-content-neutral-muted",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,19,43,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "12-400",
+                  "token": "--semantic-caption-12-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "Parts / DismissControl",
+          "type": "INSTANCE",
+          "componentName": "Parts / DismissControl",
+          "conditional": null,
+          "dimensions": {
+            "width": 20,
+            "height": 20
+          }
+        }
+      ]
+    },
+    {
+      "layerName": "action",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 184,
+        "height": 32
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 6,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "Button",
+          "type": "INSTANCE",
+          "componentName": "Button",
+          "conditional": "isFocused",
+          "dimensions": {
+            "width": 89,
+            "height": 32
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            },
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(0,27,55,0.1)",
+              "token": "--sys-border-neutral-subtle",
+              "resolved": true
+            }
+          ]
+        },
+        {
+          "layerName": "Button",
+          "type": "INSTANCE",
+          "componentName": "Button",
+          "conditional": "isFocused",
+          "dimensions": {
+            "width": 89,
+            "height": 32
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(240,68,82,1)",
+              "token": "--sys-border-status-danger-default",
+              "resolved": true
+            },
+            {
+              "property": "border-color",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 16,
+    "paddingTop": 14,
+    "paddingRight": 14,
+    "paddingBottom": 14,
+    "paddingLeft": 14,
+    "alignItems": "flex-end",
+    "justifyContent": "flex-start",
+    "borderRadius": 14
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(251,136,144,0.16)",
+      "token": "--sys-border-status-danger-disabled",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 16,
+      "token": "--spacing-16",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 14,
+      "token": "--spacing-14",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 14,
+      "token": "--radius-14",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "진행 상태가 변경되었어요",
+      "figmaValue": "14-600",
+      "token": "--semantic-label-14-semibold",
+      "resolved": true
+    },
+    {
+      "layerName": "변경된 내용을 확인 후 필요한 조치를 진행해 주세요",
+      "figmaValue": "12-400",
+      "token": "--semantic-caption-12-regular",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "type=error",
+      "variantProps": {
+        "type": "error"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(251,136,144,0.16)",
+            "token": "--sys-border-status-danger-disabled",
+            "resolved": true
+          }
+        ],
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(240,68,82,1)",
+            "token": "--sys-border-status-danger-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=info",
+      "variantProps": {
+        "type": "info"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.16)",
+            "token": "--sys-border-brand-disabled",
+            "resolved": true
+          }
+        ],
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=neutral",
+      "variantProps": {
+        "type": "neutral"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=success",
+      "variantProps": {
+        "type": "success"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(63,213,153,0.15)",
+            "token": "--sys-container-status-success-tint-default",
+            "resolved": true
+          }
+        ],
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "type=warning",
+      "variantProps": {
+        "type": "warning"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,195,66,0.2)",
+            "token": "--sys-container-status-warning-tint-default",
+            "resolved": true
+          }
+        ],
+        "Button": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "hasDescription": {
+      "tsProp": "hasDescription",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "dismissible": {
+      "tsProp": "dismissible",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "hasLeading": {
+      "tsProp": "hasLeading",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "hasAction": {
+      "tsProp": "hasAction",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "type": {
+      "tsProp": "type",
+      "tsType": "'error' | 'warning' | 'info' | 'success' | 'neutral'",
+      "figmaToCode": {
+        "error": "error",
+        "warning": "warning",
+        "info": "info",
+        "success": "success",
+        "neutral": "neutral"
+      }
+    }
+  },
+  "gaps": []
+}

@@ -1,0 +1,1003 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "652:20358",
+    "componentName": "Breadcrumb",
+    "extractedAt": "2026-05-04T04:50:44.728Z"
+  },
+  "componentPropertyDefinitions": {
+    "Seperator": {
+      "type": "VARIANT",
+      "defaultValue": "chevron",
+      "variantOptions": [
+        "chevron",
+        "slash",
+        "dot"
+      ]
+    },
+    "Leading": {
+      "type": "VARIANT",
+      "defaultValue": "none",
+      "variantOptions": [
+        "none",
+        "home"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "depth 1",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 37,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Page",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Page",
+          "conditional": null,
+          "dimensions": {
+            "width": 37,
+            "height": 20
+          },
+          "instanceProps": {
+            "Role": "link",
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "페이지",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 37,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-border-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "depth 2",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 55,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Seperator",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Seperator",
+          "conditional": null,
+          "dimensions": {
+            "width": 14,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,29,58,0.16)",
+              "token": "--sys-border-neutral-muted",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Property 1": "chevron"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_chevron_right_outline_2dp",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_chevron_right_outline_2dp",
+              "conditional": null,
+              "dimensions": {
+                "width": 14,
+                "height": 14
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,29,58,0.16)",
+                  "token": "--sys-border-neutral-muted",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "children": []
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "◇ Part / Page",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Page",
+          "conditional": null,
+          "dimensions": {
+            "width": 37,
+            "height": 20
+          },
+          "instanceProps": {
+            "Role": "link",
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "페이지",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 37,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-border-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "depth 3",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 55,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Seperator",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Seperator",
+          "conditional": null,
+          "dimensions": {
+            "width": 14,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,29,58,0.16)",
+              "token": "--sys-border-neutral-muted",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Property 1": "chevron"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_chevron_right_outline_2dp",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_chevron_right_outline_2dp",
+              "conditional": null,
+              "dimensions": {
+                "width": 14,
+                "height": 14
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,29,58,0.16)",
+                  "token": "--sys-border-neutral-muted",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "children": []
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "◇ Part / Page",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Page",
+          "conditional": null,
+          "dimensions": {
+            "width": 37,
+            "height": 20
+          },
+          "instanceProps": {
+            "Role": "link",
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "페이지",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 37,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-border-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "depth 4",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 55,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Seperator",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Seperator",
+          "conditional": null,
+          "dimensions": {
+            "width": 14,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,29,58,0.16)",
+              "token": "--sys-border-neutral-muted",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Property 1": "chevron"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_chevron_right_outline_2dp",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_chevron_right_outline_2dp",
+              "conditional": null,
+              "dimensions": {
+                "width": 14,
+                "height": 14
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,29,58,0.16)",
+                  "token": "--sys-border-neutral-muted",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "children": []
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "◇ Part / Page",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Page",
+          "conditional": null,
+          "dimensions": {
+            "width": 37,
+            "height": 20
+          },
+          "instanceProps": {
+            "Role": "link",
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "페이지",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 37,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-border-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "depth 5",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 55,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Seperator",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Seperator",
+          "conditional": null,
+          "dimensions": {
+            "width": 14,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,29,58,0.16)",
+              "token": "--sys-border-neutral-muted",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Property 1": "chevron"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_chevron_right_outline_2dp",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_chevron_right_outline_2dp",
+              "conditional": null,
+              "dimensions": {
+                "width": 14,
+                "height": 14
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,29,58,0.16)",
+                  "token": "--sys-border-neutral-muted",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "children": []
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "◇ Part / Page",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Page",
+          "conditional": null,
+          "dimensions": {
+            "width": 37,
+            "height": 20
+          },
+          "instanceProps": {
+            "Role": "link",
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "페이지",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 37,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-border-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "depth 6",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 55,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / Seperator",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Seperator",
+          "conditional": null,
+          "dimensions": {
+            "width": 14,
+            "height": 20
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,29,58,0.16)",
+              "token": "--sys-border-neutral-muted",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Property 1": "chevron"
+          },
+          "children": [
+            {
+              "layerName": "igt_core_icon_chevron_right_outline_2dp",
+              "type": "INSTANCE",
+              "componentName": "igt_core_icon_chevron_right_outline_2dp",
+              "conditional": null,
+              "dimensions": {
+                "width": 14,
+                "height": 14
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,29,58,0.16)",
+                  "token": "--sys-border-neutral-muted",
+                  "resolved": true
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "stroke",
+                  "type": "FRAME",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "children": []
+                },
+                {
+                  "layerName": "grid",
+                  "type": "INSTANCE",
+                  "componentName": "grid",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 14,
+                    "height": 14
+                  },
+                  "styleValues": [
+                    {
+                      "property": "background",
+                      "figmaValue": "rgba(255,41,41,0.1)",
+                      "token": null,
+                      "resolved": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "◇ Part / Page",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Page",
+          "conditional": null,
+          "dimensions": {
+            "width": 37,
+            "height": 20
+          },
+          "instanceProps": {
+            "Role": "current",
+            "State": "normal"
+          },
+          "children": [
+            {
+              "layerName": "페이지",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 37,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(0,12,30,0.8)",
+                  "token": "--sys-content-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,12,30,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "homeIcon",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 20
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "igt_core_icon_home_solid",
+          "type": "INSTANCE",
+          "componentName": "igt_core_icon_home_solid",
+          "conditional": null,
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "styleValues": [
+            {
+              "property": "color",
+              "figmaValue": "rgba(0,29,58,0.16)",
+              "token": "--sys-border-neutral-muted",
+              "resolved": true
+            }
+          ],
+          "children": [
+            {
+              "layerName": "stroke",
+              "type": "FRAME",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 24,
+                "height": 24
+              },
+              "children": []
+            },
+            {
+              "layerName": "grid",
+              "type": "INSTANCE",
+              "componentName": "grid",
+              "conditional": "__hidden__",
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(255,41,41,0.1)",
+                  "token": null,
+                  "resolved": false
+                }
+              ],
+              "children": [
+                {
+                  "layerName": "\bGuide",
+                  "type": "GROUP",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 2,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 2,
+      "token": "--spacing-2",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "페이지",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "페이지",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "페이지",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "페이지",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "페이지",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "페이지",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Leading=home,Seperator=chevron",
+      "variantProps": {
+        "Seperator": "chevron",
+        "Leading": "home"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=home,Seperator=dot",
+      "variantProps": {
+        "Seperator": "dot",
+        "Leading": "home"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=home,Seperator=slash",
+      "variantProps": {
+        "Seperator": "slash",
+        "Leading": "home"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=none,Seperator=chevron",
+      "variantProps": {
+        "Seperator": "chevron",
+        "Leading": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=none,Seperator=dot",
+      "variantProps": {
+        "Seperator": "dot",
+        "Leading": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=none,Seperator=slash",
+      "variantProps": {
+        "Seperator": "slash",
+        "Leading": "none"
+      },
+      "layerStyles": {}
+    }
+  ],
+  "variantSlotMap": {
+    "◇ Part / Seperator": {
+      "Leading=none,Seperator=chevron": "igt_core_icon_chevron_right_outline_2dp",
+      "Leading=home,Seperator=chevron": "igt_core_icon_chevron_right_outline_2dp",
+      "Leading=none,Seperator=slash": "igt_core_icon_chevron_right_small_outline_2dp",
+      "Leading=home,Seperator=slash": "igt_core_icon_chevron_right_small_outline_2dp",
+      "Leading=none,Seperator=dot": "igt_core_icon_circle_tiny_solid",
+      "Leading=home,Seperator=dot": "igt_core_icon_circle_tiny_solid"
+    }
+  },
+  "propMapping": {
+    "Seperator": {
+      "tsProp": "seperator",
+      "tsType": "'chevron' | 'slash' | 'dot'",
+      "figmaToCode": {
+        "chevron": "chevron",
+        "slash": "slash",
+        "dot": "dot"
+      }
+    },
+    "Leading": {
+      "tsProp": "leading",
+      "tsType": "'none' | 'home'",
+      "figmaToCode": {
+        "none": "none",
+        "home": "home"
+      }
+    }
+  },
+  "gaps": []
+}

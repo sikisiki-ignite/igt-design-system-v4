@@ -1,0 +1,428 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2144:29990",
+    "componentName": "Accordion",
+    "extractedAt": "2026-05-04T08:43:48.153Z"
+  },
+  "componentPropertyDefinitions": {
+    "Variation": {
+      "type": "VARIANT",
+      "defaultValue": "plain",
+      "variantOptions": [
+        "plain",
+        "contained"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "lg",
+      "variantOptions": [
+        "sm",
+        "md",
+        "lg"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "AccrodionItem",
+      "type": "INSTANCE",
+      "componentName": "AccrodionItem",
+      "conditional": "Leading",
+      "dimensions": {
+        "width": 480,
+        "height": 56
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,27,55,0.1)",
+          "token": "--sys-border-neutral-subtle",
+          "resolved": true
+        }
+      ],
+      "instanceProps": {
+        "Type": "plain",
+        "Size": "lg",
+        "Expanded": "false",
+        "Disabled": "false"
+      },
+      "children": [
+        {
+          "layerName": "Header",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 480,
+            "height": 56
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 12,
+            "paddingTop": 16,
+            "paddingRight": 2,
+            "paddingBottom": 16,
+            "paddingLeft": 2,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "children": [
+            {
+              "layerName": "leadingIcon",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 20,
+                "height": 24
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 10,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "center"
+              },
+              "children": [
+                {
+                  "layerName": "Parts / Icon",
+                  "type": "INSTANCE",
+                  "componentName": "Parts / Icon",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 20,
+                    "height": 20
+                  },
+                  "dimensionsBySize": {
+                    "lg": {
+                      "width": 20,
+                      "height": 20
+                    },
+                    "md": {
+                      "width": 18,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 20,
+                  "height": 24
+                },
+                "md": {
+                  "width": 18,
+                  "height": 24
+                },
+                "sm": {
+                  "width": 16,
+                  "height": 20
+                }
+              }
+            },
+            {
+              "layerName": "알림이 오지 않을 때는 어떻게 하나요?",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 412,
+                "height": 24
+              },
+              "styleValues": [
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(0,12,30,0.8)",
+                  "token": "--sys-content-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "17-600-24",
+                  "token": "--semantic-body-17-semibold",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 412,
+                  "height": 24
+                },
+                "md": {
+                  "width": 422,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 432,
+                  "height": 20
+                }
+              },
+              "textStylesBySize": {
+                "lg": {
+                  "figmaValue": "17-600-24",
+                  "token": "--semantic-body-17-semibold",
+                  "resolved": true
+                },
+                "md": {
+                  "figmaValue": "15-400-22",
+                  "token": "--semantic-body-15-regular",
+                  "resolved": true
+                },
+                "sm": {
+                  "figmaValue": "14-400-20",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              }
+            },
+            {
+              "layerName": "chevronContainer",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 20,
+                "height": 24
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 10,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "center"
+              },
+              "children": [
+                {
+                  "layerName": "Parts / Icon",
+                  "type": "INSTANCE",
+                  "componentName": "Parts / Icon",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 20,
+                    "height": 20
+                  },
+                  "dimensionsBySize": {
+                    "lg": {
+                      "width": 20,
+                      "height": 20
+                    },
+                    "md": {
+                      "width": 18,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 16,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "lg": {
+                  "width": 20,
+                  "height": 24
+                },
+                "md": {
+                  "width": 18,
+                  "height": 24
+                },
+                "sm": {
+                  "width": 16,
+                  "height": 20
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "lg": {
+              "width": 480,
+              "height": 56
+            },
+            "md": {
+              "width": 480,
+              "height": 48
+            },
+            "sm": {
+              "width": 480,
+              "height": 40
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "lg": {
+          "width": 480,
+          "height": 56
+        },
+        "md": {
+          "width": 480,
+          "height": 48
+        },
+        "sm": {
+          "width": 480,
+          "height": 40
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "flex-direction",
+      "figmaValue": "vertical",
+      "cssValue": "column",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "align-items",
+      "figmaValue": "flex-start",
+      "cssValue": "flex-start",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "justify-content",
+      "figmaValue": "flex-start",
+      "cssValue": "flex-start",
+      "token": null,
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "알림이 오지 않을 때는 어떻게 하나요?",
+      "figmaValue": "17-600-24",
+      "token": "--semantic-body-17-semibold",
+      "resolved": true,
+      "textStylesBySize": {
+        "lg": {
+          "figmaValue": "17-600-24",
+          "token": "--semantic-body-17-semibold",
+          "resolved": true
+        },
+        "md": {
+          "figmaValue": "15-400-22",
+          "token": "--semantic-body-15-regular",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "14-400-20",
+          "token": "--semantic-body-14-regular",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Variation=contained",
+      "variantProps": {
+        "Variation": "contained"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "gap",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ],
+        "AccrodionItem": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Variation=plain",
+      "variantProps": {
+        "Variation": "plain"
+      },
+      "layerStyles": {
+        "AccrodionItem": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Variation": {
+      "tsProp": "variation",
+      "tsType": "'plain' | 'contained'",
+      "figmaToCode": {
+        "plain": "plain",
+        "contained": "contained"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md' | 'lg'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md",
+        "lg": "lg"
+      }
+    }
+  },
+  "gaps": []
+}

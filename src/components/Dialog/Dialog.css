@@ -1,0 +1,194 @@
+/* ── Dialog ── */
+
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--sys-overlay-container-dark-disabled);
+  z-index: 50;
+  animation: dialog-overlay-in 0.15s ease-out;
+}
+
+@keyframes dialog-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: 360px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sys-surface-static);
+  border: 1px solid var(--sys-border-neutral-subtle);
+  border-radius: var(--radius-20);
+  box-shadow: var(--sys-elevation-dialog);
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 51;
+  outline: none;
+  animation: dialog-in 0.2s ease-out;
+}
+
+@keyframes dialog-in {
+  from { opacity: 0; transform: scale(0.97) translateY(4px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── Size ── */
+
+.dialog[data-size="sm"] { width: 360px; }
+.dialog[data-size="md"] { width: 520px; }
+.dialog[data-size="lg"] { width: 720px; }
+
+/* ── Header ── */
+
+.dialog__header {
+  padding: var(--spacing-20) var(--spacing-24) var(--spacing-16);
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-8);
+}
+
+.dialog__title {
+  flex: 1;
+  font-family: var(--semantic-heading-17-bold-fontFamily);
+  font-size: var(--semantic-heading-17-bold-fontSize);
+  line-height: var(--semantic-heading-17-bold-lineHeight);
+  font-weight: var(--semantic-heading-17-bold-fontWeight);
+  color: var(--sys-content-neutral-strong);
+  margin: 0;
+}
+
+.dialog[data-size="md"] .dialog__title,
+.dialog[data-size="lg"] .dialog__title {
+  font-family: var(--semantic-heading-20-bold-fontFamily);
+  font-size: var(--semantic-heading-20-bold-fontSize);
+  line-height: var(--semantic-heading-20-bold-lineHeight);
+  font-weight: var(--semantic-heading-20-bold-fontWeight);
+}
+
+/* ── Close Button ── */
+
+.dialog__close {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--sys-content-neutral-subtle);
+  flex-shrink: 0;
+  padding: 0;
+  outline: none;
+  margin-top: -2px;
+}
+
+.dialog__close:hover {
+  background-color: var(--sys-container-neutral-tint-default);
+  color: var(--sys-content-neutral-default);
+}
+
+.dialog__close:focus-visible {
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: 2px;
+}
+
+/* ── Body ── */
+
+.dialog__body {
+  padding: 0 var(--spacing-24) var(--spacing-16);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  flex: 1 1 auto;
+}
+
+.dialog__description {
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+  color: var(--sys-content-neutral-muted);
+  margin: 0;
+}
+
+.dialog__slot {
+  display: contents;
+}
+
+/* ── Footer ── */
+
+.dialog__footer {
+  padding: var(--spacing-16) var(--spacing-24) var(--spacing-20);
+  display: flex;
+  gap: var(--spacing-8);
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.dialog__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 var(--spacing-16);
+  border-radius: var(--radius-8);
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  cursor: pointer;
+  border: 1px solid transparent;
+  outline: none;
+  transition: background-color 0.1s;
+}
+
+.dialog__btn--secondary {
+  background-color: var(--sys-border-neutral-weak);
+  color: var(--sys-content-neutral-default);
+}
+
+.dialog__btn--secondary:hover {
+  background-color: var(--sys-container-neutral-tint-default);
+}
+
+/* ── Primary button: variation=primary (default) ── */
+
+.dialog__btn--primary {
+  background-color: var(--sys-border-brand-default);
+  color: var(--sys-surface-static);
+}
+
+.dialog__btn--primary:hover {
+  background-color: var(--sys-container-brand-solid-strong);
+}
+
+/* ── Primary button: variation=neutral ── */
+
+.dialog[data-variation="neutral"] .dialog__btn--primary {
+  background-color: var(--sys-border-neutral-weak);
+  color: var(--sys-content-neutral-default);
+}
+
+.dialog[data-variation="neutral"] .dialog__btn--primary:hover {
+  background-color: var(--sys-container-neutral-tint-strong);
+}
+
+/* ── Primary button: variation=danger ── */
+
+.dialog[data-variation="danger"] .dialog__btn--primary {
+  background-color: var(--sys-border-status-danger-default);
+  color: var(--sys-contentOn-status-danger-solid-default);
+}
+
+.dialog[data-variation="danger"] .dialog__btn--primary:hover {
+  background-color: var(--sys-interactive-hover-container-danger);
+}

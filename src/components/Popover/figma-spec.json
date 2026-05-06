@@ -1,0 +1,436 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2037:59954",
+    "componentName": "Popover",
+    "extractedAt": "2026-05-04T07:44:22.096Z"
+  },
+  "componentPropertyDefinitions": {
+    "Slot#2037:16": {
+      "type": "SLOT",
+      "defaultValue": {
+        "guid": {
+          "sessionID": -1,
+          "localID": -1
+        }
+      },
+      "preferredValues": []
+    },
+    "Emphasis": {
+      "type": "VARIANT",
+      "defaultValue": "surface",
+      "variantOptions": [
+        "surface",
+        "inverse"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Slot",
+      "type": "SLOT",
+      "conditional": null,
+      "dimensions": {
+        "width": 275,
+        "height": 252
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 20,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "section",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 247,
+            "height": 116
+          },
+          "layoutSpec": {
+            "direction": "vertical",
+            "gap": 8,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "header",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 53,
+                "height": 20
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 0,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "flex-start",
+                "justifyContent": "flex-start"
+              },
+              "children": [
+                {
+                  "layerName": "알림 안내",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 53,
+                    "height": 20
+                  },
+                  "styleValues": [
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(25,31,40,1)",
+                      "token": "--sys-content-neutral-strong",
+                      "resolved": true
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "14-600-20",
+                      "token": "--semantic-body-14-semibold",
+                      "resolved": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layerName": "body",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 247,
+                "height": 88
+              },
+              "layoutSpec": {
+                "direction": "vertical",
+                "gap": 0,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "flex-start",
+                "justifyContent": "flex-start"
+              },
+              "children": [
+                {
+                  "layerName": "일부 알림은 지연되어 도착할 수 있어요 일부 알림은 지연되어 도착할 수 있어요 설정에서 언제든지 끌 수 있어요 동일한 알림이 반복해서 표시될 수 있어요",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 247,
+                    "height": 88
+                  },
+                  "characters": "일부 알림은 지연되어 도착할 수 있어요\n일부 알림은 지연되어 도착할 수 있어요\n설정에서 언제든지 끌 수 있어요\n동일한 알림이 반복해서 표시될 수 있어요",
+                  "styleValues": [
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(0,12,30,0.8)",
+                      "token": "--sys-content-neutral-default",
+                      "resolved": true
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "14-400-22",
+                      "token": "--semantic-reading-14-regular",
+                      "resolved": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "layerName": "section",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 275,
+            "height": 116
+          },
+          "layoutSpec": {
+            "direction": "vertical",
+            "gap": 8,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "flex-start",
+            "justifyContent": "flex-start"
+          },
+          "children": [
+            {
+              "layerName": "header",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 93,
+                "height": 20
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 0,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "center"
+              },
+              "children": [
+                {
+                  "layerName": "기능 사용 가이드",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 93,
+                    "height": 20
+                  },
+                  "styleValues": [
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(25,31,40,1)",
+                      "token": "--sys-content-neutral-strong",
+                      "resolved": true
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "14-600-20",
+                      "token": "--semantic-body-14-semibold",
+                      "resolved": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "layerName": "body",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 275,
+                "height": 88
+              },
+              "layoutSpec": {
+                "direction": "vertical",
+                "gap": 10,
+                "paddingTop": 0,
+                "paddingRight": 0,
+                "paddingBottom": 0,
+                "paddingLeft": 0,
+                "alignItems": "center",
+                "justifyContent": "center"
+              },
+              "children": [
+                {
+                  "layerName": "필요한 항목을 선택해 작업을 진행할 수 있어요 선택한 항목은 한 번에 처리할 수 있어요 일부 작업은 되돌릴 수 없으니 주의해 주세요 진행 상태는 화면에서 확인할 수 있어요",
+                  "type": "TEXT",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 275,
+                    "height": 88
+                  },
+                  "characters": "필요한 항목을 선택해 작업을 진행할 수 있어요\n선택한 항목은 한 번에 처리할 수 있어요\n일부 작업은 되돌릴 수 없으니 주의해 주세요\n진행 상태는 화면에서 확인할 수 있어요",
+                  "styleValues": [
+                    {
+                      "property": "color",
+                      "figmaValue": "rgba(0,12,30,0.8)",
+                      "token": "--sys-content-neutral-default",
+                      "resolved": true
+                    },
+                    {
+                      "property": "text-style",
+                      "figmaValue": "14-400-22",
+                      "token": "--semantic-reading-14-regular",
+                      "resolved": true
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 0,
+    "paddingTop": 24,
+    "paddingRight": 24,
+    "paddingBottom": 24,
+    "paddingLeft": 24,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start",
+    "borderRadius": 20
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,0.1)",
+      "token": "--sys-border-neutral-subtle",
+      "resolved": true
+    },
+    {
+      "property": "box-shadow",
+      "figmaValue": "0px 10px 40px 0px rgba(2,32,71,0.02), 0px 20px 50px 0px rgba(2,32,71,0.02), 2px 70px 80px 0px rgba(2,32,71,0.02)",
+      "token": "--sys-elevation-popover",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 24,
+      "token": "--spacing-24",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 20,
+      "token": "--radius-20",
+      "resolved": true
+    },
+    {
+      "property": "flex-direction",
+      "figmaValue": "vertical",
+      "cssValue": "column",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "align-items",
+      "figmaValue": "flex-start",
+      "cssValue": "flex-start",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "justify-content",
+      "figmaValue": "flex-start",
+      "cssValue": "flex-start",
+      "token": null,
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "알림 안내",
+      "figmaValue": "14-600-20",
+      "token": "--semantic-body-14-semibold",
+      "resolved": true
+    },
+    {
+      "layerName": "일부 알림은 지연되어 도착할 수 있어요 일부 알림은 지연되어 도착할 수 있어요 설정에서 언제든지 끌 수 있어요 동일한 알림이 반복해서 표시될 수 있어요",
+      "figmaValue": "14-400-22",
+      "token": "--semantic-reading-14-regular",
+      "resolved": true
+    },
+    {
+      "layerName": "기능 사용 가이드",
+      "figmaValue": "14-600-20",
+      "token": "--semantic-body-14-semibold",
+      "resolved": true
+    },
+    {
+      "layerName": "필요한 항목을 선택해 작업을 진행할 수 있어요 선택한 항목은 한 번에 처리할 수 있어요 일부 작업은 되돌릴 수 없으니 주의해 주세요 진행 상태는 화면에서 확인할 수 있어요",
+      "figmaValue": "14-400-22",
+      "token": "--semantic-reading-14-regular",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Emphasis=inverse",
+      "variantProps": {
+        "Emphasis": "inverse"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(25,31,40,1)",
+            "token": "--sys-surface-floating",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          },
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 10px 40px 0px rgba(2,32,71,0.02), 0px 20px 50px 0px rgba(2,32,71,0.02), 2px 70px 80px 0px rgba(2,32,71,0.02)",
+            "token": "--sys-elevation-popover",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=surface",
+      "variantProps": {
+        "Emphasis": "surface"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          },
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,27,55,0.1)",
+            "token": "--sys-border-neutral-subtle",
+            "resolved": true
+          },
+          {
+            "property": "box-shadow",
+            "figmaValue": "0px 10px 40px 0px rgba(2,32,71,0.02), 0px 20px 50px 0px rgba(2,32,71,0.02), 2px 70px 80px 0px rgba(2,32,71,0.02)",
+            "token": "--sys-elevation-popover",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Emphasis": {
+      "tsProp": "emphasis",
+      "tsType": "'surface' | 'inverse'",
+      "figmaToCode": {
+        "surface": "surface",
+        "inverse": "inverse"
+      }
+    }
+  },
+  "gaps": []
+}

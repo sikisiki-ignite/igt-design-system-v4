@@ -1,0 +1,233 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "442:15252",
+    "componentName": "SearchTrigger",
+    "extractedAt": "2026-05-01T17:35:18.785Z"
+  },
+  "componentPropertyDefinitions": {
+    "Focus#2221:604": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "Variant": {
+      "type": "VARIANT",
+      "defaultValue": "field",
+      "variantOptions": [
+        "field",
+        "icon"
+      ]
+    },
+    "Appearance": {
+      "type": "VARIANT",
+      "defaultValue": "default",
+      "variantOptions": [
+        "default",
+        "subtle"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    },
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed"
+      ]
+    },
+    "Disabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "content",
+      "type": "FRAME",
+      "conditional": "__hidden__",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 0,
+        "paddingRight": 6,
+        "paddingBottom": 0,
+        "paddingLeft": 6,
+        "alignItems": "center",
+        "justifyContent": "center"
+      },
+      "children": [
+        {
+          "layerName": "여기를 눌러 검색하세요",
+          "type": "TEXT",
+          "conditional": null,
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(107,118,132,1)",
+              "token": "--color-grey-600",
+              "resolved": true
+            },
+            {
+              "property": "color",
+              "figmaValue": "rgba(107,118,132,1)",
+              "token": "--color-grey-600",
+              "resolved": true
+            },
+            {
+              "property": "text-style",
+              "figmaValue": "14-500",
+              "token": "--semantic-label-14-medium",
+              "resolved": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "Parts / Icon",
+      "type": "INSTANCE",
+      "componentName": "Parts / Icon",
+      "conditional": null
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "Focus",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 12
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-contentOn-status-success-solid-default",
+          "resolved": true
+        }
+      ],
+      "children": []
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": 10
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(2,32,71,1)",
+      "token": null,
+      "resolved": false
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 10,
+      "token": "--radius-10",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Focus": {
+      "tsProp": "focus",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Variant": {
+      "tsProp": "variant",
+      "tsType": "'field' | 'icon'",
+      "figmaToCode": {
+        "field": "field",
+        "icon": "icon"
+      }
+    },
+    "Appearance": {
+      "tsProp": "appearance",
+      "tsType": "'default' | 'subtle'",
+      "figmaToCode": {
+        "default": "default",
+        "subtle": "subtle"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed"
+      }
+    },
+    "Disabled": {
+      "tsProp": "disabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "property": "background",
+      "figmaValue": "rgba(2,32,71,1)",
+      "status": "open",
+      "note": "토큰 미매핑 — 토큰 추가 또는 수동 확인 필요"
+    }
+  ]
+}

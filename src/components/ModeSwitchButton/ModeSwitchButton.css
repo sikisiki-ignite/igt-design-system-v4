@@ -1,0 +1,46 @@
+/* ── ModeSwitchButton ── */
+
+.mode-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--action-modeSwitchButton-size-gap);
+  height: var(--action-modeSwitchButton-size-height);
+  padding-inline: var(--action-modeSwitchButton-size-paddingInline);
+  border-radius: var(--action-modeSwitchButton-size-radius);
+  border: 1px solid var(--action-modeSwitchButton-color-border-unselected);
+  background: var(--action-modeSwitchButton-color-bg-unselected);
+  color: var(--action-modeSwitchButton-color-content-default);
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  transition: background 0.1s, box-shadow 0.1s, border-color 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mode-switch-btn:hover {
+  background: var(--action-modeSwitchButton-color-bg-unselected-hover);
+}
+
+.mode-switch-btn[data-selected="true"] {
+  background: var(--action-modeSwitchButton-color-bg-selected);
+  border-color: var(--action-modeSwitchButton-color-border-selected);
+  box-shadow: var(--action-modeSwitchButton-shadow-selected);
+}
+
+.mode-switch-btn[data-selected="true"]:hover {
+  background: var(--action-modeSwitchButton-color-bg-selected-hover);
+}
+
+.mode-switch-btn:disabled {
+  color: var(--action-modeSwitchButton-color-content-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.mode-switch-btn__label {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  pointer-events: none;
+}

@@ -1,0 +1,225 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "328:4951",
+    "componentName": "IconButton",
+    "extractedAt": "2026-05-01T16:31:25.663Z"
+  },
+  "componentPropertyDefinitions": {
+    "isFocused#412:0": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "shape": {
+      "type": "VARIANT",
+      "defaultValue": "rounded",
+      "variantOptions": [
+        "rounded",
+        "circle"
+      ]
+    },
+    "tone": {
+      "type": "VARIANT",
+      "defaultValue": "neutral",
+      "variantOptions": [
+        "primary",
+        "neutral"
+      ]
+    },
+    "appearance": {
+      "type": "VARIANT",
+      "defaultValue": "outline",
+      "variantOptions": [
+        "fill",
+        "outline"
+      ]
+    },
+    "emphasis": {
+      "type": "VARIANT",
+      "defaultValue": "strong",
+      "variantOptions": [
+        "strong",
+        "weak"
+      ]
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "md",
+        "sm",
+        "xs"
+      ]
+    },
+    "state": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed"
+      ]
+    },
+    "isDisabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "isLoading": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Icon",
+      "type": "INSTANCE",
+      "componentName": "Icon",
+      "conditional": null
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "__hidden__",
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 12
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-contentOn-status-success-solid-default",
+          "resolved": true
+        }
+      ],
+      "children": []
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center",
+    "borderRadius": 10
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,1)",
+      "token": null,
+      "resolved": false
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 10,
+      "token": "--radius-10",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "shape": {
+      "tsProp": "shape",
+      "tsType": "'rounded' | 'circle'",
+      "figmaToCode": {
+        "rounded": "rounded",
+        "circle": "circle"
+      }
+    },
+    "tone": {
+      "tsProp": "tone",
+      "tsType": "'primary' | 'neutral'",
+      "figmaToCode": {
+        "primary": "primary",
+        "neutral": "neutral"
+      },
+      "_tokenNote": "Figma neutral → CSS token path secondary (--action-iconButton-color-tone-secondary-*)"
+    },
+    "appearance": {
+      "tsProp": "appearance",
+      "tsType": "'fill' | 'outline'",
+      "figmaToCode": {
+        "fill": "fill",
+        "outline": "outline"
+      }
+    },
+    "emphasis": {
+      "tsProp": "emphasis",
+      "tsType": "'strong' | 'weak'",
+      "figmaToCode": {
+        "strong": "strong",
+        "weak": "weak"
+      }
+    },
+    "size": {
+      "tsProp": "size",
+      "tsType": "'md' | 'sm' | 'xs'",
+      "figmaToCode": {
+        "md": "md",
+        "sm": "sm",
+        "xs": "xs"
+      }
+    },
+    "isDisabled": {
+      "tsProp": "disabled",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "false": false,
+        "true": true
+      }
+    },
+    "isLoading": {
+      "tsProp": "isLoading",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "false": false,
+        "true": true
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,1)",
+      "status": "fixed",
+      "note": "variant별 --action-iconButton-color-tone-{primary|secondary}-*-border-* 토큰으로 처리. neutral→secondary 토큰 경로 매핑."
+    }
+  ]
+}

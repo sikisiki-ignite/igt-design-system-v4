@@ -1,0 +1,164 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "726:24711",
+    "componentName": "NumberStepper",
+    "extractedAt": "2026-05-03T06:27:46.314Z"
+  },
+  "componentPropertyDefinitions": {
+    "Emphasis": {
+      "type": "VARIANT",
+      "defaultValue": "soft",
+      "variantOptions": [
+        "outline",
+        "soft"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md"
+      ]
+    },
+    "Lock": {
+      "type": "VARIANT",
+      "defaultValue": "none",
+      "variantOptions": [
+        "none",
+        "min",
+        "max",
+        "both"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Parts / minus",
+      "type": "INSTANCE",
+      "componentName": "Parts / minus",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "layerName": "Divider",
+      "type": "FRAME",
+      "conditional": null,
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 8,
+        "paddingRight": 0,
+        "paddingBottom": 8,
+        "paddingLeft": 0,
+        "alignItems": "center",
+        "justifyContent": "flex-start"
+      },
+      "children": []
+    },
+    {
+      "layerName": "Parts / plus",
+      "type": "INSTANCE",
+      "componentName": "Parts / plus",
+      "conditional": "isFocused",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "flex-start",
+    "borderRadius": 8
+  },
+  "styleValues": [
+    {
+      "property": "background",
+      "figmaValue": "rgba(255,255,255,1)",
+      "token": "--sys-surface-static",
+      "resolved": true
+    },
+    {
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,1)",
+      "token": "--input-numberStepper-color-outline-border-normal",
+      "resolved": true
+    },
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "border-radius",
+      "figmaValue": 8,
+      "token": "--radius-8",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Emphasis": {
+      "tsProp": "emphasis",
+      "tsType": "'outline' | 'soft'",
+      "figmaToCode": {
+        "outline": "outline",
+        "soft": "soft"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "Lock": {
+      "tsProp": "lock",
+      "tsType": "'none' | 'min' | 'max' | 'both'",
+      "figmaToCode": {
+        "none": "none",
+        "min": "min",
+        "max": "max",
+        "both": "both"
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "property": "border-color",
+      "figmaValue": "rgba(0,27,55,1)",
+      "status": "fixed",
+      "note": "CSS에서 --input-numberStepper-color-outline-border-normal 토큰으로 처리됨"
+    }
+  ]
+}

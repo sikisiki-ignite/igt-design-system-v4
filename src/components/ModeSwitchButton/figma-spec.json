@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "515:48096",
+    "componentName": "ModeSwitchButton",
+    "extractedAt": "2026-05-01T17:47:18.803Z"
+  },
+  "componentPropertyDefinitions": {
+    "Selected": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "true",
+        "false"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "Button",
+      "type": "INSTANCE",
+      "componentName": "Button",
+      "conditional": "hasTrailing",
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(2,32,71,1)",
+          "token": null,
+          "resolved": false
+        },
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(255,255,255,1)",
+          "token": "--sys-surface-static",
+          "resolved": true
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "propMapping": {
+    "Selected": {
+      "tsProp": "selected",
+      "tsType": "'true' | 'false'",
+      "figmaToCode": {
+        "true": "true",
+        "false": "false"
+      }
+    }
+  },
+  "gaps": []
+}

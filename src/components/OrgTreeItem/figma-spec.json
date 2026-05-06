@@ -1,0 +1,291 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "514:18546",
+    "componentName": "OrgTreeItem",
+    "extractedAt": "2026-05-04T06:06:46.808Z"
+  },
+  "componentPropertyDefinitions": {
+    "Icon#700:0": {
+      "type": "INSTANCE_SWAP",
+      "defaultValue": "622:36622",
+      "preferredValues": []
+    },
+    "Leading": {
+      "type": "VARIANT",
+      "defaultValue": "blank",
+      "variantOptions": [
+        "blank",
+        "open",
+        "close",
+        "dot",
+        "folder",
+        "file",
+        "custom",
+        "treeGuideDefault",
+        "treeGuideCenter",
+        "treeGuideEnd"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "igt_core_icon_circle_tiny_solid",
+      "type": "INSTANCE",
+      "componentName": "igt_core_icon_circle_tiny_solid",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(3,24,50,0.46)",
+          "token": "--sys-border-neutral-default",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "stroke",
+          "type": "FRAME",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "children": []
+        },
+        {
+          "layerName": "grid",
+          "type": "INSTANCE",
+          "componentName": "grid",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,41,41,0.1)",
+              "token": null,
+              "resolved": false
+            }
+          ],
+          "children": [
+            {
+              "layerName": "\bGuide",
+              "type": "GROUP",
+              "conditional": null,
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "children": [
+                {
+                  "layerName": "padding",
+                  "type": "GROUP",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layerName": "Icon",
+      "type": "INSTANCE",
+      "componentName": "Icon",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      },
+      "styleValues": [
+        {
+          "property": "color",
+          "figmaValue": "rgba(3,24,50,0.46)",
+          "token": "--sys-border-neutral-default",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "stroke",
+          "type": "FRAME",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "children": []
+        },
+        {
+          "layerName": "grid",
+          "type": "INSTANCE",
+          "componentName": "grid",
+          "conditional": "__hidden__",
+          "dimensions": {
+            "width": 16,
+            "height": 16
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,41,41,0.1)",
+              "token": null,
+              "resolved": false
+            }
+          ],
+          "children": [
+            {
+              "layerName": "\bGuide",
+              "type": "GROUP",
+              "conditional": null,
+              "dimensions": {
+                "width": 16,
+                "height": 16
+              },
+              "children": [
+                {
+                  "layerName": "padding",
+                  "type": "GROUP",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "flex-end"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Leading=blank",
+      "variantProps": {
+        "Leading": "blank"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=close",
+      "variantProps": {
+        "Leading": "close"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=custom",
+      "variantProps": {
+        "Leading": "custom"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=dot",
+      "variantProps": {
+        "Leading": "dot"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=file",
+      "variantProps": {
+        "Leading": "file"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=folder",
+      "variantProps": {
+        "Leading": "folder"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=open",
+      "variantProps": {
+        "Leading": "open"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=treeGuideCenter",
+      "variantProps": {
+        "Leading": "treeGuideCenter"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=treeGuideDefault",
+      "variantProps": {
+        "Leading": "treeGuideDefault"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Leading=treeGuideEnd",
+      "variantProps": {
+        "Leading": "treeGuideEnd"
+      },
+      "layerStyles": {}
+    }
+  ],
+  "propMapping": {
+    "Leading": {
+      "tsProp": "leading",
+      "tsType": "'blank' | 'open' | 'close' | 'dot' | 'folder' | 'file' | 'custom' | 'treeguidedefault' | 'treeguidecenter' | 'treeguideend'",
+      "figmaToCode": {
+        "blank": "blank",
+        "open": "open",
+        "close": "close",
+        "dot": "dot",
+        "folder": "folder",
+        "file": "file",
+        "custom": "custom",
+        "treeGuideDefault": "treeguidedefault",
+        "treeGuideCenter": "treeguidecenter",
+        "treeGuideEnd": "treeguideend"
+      }
+    }
+  },
+  "gaps": []
+}

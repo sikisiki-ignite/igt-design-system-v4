@@ -1,0 +1,119 @@
+/* ── IconToggle ── */
+
+.icon-toggle {
+  --it-icon:      currentColor;
+  --it-container: transparent;
+  --it-height:    var(--action-iconToggle-size-height-md);
+  --it-icon-size: var(--action-iconToggle-size-iconSize-md);
+  --it-radius:    var(--action-iconToggle-size-radius-md);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--it-height);
+  height: var(--it-height);
+  border-radius: var(--it-radius);
+  border: none;
+  background: var(--it-container);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  flex-shrink: 0;
+  transition: background 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Focus ring ── */
+.icon-toggle__focus-ring {
+  display: none;
+  position: absolute;
+  inset: -2px;
+  border-radius: calc(var(--it-radius) + 2px);
+  outline: 2px solid var(--sys-border-brand-default);
+  pointer-events: none;
+}
+.icon-toggle:focus-visible .icon-toggle__focus-ring { display: block; }
+
+/* ── Icon ── */
+.icon-toggle__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--it-icon-size);
+  height: var(--it-icon-size);
+  flex-shrink: 0;
+  color: var(--it-icon);
+  pointer-events: none;
+}
+.icon-toggle__icon > span,
+.icon-toggle__icon svg { width: 100%; height: 100%; }
+
+/* ── Disabled ── */
+.icon-toggle:disabled { cursor: not-allowed; pointer-events: none; }
+
+/* ── Size ── */
+.icon-toggle[data-size="xs"] {
+  --it-height:    var(--action-iconToggle-size-height-xs);
+  --it-icon-size: var(--action-iconToggle-size-iconSize-xs);
+  --it-radius:    var(--action-iconToggle-size-radius-xs);
+}
+.icon-toggle[data-size="sm"] {
+  --it-height:    var(--action-iconToggle-size-height-sm);
+  --it-icon-size: var(--action-iconToggle-size-iconSize-sm);
+  --it-radius:    var(--action-iconToggle-size-radius-sm);
+}
+.icon-toggle[data-size="md"] {
+  --it-height:    var(--action-iconToggle-size-height-md);
+  --it-icon-size: var(--action-iconToggle-size-iconSize-md);
+  --it-radius:    var(--action-iconToggle-size-radius-md);
+}
+
+/* ── Shared unselected ── */
+.icon-toggle[data-selected="false"] {
+  --it-container: var(--action-iconToggle-color-shared-unselected-container-normal);
+  --it-icon:      var(--action-iconToggle-color-shared-unselected-icon-normal);
+}
+.icon-toggle[data-selected="false"]:hover {
+  --it-container: var(--action-iconToggle-color-shared-unselected-container-hover);
+  --it-icon:      var(--action-iconToggle-color-shared-unselected-icon-hover);
+}
+.icon-toggle[data-selected="false"]:active {
+  --it-container: var(--action-iconToggle-color-shared-unselected-container-pressed);
+  --it-icon:      var(--action-iconToggle-color-shared-unselected-icon-pressed);
+}
+.icon-toggle[data-selected="false"]:disabled {
+  --it-container: var(--action-iconToggle-color-shared-unselected-container-disabled);
+  --it-icon:      var(--action-iconToggle-color-shared-unselected-icon-disabled);
+}
+
+/* ── Shared selected container ── */
+.icon-toggle[data-selected="true"] {
+  --it-container: var(--action-iconToggle-color-shared-selected-container-normal);
+}
+.icon-toggle[data-selected="true"]:hover {
+  --it-container: var(--action-iconToggle-color-shared-selected-container-hover);
+}
+.icon-toggle[data-selected="true"]:active {
+  --it-container: var(--action-iconToggle-color-shared-selected-container-pressed);
+}
+.icon-toggle[data-selected="true"]:disabled {
+  --it-container: var(--action-iconToggle-color-shared-selected-container-disabled);
+}
+
+/* ── Intent: reaction / selected icon ── */
+.icon-toggle[data-intent="reaction"][data-selected="true"] { --it-icon: var(--action-iconToggle-color-reaction-selected-icon-normal); }
+.icon-toggle[data-intent="reaction"][data-selected="true"]:hover { --it-icon: var(--action-iconToggle-color-reaction-selected-icon-hover); }
+.icon-toggle[data-intent="reaction"][data-selected="true"]:active { --it-icon: var(--action-iconToggle-color-reaction-selected-icon-pressed); }
+.icon-toggle[data-intent="reaction"][data-selected="true"]:disabled { --it-icon: var(--action-iconToggle-color-reaction-selected-icon-disabled); }
+
+/* ── Intent: accent / selected icon ── */
+.icon-toggle[data-intent="accent"][data-selected="true"] { --it-icon: var(--action-iconToggle-color-accent-selected-icon-normal); }
+.icon-toggle[data-intent="accent"][data-selected="true"]:hover { --it-icon: var(--action-iconToggle-color-accent-selected-icon-hover); }
+.icon-toggle[data-intent="accent"][data-selected="true"]:active { --it-icon: var(--action-iconToggle-color-accent-selected-icon-pressed); }
+.icon-toggle[data-intent="accent"][data-selected="true"]:disabled { --it-icon: var(--action-iconToggle-color-accent-selected-icon-disabled); }
+
+/* ── Intent: neutral / selected icon ── */
+.icon-toggle[data-intent="neutral"][data-selected="true"] { --it-icon: var(--action-iconToggle-color-neutral-selected-icon-normal); }
+.icon-toggle[data-intent="neutral"][data-selected="true"]:hover { --it-icon: var(--action-iconToggle-color-neutral-selected-icon-hover); }
+.icon-toggle[data-intent="neutral"][data-selected="true"]:active { --it-icon: var(--action-iconToggle-color-neutral-selected-icon-pressed); }
+.icon-toggle[data-intent="neutral"][data-selected="true"]:disabled { --it-icon: var(--action-iconToggle-color-neutral-selected-icon-disabled); }

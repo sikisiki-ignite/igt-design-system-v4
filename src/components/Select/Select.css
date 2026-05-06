@@ -1,0 +1,353 @@
+/* ── Select Trigger ── */
+
+.select {
+  --st-container:   var(--input-select-selectTrigger-color-outline-container-normal);
+  --st-border:      var(--input-select-selectTrigger-color-outline-border-normal);
+  --st-value:       var(--input-select-selectTrigger-color-outline-value-normal);
+  --st-placeholder: var(--input-select-selectTrigger-color-outline-placeholder-normal);
+  --st-icon:        var(--input-select-selectTrigger-color-outline-icon-normal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--input-select-selectTrigger-size-spacing-gapTextToTrailing-md);
+  height: var(--input-select-selectTrigger-size-height-md);
+  padding-inline: var(--input-select-selectTrigger-size-spacing-paddingInline-md);
+  border-radius: var(--input-select-selectTrigger-size-radius-md);
+  border: var(--input-select-selectTrigger-size-borderWidth) solid var(--st-border);
+  background-color: var(--st-container);
+  color: var(--st-value);
+  cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.12s, background-color 0.12s;
+  white-space: nowrap;
+}
+
+/* ── Width ── */
+.select[data-width="fill"] {
+  width: 100%;
+}
+
+/* ── Appearance: fill ── */
+.select[data-appearance="fill"] {
+  --st-container:   var(--input-select-selectTrigger-color-fill-container-normal);
+  --st-border:      var(--input-select-selectTrigger-color-fill-border-normal);
+  --st-value:       var(--input-select-selectTrigger-color-fill-value-normal);
+  --st-placeholder: var(--input-select-selectTrigger-color-fill-placeholder-normal);
+  --st-icon:        var(--input-select-selectTrigger-color-fill-icon-normal);
+}
+
+/* ── Appearance: plain ── */
+.select[data-appearance="plain"] {
+  --st-container:   var(--input-select-selectTrigger-color-plain-container-normal);
+  --st-border:      var(--input-select-selectTrigger-color-plain-border-normal);
+  --st-value:       var(--input-select-selectTrigger-color-plain-value-normal);
+  --st-placeholder: var(--input-select-selectTrigger-color-plain-placeholder-normal);
+  --st-icon:        var(--input-select-selectTrigger-color-plain-icon-normal);
+}
+
+/* ── Size ── */
+.select[data-size="xs"] {
+  gap: var(--input-select-selectTrigger-size-spacing-gapTextToTrailing-xs);
+  height: var(--input-select-selectTrigger-size-height-xs);
+  padding-inline: var(--input-select-selectTrigger-size-spacing-paddingInline-xs);
+  border-radius: var(--input-select-selectTrigger-size-radius-xs);
+}
+
+.select[data-size="sm"] {
+  gap: var(--input-select-selectTrigger-size-spacing-gapTextToTrailing-sm);
+  height: var(--input-select-selectTrigger-size-height-sm);
+  padding-inline: var(--input-select-selectTrigger-size-spacing-paddingInline-sm);
+  border-radius: var(--input-select-selectTrigger-size-radius-sm);
+}
+
+/* ── Hover ── */
+.select:not([data-disabled]):not([data-readonly]):hover {
+  --st-container:   var(--input-select-selectTrigger-color-outline-container-hover);
+  --st-border:      var(--input-select-selectTrigger-color-outline-border-hover);
+  --st-value:       var(--input-select-selectTrigger-color-outline-value-hover);
+  --st-placeholder: var(--input-select-selectTrigger-color-outline-placeholder-hover);
+  --st-icon:        var(--input-select-selectTrigger-color-outline-icon-hover);
+}
+
+.select[data-appearance="fill"]:not([data-disabled]):not([data-readonly]):hover {
+  --st-container:   var(--input-select-selectTrigger-color-fill-container-hover);
+  --st-border:      var(--input-select-selectTrigger-color-fill-border-hover);
+  --st-value:       var(--input-select-selectTrigger-color-fill-value-hover);
+  --st-placeholder: var(--input-select-selectTrigger-color-fill-placeholder-hover);
+  --st-icon:        var(--input-select-selectTrigger-color-fill-icon-hover);
+}
+
+.select[data-appearance="plain"]:not([data-disabled]):not([data-readonly]):hover {
+  --st-container:   var(--input-select-selectTrigger-color-plain-container-hover);
+  --st-border:      var(--input-select-selectTrigger-color-plain-border-hover);
+  --st-value:       var(--input-select-selectTrigger-color-plain-value-hover);
+  --st-placeholder: var(--input-select-selectTrigger-color-plain-placeholder-hover);
+  --st-icon:        var(--input-select-selectTrigger-color-plain-icon-hover);
+}
+
+/* ── Focus ── */
+.select:not([data-disabled]):not([data-readonly]):focus,
+.select[data-state="open"]:not([data-disabled]):not([data-readonly]) {
+  --st-container:   var(--input-select-selectTrigger-color-outline-container-pressed);
+  --st-border:      var(--input-select-selectTrigger-color-outline-border-pressed);
+  --st-value:       var(--input-select-selectTrigger-color-outline-value-pressed);
+  --st-icon:        var(--input-select-selectTrigger-color-outline-icon-pressed);
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: var(--spacing-2);
+}
+
+.select[data-appearance="fill"]:not([data-disabled]):not([data-readonly]):focus,
+.select[data-appearance="fill"][data-state="open"]:not([data-disabled]):not([data-readonly]) {
+  --st-container:   var(--input-select-selectTrigger-color-fill-container-pressed);
+  --st-border:      var(--input-select-selectTrigger-color-fill-border-pressed);
+  --st-value:       var(--input-select-selectTrigger-color-fill-value-pressed);
+  --st-icon:        var(--input-select-selectTrigger-color-fill-icon-pressed);
+}
+
+.select[data-appearance="plain"]:not([data-disabled]):not([data-readonly]):focus,
+.select[data-appearance="plain"][data-state="open"]:not([data-disabled]):not([data-readonly]) {
+  --st-container:   var(--input-select-selectTrigger-color-plain-container-pressed);
+  --st-border:      var(--input-select-selectTrigger-color-plain-border-pressed);
+  --st-value:       var(--input-select-selectTrigger-color-plain-value-pressed);
+  --st-icon:        var(--input-select-selectTrigger-color-plain-icon-pressed);
+}
+
+/* ── Invalid ── */
+.select[data-invalid] {
+  --st-border: var(--input-select-selectTrigger-color-outline-border-error);
+}
+.select[data-appearance="fill"][data-invalid] {
+  --st-border: var(--input-select-selectTrigger-color-fill-border-error);
+}
+.select[data-appearance="plain"][data-invalid] {
+  --st-border: var(--input-select-selectTrigger-color-plain-border-error);
+}
+
+/* ── Disabled ── */
+.select[data-disabled] {
+  --st-container:   var(--input-select-selectTrigger-color-outline-container-disabled);
+  --st-border:      var(--input-select-selectTrigger-color-outline-border-disabled);
+  --st-value:       var(--input-select-selectTrigger-color-outline-value-disabled);
+  --st-placeholder: var(--input-select-selectTrigger-color-outline-placeholder-disabled);
+  --st-icon:        var(--input-select-selectTrigger-color-outline-icon-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.select[data-appearance="fill"][data-disabled] {
+  --st-container:   var(--input-select-selectTrigger-color-fill-container-disabled);
+  --st-border:      var(--input-select-selectTrigger-color-fill-border-disabled);
+  --st-value:       var(--input-select-selectTrigger-color-fill-value-disabled);
+  --st-placeholder: var(--input-select-selectTrigger-color-fill-placeholder-disabled);
+  --st-icon:        var(--input-select-selectTrigger-color-fill-icon-disabled);
+}
+.select[data-appearance="plain"][data-disabled] {
+  --st-container:   var(--input-select-selectTrigger-color-plain-container-disabled);
+  --st-border:      var(--input-select-selectTrigger-color-plain-border-disabled);
+  --st-value:       var(--input-select-selectTrigger-color-plain-value-disabled);
+  --st-placeholder: var(--input-select-selectTrigger-color-plain-placeholder-disabled);
+  --st-icon:        var(--input-select-selectTrigger-color-plain-icon-disabled);
+}
+
+/* ── ReadOnly ── */
+.select[data-readonly] {
+  --st-container:   var(--input-select-selectTrigger-color-outline-container-readOnly);
+  --st-border:      var(--input-select-selectTrigger-color-outline-border-readOnly);
+  --st-value:       var(--input-select-selectTrigger-color-outline-value-readOnly);
+  --st-placeholder: var(--input-select-selectTrigger-color-outline-placeholder-readOnly);
+  --st-icon:        var(--input-select-selectTrigger-color-outline-icon-readOnly);
+  pointer-events: none;
+}
+.select[data-appearance="fill"][data-readonly] {
+  --st-container:   var(--input-select-selectTrigger-color-fill-container-readOnly);
+  --st-border:      var(--input-select-selectTrigger-color-fill-border-readOnly);
+  --st-value:       var(--input-select-selectTrigger-color-fill-value-readOnly);
+  --st-placeholder: var(--input-select-selectTrigger-color-fill-placeholder-readOnly);
+  --st-icon:        var(--input-select-selectTrigger-color-fill-icon-readOnly);
+}
+.select[data-appearance="plain"][data-readonly] {
+  --st-container:   var(--input-select-selectTrigger-color-plain-container-readOnly);
+  --st-border:      var(--input-select-selectTrigger-color-plain-border-readOnly);
+  --st-value:       var(--input-select-selectTrigger-color-plain-value-readOnly);
+  --st-placeholder: var(--input-select-selectTrigger-color-plain-placeholder-readOnly);
+  --st-icon:        var(--input-select-selectTrigger-color-plain-icon-readOnly);
+}
+
+/* ── Value / Placeholder text — figma-spec textStylesBySize 기준 ── */
+/* padding-inline: figma textInsetX치수 역산 (md: L4/R2, xs: L2/R2, sm: L3/R3) */
+.select__value {
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  color: var(--st-value);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  padding-inline-start: 4px;
+  padding-inline-end: 2px;
+}
+
+.select[data-size="xs"] .select__value {
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  line-height: var(--semantic-label-12-semibold-lineHeight);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+  padding-inline: 2px;
+}
+
+.select[data-size="sm"] .select__value {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  padding-inline: 3px;
+}
+
+/* Placeholder: Radix 내부 span에 data-placeholder 속성 추가됨 */
+.select__value span[data-placeholder] {
+  color: var(--st-placeholder);
+}
+
+/* ── Chevron icon ── */
+.select__icon {
+  color: var(--st-icon);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Dropdown Content ── */
+.select__content {
+  background-color: var(--input-select-selectPopover-color-container-background);
+  border: var(--input-select-selectPopover-size-borderWidth) solid var(--input-select-selectPopover-color-container-border);
+  border-radius: var(--input-select-selectPopover-size-radius-md);
+  padding-block: var(--input-select-selectPopover-size-paddingBlock-md);
+  padding-inline: var(--input-select-selectPopover-size-paddingInline-md);
+  max-height: var(--input-select-selectPopover-size-maxHeight-md);
+  overflow: hidden;
+  box-shadow: var(--input-select-selectPopover-shadow);
+  z-index: 50;
+  min-width: var(--radix-select-trigger-width);
+}
+
+.select__content[data-size="xs"],
+.select__content[data-size="sm"] {
+  border-radius: var(--input-select-selectPopover-size-radius-sm);
+  padding-block: var(--input-select-selectPopover-size-paddingBlock-sm);
+  padding-inline: var(--input-select-selectPopover-size-paddingInline-sm);
+  max-height: var(--input-select-selectPopover-size-maxHeight-sm);
+}
+
+/* ── Viewport ── */
+.select__viewport {
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-select-selectPopover-size-gapInline-md);
+}
+
+.select__content[data-size="xs"] .select__viewport,
+.select__content[data-size="sm"] .select__viewport {
+  gap: var(--input-select-selectPopover-size-gapInline-sm);
+}
+
+/* ── Item ── */
+.select__item {
+  --si-container:   var(--input-select-selectItem-color-unselected-container-normal);
+  --si-text:        var(--input-select-selectItem-color-unselected-text-normal);
+  --si-icon:        var(--input-select-selectItem-color-unselected-icon-normal);
+
+  display: flex;
+  align-items: center;
+  gap: var(--input-select-selectItem-size-gapInline-md);
+  padding-inline: var(--input-select-selectItem-size-paddingInline-md);
+  padding-block: var(--input-select-selectItem-size-paddingBlock-md);
+  min-height: var(--input-select-selectItem-size-height-md);
+  border-radius: var(--input-select-selectItem-size-radius-md);
+  background-color: var(--si-container);
+  color: var(--si-text);
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.select__item[data-size="xs"],
+.select__item[data-size="sm"] {
+  gap: var(--input-select-selectItem-size-gapInline-sm);
+  padding-inline: var(--input-select-selectItem-size-paddingInline-sm);
+  padding-block: var(--input-select-selectItem-size-paddingBlock-sm);
+  min-height: var(--input-select-selectItem-size-height-sm);
+  border-radius: var(--input-select-selectItem-size-radius-sm);
+}
+
+.select__item[data-highlighted] {
+  --si-container: var(--input-select-selectItem-color-unselected-container-hover);
+  --si-text:      var(--input-select-selectItem-color-unselected-text-hover);
+  --si-icon:      var(--input-select-selectItem-color-unselected-icon-hover);
+}
+
+.select__item[data-state="checked"] {
+  --si-container: var(--input-select-selectItem-color-selected-container-normal);
+  --si-text:      var(--input-select-selectItem-color-selected-text-normal);
+  --si-icon:      var(--input-select-selectItem-color-selected-icon-normal);
+}
+
+.select__item[data-state="checked"][data-highlighted] {
+  --si-container: var(--input-select-selectItem-color-selected-container-hover);
+  --si-text:      var(--input-select-selectItem-color-selected-text-hover);
+  --si-icon:      var(--input-select-selectItem-color-selected-icon-hover);
+}
+
+.select__item[data-disabled] {
+  --si-container: var(--input-select-selectItem-color-unselected-container-disabled);
+  --si-text:      var(--input-select-selectItem-color-unselected-text-disabled);
+  --si-icon:      var(--input-select-selectItem-color-unselected-icon-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Item text — SelectItem figma-spec textStylesBySize 기준 ── */
+.select__item-text {
+  flex: 1;
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  color: var(--si-text);
+}
+
+.select__item[data-size="xs"] .select__item-text {
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  line-height: var(--semantic-label-12-semibold-lineHeight);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+}
+
+.select__item[data-size="sm"] .select__item-text {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+}
+
+/* ── Item leading icon ── */
+.select__item-leading {
+  color: var(--si-icon);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Item checkmark indicator ── */
+.select__item-indicator {
+  color: var(--si-icon);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-inline-start: auto;
+}

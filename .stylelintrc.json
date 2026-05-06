@@ -1,0 +1,17 @@
+{
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["src/components/**/*.css"],
+      "rules": {
+        "declaration-property-value-disallowed-list": [
+          {
+            "font-size": ["/^[0-9]/", "/^0\\./", "/^1\\./", "/^2\\./"],
+            "font-family": ["/-apple-system/", "/BlinkMacSystemFont/", "/Segoe UI/", "/sans-serif$/", "/^serif$/", "/monospace/"]
+          },
+          { "message": "하드코드 font 값 금지 — text-* 클래스 또는 var(--semantic-*) 사용" }
+        ]
+      }
+    }
+  ]
+}

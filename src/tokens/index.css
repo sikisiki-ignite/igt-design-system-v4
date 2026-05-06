@@ -1,0 +1,384 @@
+/* IGT Design System v2 — Token Entry Point */
+@import 'tailwindcss';
+@import '../fonts/fonts.css';
+@import './primitives.css';
+@import './semantic.css';
+@import './themes.css';
+@import './typography.css';
+@import './effects.css';
+@import './component.css';
+
+/* Tailwind v4 — Semantic token 매핑
+ * 대상: 레이아웃/페이지 구성용 토큰만 (컴포넌트 토큰 제외)
+ * inline 필수: data-theme/data-brand 런타임 전환이 Tailwind 유틸리티에 반영되어야 함
+ */
+@theme inline {
+  /* Background */
+  --color-bg:              var(--sys-background-base);
+  --color-bg-subtle:       var(--sys-background-subtle);
+  --color-bg-inverse:      var(--sys-background-inverse);
+
+  /* Surface */
+  --color-surface:         var(--sys-surface-base);
+  --color-surface-raised:  var(--sys-surface-raised);
+  --color-surface-overlay: var(--sys-surface-overlay);
+
+  /* Content (text) */
+  --color-fg:              var(--sys-content-neutral-default);
+  --color-fg-strong:       var(--sys-content-neutral-strong);
+  --color-fg-muted:        var(--sys-content-neutral-muted);
+  --color-fg-subtle:       var(--sys-content-neutral-subtle);
+  --color-fg-disabled:     var(--sys-content-neutral-disabled);
+
+  /* Brand */
+  --color-primary:         var(--sys-container-brand-solid-default);
+  --color-primary-strong:  var(--sys-container-brand-solid-strong);
+  --color-primary-fg:      var(--sys-contentOn-brand-solid-default);
+
+  /* Status — solid (강조 배경용) */
+  --color-danger:          var(--sys-container-status-danger-solid-default);
+  --color-danger-fg:       var(--sys-contentOn-status-danger-solid-default);
+  --color-warning:         var(--sys-container-status-warning-solid-default);
+  --color-warning-fg:      var(--sys-contentOn-status-warning-solid-default);
+  --color-success:         var(--sys-container-status-success-solid-default);
+  --color-success-fg:      var(--sys-contentOn-status-success-solid-default);
+  --color-info:            var(--sys-container-status-info-solid-default);
+  --color-info-fg:         var(--sys-contentOn-status-info-solid-default);
+
+  /* Border */
+  --color-border:          var(--sys-border-neutral-default);
+  --color-border-strong:   var(--sys-border-neutral-strong);
+  --color-border-subtle:   var(--sys-border-neutral-subtle);
+  --color-border-brand:    var(--sys-border-brand-default);
+
+  /* Elevation */
+  --shadow-subtle:         var(--sys-elevation-subtle);
+  --shadow-floating:       var(--sys-elevation-floating);
+  --shadow-popover:        var(--sys-elevation-popover);
+  --shadow-dialog:         var(--sys-elevation-dialog);
+
+}
+
+/* Radius utilities — Tailwind 기본 스케일에 없는 2개
+ * themes.css의 --radius-xs/4xl을 참조, data-radius 전환에 자동 반응
+ */
+@utility rounded-xs {
+  border-radius: var(--radius-xs);
+}
+@utility rounded-4xl {
+  border-radius: var(--radius-4xl);
+}
+
+/* Typography utilities
+ * 토큰이 composite(5개 속성)이라 @theme 매핑 불가 → @utility로 단일 클래스 제공
+ * 5속성 자가완결: font-family 포함 → [data-font] 전환 자동 반응
+ * 사용 예: <h1 class="text-heading-24-semibold text-fg-strong">
+ */
+@utility text-display-32-bold {
+  font-family: var(--semantic-display-32-bold-fontFamily);
+  font-size: var(--semantic-display-32-bold-fontSize);
+  line-height: var(--semantic-display-32-bold-lineHeight);
+  font-weight: var(--semantic-display-32-bold-fontWeight);
+  letter-spacing: var(--semantic-display-32-bold-letterSpacing);
+}
+@utility text-display-40-bold {
+  font-family: var(--semantic-display-40-bold-fontFamily);
+  font-size: var(--semantic-display-40-bold-fontSize);
+  line-height: var(--semantic-display-40-bold-lineHeight);
+  font-weight: var(--semantic-display-40-bold-fontWeight);
+  letter-spacing: var(--semantic-display-40-bold-letterSpacing);
+}
+@utility text-display-48-bold {
+  font-family: var(--semantic-display-48-bold-fontFamily);
+  font-size: var(--semantic-display-48-bold-fontSize);
+  line-height: var(--semantic-display-48-bold-lineHeight);
+  font-weight: var(--semantic-display-48-bold-fontWeight);
+  letter-spacing: var(--semantic-display-48-bold-letterSpacing);
+}
+
+@utility text-heading-17-semibold {
+  font-family: var(--semantic-heading-17-semibold-fontFamily);
+  font-size: var(--semantic-heading-17-semibold-fontSize);
+  line-height: var(--semantic-heading-17-semibold-lineHeight);
+  font-weight: var(--semantic-heading-17-semibold-fontWeight);
+  letter-spacing: var(--semantic-heading-17-semibold-letterSpacing);
+}
+@utility text-heading-17-bold {
+  font-family: var(--semantic-heading-17-bold-fontFamily);
+  font-size: var(--semantic-heading-17-bold-fontSize);
+  line-height: var(--semantic-heading-17-bold-lineHeight);
+  font-weight: var(--semantic-heading-17-bold-fontWeight);
+  letter-spacing: var(--semantic-heading-17-bold-letterSpacing);
+}
+@utility text-heading-20-semibold {
+  font-family: var(--semantic-heading-20-semibold-fontFamily);
+  font-size: var(--semantic-heading-20-semibold-fontSize);
+  line-height: var(--semantic-heading-20-semibold-lineHeight);
+  font-weight: var(--semantic-heading-20-semibold-fontWeight);
+  letter-spacing: var(--semantic-heading-20-semibold-letterSpacing);
+}
+@utility text-heading-20-bold {
+  font-family: var(--semantic-heading-20-bold-fontFamily);
+  font-size: var(--semantic-heading-20-bold-fontSize);
+  line-height: var(--semantic-heading-20-bold-lineHeight);
+  font-weight: var(--semantic-heading-20-bold-fontWeight);
+  letter-spacing: var(--semantic-heading-20-bold-letterSpacing);
+}
+@utility text-heading-24-semibold {
+  font-family: var(--semantic-heading-24-semibold-fontFamily);
+  font-size: var(--semantic-heading-24-semibold-fontSize);
+  line-height: var(--semantic-heading-24-semibold-lineHeight);
+  font-weight: var(--semantic-heading-24-semibold-fontWeight);
+  letter-spacing: var(--semantic-heading-24-semibold-letterSpacing);
+}
+@utility text-heading-24-bold {
+  font-family: var(--semantic-heading-24-bold-fontFamily);
+  font-size: var(--semantic-heading-24-bold-fontSize);
+  line-height: var(--semantic-heading-24-bold-lineHeight);
+  font-weight: var(--semantic-heading-24-bold-fontWeight);
+  letter-spacing: var(--semantic-heading-24-bold-letterSpacing);
+}
+@utility text-heading-26-semibold {
+  font-family: var(--semantic-heading-26-semibold-fontFamily);
+  font-size: var(--semantic-heading-26-semibold-fontSize);
+  line-height: var(--semantic-heading-26-semibold-lineHeight);
+  font-weight: var(--semantic-heading-26-semibold-fontWeight);
+  letter-spacing: var(--semantic-heading-26-semibold-letterSpacing);
+}
+@utility text-heading-26-bold {
+  font-family: var(--semantic-heading-26-bold-fontFamily);
+  font-size: var(--semantic-heading-26-bold-fontSize);
+  line-height: var(--semantic-heading-26-bold-lineHeight);
+  font-weight: var(--semantic-heading-26-bold-fontWeight);
+  letter-spacing: var(--semantic-heading-26-bold-letterSpacing);
+}
+
+@utility text-body-13-regular {
+  font-family: var(--semantic-body-13-regular-fontFamily);
+  font-size: var(--semantic-body-13-regular-fontSize);
+  line-height: var(--semantic-body-13-regular-lineHeight);
+  font-weight: var(--semantic-body-13-regular-fontWeight);
+  letter-spacing: var(--semantic-body-13-regular-letterSpacing);
+}
+@utility text-body-13-semibold {
+  font-family: var(--semantic-body-13-semibold-fontFamily);
+  font-size: var(--semantic-body-13-semibold-fontSize);
+  line-height: var(--semantic-body-13-semibold-lineHeight);
+  font-weight: var(--semantic-body-13-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-13-semibold-letterSpacing);
+}
+@utility text-body-14-regular {
+  font-family: var(--semantic-body-14-regular-fontFamily);
+  font-size: var(--semantic-body-14-regular-fontSize);
+  line-height: var(--semantic-body-14-regular-lineHeight);
+  font-weight: var(--semantic-body-14-regular-fontWeight);
+  letter-spacing: var(--semantic-body-14-regular-letterSpacing);
+}
+@utility text-body-14-semibold {
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-14-semibold-letterSpacing);
+}
+@utility text-body-15-regular {
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+  letter-spacing: var(--semantic-body-15-regular-letterSpacing);
+}
+@utility text-body-15-semibold {
+  font-family: var(--semantic-body-15-semibold-fontFamily);
+  font-size: var(--semantic-body-15-semibold-fontSize);
+  line-height: var(--semantic-body-15-semibold-lineHeight);
+  font-weight: var(--semantic-body-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-15-semibold-letterSpacing);
+}
+@utility text-body-17-regular {
+  font-family: var(--semantic-body-17-regular-fontFamily);
+  font-size: var(--semantic-body-17-regular-fontSize);
+  line-height: var(--semantic-body-17-regular-lineHeight);
+  font-weight: var(--semantic-body-17-regular-fontWeight);
+  letter-spacing: var(--semantic-body-17-regular-letterSpacing);
+}
+@utility text-body-17-semibold {
+  font-family: var(--semantic-body-17-semibold-fontFamily);
+  font-size: var(--semantic-body-17-semibold-fontSize);
+  line-height: var(--semantic-body-17-semibold-lineHeight);
+  font-weight: var(--semantic-body-17-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-17-semibold-letterSpacing);
+}
+@utility text-body-17-bold {
+  font-family: var(--semantic-body-17-bold-fontFamily);
+  font-size: var(--semantic-body-17-bold-fontSize);
+  line-height: var(--semantic-body-17-bold-lineHeight);
+  font-weight: var(--semantic-body-17-bold-fontWeight);
+  letter-spacing: var(--semantic-body-17-bold-letterSpacing);
+}
+
+@utility text-reading-14-regular {
+  font-family: var(--semantic-reading-14-regular-fontFamily);
+  font-size: var(--semantic-reading-14-regular-fontSize);
+  line-height: var(--semantic-reading-14-regular-lineHeight);
+  font-weight: var(--semantic-reading-14-regular-fontWeight);
+  letter-spacing: var(--semantic-reading-14-regular-letterSpacing);
+}
+@utility text-reading-15-regular {
+  font-family: var(--semantic-reading-15-regular-fontFamily);
+  font-size: var(--semantic-reading-15-regular-fontSize);
+  line-height: var(--semantic-reading-15-regular-lineHeight);
+  font-weight: var(--semantic-reading-15-regular-fontWeight);
+  letter-spacing: var(--semantic-reading-15-regular-letterSpacing);
+}
+@utility text-reading-16-regular {
+  font-family: var(--semantic-reading-16-regular-fontFamily);
+  font-size: var(--semantic-reading-16-regular-fontSize);
+  line-height: var(--semantic-reading-16-regular-lineHeight);
+  font-weight: var(--semantic-reading-16-regular-fontWeight);
+  letter-spacing: var(--semantic-reading-16-regular-letterSpacing);
+}
+@utility text-reading-17-regular {
+  font-family: var(--semantic-reading-17-regular-fontFamily);
+  font-size: var(--semantic-reading-17-regular-fontSize);
+  line-height: var(--semantic-reading-17-regular-lineHeight);
+  font-weight: var(--semantic-reading-17-regular-fontWeight);
+  letter-spacing: var(--semantic-reading-17-regular-letterSpacing);
+}
+@utility text-reading-18-regular {
+  font-family: var(--semantic-reading-18-regular-fontFamily);
+  font-size: var(--semantic-reading-18-regular-fontSize);
+  line-height: var(--semantic-reading-18-regular-lineHeight);
+  font-weight: var(--semantic-reading-18-regular-fontWeight);
+  letter-spacing: var(--semantic-reading-18-regular-letterSpacing);
+}
+
+@utility text-label-12-medium {
+  font-family: var(--semantic-label-12-medium-fontFamily);
+  font-size: var(--semantic-label-12-medium-fontSize);
+  line-height: var(--semantic-label-12-medium-lineHeight);
+  font-weight: var(--semantic-label-12-medium-fontWeight);
+  letter-spacing: var(--semantic-label-12-medium-letterSpacing);
+}
+@utility text-label-12-semibold {
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  line-height: var(--semantic-label-12-semibold-lineHeight);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-12-semibold-letterSpacing);
+}
+@utility text-label-13-medium {
+  font-family: var(--semantic-label-13-medium-fontFamily);
+  font-size: var(--semantic-label-13-medium-fontSize);
+  line-height: var(--semantic-label-13-medium-lineHeight);
+  font-weight: var(--semantic-label-13-medium-fontWeight);
+  letter-spacing: var(--semantic-label-13-medium-letterSpacing);
+}
+@utility text-label-13-semibold {
+  font-family: var(--semantic-label-13-semibold-fontFamily);
+  font-size: var(--semantic-label-13-semibold-fontSize);
+  line-height: var(--semantic-label-13-semibold-lineHeight);
+  font-weight: var(--semantic-label-13-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-13-semibold-letterSpacing);
+}
+@utility text-label-14-medium {
+  font-family: var(--semantic-label-14-medium-fontFamily);
+  font-size: var(--semantic-label-14-medium-fontSize);
+  line-height: var(--semantic-label-14-medium-lineHeight);
+  font-weight: var(--semantic-label-14-medium-fontWeight);
+  letter-spacing: var(--semantic-label-14-medium-letterSpacing);
+}
+@utility text-label-14-semibold {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-14-semibold-letterSpacing);
+}
+@utility text-label-15-medium {
+  font-family: var(--semantic-label-15-medium-fontFamily);
+  font-size: var(--semantic-label-15-medium-fontSize);
+  line-height: var(--semantic-label-15-medium-lineHeight);
+  font-weight: var(--semantic-label-15-medium-fontWeight);
+  letter-spacing: var(--semantic-label-15-medium-letterSpacing);
+}
+@utility text-label-15-semibold {
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-15-semibold-letterSpacing);
+}
+@utility text-label-17-medium {
+  font-family: var(--semantic-label-17-medium-fontFamily);
+  font-size: var(--semantic-label-17-medium-fontSize);
+  line-height: var(--semantic-label-17-medium-lineHeight);
+  font-weight: var(--semantic-label-17-medium-fontWeight);
+  letter-spacing: var(--semantic-label-17-medium-letterSpacing);
+}
+@utility text-label-17-semibold {
+  font-family: var(--semantic-label-17-semibold-fontFamily);
+  font-size: var(--semantic-label-17-semibold-fontSize);
+  line-height: var(--semantic-label-17-semibold-lineHeight);
+  font-weight: var(--semantic-label-17-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-17-semibold-letterSpacing);
+}
+
+@utility text-caption-11-regular {
+  font-family: var(--semantic-caption-11-regular-fontFamily);
+  font-size: var(--semantic-caption-11-regular-fontSize);
+  line-height: var(--semantic-caption-11-regular-lineHeight);
+  font-weight: var(--semantic-caption-11-regular-fontWeight);
+  letter-spacing: var(--semantic-caption-11-regular-letterSpacing);
+}
+@utility text-caption-11-semibold {
+  font-family: var(--semantic-caption-11-semibold-fontFamily);
+  font-size: var(--semantic-caption-11-semibold-fontSize);
+  line-height: var(--semantic-caption-11-semibold-lineHeight);
+  font-weight: var(--semantic-caption-11-semibold-fontWeight);
+  letter-spacing: var(--semantic-caption-11-semibold-letterSpacing);
+}
+@utility text-caption-12-regular {
+  font-family: var(--semantic-caption-12-regular-fontFamily);
+  font-size: var(--semantic-caption-12-regular-fontSize);
+  line-height: var(--semantic-caption-12-regular-lineHeight);
+  font-weight: var(--semantic-caption-12-regular-fontWeight);
+  letter-spacing: var(--semantic-caption-12-regular-letterSpacing);
+}
+@utility text-caption-12-semibold {
+  font-family: var(--semantic-caption-12-semibold-fontFamily);
+  font-size: var(--semantic-caption-12-semibold-fontSize);
+  line-height: var(--semantic-caption-12-semibold-lineHeight);
+  font-weight: var(--semantic-caption-12-semibold-fontWeight);
+  letter-spacing: var(--semantic-caption-12-semibold-letterSpacing);
+}
+
+@utility text-micro-9-semibold {
+  font-family: var(--semantic-micro-9-semibold-fontFamily);
+  font-size: var(--semantic-micro-9-semibold-fontSize);
+  line-height: var(--semantic-micro-9-semibold-lineHeight);
+  font-weight: var(--semantic-micro-9-semibold-fontWeight);
+  letter-spacing: var(--semantic-micro-9-semibold-letterSpacing);
+}
+@utility text-micro-10-regular {
+  font-family: var(--semantic-micro-10-regular-fontFamily);
+  font-size: var(--semantic-micro-10-regular-fontSize);
+  line-height: var(--semantic-micro-10-regular-lineHeight);
+  font-weight: var(--semantic-micro-10-regular-fontWeight);
+  letter-spacing: var(--semantic-micro-10-regular-letterSpacing);
+}
+@utility text-micro-10-semibold {
+  font-family: var(--semantic-micro-10-semibold-fontFamily);
+  font-size: var(--semantic-micro-10-semibold-fontSize);
+  line-height: var(--semantic-micro-10-semibold-lineHeight);
+  font-weight: var(--semantic-micro-10-semibold-fontWeight);
+  letter-spacing: var(--semantic-micro-10-semibold-letterSpacing);
+}
+
+/* Global font-family safety net — text-* 못 붙은 요소도 IGT System Sans fallback */
+:root {
+  font-family: var(--typography-fontFamily-primary);
+}
+[data-font="secondary"] {
+  font-family: var(--typography-fontFamily-secondary);
+}

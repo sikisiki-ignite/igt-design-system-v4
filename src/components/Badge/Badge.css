@@ -1,0 +1,55 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--dataDisplay-countBadge-size-minWidth-lg);
+  height: var(--dataDisplay-countBadge-size-height-lg);
+  padding-inline: var(--dataDisplay-countBadge-size-paddingInline-lg);
+  border-radius: var(--dataDisplay-countBadge-size-radius-lg);
+  background: var(--dataDisplay-countBadge-color-urgent-container);
+  color: var(--dataDisplay-countBadge-color-urgent-text);
+  white-space: nowrap;
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-14-semibold-letterSpacing);
+}
+
+/* ── Size ── */
+.badge[data-size="sm"] {
+  min-width: var(--dataDisplay-countBadge-size-minWidth-sm);
+  height: var(--dataDisplay-countBadge-size-height-sm);
+  padding-inline: var(--dataDisplay-countBadge-size-paddingInline-sm);
+  border-radius: var(--dataDisplay-countBadge-size-radius-sm);
+  font-family: var(--semantic-caption-11-semibold-fontFamily);
+  font-size: var(--semantic-caption-11-semibold-fontSize);
+  line-height: var(--semantic-caption-11-semibold-lineHeight);
+  font-weight: var(--semantic-caption-11-semibold-fontWeight);
+  letter-spacing: var(--semantic-caption-11-semibold-letterSpacing);
+}
+.badge[data-size="md"] {
+  min-width: var(--dataDisplay-countBadge-size-minWidth-md);
+  height: var(--dataDisplay-countBadge-size-height-md);
+  padding-inline: var(--dataDisplay-countBadge-size-paddingInline-md);
+  border-radius: var(--dataDisplay-countBadge-size-radius-md);
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  line-height: var(--semantic-label-12-semibold-lineHeight);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-12-semibold-letterSpacing);
+}
+
+/* ── Tone ── */
+.badge[data-tone="urgent"] {
+  background: var(--dataDisplay-countBadge-color-urgent-container);
+  color: var(--dataDisplay-countBadge-color-urgent-text);
+}
+.badge[data-tone="accent"] {
+  background: var(--dataDisplay-countBadge-color-accent-container);
+  color: var(--dataDisplay-countBadge-color-accent-text);
+}
+.badge[data-tone="neutral"] {
+  background: var(--dataDisplay-countBadge-color-neutral-container);
+  color: var(--dataDisplay-countBadge-color-neutral-text);
+}

@@ -1,0 +1,183 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  height: var(--dataDisplay-label-size-container-height-xl);
+  padding-inline: var(--dataDisplay-label-size-container-spacing-paddingInline-xl);
+  gap: var(--dataDisplay-label-size-container-spacing-gapInline-xl);
+  border-radius: var(--dataDisplay-label-size-container-radius-xl);
+  border: var(--dataDisplay-label-size-container-borderWidth) solid var(--label-border-color, transparent);
+  background: var(--label-bg);
+  color: var(--label-text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Size ── */
+.label[data-size="xs"] {
+  height: var(--dataDisplay-label-size-container-height-xs);
+  padding-inline: var(--dataDisplay-label-size-container-spacing-paddingInline-xs);
+  gap: var(--dataDisplay-label-size-container-spacing-gapInline-xs);
+  border-radius: var(--dataDisplay-label-size-container-radius-xs);
+}
+.label[data-size="sm"] {
+  height: var(--dataDisplay-label-size-container-height-sm);
+  padding-inline: var(--dataDisplay-label-size-container-spacing-paddingInline-sm);
+  gap: var(--dataDisplay-label-size-container-spacing-gapInline-sm);
+  border-radius: var(--dataDisplay-label-size-container-radius-sm);
+}
+.label[data-size="md"] {
+  height: var(--dataDisplay-label-size-container-height-md);
+  padding-inline: var(--dataDisplay-label-size-container-spacing-paddingInline-md);
+  gap: var(--dataDisplay-label-size-container-spacing-gapInline-md);
+  border-radius: var(--dataDisplay-label-size-container-radius-md);
+}
+.label[data-size="lg"] {
+  height: var(--dataDisplay-label-size-container-height-lg);
+  padding-inline: var(--dataDisplay-label-size-container-spacing-paddingInline-lg);
+  gap: var(--dataDisplay-label-size-container-spacing-gapInline-lg);
+  border-radius: var(--dataDisplay-label-size-container-radius-lg);
+}
+
+/* ── Typography (xl default) ── */
+.label__text {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+}
+.label[data-size="xs"] .label__text {
+  font-family: var(--semantic-micro-9-semibold-fontFamily);
+  font-size: var(--semantic-micro-9-semibold-fontSize);
+  line-height: var(--semantic-micro-9-semibold-lineHeight);
+  font-weight: var(--semantic-micro-9-semibold-fontWeight);
+}
+.label[data-size="sm"] .label__text {
+  font-family: var(--semantic-caption-11-semibold-fontFamily);
+  font-size: var(--semantic-caption-11-semibold-fontSize);
+  line-height: var(--semantic-caption-11-semibold-lineHeight);
+  font-weight: var(--semantic-caption-11-semibold-fontWeight);
+}
+.label[data-size="md"] .label__text {
+  font-family: var(--semantic-label-12-semibold-fontFamily);
+  font-size: var(--semantic-label-12-semibold-fontSize);
+  line-height: var(--semantic-label-12-semibold-lineHeight);
+  font-weight: var(--semantic-label-12-semibold-fontWeight);
+}
+.label[data-size="lg"] .label__text {
+  font-family: var(--semantic-label-13-semibold-fontFamily);
+  font-size: var(--semantic-label-13-semibold-fontSize);
+  line-height: var(--semantic-label-13-semibold-lineHeight);
+  font-weight: var(--semantic-label-13-semibold-fontWeight);
+}
+
+/* ── Icon ── */
+.label__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--dataDisplay-label-size-content-iconSize-xl);
+  height: var(--dataDisplay-label-size-content-iconSize-xl);
+  color: var(--label-icon);
+}
+.label[data-size="xs"] .label__icon { width: var(--dataDisplay-label-size-content-iconSize-xs); height: var(--dataDisplay-label-size-content-iconSize-xs); }
+.label[data-size="sm"] .label__icon { width: var(--dataDisplay-label-size-content-iconSize-sm); height: var(--dataDisplay-label-size-content-iconSize-sm); }
+.label[data-size="md"] .label__icon { width: var(--dataDisplay-label-size-content-iconSize-md); height: var(--dataDisplay-label-size-content-iconSize-md); }
+.label[data-size="lg"] .label__icon { width: var(--dataDisplay-label-size-content-iconSize-lg); height: var(--dataDisplay-label-size-content-iconSize-lg); }
+
+/* ── Color × Tone ── */
+.label[data-color="grey"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-neutral-soft-text);
+  --label-icon: var(--dataDisplay-label-color-neutral-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-neutral-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-neutral-soft-border);
+}
+.label[data-color="grey"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-neutral-outline-text);
+  --label-icon: var(--dataDisplay-label-color-neutral-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-neutral-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-neutral-outline-border);
+}
+.label[data-color="yellow"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-yellow-soft-text);
+  --label-icon: var(--dataDisplay-label-color-yellow-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-yellow-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-yellow-soft-border);
+}
+.label[data-color="yellow"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-yellow-outline-text);
+  --label-icon: var(--dataDisplay-label-color-yellow-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-yellow-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-yellow-outline-border);
+}
+.label[data-color="green"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-green-soft-text);
+  --label-icon: var(--dataDisplay-label-color-green-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-green-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-green-soft-border);
+}
+.label[data-color="green"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-green-outline-text);
+  --label-icon: var(--dataDisplay-label-color-green-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-green-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-green-outline-border);
+}
+.label[data-color="teal"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-teal-soft-text);
+  --label-icon: var(--dataDisplay-label-color-teal-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-teal-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-teal-soft-border);
+}
+.label[data-color="teal"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-teal-outline-text);
+  --label-icon: var(--dataDisplay-label-color-teal-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-teal-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-teal-outline-border);
+}
+.label[data-color="blue"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-blue-soft-text);
+  --label-icon: var(--dataDisplay-label-color-blue-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-blue-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-blue-soft-border);
+}
+.label[data-color="blue"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-blue-outline-text);
+  --label-icon: var(--dataDisplay-label-color-blue-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-blue-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-blue-outline-border);
+}
+.label[data-color="red"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-red-soft-text);
+  --label-icon: var(--dataDisplay-label-color-red-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-red-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-red-soft-border);
+}
+.label[data-color="red"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-red-outline-text);
+  --label-icon: var(--dataDisplay-label-color-red-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-red-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-red-outline-border);
+}
+.label[data-color="purple"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-purple-soft-text);
+  --label-icon: var(--dataDisplay-label-color-purple-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-purple-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-purple-soft-border);
+}
+.label[data-color="purple"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-purple-outline-text);
+  --label-icon: var(--dataDisplay-label-color-purple-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-purple-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-purple-outline-border);
+}
+.label[data-color="orange"][data-tone="soft"] {
+  --label-text: var(--dataDisplay-label-color-orange-soft-text);
+  --label-icon: var(--dataDisplay-label-color-orange-soft-icon);
+  --label-bg: var(--dataDisplay-label-color-orange-soft-container);
+  --label-border-color: var(--dataDisplay-label-color-orange-soft-border);
+}
+.label[data-color="orange"][data-tone="outline"] {
+  --label-text: var(--dataDisplay-label-color-orange-outline-text);
+  --label-icon: var(--dataDisplay-label-color-orange-outline-icon);
+  --label-bg: var(--dataDisplay-label-color-orange-outline-container);
+  --label-border-color: var(--dataDisplay-label-color-orange-outline-border);
+}

@@ -1,0 +1,160 @@
+/* ── ArrowControl ── */
+
+.arrow-control {
+  --ac-container:  transparent;
+  --ac-border:     transparent;
+  --ac-icon:       currentColor;
+  --ac-size:       var(--action-arrowControl-size-container-md);
+  --ac-icon-size:  var(--action-arrowControl-size-iconSize-md);
+  --ac-radius:     var(--action-arrowControl-size-radius);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--ac-size);
+  height: var(--ac-size);
+  border-radius: var(--ac-radius);
+  border: 1px solid var(--ac-border);
+  background: var(--ac-container);
+  color: var(--ac-icon);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ── Focus ring ── */
+.arrow-control__focus-ring {
+  display: none;
+  position: absolute;
+  inset: -3px;
+  border-radius: calc(var(--ac-radius) + 2px);
+  outline: 2px solid var(--sys-border-brand-default);
+  pointer-events: none;
+}
+.arrow-control:focus-visible .arrow-control__focus-ring {
+  display: block;
+}
+
+/* ── Icon slot ── */
+.arrow-control__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--ac-icon-size);
+  height: var(--ac-icon-size);
+  line-height: 1;
+  pointer-events: none;
+}
+.arrow-control__icon > span,
+.arrow-control__icon svg { width: 100%; height: 100%; }
+
+/* ── Disabled ── */
+.arrow-control:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Size ── */
+.arrow-control[data-size="xs"] {
+  --ac-size:      var(--action-arrowControl-size-container-xs);
+  --ac-icon-size: var(--action-arrowControl-size-iconSize-xs);
+}
+.arrow-control[data-size="sm"] {
+  --ac-size:      var(--action-arrowControl-size-container-sm);
+  --ac-icon-size: var(--action-arrowControl-size-iconSize-sm);
+}
+.arrow-control[data-size="md"] {
+  --ac-size:      var(--action-arrowControl-size-container-md);
+  --ac-icon-size: var(--action-arrowControl-size-iconSize-md);
+}
+
+/* ── Variant — surfaceFill ── */
+.arrow-control[data-variant="surfaceFill"] {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceFill-container-normal);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceFill-border-normal);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceFill-icon-normal);
+}
+.arrow-control[data-variant="surfaceFill"]:hover {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceFill-container-hover);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceFill-border-hover);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceFill-icon-hover);
+}
+.arrow-control[data-variant="surfaceFill"]:active {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceFill-container-pressed);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceFill-border-pressed);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceFill-icon-pressed);
+}
+.arrow-control[data-variant="surfaceFill"]:disabled {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceFill-container-disabled);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceFill-border-disabled);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceFill-icon-disabled);
+}
+
+/* ── Variant — surfaceOutline ── */
+.arrow-control[data-variant="surfaceOutline"] {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceOutline-container-normal);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceOutline-border-normal);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceOutline-icon-normal);
+}
+.arrow-control[data-variant="surfaceOutline"]:hover {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceOutline-container-hover);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceOutline-border-hover);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceOutline-icon-hover);
+}
+.arrow-control[data-variant="surfaceOutline"]:active {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceOutline-container-pressed);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceOutline-border-pressed);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceOutline-icon-pressed);
+}
+.arrow-control[data-variant="surfaceOutline"]:disabled {
+  --ac-container: var(--action-arrowControl-color-variant-surfaceOutline-container-disabled);
+  --ac-border:    var(--action-arrowControl-color-variant-surfaceOutline-border-disabled);
+  --ac-icon:      var(--action-arrowControl-color-variant-surfaceOutline-icon-disabled);
+}
+
+/* ── Variant — overlayLight ── */
+.arrow-control[data-variant="overlayLight"] {
+  --ac-container: var(--action-arrowControl-color-variant-overlayLight-container-normal);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayLight-border-normal);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayLight-icon-normal);
+}
+.arrow-control[data-variant="overlayLight"]:hover {
+  --ac-container: var(--action-arrowControl-color-variant-overlayLight-container-hover);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayLight-border-hover);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayLight-icon-hover);
+}
+.arrow-control[data-variant="overlayLight"]:active {
+  --ac-container: var(--action-arrowControl-color-variant-overlayLight-container-pressed);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayLight-border-pressed);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayLight-icon-pressed);
+}
+.arrow-control[data-variant="overlayLight"]:disabled {
+  --ac-container: var(--action-arrowControl-color-variant-overlayLight-container-disabled);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayLight-border-disabled);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayLight-icon-disabled);
+}
+
+/* ── Variant — overlayDark ── */
+.arrow-control[data-variant="overlayDark"] {
+  --ac-container: var(--action-arrowControl-color-variant-overlayDark-container-normal);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayDark-border-normal);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayDark-icon-normal);
+}
+.arrow-control[data-variant="overlayDark"]:hover {
+  --ac-container: var(--action-arrowControl-color-variant-overlayDark-container-hover);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayDark-border-hover);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayDark-icon-hover);
+}
+.arrow-control[data-variant="overlayDark"]:active {
+  --ac-container: var(--action-arrowControl-color-variant-overlayDark-container-pressed);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayDark-border-pressed);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayDark-icon-pressed);
+}
+.arrow-control[data-variant="overlayDark"]:disabled {
+  --ac-container: var(--action-arrowControl-color-variant-overlayDark-container-disabled);
+  --ac-border:    var(--action-arrowControl-color-variant-overlayDark-border-disabled);
+  --ac-icon:      var(--action-arrowControl-color-variant-overlayDark-icon-disabled);
+}

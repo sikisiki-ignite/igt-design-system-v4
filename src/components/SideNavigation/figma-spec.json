@@ -1,0 +1,1581 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "289:20249",
+    "componentName": "SideNavigation",
+    "extractedAt": "2026-05-04T05:03:11.508Z"
+  },
+  "componentPropertyDefinitions": {
+    "NavSectionHeader#2266:1024": {
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    "Tone": {
+      "type": "VARIANT",
+      "defaultValue": "neutral",
+      "variantOptions": [
+        "neutral",
+        "accent"
+      ]
+    },
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "NavSectionHeader",
+      "type": "INSTANCE",
+      "componentName": "NavSectionHeader",
+      "conditional": null,
+      "dimensions": {
+        "width": 220,
+        "height": 58
+      },
+      "children": [
+        {
+          "layerName": "container",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 192,
+            "height": 22
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 1,
+            "paddingRight": 0,
+            "paddingBottom": 1,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "center"
+          },
+          "children": [
+            {
+              "layerName": "네비게이션 섹션 헤더",
+              "type": "TEXT",
+              "conditional": null,
+              "dimensions": {
+                "width": 192,
+                "height": 20
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(3,24,50,0.46)",
+                  "token": "--sys-border-neutral-default",
+                  "resolved": true
+                },
+                {
+                  "property": "color",
+                  "figmaValue": "rgba(3,24,50,1)",
+                  "token": null,
+                  "resolved": false
+                },
+                {
+                  "property": "text-style",
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 20
+                },
+                "sm": {
+                  "width": 200,
+                  "height": 16
+                }
+              },
+              "textStylesBySize": {
+                "md": {
+                  "figmaValue": "14-400",
+                  "token": "--semantic-body-14-regular",
+                  "resolved": true
+                },
+                "sm": {
+                  "figmaValue": "12-400",
+                  "token": "--semantic-caption-12-regular",
+                  "resolved": true
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 192,
+              "height": 22
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 220,
+          "height": 58
+        },
+        "sm": {
+          "width": 220,
+          "height": 44
+        }
+      }
+    },
+    {
+      "layerName": "list",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 220,
+        "height": 480
+      },
+      "layoutSpec": {
+        "direction": "vertical",
+        "gap": 4,
+        "paddingTop": 0,
+        "paddingRight": 0,
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start"
+      },
+      "children": [
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(2,32,71,0.05)",
+              "token": "--sys-border-neutral-weak",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "current",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        },
+        {
+          "layerName": "NavItem",
+          "type": "INSTANCE",
+          "componentName": "NavItem",
+          "conditional": "hasLeading",
+          "dimensions": {
+            "width": 220,
+            "height": 40
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(255,255,255,0)",
+              "token": "--sys-border-none",
+              "resolved": true
+            }
+          ],
+          "instanceProps": {
+            "Tone": "neutral",
+            "Depth": "1",
+            "Size": "md",
+            "State": "normal",
+            "Disabled": "false"
+          },
+          "children": [
+            {
+              "layerName": "container",
+              "type": "FRAME",
+              "conditional": null,
+              "dimensions": {
+                "width": 220,
+                "height": 40
+              },
+              "layoutSpec": {
+                "direction": "horizontal",
+                "gap": 6,
+                "paddingTop": 11,
+                "paddingRight": 12,
+                "paddingBottom": 11,
+                "paddingLeft": 12,
+                "alignItems": "center",
+                "justifyContent": "flex-start",
+                "borderRadius": 8
+              },
+              "children": [
+                {
+                  "layerName": "LeadingIcon",
+                  "type": "INSTANCE",
+                  "componentName": "LeadingIcon",
+                  "conditional": "__hidden__",
+                  "dimensions": {
+                    "width": 16,
+                    "height": 16
+                  },
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 16,
+                      "height": 16
+                    },
+                    "sm": {
+                      "width": 14,
+                      "height": 14
+                    }
+                  }
+                },
+                {
+                  "layerName": "textInsetInline",
+                  "type": "FRAME",
+                  "conditional": null,
+                  "dimensions": {
+                    "width": 196,
+                    "height": 18
+                  },
+                  "layoutSpec": {
+                    "direction": "horizontal",
+                    "gap": 10,
+                    "paddingTop": 0,
+                    "paddingRight": 2,
+                    "paddingBottom": 0,
+                    "paddingLeft": 2,
+                    "alignItems": "center",
+                    "justifyContent": "center"
+                  },
+                  "children": [],
+                  "dimensionsBySize": {
+                    "md": {
+                      "width": 196,
+                      "height": 18
+                    },
+                    "sm": {
+                      "width": 204,
+                      "height": 16
+                    }
+                  }
+                }
+              ],
+              "dimensionsBySize": {
+                "md": {
+                  "width": 192,
+                  "height": 22
+                },
+                "sm": {
+                  "width": 220,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 220,
+              "height": 40
+            },
+            "sm": {
+              "width": 220,
+              "height": 32
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 220,
+          "height": 480
+        },
+        "sm": {
+          "width": 220,
+          "height": 392
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 0,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "flex-start",
+    "justifyContent": "flex-start"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "textStyles": [
+    {
+      "layerName": "네비게이션 섹션 헤더",
+      "figmaValue": "14-400",
+      "token": "--semantic-body-14-regular",
+      "resolved": true,
+      "textStylesBySize": {
+        "md": {
+          "figmaValue": "14-400",
+          "token": "--semantic-body-14-regular",
+          "resolved": true
+        },
+        "sm": {
+          "figmaValue": "12-400",
+          "token": "--semantic-caption-12-regular",
+          "resolved": true
+        }
+      }
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Tone=accent",
+      "variantProps": {
+        "Tone": "accent"
+      },
+      "layerStyles": {
+        "NavItem": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral"
+      },
+      "layerStyles": {
+        "NavItem": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "NavSectionHeader": {
+      "tsProp": "navSectionHeader",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "Tone": {
+      "tsProp": "tone",
+      "tsType": "'neutral' | 'accent'",
+      "figmaToCode": {
+        "neutral": "neutral",
+        "accent": "accent"
+      }
+    },
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    }
+  },
+  "gaps": []
+}

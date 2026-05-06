@@ -1,0 +1,424 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "442:17790",
+    "componentName": "Avatar",
+    "extractedAt": "2026-05-04T08:36:22.613Z"
+  },
+  "componentPropertyDefinitions": {
+    "Size": {
+      "type": "VARIANT",
+      "defaultValue": "xl",
+      "variantOptions": [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ]
+    },
+    "Shape": {
+      "type": "VARIANT",
+      "defaultValue": "circle",
+      "variantOptions": [
+        "circle",
+        "rounded"
+      ]
+    },
+    "StatusBadge": {
+      "type": "VARIANT",
+      "defaultValue": "true",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "container",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 24,
+        "height": 24
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(2,32,71,0.05)",
+          "token": "--sys-border-neutral-weak",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "◇ Part / Content",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / Content",
+          "conditional": null,
+          "dimensions": {
+            "width": 24,
+            "height": 24
+          },
+          "instanceProps": {
+            "Variant": "image"
+          },
+          "children": [
+            {
+              "layerName": "Image",
+              "type": "RECTANGLE",
+              "conditional": null,
+              "dimensions": {
+                "width": 24,
+                "height": 24
+              },
+              "dimensionsBySize": {
+                "xs": {
+                  "width": 24,
+                  "height": 24
+                },
+                "xl": {
+                  "width": 56,
+                  "height": 56
+                },
+                "lg": {
+                  "width": 48,
+                  "height": 48
+                },
+                "md": {
+                  "width": 40,
+                  "height": 40
+                },
+                "sm": {
+                  "width": 32,
+                  "height": 32
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "xs": {
+              "width": 24,
+              "height": 24
+            },
+            "xl": {
+              "width": 56,
+              "height": 56
+            },
+            "lg": {
+              "width": 48,
+              "height": 48
+            },
+            "md": {
+              "width": 40,
+              "height": 40
+            },
+            "sm": {
+              "width": 32,
+              "height": 32
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "xs": {
+          "width": 24,
+          "height": 24
+        },
+        "xl": {
+          "width": 56,
+          "height": 56
+        },
+        "lg": {
+          "width": 48,
+          "height": 48
+        },
+        "md": {
+          "width": 40,
+          "height": 40
+        },
+        "sm": {
+          "width": 32,
+          "height": 32
+        }
+      }
+    },
+    {
+      "layerName": "◇ Part / StatusIndicator",
+      "type": "INSTANCE",
+      "componentName": "◇ Part / StatusIndicator",
+      "conditional": null,
+      "dimensions": {
+        "width": 24,
+        "height": 24
+      },
+      "instanceProps": {
+        "Status": "online",
+        "StatusPosition": "bottomEnd"
+      },
+      "children": [
+        {
+          "layerName": "◇ Part / SeparatorRing",
+          "type": "INSTANCE",
+          "componentName": "◇ Part / SeparatorRing",
+          "conditional": null,
+          "dimensions": {
+            "width": 6,
+            "height": 6
+          },
+          "instanceProps": {
+            "SurfaceContext": "backgroundBase"
+          },
+          "children": [
+            {
+              "layerName": "surface",
+              "type": "RECTANGLE",
+              "conditional": null,
+              "dimensions": {
+                "width": 10,
+                "height": 10
+              },
+              "styleValues": [
+                {
+                  "property": "background",
+                  "figmaValue": "rgba(255,255,255,1)",
+                  "token": "--sys-surface-static",
+                  "resolved": true
+                }
+              ],
+              "dimensionsBySize": {
+                "xs": {
+                  "width": 10,
+                  "height": 10
+                },
+                "xl": {
+                  "width": 18,
+                  "height": 18
+                },
+                "lg": {
+                  "width": 16,
+                  "height": 16
+                },
+                "md": {
+                  "width": 14,
+                  "height": 14
+                },
+                "sm": {
+                  "width": 12,
+                  "height": 12
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "xs": {
+              "width": 6,
+              "height": 6
+            },
+            "xl": {
+              "width": 14,
+              "height": 14
+            },
+            "lg": {
+              "width": 12,
+              "height": 12
+            },
+            "md": {
+              "width": 10,
+              "height": 10
+            },
+            "sm": {
+              "width": 8,
+              "height": 8
+            }
+          }
+        },
+        {
+          "layerName": "StatusIndicator",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 6,
+            "height": 6
+          },
+          "styleValues": [
+            {
+              "property": "background",
+              "figmaValue": "rgba(3,178,108,1)",
+              "token": "--sys-border-status-success-default",
+              "resolved": true
+            }
+          ],
+          "children": [],
+          "dimensionsBySize": {
+            "xs": {
+              "width": 6,
+              "height": 6
+            },
+            "xl": {
+              "width": 14,
+              "height": 14
+            },
+            "lg": {
+              "width": 12,
+              "height": 12
+            },
+            "md": {
+              "width": 10,
+              "height": 10
+            },
+            "sm": {
+              "width": 8,
+              "height": 8
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "xs": {
+          "width": 24,
+          "height": 24
+        },
+        "xl": {
+          "width": 56,
+          "height": 56
+        },
+        "lg": {
+          "width": 48,
+          "height": 48
+        },
+        "md": {
+          "width": 40,
+          "height": 40
+        },
+        "sm": {
+          "width": 32,
+          "height": 32
+        }
+      }
+    }
+  ],
+  "layoutSpec": null,
+  "styleValues": [],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Shape=circle,StatusBadge=false",
+      "variantProps": {
+        "Shape": "circle",
+        "StatusBadge": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Shape=circle,StatusBadge=true",
+      "variantProps": {
+        "Shape": "circle",
+        "StatusBadge": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Shape=rounded,StatusBadge=false",
+      "variantProps": {
+        "Shape": "rounded",
+        "StatusBadge": "false"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Shape=rounded,StatusBadge=true",
+      "variantProps": {
+        "Shape": "rounded",
+        "StatusBadge": "true"
+      },
+      "layerStyles": {
+        "container": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Size": {
+      "tsProp": "size",
+      "tsType": "'xs' | 'sm' | 'md' | 'lg' | 'xl'",
+      "figmaToCode": {
+        "xs": "xs",
+        "sm": "sm",
+        "md": "md",
+        "lg": "lg",
+        "xl": "xl"
+      }
+    },
+    "Shape": {
+      "tsProp": "shape",
+      "tsType": "'circle' | 'rounded'",
+      "figmaToCode": {
+        "circle": "circle",
+        "rounded": "rounded"
+      }
+    },
+    "StatusBadge": {
+      "tsProp": "statusBadge",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "false": false,
+        "true": true
+      }
+    }
+  },
+  "gaps": [
+    {
+      "priority": "P1",
+      "figmaProp": "Content.Variant (image/initials/icon)",
+      "status": "open",
+      "note": "서브컴포넌트 Content의 Variant 값이 상위 propMapping에 미포함. src/initials prop으로 코드 레벨 분기 처리."
+    },
+    {
+      "priority": "P1",
+      "figmaProp": "StatusIndicator.Status (active/attention/inactive/error)",
+      "status": "open",
+      "note": "서브컴포넌트 StatusIndicator의 Status prop이 상위 propMapping에 미포함. status prop으로 코드 레벨 처리."
+    },
+    {
+      "priority": "P2",
+      "figmaProp": "SeparatorRing.SurfaceContext",
+      "status": "open",
+      "note": "분리 링 색상이 배경 컨텍스트(backgroundBase/surfaceRaised 등)에 따라 다름. surfaceContext prop으로 처리."
+    }
+  ]
+}

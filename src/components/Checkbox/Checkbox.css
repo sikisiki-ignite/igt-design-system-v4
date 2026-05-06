@@ -1,0 +1,170 @@
+/* ── Checkbox ── */
+
+.checkbox {
+  --cb-container: var(--input-checkbox-size-container-md);
+  --cb-icon-size: var(--input-checkbox-size-iconSize-md);
+  --cb-radius:    var(--input-checkbox-size-radius-md);
+  --cb-border-w:  var(--input-checkbox-size-borderWidth-md);
+  --cb-hit-area:  var(--input-checkbox-size-hitArea-md);
+
+  --cb-bg:     var(--input-checkbox-color-unchecked-container-normal);
+  --cb-border: var(--input-checkbox-color-unchecked-border-normal);
+  --cb-icon:   var(--input-checkbox-color-unchecked-icon-normal);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--cb-hit-area);
+  height: var(--cb-hit-area);
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* ── Size ── */
+.checkbox[data-size="sm"] {
+  --cb-container: var(--input-checkbox-size-container-sm);
+  --cb-icon-size: var(--input-checkbox-size-iconSize-sm);
+  --cb-radius:    var(--input-checkbox-size-radius-sm);
+  --cb-border-w:  var(--input-checkbox-size-borderWidth-sm);
+  --cb-hit-area:  var(--input-checkbox-size-hitArea-sm);
+}
+
+/* ── Visually hidden native input (overlays entire hit area) ── */
+.checkbox__input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: inherit;
+  margin: 0;
+}
+
+/* ── Custom visual control ── */
+.checkbox__control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--cb-container);
+  height: var(--cb-container);
+  border-radius: var(--cb-radius);
+  border: var(--cb-border-w) solid var(--cb-border);
+  background: var(--cb-bg);
+  color: var(--cb-icon);
+  transition: background 0.1s, border-color 0.1s;
+  flex-shrink: 0;
+}
+
+.checkbox__icon {
+  width: var(--cb-icon-size);
+  height: var(--cb-icon-size);
+  flex-shrink: 0;
+}
+
+/* ── Checked state ── */
+.checkbox[data-checked="true"] {
+  --cb-bg:     var(--input-checkbox-color-checked-container-normal);
+  --cb-border: var(--input-checkbox-color-checked-border-normal);
+  --cb-icon:   var(--input-checkbox-color-checked-icon-normal);
+}
+
+/* ── Indeterminate state ── */
+.checkbox[data-checked="indeterminate"] {
+  --cb-bg:     var(--input-checkbox-color-indeterminate-container-normal);
+  --cb-border: var(--input-checkbox-color-indeterminate-border-normal);
+  --cb-icon:   var(--input-checkbox-color-indeterminate-icon-normal);
+}
+
+/* ── Hover ── */
+.checkbox:not([data-disabled]):not([data-readonly]):hover {
+  --cb-bg:     var(--input-checkbox-color-unchecked-container-hover);
+  --cb-border: var(--input-checkbox-color-unchecked-border-hover);
+  --cb-icon:   var(--input-checkbox-color-unchecked-icon-hover);
+}
+.checkbox[data-checked="true"]:not([data-disabled]):not([data-readonly]):hover {
+  --cb-bg:     var(--input-checkbox-color-checked-container-hover);
+  --cb-border: var(--input-checkbox-color-checked-border-hover);
+  --cb-icon:   var(--input-checkbox-color-checked-icon-hover);
+}
+.checkbox[data-checked="indeterminate"]:not([data-disabled]):not([data-readonly]):hover {
+  --cb-bg:     var(--input-checkbox-color-indeterminate-container-hover);
+  --cb-border: var(--input-checkbox-color-indeterminate-border-hover);
+  --cb-icon:   var(--input-checkbox-color-indeterminate-icon-hover);
+}
+
+/* ── Pressed ── */
+.checkbox:not([data-disabled]):not([data-readonly]):active {
+  --cb-bg:     var(--input-checkbox-color-unchecked-container-pressed);
+  --cb-border: var(--input-checkbox-color-unchecked-border-pressed);
+  --cb-icon:   var(--input-checkbox-color-unchecked-icon-pressed);
+}
+.checkbox[data-checked="true"]:not([data-disabled]):not([data-readonly]):active {
+  --cb-bg:     var(--input-checkbox-color-checked-container-pressed);
+  --cb-border: var(--input-checkbox-color-checked-border-pressed);
+  --cb-icon:   var(--input-checkbox-color-checked-icon-pressed);
+}
+.checkbox[data-checked="indeterminate"]:not([data-disabled]):not([data-readonly]):active {
+  --cb-bg:     var(--input-checkbox-color-indeterminate-container-pressed);
+  --cb-border: var(--input-checkbox-color-indeterminate-border-pressed);
+  --cb-icon:   var(--input-checkbox-color-indeterminate-icon-pressed);
+}
+
+/* ── Disabled ── */
+.checkbox[data-disabled] {
+  --cb-bg:     var(--input-checkbox-color-unchecked-container-disabled);
+  --cb-border: var(--input-checkbox-color-unchecked-border-disabled);
+  --cb-icon:   var(--input-checkbox-color-unchecked-icon-disabled);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.checkbox[data-checked="true"][data-disabled] {
+  --cb-bg:     var(--input-checkbox-color-checked-container-disabled);
+  --cb-border: var(--input-checkbox-color-checked-border-disabled);
+  --cb-icon:   var(--input-checkbox-color-checked-icon-disabled);
+}
+.checkbox[data-checked="indeterminate"][data-disabled] {
+  --cb-bg:     var(--input-checkbox-color-indeterminate-container-disabled);
+  --cb-border: var(--input-checkbox-color-indeterminate-border-disabled);
+  --cb-icon:   var(--input-checkbox-color-indeterminate-icon-disabled);
+}
+
+/* ── ReadOnly ── */
+.checkbox[data-readonly] {
+  --cb-bg:     var(--input-checkbox-color-unchecked-container-readOnly);
+  --cb-border: var(--input-checkbox-color-unchecked-border-readOnly);
+  --cb-icon:   var(--input-checkbox-color-unchecked-icon-readOnly);
+  cursor: default;
+  pointer-events: none;
+}
+.checkbox[data-checked="true"][data-readonly] {
+  --cb-bg:     var(--input-checkbox-color-checked-container-readOnly);
+  --cb-border: var(--input-checkbox-color-checked-border-readOnly);
+  --cb-icon:   var(--input-checkbox-color-checked-icon-readOnly);
+}
+.checkbox[data-checked="indeterminate"][data-readonly] {
+  --cb-bg:     var(--input-checkbox-color-indeterminate-container-readOnly);
+  --cb-border: var(--input-checkbox-color-indeterminate-border-readOnly);
+  --cb-icon:   var(--input-checkbox-color-indeterminate-icon-readOnly);
+}
+
+/* ── Invalid ── */
+/* variantStyleMatrix 근거 (Figma raw layer 확인):
+   unchecked+invalid → Invalid FRAME(형제 레이어)에 red STROKES → red border
+   checked+invalid   → Invalid FRAME(CheckBox 안에 중첩)에 red FILLS → red bg로 완전 교체
+   indeterminate+invalid → 동일 */
+.checkbox[data-invalid] {
+  --cb-border: var(--input-checkbox-color-invalid-border);
+}
+.checkbox[data-checked="true"][data-invalid] {
+  --cb-bg:     var(--input-checkbox-color-checked-container-invalid);
+  --cb-border: var(--input-checkbox-color-checked-border-normal);
+}
+.checkbox[data-checked="indeterminate"][data-invalid] {
+  --cb-bg:     var(--input-checkbox-color-indeterminate-container-invalid);
+  --cb-border: var(--input-checkbox-color-indeterminate-border-normal);
+}
+
+/* ── Focus ring (focusRing layer) ── */
+.checkbox__input:focus-visible ~ .checkbox__control {
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: 2px;
+}

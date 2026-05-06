@@ -1,0 +1,191 @@
+/* ── TextArea ── */
+
+.ta {
+  --ta-container:   var(--input-textArea-color-outline-container-normal);
+  --ta-border:      var(--input-textArea-color-outline-border-normal);
+  --ta-label:       var(--input-textArea-color-shared-label-normal);
+  --ta-value:       var(--input-textArea-color-shared-value-normal);
+  --ta-placeholder: var(--input-textArea-color-shared-placeholder-normal);
+  --ta-helper:      var(--input-textArea-color-shared-helper-normal);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-textArea-size-spacing-gapStack-lg);
+  width: 100%;
+}
+
+.ta[data-size="md"] { gap: var(--input-textArea-size-spacing-gapStack-md); }
+
+/* ── Appearance: fill ── */
+.ta[data-appearance="fill"] {
+  --ta-container: var(--input-textArea-color-fill-container-normal);
+  --ta-border:    var(--input-textArea-color-fill-border-normal);
+}
+
+/* ── Label row ── */
+.ta__label-row {
+  display: flex;
+  align-items: center;
+  gap: var(--pattern-fieldBase-spacing-gapLabelToIndicator-lg);
+}
+
+.ta[data-size="md"] .ta__label-row { gap: var(--pattern-fieldBase-spacing-gapLabelToIndicator-md); }
+
+.ta__label {
+  font-family: var(--semantic-label-15-medium-fontFamily);
+  font-size: var(--semantic-label-15-medium-fontSize);
+  line-height: var(--semantic-label-15-medium-lineHeight);
+  font-weight: var(--semantic-label-15-medium-fontWeight);
+  color: var(--ta-label);
+}
+
+.ta[data-size="md"] .ta__label {
+  font-family: var(--semantic-label-14-medium-fontFamily);
+  font-size: var(--semantic-label-14-medium-fontSize);
+  line-height: var(--semantic-label-14-medium-lineHeight);
+  font-weight: var(--semantic-label-14-medium-fontWeight);
+}
+
+/* ── Indicator ── */
+.ta__indicator--required { color: var(--pattern-fieldBase-common-label-indicator-required-color); }
+.ta__indicator--optional { color: var(--pattern-fieldBase-common-label-indicator-optional-color); }
+
+/* ── Container ── */
+.ta__container {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--input-textArea-size-radius-lg);
+  border: var(--input-textArea-size-borderWidth-default) solid var(--ta-border);
+  background-color: var(--ta-container);
+  overflow: hidden;
+  transition: border-color 0.12s, background-color 0.12s;
+}
+
+.ta[data-size="md"] .ta__container { border-radius: var(--input-textArea-size-radius-md); }
+
+/* ── Hover ── */
+.ta:not([data-disabled]):not([data-readonly]) .ta__container:hover {
+  --ta-container: var(--input-textArea-color-outline-container-hover);
+  --ta-border:    var(--input-textArea-color-outline-border-hover);
+}
+
+.ta[data-appearance="fill"]:not([data-disabled]):not([data-readonly]) .ta__container:hover {
+  --ta-container: var(--input-textArea-color-fill-container-hover);
+  --ta-border:    var(--input-textArea-color-fill-border-hover);
+}
+
+/* ── Focus ── */
+.ta:not([data-disabled]):not([data-readonly]) .ta__container:focus-within {
+  --ta-container: var(--input-textArea-color-outline-container-focused);
+  --ta-border:    var(--input-textArea-color-outline-border-focus);
+  outline: 2px solid var(--sys-interactive-focus-ring-default);
+  outline-offset: var(--spacing-2);
+}
+
+.ta[data-appearance="fill"]:not([data-disabled]):not([data-readonly]) .ta__container:focus-within {
+  --ta-container: var(--input-textArea-color-fill-container-focused);
+  --ta-border:    var(--input-textArea-color-fill-border-focused);
+}
+
+/* ── Invalid ── */
+.ta[data-invalid] {
+  --ta-label:  var(--input-textArea-color-shared-label-error);
+  --ta-helper: var(--input-textArea-color-shared-helper-error);
+}
+
+.ta[data-invalid] .ta__container {
+  --ta-border: var(--input-textArea-color-outline-border-error);
+}
+
+.ta[data-appearance="fill"][data-invalid] .ta__container {
+  --ta-border: var(--input-textArea-color-fill-border-error);
+}
+
+/* ── Disabled ── */
+.ta[data-disabled] {
+  --ta-label:  var(--input-textArea-color-shared-label-disabled);
+  --ta-helper: var(--input-textArea-color-shared-helper-disabled);
+}
+
+.ta[data-disabled] .ta__container {
+  --ta-container: var(--input-textArea-color-outline-container-disabled);
+  --ta-border:    var(--input-textArea-color-outline-border-disabled);
+  --ta-value:     var(--input-textArea-color-shared-value-disabled);
+  --ta-placeholder: var(--input-textArea-color-shared-placeholder-disabled);
+  cursor: not-allowed;
+}
+
+.ta[data-appearance="fill"][data-disabled] .ta__container {
+  --ta-container: var(--input-textArea-color-fill-container-disabled);
+  --ta-border:    var(--input-textArea-color-fill-border-disabled);
+}
+
+/* ── ReadOnly ── */
+.ta[data-readonly] {
+  --ta-label: var(--input-textArea-color-shared-label-readOnly);
+}
+
+.ta[data-readonly] .ta__container {
+  --ta-container: var(--input-textArea-color-outline-container-readOnly);
+  --ta-border:    var(--input-textArea-color-outline-border-readOnly);
+  --ta-value:     var(--input-textArea-color-shared-value-readOnly);
+}
+
+.ta[data-appearance="fill"][data-readonly] .ta__container {
+  --ta-container: var(--input-textArea-color-fill-container-readOnly);
+  --ta-border:    var(--input-textArea-color-fill-border-readOnly);
+}
+
+/* ── Textarea element ── */
+.ta__textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ta-value);
+  caret-color: var(--sys-interactive-focus-ring-default);
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--input-textArea-size-spacing-paddingBlock-lg) var(--input-textArea-size-spacing-paddingInline-lg);
+
+  font-family: var(--semantic-body-17-regular-fontFamily);
+  font-size: var(--semantic-body-17-regular-fontSize);
+  line-height: var(--semantic-body-17-regular-lineHeight);
+  font-weight: var(--semantic-body-17-regular-fontWeight);
+}
+
+.ta[data-size="md"] .ta__textarea {
+  padding: var(--input-textArea-size-spacing-paddingBlock-md) var(--input-textArea-size-spacing-paddingInline-md);
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+}
+
+.ta__textarea::placeholder { color: var(--ta-placeholder); }
+.ta__textarea:disabled { cursor: not-allowed; }
+
+/* ── Character count ── */
+.ta__count {
+  align-self: flex-end;
+  padding: 0 var(--input-textArea-size-spacing-paddingInline-lg) var(--spacing-6);
+  font-family: var(--semantic-body-13-regular-fontFamily);
+  font-size: var(--semantic-body-13-regular-fontSize);
+  line-height: var(--semantic-body-13-regular-lineHeight);
+  color: var(--sys-content-neutral-subtle);
+}
+
+/* ── Message ── */
+.ta__message {
+  margin: 0;
+  color: var(--ta-helper);
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+}
+
+.ta[data-size="md"] .ta__message {
+  font-size: var(--semantic-body-13-regular-fontSize);
+  line-height: var(--semantic-body-13-regular-lineHeight);
+}

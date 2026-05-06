@@ -1,0 +1,150 @@
+.org-tree {
+  display: flex;
+  flex-direction: column;
+}
+
+.org-tree__node {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row: wraps button + trail guide line */
+.org-tree__row {
+  position: relative;
+}
+
+/* Row item button */
+.org-tree__item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: var(--navigation-orgTree-color-container-normal);
+  color: var(--navigation-orgTree-color-text-normal);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+
+.org-tree[data-size="sm"] .org-tree__item {
+  height: var(--navigation-orgTree-size-height-sm);
+  border-radius: var(--navigation-orgTree-size-radius-sm);
+  font-family: var(--semantic-label-14-medium-fontFamily);
+  font-size: var(--semantic-label-14-medium-fontSize);
+  font-weight: var(--semantic-label-14-medium-fontWeight);
+  line-height: var(--semantic-label-14-medium-lineHeight);
+}
+
+.org-tree[data-size="md"] .org-tree__item {
+  height: var(--navigation-orgTree-size-height-md);
+  border-radius: var(--navigation-orgTree-size-radius-md);
+  font-family: var(--semantic-label-15-medium-fontFamily);
+  font-size: var(--semantic-label-15-medium-fontSize);
+  font-weight: var(--semantic-label-15-medium-fontWeight);
+  line-height: var(--semantic-label-15-medium-lineHeight);
+}
+
+.org-tree__item:hover:not(:disabled) {
+  background: var(--navigation-orgTree-color-container-hover);
+  color: var(--navigation-orgTree-color-text-hover);
+}
+
+.org-tree__item:active:not(:disabled) {
+  background: var(--navigation-orgTree-color-container-pressed);
+  color: var(--navigation-orgTree-color-text-pressed);
+}
+
+.org-tree__item[data-selected] {
+  background: var(--navigation-orgTree-color-container-selected);
+  color: var(--navigation-orgTree-color-text-selected);
+}
+
+.org-tree__item:disabled,
+.org-tree__item[data-disabled] {
+  color: var(--navigation-orgTree-color-text-disabled);
+  cursor: default;
+}
+
+/* Bullet column (expand chevron or leaf dot) */
+.org-tree__bullet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  flex-shrink: 0;
+  color: var(--navigation-orgTree-color-icon-normal);
+}
+
+.org-tree__item:hover:not(:disabled) .org-tree__bullet {
+  color: var(--navigation-orgTree-color-icon-hover);
+}
+
+.org-tree__item[data-selected] .org-tree__bullet {
+  color: var(--navigation-orgTree-color-icon-selected);
+}
+
+.org-tree__item:disabled .org-tree__bullet {
+  color: var(--navigation-orgTree-color-icon-disabled);
+}
+
+.org-tree__expand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Label */
+.org-tree__label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-inline: var(--spacing-4);
+}
+
+/* Count badge */
+.org-tree__count {
+  flex-shrink: 0;
+  padding-inline-end: var(--spacing-8);
+  color: var(--navigation-orgTree-color-count-normal);
+}
+
+.org-tree[data-size="sm"] .org-tree__count {
+  font-family: var(--semantic-body-14-regular-fontFamily);
+  font-size: var(--semantic-body-14-regular-fontSize);
+  font-weight: var(--semantic-body-14-regular-fontWeight);
+  line-height: var(--semantic-body-14-regular-lineHeight);
+}
+
+.org-tree[data-size="md"] .org-tree__count {
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+}
+
+.org-tree__item[data-selected] .org-tree__count {
+  color: var(--navigation-orgTree-color-count-selected);
+}
+
+.org-tree__item:disabled .org-tree__count {
+  color: var(--navigation-orgTree-color-count-disabled);
+}
+
+/* Badge text label (e.g. "인기") */
+.org-tree__badge {
+  flex-shrink: 0;
+  padding-inline: var(--spacing-4);
+  color: var(--sys-content-brand-default);
+  font-family: var(--semantic-caption-11-semibold-fontFamily);
+  font-size: var(--semantic-caption-11-semibold-fontSize);
+  font-weight: var(--semantic-caption-11-semibold-fontWeight);
+  line-height: var(--semantic-caption-11-semibold-lineHeight);
+}
+
+.org-tree__children {
+  display: flex;
+  flex-direction: column;
+}

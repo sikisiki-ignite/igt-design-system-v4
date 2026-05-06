@@ -1,0 +1,102 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "401:11318",
+    "componentName": "AlertDismiss",
+    "extractedAt": "2026-05-04T02:49:46.961Z"
+  },
+  "componentPropertyDefinitions": {
+    "State": {
+      "type": "VARIANT",
+      "defaultValue": "normal",
+      "variantOptions": [
+        "normal",
+        "hover",
+        "pressed"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "hitArea",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 28,
+        "height": 28
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(255,255,255,0)",
+          "token": "--sys-border-none",
+          "resolved": true
+        }
+      ],
+      "children": []
+    },
+    {
+      "layerName": "iconnew",
+      "type": "INSTANCE",
+      "componentName": "iconnew",
+      "conditional": null,
+      "dimensions": {
+        "width": 16,
+        "height": 16
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "horizontal",
+    "gap": 10,
+    "paddingTop": 4,
+    "paddingRight": 4,
+    "paddingBottom": 4,
+    "paddingLeft": 4,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 4,
+      "token": "--spacing-4",
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "",
+      "variantProps": {},
+      "layerStyles": {
+        "hitArea": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,0)",
+            "token": "--sys-border-none",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "State": {
+      "tsProp": "state",
+      "tsType": "'normal' | 'hover' | 'pressed'",
+      "figmaToCode": {
+        "normal": "normal",
+        "hover": "hover",
+        "pressed": "pressed"
+      }
+    }
+  },
+  "gaps": []
+}

@@ -1,0 +1,481 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "2225:44339",
+    "componentName": "Switch",
+    "extractedAt": "2026-05-03T14:54:32.482Z"
+  },
+  "componentPropertyDefinitions": {
+    "isFocused#2225:834": {
+      "type": "BOOLEAN",
+      "defaultValue": false
+    },
+    "size": {
+      "type": "VARIANT",
+      "defaultValue": "md",
+      "variantOptions": [
+        "sm",
+        "md"
+      ]
+    },
+    "isOn": {
+      "type": "VARIANT",
+      "defaultValue": "true",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    },
+    "isDisabled": {
+      "type": "VARIANT",
+      "defaultValue": "false",
+      "variantOptions": [
+        "false",
+        "true"
+      ]
+    }
+  },
+  "layerInventory": [
+    {
+      "layerName": "hitArea",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 40,
+        "height": 24
+      },
+      "children": [],
+      "dimensionsBySize": {
+        "md": {
+          "width": 40,
+          "height": 24
+        },
+        "sm": {
+          "width": 28,
+          "height": 20
+        }
+      }
+    },
+    {
+      "layerName": "Switch",
+      "type": "FRAME",
+      "conditional": null,
+      "dimensions": {
+        "width": 34,
+        "height": 20
+      },
+      "styleValues": [
+        {
+          "property": "background",
+          "figmaValue": "rgba(49,130,246,1)",
+          "token": "--sys-border-brand-default",
+          "resolved": true
+        }
+      ],
+      "children": [
+        {
+          "layerName": "stateLayer",
+          "type": "FRAME",
+          "conditional": null,
+          "dimensions": {
+            "width": 34,
+            "height": 20
+          },
+          "layoutSpec": {
+            "direction": "horizontal",
+            "gap": 10,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "alignItems": "center",
+            "justifyContent": "flex-start",
+            "borderRadius": 9999
+          },
+          "children": [
+            {
+              "layerName": "containerLayer",
+              "type": "INSTANCE",
+              "componentName": "containerLayer",
+              "conditional": null,
+              "dimensions": {
+                "width": 34,
+                "height": 20
+              },
+              "dimensionsBySize": {
+                "md": {
+                  "width": 34,
+                  "height": 20
+                },
+                "sm": {
+                  "width": 26,
+                  "height": 16
+                }
+              }
+            }
+          ],
+          "dimensionsBySize": {
+            "md": {
+              "width": 34,
+              "height": 20
+            },
+            "sm": {
+              "width": 26,
+              "height": 16
+            }
+          }
+        }
+      ],
+      "dimensionsBySize": {
+        "md": {
+          "width": 34,
+          "height": 20
+        },
+        "sm": {
+          "width": 26,
+          "height": 16
+        }
+      }
+    },
+    {
+      "layerName": "focusRing",
+      "type": "FRAME",
+      "conditional": "__hidden__",
+      "dimensions": {
+        "width": 38,
+        "height": 24
+      },
+      "layoutSpec": {
+        "direction": "horizontal",
+        "gap": 10,
+        "paddingTop": 2,
+        "paddingRight": 2,
+        "paddingBottom": 2,
+        "paddingLeft": 2,
+        "alignItems": "flex-start",
+        "justifyContent": "flex-start",
+        "borderRadius": 9999
+      },
+      "styleValues": [
+        {
+          "property": "border-color",
+          "figmaValue": "rgba(0,0,0,1)",
+          "token": "--sys-interactive-focus-ring-default",
+          "resolved": true
+        }
+      ],
+      "children": [],
+      "dimensionsBySize": {
+        "md": {
+          "width": 38,
+          "height": 24
+        },
+        "sm": {
+          "width": 30,
+          "height": 20
+        }
+      }
+    }
+  ],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    }
+  ],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "isDisabled=false,isOn=false,size=md",
+      "variantProps": {
+        "size": "md",
+        "isOn": "false",
+        "isDisabled": "false"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Ellipse 1": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "isDisabled=false,isOn=false,size=sm",
+      "variantProps": {
+        "size": "sm",
+        "isOn": "false",
+        "isDisabled": "false"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Ellipse 2": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "isDisabled=false,isOn=true,size=md",
+      "variantProps": {
+        "size": "md",
+        "isOn": "true",
+        "isDisabled": "false"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "Ellipse 1": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "isDisabled=false,isOn=true,size=sm",
+      "variantProps": {
+        "size": "sm",
+        "isOn": "true",
+        "isDisabled": "false"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(49,130,246,1)",
+            "token": "--sys-border-brand-default",
+            "resolved": true
+          }
+        ],
+        "Ellipse 2": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ],
+        "focusRing": [
+          {
+            "property": "border-color",
+            "figmaValue": "rgba(0,0,0,1)",
+            "token": "--sys-interactive-focus-ring-default",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "isDisabled=true,isOn=false,size=md",
+      "variantProps": {
+        "size": "md",
+        "isOn": "false",
+        "isDisabled": "true"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Ellipse 1": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "isDisabled=true,isOn=false,size=sm",
+      "variantProps": {
+        "size": "sm",
+        "isOn": "false",
+        "isDisabled": "true"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(2,32,71,0.05)",
+            "token": "--sys-border-neutral-weak",
+            "resolved": true
+          }
+        ],
+        "Ellipse 2": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "isDisabled=true,isOn=true,size=md",
+      "variantProps": {
+        "size": "md",
+        "isOn": "true",
+        "isDisabled": "true"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "Ellipse 1": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "isDisabled=true,isOn=true,size=sm",
+      "variantProps": {
+        "size": "sm",
+        "isOn": "true",
+        "isDisabled": "true"
+      },
+      "layerStyles": {
+        "Switch": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(100,168,255,0.52)",
+            "token": "--sys-border-brand-subtle",
+            "resolved": true
+          }
+        ],
+        "Ellipse 2": [
+          {
+            "property": "background",
+            "figmaValue": "rgba(255,255,255,1)",
+            "token": "--sys-surface-static",
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "isFocused": {
+      "tsProp": "isFocused",
+      "tsType": "boolean",
+      "figmaToCode": {
+        "true": true,
+        "false": false
+      }
+    },
+    "size": {
+      "tsProp": "size",
+      "tsType": "'sm' | 'md'",
+      "figmaToCode": {
+        "sm": "sm",
+        "md": "md"
+      }
+    },
+    "isOn": {
+      "tsProp": "isOn",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    },
+    "isDisabled": {
+      "tsProp": "isDisabled",
+      "tsType": "'false' | 'true'",
+      "figmaToCode": {
+        "false": "false",
+        "true": "true"
+      }
+    }
+  },
+  "gaps": []
+}
