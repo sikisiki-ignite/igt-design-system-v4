@@ -18,6 +18,7 @@
     "src/ai-guide"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist",
     "dev": "vite build --watch",
     "showcase": "vite --config vite.config.showcase.ts",

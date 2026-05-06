@@ -1,10 +1,41 @@
+import { useState } from 'react'
 import { Alert } from '../src/components/Alert/Alert'
 import { Button } from '../src/components/Button/Button'
 
 export function AlertShowcase() {
+  const [warningVisible, setWarningVisible] = useState(true)
+  const [errorVisible, setErrorVisible] = useState(true)
+
   return (
     <section>
       <h2>Alert</h2>
+
+      {/* ── dismissible + onDismiss 상태 관리 ── */}
+      <h3>dismissible + onDismiss 상태 관리</h3>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+        {warningVisible ? (
+          <Alert
+            type="warning"
+            title="인증이 만료될 예정이에요"
+            description="30분 후 자동으로 로그아웃됩니다"
+            dismissible
+            onDismiss={() => setWarningVisible(false)}
+          />
+        ) : (
+          <Button tone="secondary" appearance="outline" size="sm" onClick={() => setWarningVisible(true)}>경고 알림 다시 보기</Button>
+        )}
+        {errorVisible ? (
+          <Alert
+            type="error"
+            title="저장에 실패했어요"
+            description="네트워크 연결을 확인하고 다시 시도해 주세요"
+            dismissible
+            onDismiss={() => setErrorVisible(false)}
+          />
+        ) : (
+          <Button tone="secondary" appearance="outline" size="sm" onClick={() => setErrorVisible(true)}>오류 알림 다시 보기</Button>
+        )}
+      </div>
 
       <h3>Type</h3>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

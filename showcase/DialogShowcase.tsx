@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog, DialogProps } from '../src/components/Dialog/Dialog'
 import { Button } from '../src/components/Button/Button'
+import { TextField } from '../src/components/TextField/TextField'
 
 type DialogKey = string
 
@@ -112,6 +113,25 @@ export function DialogShowcase() {
         title: '업데이트가 완료되었어요',
         description: '새로운 기능을 사용할 수 있습니다.',
         primaryLabel: '확인',
+      },
+    },
+    {
+      key: 'md-form',
+      label: 'md · children 슬롯 (폼)',
+      props: {
+        size: 'md',
+        variation: 'primary',
+        showCloseButton: true,
+        title: '사용자 정보 수정',
+        primaryLabel: '저장',
+        secondaryLabel: '취소',
+        children: (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+            <TextField label="이름" indicator="required" placeholder="홍길동" />
+            <TextField label="이메일" indicator="required" placeholder="name@example.com" />
+            <TextField label="부서" indicator="optional" placeholder="개발팀" />
+          </div>
+        ),
       },
     },
   ]

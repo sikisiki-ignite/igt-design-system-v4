@@ -1,0 +1,64 @@
+/* ── Divider ── (Flow A: figma-spec 339:5220) */
+
+.divider {
+  --dv-color: var(--layout-divider-color-neutral-weak);
+  --dv-width: var(--layout-divider-size-borderWidth-default);
+  --dv-style: solid;
+  --dv-inset: var(--layout-divider-size-Inset-none);
+}
+
+/* ── Orientation ── */
+
+.divider[data-orientation="horizontal"] {
+  display: block;
+  width: 100%;
+  padding-inline: var(--dv-inset);
+  box-sizing: border-box;
+}
+
+.divider[data-orientation="vertical"] {
+  display: inline-flex;
+  align-self: stretch;
+  padding-block: var(--dv-inset);
+}
+
+/* ── Line ── */
+
+.divider[data-orientation="horizontal"] .divider__line {
+  display: block;
+  width: 100%;
+  height: 0;
+  border-top: var(--dv-width) var(--dv-style) var(--dv-color);
+}
+
+.divider[data-orientation="vertical"] .divider__line {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-left: var(--dv-width) var(--dv-style) var(--dv-color);
+}
+
+/* ── Tone × Emphasis ── */
+
+.divider[data-tone="neutral"][data-emphasis="weak"]    { --dv-color: var(--layout-divider-color-neutral-weak); }
+.divider[data-tone="neutral"][data-emphasis="default"] { --dv-color: var(--layout-divider-color-neutral-default); }
+.divider[data-tone="neutral"][data-emphasis="strong"]  { --dv-color: var(--layout-divider-color-neutral-strong); }
+
+.divider[data-tone="accent"][data-emphasis="weak"]    { --dv-color: var(--layout-divider-color-accent-weak); }
+.divider[data-tone="accent"][data-emphasis="default"] { --dv-color: var(--layout-divider-color-accent-default); }
+.divider[data-tone="accent"][data-emphasis="strong"]  { --dv-color: var(--layout-divider-color-accent-strong); }
+
+.divider[data-tone="danger"][data-emphasis="weak"]    { --dv-color: var(--layout-divider-color-danger-weak); }
+.divider[data-tone="danger"][data-emphasis="default"] { --dv-color: var(--layout-divider-color-danger-default); }
+.divider[data-tone="danger"][data-emphasis="strong"]  { --dv-color: var(--layout-divider-color-danger-strong); }
+
+/* ── Variant ── */
+
+.divider[data-variant="dashed"] { --dv-style: dashed; }
+
+/* ── Inset ── */
+
+.divider[data-inset="none"] { --dv-inset: var(--layout-divider-size-Inset-none); }
+.divider[data-inset="sm"]   { --dv-inset: var(--layout-divider-size-Inset-sm); }
+.divider[data-inset="md"]   { --dv-inset: var(--layout-divider-size-Inset-md); }
+.divider[data-inset="lg"]   { --dv-inset: var(--layout-divider-size-Inset-lg); }

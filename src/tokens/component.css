@@ -2463,4 +2463,12 @@
   --action-modeSwitchButton-color-content-default: var(--sys-content-neutral-strong);
   --action-modeSwitchButton-color-content-disabled: var(--sys-content-neutral-disabled);
   --action-modeSwitchButton-shadow-selected: var(--sys-elevation-floating);
+
+  /* ── Card ── */
+  --layout-card-size-radius: var(--radius-2xl);
+  --layout-card-size-padding: var(--spacing-20);
+  --layout-card-size-gap: var(--spacing-16);
+  --layout-card-color-container: var(--sys-surface-upper);
+  --layout-card-color-border: var(--sys-border-neutral-subtle);
+  --layout-card-color-shadow: var(--sys-elevation-subtle);
 }

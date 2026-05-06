@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import { TextField } from '../src/components/TextField/TextField'
+import { Icon } from '../src/components/Icon/Icon'
 
 export function TextFieldShowcase() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState('')
+  const [searchVal, setSearchVal] = useState('')
+  const [phoneVal, setPhoneVal] = useState('')
+  const [amountVal, setAmountVal] = useState('')
 
   const validateEmail = (v: string) => {
     setEmail(v)
@@ -61,6 +65,30 @@ export function TextFieldShowcase() {
         <TextField label="링크" placeholder="주소" leadingIcon="linkOutline1dp" suffixText=".com" />
       </div>
 
+      {/* ── trailingAction — Clearable ── */}
+      <h3 style={{ marginTop: 32 }}>trailingAction — Clearable</h3>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 400 }}>
+        {/* 검색 + clearable: 텍스트가 있을 때만 X 버튼 노출 */}
+        <TextField
+          label="검색 (clearable)"
+          placeholder="검색어 입력"
+          leadingIcon="searchOutline2dp"
+          value={searchVal}
+          onChange={e => setSearchVal(e.target.value)}
+          trailingAction={
+            searchVal ? (
+              <button
+                type="button"
+                onClick={() => setSearchVal('')}
+                style={{ display: 'flex', alignItems: 'center', background: 'none', border: 'none', cursor: 'pointer', padding: 0, color: 'var(--sys-content-neutral-muted)' }}
+              >
+                <Icon name="xCircleSolid" size={20} />
+              </button>
+            ) : undefined
+          }
+        />
+      </div>
+
       {/* ── Interactive ── */}
       <h3 style={{ marginTop: 40 }}>Interactive</h3>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: 400 }}>
@@ -80,6 +108,49 @@ export function TextFieldShowcase() {
           onChange={e => validateEmail(e.target.value)}
           invalid={!!emailError}
           message={emailError || '알림을 받을 이메일 주소'}
+        />
+      </div>
+
+      {/* ── Real-world: 입력 유형별 ── */}
+      <h3 style={{ marginTop: 40 }}>실사용 예시 — 입력 유형별</h3>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: 400 }}>
+        {/* 전화번호: 숫자만 입력받고 자동 포맷 */}
+        <TextField
+          label="전화번호"
+          indicator="required"
+          type="tel"
+          placeholder="010-0000-0000"
+          value={phoneVal}
+          onChange={e => {
+            const digits = e.target.value.replace(/[^0-9]/g, '')
+            if (digits.length <= 3) setPhoneVal(digits)
+            else if (digits.length <= 7) setPhoneVal(`${digits.slice(0, 3)}-${digits.slice(3)}`)
+            else setPhoneVal(`${digits.slice(0, 3)}-${digits.slice(3, 7)}-${digits.slice(7, 11)}`)
+          }}
+          message="숫자만 입력하면 자동으로 포맷됩니다"
+        />
+        {/* 금액: inputMode="numeric" + suffixText="원" + 숫자만 허용 */}
+        <TextField
+          label="금액"
+          indicator="required"
+          inputMode="numeric"
+          placeholder="0"
+          suffixText="원"
+          value={amountVal}
+          onChange={e => setAmountVal(e.target.value.replace(/[^0-9]/g, ''))}
+          message="숫자만 입력 가능합니다"
+        />
+        {/* 금액 invalid: 최소 금액 미달 */}
+        <TextField
+          label="금액"
+          indicator="required"
+          inputMode="numeric"
+          placeholder="0"
+          suffixText="원"
+          value="500"
+          invalid
+          message="최소 주문 금액은 1,000원입니다"
+          readOnly
         />
       </div>
 

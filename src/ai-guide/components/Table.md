@@ -54,6 +54,21 @@ const data = [
 <Table columns={columns} data={data} selectable size="md" />
 ```
 
+## Pagination 연동
+
+`total` prop은 **전체 행 수가 아니라 전체 페이지 수**다.
+
+```tsx
+const PAGE_SIZE = 10
+const [page, setPage] = useState(1)
+const totalPages = Math.ceil(data.length / PAGE_SIZE)          // 행 수 ÷ 페이지 크기
+const pagedData = data.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+
+<Table columns={columns} data={pagedData} rowKey="id" />
+<Pagination page={page} total={totalPages} onChange={setPage} />
+//                              ↑ 페이지 수 (행 수 아님)
+```
+
 ## NOT in Figma (avoid)
 
 - 정렬(sort) 기능 — 헤더 클릭 정렬 없음

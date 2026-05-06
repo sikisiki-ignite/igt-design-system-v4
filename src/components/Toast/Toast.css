@@ -8,6 +8,7 @@
   border-radius: var(--radius-12);
   background-color: var(--sys-surface-floating);
   box-shadow: var(--sys-elevation-floating);
+  min-width: 280px;
   max-width: 400px;
   box-sizing: border-box;
 }
@@ -26,6 +27,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-10);
+  width: 100%;
 }
 
 .toast__icon {

@@ -1,0 +1,3912 @@
+{
+  "_meta": {
+    "figmaFileKey": "VIUhZbtjMzxEHzkpSvfIDR",
+    "figmaNodeId": "339:5220",
+    "componentName": "Divider",
+    "extractedAt": "2026-05-06T02:41:45.717Z"
+  },
+  "componentPropertyDefinitions": {
+    "Tone": {
+      "type": "VARIANT",
+      "defaultValue": "neutral",
+      "variantOptions": [
+        "neutral",
+        "accent",
+        "danger"
+      ]
+    },
+    "Style": {
+      "type": "VARIANT",
+      "defaultValue": "solid",
+      "variantOptions": [
+        "solid",
+        "dashed"
+      ]
+    },
+    "Emphasis": {
+      "type": "VARIANT",
+      "defaultValue": "weak",
+      "variantOptions": [
+        "weak",
+        "default",
+        "strong"
+      ]
+    },
+    "Orientation": {
+      "type": "VARIANT",
+      "defaultValue": "horizontal",
+      "variantOptions": [
+        "horizontal",
+        "vertical"
+      ]
+    },
+    "Inset": {
+      "type": "VARIANT",
+      "defaultValue": "none",
+      "variantOptions": [
+        "none",
+        "sm",
+        "md",
+        "lg"
+      ]
+    }
+  },
+  "layerInventory": [],
+  "layoutSpec": {
+    "direction": "vertical",
+    "gap": 10,
+    "paddingTop": 0,
+    "paddingRight": 0,
+    "paddingBottom": 0,
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "styleValues": [
+    {
+      "property": "gap",
+      "figmaValue": 10,
+      "token": "--spacing-10",
+      "resolved": true
+    },
+    {
+      "property": "padding",
+      "figmaValue": 0,
+      "token": "--spacing-none",
+      "resolved": true
+    },
+    {
+      "property": "flex-direction",
+      "figmaValue": "vertical",
+      "cssValue": "column",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "align-items",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    },
+    {
+      "property": "justify-content",
+      "figmaValue": "center",
+      "cssValue": "center",
+      "token": null,
+      "resolved": true
+    }
+  ],
+  "textStyles": [],
+  "variantStyleMatrix": [
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=lg,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=md,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=none,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=default,Inset=sm,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "default",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=lg,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=md,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=none,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=strong,Inset=sm,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "strong",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=lg,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "lg"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 24,
+            "token": "--spacing-24",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=md,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "md"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 16,
+            "token": "--spacing-16",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "none"
+      },
+      "layerStyles": {}
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=none,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "none"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=horizontal,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=horizontal,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=horizontal,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=horizontal,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=horizontal,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=horizontal,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "horizontal",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=vertical,Style=dashed,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=vertical,Style=dashed,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=vertical,Style=dashed,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "dashed",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=vertical,Style=solid,Tone=accent",
+      "variantProps": {
+        "Tone": "accent",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=vertical,Style=solid,Tone=danger",
+      "variantProps": {
+        "Tone": "danger",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    },
+    {
+      "variantKey": "Emphasis=weak,Inset=sm,Orientation=vertical,Style=solid,Tone=neutral",
+      "variantProps": {
+        "Tone": "neutral",
+        "Style": "solid",
+        "Emphasis": "weak",
+        "Orientation": "vertical",
+        "Inset": "sm"
+      },
+      "layerStyles": {
+        "__root__": [
+          {
+            "property": "padding-block",
+            "figmaValue": 8,
+            "token": "--spacing-8",
+            "resolved": true
+          },
+          {
+            "property": "padding-inline",
+            "figmaValue": 0,
+            "token": "--spacing-none",
+            "resolved": true
+          },
+          {
+            "property": "flex-direction",
+            "figmaValue": "horizontal",
+            "cssValue": "row",
+            "token": null,
+            "resolved": true
+          }
+        ]
+      }
+    }
+  ],
+  "propMapping": {
+    "Tone": {
+      "tsProp": "tone",
+      "tsType": "'neutral' | 'accent' | 'danger'",
+      "figmaToCode": {
+        "neutral": "neutral",
+        "accent": "accent",
+        "danger": "danger"
+      }
+    },
+    "Style": {
+      "tsProp": "variant",
+      "tsType": "'solid' | 'dashed'",
+      "figmaToCode": {
+        "solid": "solid",
+        "dashed": "dashed"
+      }
+    },
+    "Emphasis": {
+      "tsProp": "emphasis",
+      "tsType": "'weak' | 'default' | 'strong'",
+      "figmaToCode": {
+        "weak": "weak",
+        "default": "default",
+        "strong": "strong"
+      }
+    },
+    "Orientation": {
+      "tsProp": "orientation",
+      "tsType": "'horizontal' | 'vertical'",
+      "figmaToCode": {
+        "horizontal": "horizontal",
+        "vertical": "vertical"
+      }
+    },
+    "Inset": {
+      "tsProp": "inset",
+      "tsType": "'none' | 'sm' | 'md' | 'lg'",
+      "figmaToCode": {
+        "none": "none",
+        "sm": "sm",
+        "md": "md",
+        "lg": "lg"
+      }
+    }
+  },
+  "gaps": []
+}

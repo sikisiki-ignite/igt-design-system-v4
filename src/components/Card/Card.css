@@ -1,0 +1,120 @@
+/* ── Card ── (no figma-spec | composition with sys tokens) */
+
+/* ── Card ── */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--layout-card-size-gap);
+  padding: var(--layout-card-size-padding);
+  border-radius: var(--layout-card-size-radius);
+  background-color: var(--layout-card-color-container);
+  box-sizing: border-box;
+}
+
+.card[data-variant="bordered"] {
+  border: var(--borderWidth-1) solid var(--layout-card-color-border);
+}
+
+.card[data-variant="shadow"] {
+  box-shadow: var(--layout-card-color-shadow);
+}
+
+/* ── Card Header ── */
+
+.card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.card__title {
+  margin: 0;
+  font-family: var(--semantic-heading-17-semibold-fontFamily);
+  font-size: var(--semantic-heading-17-semibold-fontSize);
+  line-height: var(--semantic-heading-17-semibold-lineHeight);
+  font-weight: var(--semantic-heading-17-semibold-fontWeight);
+  color: var(--sys-content-neutral-strong);
+}
+
+.card__description {
+  margin: 0;
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+  color: var(--sys-content-neutral-muted);
+}
+
+/* ── Card Body ── */
+
+.card__body {
+  font-family: var(--semantic-body-15-regular-fontFamily);
+  font-size: var(--semantic-body-15-regular-fontSize);
+  line-height: var(--semantic-body-15-regular-lineHeight);
+  font-weight: var(--semantic-body-15-regular-fontWeight);
+  color: var(--sys-content-neutral-default);
+}
+
+/* ── Card Footer ── */
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+/* ── KpiCard ── */
+
+.kpi-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--layout-card-size-padding);
+  border-radius: var(--layout-card-size-radius);
+  background-color: var(--layout-card-color-container);
+  border: var(--borderWidth-1) solid var(--layout-card-color-border);
+  box-sizing: border-box;
+}
+
+.kpi-card__label {
+  margin: 0;
+  font-family: var(--semantic-label-13-medium-fontFamily);
+  font-size: var(--semantic-label-13-medium-fontSize);
+  line-height: var(--semantic-label-13-medium-lineHeight);
+  font-weight: var(--semantic-label-13-medium-fontWeight);
+  color: var(--sys-content-neutral-subtle);
+}
+
+.kpi-card__value {
+  margin: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-4);
+  font-family: var(--semantic-display-32-bold-fontFamily);
+  font-size: var(--semantic-display-32-bold-fontSize);
+  line-height: var(--semantic-display-32-bold-lineHeight);
+  font-weight: var(--semantic-display-32-bold-fontWeight);
+  color: var(--sys-content-neutral-strong);
+}
+
+.kpi-card__unit {
+  font-family: var(--semantic-body-17-regular-fontFamily);
+  font-size: var(--semantic-body-17-regular-fontSize);
+  line-height: var(--semantic-body-17-regular-lineHeight);
+  font-weight: var(--semantic-body-17-regular-fontWeight);
+  color: var(--sys-content-neutral-muted);
+}
+
+.kpi-card__delta {
+  margin: 0;
+  font-family: var(--semantic-body-13-regular-fontFamily);
+  font-size: var(--semantic-body-13-regular-fontSize);
+  line-height: var(--semantic-body-13-regular-lineHeight);
+  font-weight: var(--semantic-body-13-regular-fontWeight);
+  color: var(--sys-content-neutral-subtle);
+}
+
+.kpi-card__delta[data-type="positive"] { color: var(--sys-content-status-success-default); }
+.kpi-card__delta[data-type="negative"] { color: var(--sys-content-status-danger-default); }
+.kpi-card__delta[data-type="neutral"]  { color: var(--sys-content-neutral-subtle); }

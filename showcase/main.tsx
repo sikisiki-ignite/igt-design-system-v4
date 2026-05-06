@@ -9,6 +9,7 @@ import '../src/tokens/component.css'
 import '../src/fonts/fonts.css'
 import './showcase.css'
 import { ThemeControls } from './ThemeControls'
+import { ShowcaseNav } from './ShowcaseNav'
 import { ButtonShowcase } from './ButtonShowcase'
 import { IconButtonShowcase } from './IconButtonShowcase'
 import { OverlayActionShowcase } from './OverlayActionShowcase'
@@ -30,6 +31,7 @@ import { RatingShowcase } from './RatingShowcase'
 import { NumberStepperShowcase } from './NumberStepperShowcase'
 import { SliderShowcase } from './SliderShowcase'
 import { TextFieldShowcase } from './TextFieldShowcase'
+import { TagInputShowcase } from './TagInputShowcase'
 import { TextAreaShowcase } from './TextAreaShowcase'
 import { SearchShowcase } from './SearchShowcase'
 import { SelectShowcase } from './SelectShowcase'
@@ -58,6 +60,8 @@ import { BadgeShowcase } from './BadgeShowcase'
 import { LabelShowcase } from './LabelShowcase'
 import { AccordionShowcase } from './AccordionShowcase'
 import { TableShowcase } from './TableShowcase'
+import { DividerShowcase } from './DividerShowcase'
+import { CardShowcase } from './CardShowcase'
 
 const HR = () => <hr style={{ margin: '48px 0', border: 'none', borderTop: '1px solid var(--sys-border-neutral-subtle, #e5e7eb)' }} />
 
@@ -65,104 +69,113 @@ function App() {
   return (
     <>
       <ThemeControls />
-      <div className="sc-content">
-        <ButtonShowcase />
-        <HR />
-        <IconButtonShowcase />
-        <HR />
-        <OverlayActionShowcase />
-        <HR />
-        <FloatingButtonShowcase />
-        <HR />
-        <ArrowControlShowcase />
-        <HR />
-        <SearchTriggerShowcase />
-        <HR />
-        <TextButtonShowcase />
-        <HR />
-        <LinkShowcase />
-        <HR />
-        <ActionToggleShowcase />
-        <HR />
-        <IconToggleShowcase />
-        <HR />
-        <MenuShowcase />
-        <HR />
-        <ModeSwitchButtonShowcase />
-        <HR />
-        <ButtonGroupShowcase />
-        <HR />
-        <CheckboxShowcase />
-        <HR />
-        <RadioBoxShowcase />
-        <HR />
-        <SwitchShowcase />
-        <HR />
-        <ChipShowcase />
-        <HR />
-        <RatingShowcase />
-        <HR />
-        <NumberStepperShowcase />
-        <HR />
-        <SliderShowcase />
-        <HR />
-        <TextFieldShowcase />
-        <HR />
-        <TextAreaShowcase />
-        <HR />
-        <SearchShowcase />
-        <HR />
-        <SelectShowcase />
-        <HR />
-        <DatePickerShowcase />
-        <HR />
-        <AlertShowcase />
-        <HR />
-        <BannerShowcase />
-        <HR />
-        <ToastShowcase />
-        <HR />
-        <StateViewShowcase />
-        <HR />
-        <SkeletonShowcase />
-        <HR />
-        <BreadcrumbShowcase />
-        <HR />
-        <PageIndicatorShowcase />
-        <HR />
-        <PaginationShowcase />
-        <HR />
-        <TabShowcase />
-        <HR />
-        <SegmentControlShowcase />
-        <HR />
-        <NavigationShowcase />
-        <HR />
-        <SideNavigationShowcase />
-        <HR />
-        <OrgTreeShowcase />
-        <HR />
-        <BackdropShowcase />
-        <HR />
-        <HoverHintShowcase />
-        <HR />
-        <TooltipShowcase />
-        <HR />
-        <PopoverShowcase />
-        <HR />
-        <DialogShowcase />
-        <HR />
-        <DrawerShowcase />
-        <HR />
-        <AvatarShowcase />
-        <HR />
-        <BadgeShowcase />
-        <HR />
-        <LabelShowcase />
-        <HR />
-        <AccordionShowcase />
-        <HR />
-        <TableShowcase />
+      <div className="sc-layout">
+        <ShowcaseNav />
+        <main className="sc-content">
+          <section id="button"><ButtonShowcase /></section>
+          <HR />
+          <section id="icon-button"><IconButtonShowcase /></section>
+          <HR />
+          <section id="overlay-action"><OverlayActionShowcase /></section>
+          <HR />
+          <section id="floating-button"><FloatingButtonShowcase /></section>
+          <HR />
+          <section id="arrow-control"><ArrowControlShowcase /></section>
+          <HR />
+          <section id="search-trigger"><SearchTriggerShowcase /></section>
+          <HR />
+          <section id="text-button"><TextButtonShowcase /></section>
+          <HR />
+          <section id="link"><LinkShowcase /></section>
+          <HR />
+          <section id="action-toggle"><ActionToggleShowcase /></section>
+          <HR />
+          <section id="icon-toggle"><IconToggleShowcase /></section>
+          <HR />
+          <section id="menu"><MenuShowcase /></section>
+          <HR />
+          <section id="mode-switch-button"><ModeSwitchButtonShowcase /></section>
+          <HR />
+          <section id="button-group"><ButtonGroupShowcase /></section>
+          <HR />
+          <section id="checkbox"><CheckboxShowcase /></section>
+          <HR />
+          <section id="radio-box"><RadioBoxShowcase /></section>
+          <HR />
+          <section id="switch"><SwitchShowcase /></section>
+          <HR />
+          <section id="chip"><ChipShowcase /></section>
+          <HR />
+          <section id="rating"><RatingShowcase /></section>
+          <HR />
+          <section id="number-stepper"><NumberStepperShowcase /></section>
+          <HR />
+          <section id="slider"><SliderShowcase /></section>
+          <HR />
+          <section id="text-field"><TextFieldShowcase /></section>
+          <HR />
+          <section id="tag-input"><TagInputShowcase /></section>
+          <HR />
+          <section id="text-area"><TextAreaShowcase /></section>
+          <HR />
+          <section id="search"><SearchShowcase /></section>
+          <HR />
+          <section id="select"><SelectShowcase /></section>
+          <HR />
+          <section id="date-picker"><DatePickerShowcase /></section>
+          <HR />
+          <section id="alert"><AlertShowcase /></section>
+          <HR />
+          <section id="banner"><BannerShowcase /></section>
+          <HR />
+          <section id="toast"><ToastShowcase /></section>
+          <HR />
+          <section id="state-view"><StateViewShowcase /></section>
+          <HR />
+          <section id="skeleton"><SkeletonShowcase /></section>
+          <HR />
+          <section id="breadcrumb"><BreadcrumbShowcase /></section>
+          <HR />
+          <section id="page-indicator"><PageIndicatorShowcase /></section>
+          <HR />
+          <section id="pagination"><PaginationShowcase /></section>
+          <HR />
+          <section id="tab"><TabShowcase /></section>
+          <HR />
+          <section id="segment-control"><SegmentControlShowcase /></section>
+          <HR />
+          <section id="navigation"><NavigationShowcase /></section>
+          <HR />
+          <section id="side-navigation"><SideNavigationShowcase /></section>
+          <HR />
+          <section id="org-tree"><OrgTreeShowcase /></section>
+          <HR />
+          <section id="backdrop"><BackdropShowcase /></section>
+          <HR />
+          <section id="hover-hint"><HoverHintShowcase /></section>
+          <HR />
+          <section id="tooltip"><TooltipShowcase /></section>
+          <HR />
+          <section id="popover"><PopoverShowcase /></section>
+          <HR />
+          <section id="dialog"><DialogShowcase /></section>
+          <HR />
+          <section id="drawer"><DrawerShowcase /></section>
+          <HR />
+          <section id="avatar"><AvatarShowcase /></section>
+          <HR />
+          <section id="badge"><BadgeShowcase /></section>
+          <HR />
+          <section id="label"><LabelShowcase /></section>
+          <HR />
+          <section id="accordion"><AccordionShowcase /></section>
+          <HR />
+          <section id="table"><TableShowcase /></section>
+          <HR />
+          <section id="divider"><DividerShowcase /></section>
+          <HR />
+          <section id="card"><CardShowcase /></section>
+        </main>
       </div>
     </>
   )

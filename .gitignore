@@ -4,3 +4,4 @@ dist-showcase/
 .DS_Store
 *.local
 .env
+*.tgz

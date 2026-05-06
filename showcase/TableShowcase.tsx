@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Table, TableColumn } from '../src/components/Table/Table';
 import { Label } from '../src/components/Label/Label';
 import { Badge } from '../src/components/Badge/Badge';
 import { StateView } from '../src/components/StateView/StateView';
 import { Icon } from '../src/components/Icon/Icon';
+import { Pagination } from '../src/components/Pagination/Pagination';
 
 type Employee = {
   id: number;
@@ -54,7 +55,13 @@ const columns: TableColumn<Employee>[] = [
   },
 ];
 
+const PAGE_SIZE = 3
+
 export function TableShowcase() {
+  const [page, setPage] = useState(1)
+  const totalPages = Math.ceil(data.length / PAGE_SIZE)
+  const pagedData = data.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+
   return (
     <div style={{ padding: 32, display: 'flex', flexDirection: 'column', gap: 48 }}>
       <h2 style={{ margin: 0 }}>Table</h2>
@@ -84,6 +91,16 @@ export function TableShowcase() {
             />
           }
         />
+      </section>
+
+      {/* ── Table + Pagination 연동 ── */}
+      <section>
+        <h3>Table + Pagination</h3>
+        {/* total은 전체 행 수가 아니라 전체 페이지 수임 */}
+        <Table columns={columns} data={pagedData} rowKey="id" />
+        <div style={{ marginTop: 16, display: 'flex', justifyContent: 'center' }}>
+          <Pagination page={page} total={totalPages} onChange={setPage} />
+        </div>
       </section>
     </div>
   );

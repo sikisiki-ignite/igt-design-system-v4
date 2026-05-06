@@ -54,6 +54,32 @@
 | success | `--sys-border-status-success-default` |
 | neutral | `--sys-contentOn-dark-default` |
 
+## 상태 관리 패턴
+
+```tsx
+// 단건 auto-dismiss (3초 후 자동 닫힘)
+const [visible, setVisible] = useState(false)
+function show() {
+  setVisible(true)
+  setTimeout(() => setVisible(false), 3000)
+}
+{visible && <Toast type="success" message="저장되었어요" />}
+
+// 다건 쌓기 — ID 카운터는 반드시 useRef (let은 렌더마다 리셋됨)
+const [toasts, setToasts] = useState<Array<{ id: number; message: string }>>([])
+const toastIdRef = useRef(0)
+function addToast(message: string) {
+  const id = ++toastIdRef.current
+  setToasts(prev => [...prev, { id, message }])
+  setTimeout(() => setToasts(prev => prev.filter(t => t.id !== id)), 3000)
+}
+{toasts.map(t => (
+  <Toast key={t.id} message={t.message} dismissible onDismiss={() =>
+    setToasts(prev => prev.filter(x => x.id !== t.id))
+  } />
+))}
+```
+
 ## NOT in Figma (avoid)
 
 - `title` prop — Toast는 단일 메시지만 표시함. Alert/Banner를 사용할 것

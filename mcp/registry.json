@@ -8,5 +8,961 @@
     "data-size": ["comfortable", "compact"],
     "data-brand": "string (brand name)"
   },
-  "components": []
+  "components": [
+    {
+      "name": "Button",
+      "category": "action",
+      "description": "A primary action button with customizable tone, appearance, size, and icon support.",
+      "import": "import { Button } from 'igt-design-system-v4'",
+      "props": {
+        "tone": "'primary' | 'secondary' | 'danger' | 'overlayDark'",
+        "appearance": "'fill' | 'outline'",
+        "emphasis": "'strong' | 'weak'",
+        "size": "'lg' | 'md' | 'sm' | 'xs'",
+        "iconOnly": "boolean",
+        "isLoading": "boolean",
+        "leadingIcon": "ReactNode",
+        "trailingIcon": "ReactNode",
+        "disabled": "boolean",
+        "children": "ReactNode",
+        "className": "string"
+      },
+      "example": "<Button tone=\"primary\" appearance=\"fill\" size=\"md\">확인</Button>"
+    },
+    {
+      "name": "IconButton",
+      "category": "action",
+      "description": "A square icon-only action button with customizable tone, appearance, and shape.",
+      "import": "import { IconButton } from 'igt-design-system-v4'",
+      "props": {
+        "tone": "'primary' | 'neutral'",
+        "appearance": "'fill' | 'outline'",
+        "emphasis": "'strong' | 'weak'",
+        "size": "'md' | 'sm' | 'xs'",
+        "shape": "'rounded' | 'circle'",
+        "disabled": "boolean",
+        "isLoading": "boolean",
+        "children": "ReactNode"
+      },
+      "example": "<IconButton tone=\"neutral\" size=\"md\"><Icon name=\"plusOutline3dp\" /></IconButton>"
+    },
+    {
+      "name": "OverlayAction",
+      "category": "action",
+      "description": "A circular icon button with semi-transparent background designed to overlay media content.",
+      "import": "import { OverlayAction } from 'igt-design-system-v4'",
+      "props": {
+        "polarity": "'dark' | 'light'",
+        "size": "'md' | 'sm' | 'xs'",
+        "disabled": "boolean",
+        "isLoading": "boolean",
+        "children": "ReactNode"
+      },
+      "example": "<OverlayAction polarity=\"dark\" size=\"md\"><Icon name=\"playFill\" /></OverlayAction>"
+    },
+    {
+      "name": "FloatingButton",
+      "category": "action",
+      "description": "A floating action button (FAB) in circular or extended form with icon and optional label.",
+      "import": "import { FloatingButton } from 'igt-design-system-v4'",
+      "props": {
+        "variant": "'icon' | 'extended'",
+        "priority": "'primaryFill' | 'secondaryFill' | 'secondaryOutline'",
+        "size": "'lg' | 'md'",
+        "iconName": "IconName",
+        "isLoading": "boolean",
+        "disabled": "boolean",
+        "children": "string"
+      },
+      "example": "<FloatingButton iconName=\"plusOutline3dp\" />"
+    },
+    {
+      "name": "ArrowControl",
+      "category": "action",
+      "description": "A directional arrow button for navigation controls in carousels and sliders.",
+      "import": "import { ArrowControl } from 'igt-design-system-v4'",
+      "props": {
+        "direction": "'prev' | 'next'",
+        "variant": "'surfaceFill' | 'surfaceOutline' | 'overlayLight' | 'overlayDark'",
+        "size": "'xs' | 'sm' | 'md'",
+        "disabled": "boolean"
+      },
+      "example": "<ArrowControl direction=\"prev\" />"
+    },
+    {
+      "name": "SearchTrigger",
+      "category": "action",
+      "description": "A trigger button for opening a search interface with field or icon variant.",
+      "import": "import { SearchTrigger } from 'igt-design-system-v4'",
+      "props": {
+        "variant": "'field' | 'icon'",
+        "appearance": "'default' | 'subtle'",
+        "size": "'sm' | 'md'",
+        "placeholder": "string",
+        "disabled": "boolean"
+      },
+      "example": "<SearchTrigger variant=\"field\" onClick={openSearch} />"
+    },
+    {
+      "name": "TextButton",
+      "category": "action",
+      "description": "A text-only button with chevron, underline, or plain variants in multiple tones.",
+      "import": "import { TextButton } from 'igt-design-system-v4'",
+      "props": {
+        "variant": "'chevron' | 'underline' | 'plain'",
+        "tone": "'neutral' | 'neutralMuted' | 'accent' | 'danger'",
+        "size": "'xs' | 'sm' | 'md' | 'lg'",
+        "leadingIconName": "IconName",
+        "disabled": "boolean",
+        "children": "ReactNode"
+      },
+      "example": "<TextButton variant=\"chevron\">더 보기</TextButton>"
+    },
+    {
+      "name": "Link",
+      "category": "action",
+      "description": "An anchor-based inline link with customizable tone and underline behavior.",
+      "import": "import { Link } from 'igt-design-system-v4'",
+      "props": {
+        "tone": "'brand' | 'neutral'",
+        "underline": "'always' | 'auto' | 'none'",
+        "disabled": "boolean",
+        "children": "ReactNode",
+        "href": "string",
+        "target": "string"
+      },
+      "example": "<Link href=\"/terms\" tone=\"brand\">이용약관</Link>"
+    },
+    {
+      "name": "ActionToggle",
+      "category": "action",
+      "description": "A toggleable action button with icon and optional text for selections like follow or subscribe.",
+      "import": "import { ActionToggle } from 'igt-design-system-v4'",
+      "props": {
+        "emphasis": "'onDefault' | 'onSelect'",
+        "selected": "boolean",
+        "iconOnly": "boolean",
+        "size": "'xs' | 'sm' | 'md'",
+        "iconName": "IconName",
+        "disabled": "boolean",
+        "children": "ReactNode"
+      },
+      "example": "<ActionToggle iconName=\"plusOutline3dp\" selected={following} onClick={toggleFollow}>팔로우</ActionToggle>"
+    },
+    {
+      "name": "IconToggle",
+      "category": "action",
+      "description": "An icon-only toggle button for selections like likes, bookmarks, or reactions.",
+      "import": "import { IconToggle } from 'igt-design-system-v4'",
+      "props": {
+        "intent": "'reaction' | 'accent' | 'neutral'",
+        "selected": "boolean",
+        "size": "'xs' | 'sm' | 'md'",
+        "iconName": "IconName",
+        "disabled": "boolean"
+      },
+      "example": "<IconToggle iconName=\"heartOutline3dp\" selected={liked} onClick={toggleLike} />"
+    },
+    {
+      "name": "Menu",
+      "category": "action",
+      "description": "A dropdown or context menu container composed of Menu and MenuItem sub-components.",
+      "import": "import { Menu, MenuItem } from 'igt-design-system-v4'",
+      "props": {
+        "size": "'sm' | 'md'",
+        "children": "ReactNode"
+      },
+      "example": "<Menu size=\"md\">\n  <MenuItem onClick={handleEdit}>편집</MenuItem>\n  <MenuItem tone=\"danger\" onClick={handleDelete}>삭제</MenuItem>\n</Menu>"
+    },
+    {
+      "name": "MenuItem",
+      "category": "action",
+      "description": "A menu item component with customizable tone and icon support for use inside Menu.",
+      "import": "import { MenuItem } from 'igt-design-system-v4'",
+      "props": {
+        "tone": "'neutral' | 'accent' | 'danger'",
+        "size": "'sm' | 'md'",
+        "leadingIconName": "IconName",
+        "trailingIconName": "IconName",
+        "disabled": "boolean",
+        "children": "ReactNode"
+      },
+      "example": "<MenuItem leadingIconName=\"editOutline3dp\" onClick={handleEdit}>편집</MenuItem>"
+    },
+    {
+      "name": "ModeSwitchButton",
+      "category": "action",
+      "description": "A single toggle button for mode switching and view transitions.",
+      "import": "import { ModeSwitchButton } from 'igt-design-system-v4'",
+      "props": {
+        "selected": "boolean",
+        "disabled": "boolean",
+        "children": "ReactNode"
+      },
+      "example": "<ModeSwitchButton selected={isGrid} onClick={() => setIsGrid(true)}>그리드</ModeSwitchButton>"
+    },
+    {
+      "name": "ButtonGroupAttached",
+      "category": "action",
+      "description": "A group of visually attached buttons for segment controls and filter selections.",
+      "import": "import { ButtonGroupAttached } from 'igt-design-system-v4'",
+      "props": {
+        "variant": "'soft' | 'outline'",
+        "size": "'xs' | 'sm' | 'md'",
+        "children": "ReactNode"
+      },
+      "example": "<ButtonGroupAttached variant=\"outline\" size=\"md\">\n  <Button>월</Button>\n  <Button>분기</Button>\n  <Button>연</Button>\n</ButtonGroupAttached>"
+    },
+    {
+      "name": "ButtonGroup",
+      "category": "action",
+      "description": "A layout container that groups multiple buttons with customizable gap, direction, and distribution.",
+      "import": "import { ButtonGroup } from 'igt-design-system-v4'",
+      "props": {
+        "size": "'lg' | 'md' | 'sm' | 'xs'",
+        "direction": "'horizontal' | 'vertical'",
+        "distribution": "'content' | 'equal'",
+        "children": "ReactNode"
+      },
+      "example": "<ButtonGroup direction=\"horizontal\">\n  <Button tone=\"secondary\" appearance=\"outline\">취소</Button>\n  <Button tone=\"primary\" appearance=\"fill\">확인</Button>\n</ButtonGroup>"
+    },
+    {
+      "name": "TextField",
+      "category": "input",
+      "description": "Single-line text input with optional label, helper message, icons, prefix/suffix, and trailing action.",
+      "import": "import { TextField } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "indicator": "'required' | 'optional'",
+        "message": "string",
+        "invalid": "boolean",
+        "appearance": "'outline' | 'fill'",
+        "size": "'sm' | 'md' | 'lg'",
+        "prefixText": "string",
+        "suffixText": "string",
+        "leadingIcon": "IconName",
+        "trailingIcon": "IconName",
+        "trailingAction": "ReactNode",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "placeholder": "string",
+        "value": "string",
+        "onChange": "ChangeEventHandler<HTMLInputElement>",
+        "className": "string"
+      },
+      "example": "<TextField label=\"이름\" indicator=\"required\" placeholder=\"이름을 입력하세요\" value={name} onChange={e => setName(e.target.value)} />"
+    },
+    {
+      "name": "TextArea",
+      "category": "input",
+      "description": "Multi-line text input with optional label, character counter, and helper message.",
+      "import": "import { TextArea } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "indicator": "'required' | 'optional'",
+        "message": "string",
+        "invalid": "boolean",
+        "appearance": "'outline' | 'fill'",
+        "size": "'md' | 'lg'",
+        "rows": "number",
+        "maxLength": "number",
+        "showCount": "boolean",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "value": "string",
+        "onChange": "ChangeEventHandler<HTMLTextAreaElement>",
+        "className": "string"
+      },
+      "example": "<TextArea label=\"설명\" rows={4} maxLength={200} showCount placeholder=\"내용을 입력하세요\" />"
+    },
+    {
+      "name": "Search",
+      "category": "input",
+      "description": "Search input field with leading search icon and optional clear button supporting Enter-to-search.",
+      "import": "import { Search } from 'igt-design-system-v4'",
+      "props": {
+        "appearance": "'fill' | 'outline'",
+        "size": "'sm' | 'md' | 'lg'",
+        "invalid": "boolean",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "placeholder": "string",
+        "value": "string",
+        "onChange": "ChangeEventHandler<HTMLInputElement>",
+        "onClear": "() => void",
+        "onSearch": "(value: string) => void"
+      },
+      "example": "<Search value={q} onChange={e => setQ(e.target.value)} onClear={() => setQ('')} onSearch={handleSearch} />"
+    },
+    {
+      "name": "Select",
+      "category": "input",
+      "description": "Dropdown selector with trigger button and popover option list built on Radix UI Select.",
+      "import": "import { Select } from 'igt-design-system-v4'",
+      "props": {
+        "options": "SelectOption[]",
+        "value": "string",
+        "defaultValue": "string",
+        "placeholder": "string",
+        "appearance": "'fill' | 'outline' | 'plain'",
+        "size": "'xs' | 'sm' | 'md'",
+        "width": "'fill' | 'hug'",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "invalid": "boolean",
+        "onChange": "(value: string) => void",
+        "id": "string",
+        "className": "string"
+      },
+      "example": "<Select\n  options={[{ value: 'a', label: '옵션 A' }, { value: 'b', label: '옵션 B' }]}\n  placeholder=\"선택하세요\"\n  onChange={setValue}\n/>"
+    },
+    {
+      "name": "DatePicker",
+      "category": "input",
+      "description": "Date input field with calendar popover supporting single date and date range selection.",
+      "import": "import { DatePicker } from 'igt-design-system-v4'",
+      "props": {
+        "variation": "'singleDate' | 'range'",
+        "size": "'md' | 'lg'",
+        "value": "string",
+        "endValue": "string",
+        "label": "string",
+        "message": "string",
+        "placeholder": "string",
+        "endPlaceholder": "string",
+        "invalid": "boolean",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "onChange": "(value: string) => void",
+        "onRangeChange": "(start: string, end: string) => void",
+        "className": "string"
+      },
+      "example": "<DatePicker label=\"날짜 선택\" value={date} onChange={setDate} />"
+    },
+    {
+      "name": "Checkbox",
+      "category": "input",
+      "description": "Selectable checkbox control with support for checked, unchecked, and indeterminate states.",
+      "import": "import { Checkbox } from 'igt-design-system-v4'",
+      "props": {
+        "checked": "boolean | 'indeterminate'",
+        "size": "'sm' | 'md'",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "invalid": "boolean",
+        "onChange": "(e: ChangeEvent<HTMLInputElement>) => void"
+      },
+      "example": "<Checkbox checked={isChecked} onChange={e => setIsChecked(e.target.checked)} />"
+    },
+    {
+      "name": "RadioBox",
+      "category": "input",
+      "description": "Radio button control for selecting one option from a group.",
+      "import": "import { RadioBox } from 'igt-design-system-v4'",
+      "props": {
+        "checked": "boolean",
+        "size": "'sm' | 'md'",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "invalid": "boolean",
+        "name": "string",
+        "value": "string",
+        "onChange": "(e: ChangeEvent<HTMLInputElement>) => void"
+      },
+      "example": "<RadioBox name=\"payment\" value=\"card\" checked={selected === 'card'} onChange={handleChange} />"
+    },
+    {
+      "name": "Switch",
+      "category": "input",
+      "description": "Toggle switch input component that indicates ON/OFF state.",
+      "import": "import { Switch } from 'igt-design-system-v4'",
+      "props": {
+        "checked": "boolean",
+        "size": "'sm' | 'md'",
+        "disabled": "boolean",
+        "onChange": "ChangeEventHandler<HTMLInputElement>"
+      },
+      "example": "<Switch checked={on} onChange={e => setOn(e.target.checked)} />"
+    },
+    {
+      "name": "NumberStepper",
+      "category": "input",
+      "description": "Numeric input component with increment and decrement buttons for quantity or value selection.",
+      "import": "import { NumberStepper } from 'igt-design-system-v4'",
+      "props": {
+        "value": "number",
+        "min": "number",
+        "max": "number",
+        "step": "number",
+        "emphasis": "'outline' | 'soft'",
+        "size": "'xs' | 'sm' | 'md'",
+        "disabled": "boolean",
+        "onChange": "(value: number) => void",
+        "aria-label": "string"
+      },
+      "example": "<NumberStepper value={qty} min={1} max={99} onChange={setQty} />"
+    },
+    {
+      "name": "Slider",
+      "category": "input",
+      "description": "Draggable slider component for selecting values within a range, based on Radix UI Slider.",
+      "import": "import { Slider } from 'igt-design-system-v4'",
+      "props": {
+        "value": "number",
+        "defaultValue": "number",
+        "min": "number",
+        "max": "number",
+        "step": "number",
+        "disabled": "boolean",
+        "leadingIcon": "IconName",
+        "trailingIcon": "IconName",
+        "onChange": "(value: number) => void",
+        "aria-label": "string"
+      },
+      "example": "<Slider value={vol} min={0} max={100} onChange={setVol} leadingIcon=\"speakerOffSolid\" trailingIcon=\"speakerOnSolid\" />"
+    },
+    {
+      "name": "Rating",
+      "category": "input",
+      "description": "Star rating component displaying 0–5 integer values with interactive input support.",
+      "import": "import { Rating } from 'igt-design-system-v4'",
+      "props": {
+        "value": "number",
+        "max": "number",
+        "size": "'xs' | 'sm' | 'md'",
+        "disabled": "boolean",
+        "readOnly": "boolean",
+        "onChange": "(value: number) => void",
+        "aria-label": "string"
+      },
+      "example": "<Rating value={rating} onChange={setRating} size=\"md\" />"
+    },
+    {
+      "name": "TagInput",
+      "category": "input",
+      "description": "Text input that creates removable tags from user input, using Enter or comma as delimiters.",
+      "import": "import { TagInput } from 'igt-design-system-v4'",
+      "props": {
+        "tags": "string[]",
+        "onChange": "(tags: string[]) => void",
+        "placeholder": "string",
+        "label": "string",
+        "indicator": "'required' | 'optional'",
+        "size": "'sm' | 'md' | 'lg'",
+        "invalid": "boolean",
+        "disabled": "boolean",
+        "message": "string",
+        "maxTags": "number",
+        "tone": "'neutral' | 'accent'"
+      },
+      "example": "<TagInput tags={tags} onChange={setTags} label=\"키워드\" placeholder=\"입력 후 Enter\" />"
+    },
+    {
+      "name": "ActionChip",
+      "category": "input",
+      "description": "Clickable chip that triggers an action with optional leading and trailing icons.",
+      "import": "import { ActionChip } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "size": "'xs' | 'sm' | 'md'",
+        "leadingIcon": "IconName",
+        "trailingIcon": "IconName",
+        "disabled": "boolean",
+        "onClick": "() => void"
+      },
+      "example": "<ActionChip label=\"필터 추가\" size=\"md\" onClick={openFilter} />"
+    },
+    {
+      "name": "ChoiceChip",
+      "category": "input",
+      "description": "Multi-select chip that toggles selected state with optional leading and trailing icons.",
+      "import": "import { ChoiceChip } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "size": "'xs' | 'sm' | 'md'",
+        "selected": "boolean",
+        "leadingIcon": "IconName",
+        "trailingIcon": "IconName",
+        "disabled": "boolean",
+        "onClick": "() => void"
+      },
+      "example": "<ChoiceChip label=\"디자인\" selected={selected} onClick={() => setSelected(v => !v)} />"
+    },
+    {
+      "name": "FilterChip",
+      "category": "input",
+      "description": "Filter chip that displays a label and optional value when a filter is applied.",
+      "import": "import { FilterChip } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "value": "string",
+        "selected": "boolean",
+        "size": "'xs' | 'sm' | 'md'",
+        "leadingIcon": "IconName",
+        "trailingIcon": "IconName",
+        "disabled": "boolean",
+        "onClick": "() => void"
+      },
+      "example": "<FilterChip label=\"카테고리\" value=\"디자인\" selected={true} onClick={openDropdown} />"
+    },
+    {
+      "name": "InputChip",
+      "category": "input",
+      "description": "Tag or token chip used in input fields with an optional remove button.",
+      "import": "import { InputChip } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "tone": "'neutral' | 'accent'",
+        "size": "'xs' | 'sm' | 'md'",
+        "leadingIcon": "IconName",
+        "disabled": "boolean",
+        "onRemove": "() => void"
+      },
+      "example": "<InputChip label=\"React\" tone=\"neutral\" size=\"md\" onRemove={() => removeTag('React')} />"
+    },
+    {
+      "name": "MetaChip",
+      "category": "input",
+      "description": "Pill-shaped metadata chip displaying a label and optional value pair in an interactive format.",
+      "import": "import { MetaChip } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "value": "string",
+        "size": "'xs' | 'sm' | 'md'",
+        "leadingIcon": "IconName",
+        "disabled": "boolean",
+        "onClick": "() => void"
+      },
+      "example": "<MetaChip label=\"상태\" value=\"진행중\" size=\"md\" onClick={openDetail} />"
+    },
+    {
+      "name": "Breadcrumb",
+      "category": "navigation",
+      "description": "Displays the user's current location in a page hierarchy with clickable ancestor links.",
+      "import": "import { Breadcrumb } from 'igt-design-system-v4'",
+      "props": {
+        "items": "BreadcrumbItem[]",
+        "separator": "'chevron' | 'slash' | 'dot'",
+        "leading": "'none' | 'home'",
+        "onHomeClick": "(e: MouseEvent) => void",
+        "className": "string"
+      },
+      "example": "<Breadcrumb items={[{ label: '홈', href: '/' }, { label: '제품', href: '/products' }, { label: '상세' }]} />"
+    },
+    {
+      "name": "PageIndicator",
+      "category": "navigation",
+      "description": "Displays the current position in a carousel or slider using dots or text format.",
+      "import": "import { PageIndicator } from 'igt-design-system-v4'",
+      "props": {
+        "type": "'dot' | 'text'",
+        "count": "number",
+        "activeIndex": "number",
+        "size": "'sm' | 'md' | 'lg'",
+        "appearance": "'surface' | 'onImage'",
+        "page": "number",
+        "total": "number",
+        "className": "string"
+      },
+      "example": "<PageIndicator type=\"dot\" count={5} activeIndex={currentSlide} size=\"md\" />"
+    },
+    {
+      "name": "Pagination",
+      "category": "navigation",
+      "description": "A pagination control with previous/next arrows and page number buttons.",
+      "import": "import { Pagination } from 'igt-design-system-v4'",
+      "props": {
+        "page": "number",
+        "total": "number",
+        "onChange": "(page: number) => void",
+        "variant": "'default' | 'minimal'",
+        "size": "'sm' | 'md'",
+        "siblingCount": "number",
+        "className": "string"
+      },
+      "example": "<Pagination page={currentPage} total={totalPages} onChange={setCurrentPage} />"
+    },
+    {
+      "name": "Tab",
+      "category": "navigation",
+      "description": "Tab navigation component with an underline indicator below the active tab.",
+      "import": "import { Tab } from 'igt-design-system-v4'",
+      "props": {
+        "tabs": "TabItem[]",
+        "activeIndex": "number",
+        "onTabChange": "(index: number) => void",
+        "size": "'sm' | 'md' | 'lg'",
+        "distribution": "'content' | 'equal'",
+        "className": "string"
+      },
+      "example": "<Tab\n  tabs={[{ label: '전체' }, { label: '진행중', count: 3 }, { label: '완료', disabled: true }]}\n  activeIndex={activeTab}\n  onTabChange={setActiveTab}\n/>"
+    },
+    {
+      "name": "SegmentControl",
+      "category": "navigation",
+      "description": "A segmented control where the selected segment shows a white fill with shadow indicator.",
+      "import": "import { SegmentControl } from 'igt-design-system-v4'",
+      "props": {
+        "segments": "SegmentItem[]",
+        "activeIndex": "number",
+        "onSegmentChange": "(index: number) => void",
+        "size": "'xs' | 'sm' | 'md'",
+        "width": "'content' | 'equal'",
+        "content": "'text' | 'iconText' | 'icon'",
+        "className": "string"
+      },
+      "example": "<SegmentControl\n  segments={[{ label: '일' }, { label: '주' }, { label: '월' }]}\n  activeIndex={period}\n  onSegmentChange={setPeriod}\n/>"
+    },
+    {
+      "name": "Navigation",
+      "category": "navigation",
+      "description": "Top global navigation bar with leading, center, and trailing slots for logo, nav items, and actions.",
+      "import": "import { Navigation, NavItem } from 'igt-design-system-v4'",
+      "props": {
+        "size": "'sm' | 'md'",
+        "scrolled": "boolean",
+        "layoutMode": "'narrow' | 'wide' | 'full'",
+        "logo": "ReactNode",
+        "navItems": "ReactNode",
+        "center": "ReactNode",
+        "trailing": "ReactNode",
+        "className": "string"
+      },
+      "example": "<Navigation\n  logo={<img src=\"/logo.svg\" alt=\"IGT\" height={28} />}\n  navItems={<><NavItem label=\"홈\" href=\"/\" current /><NavItem label=\"서비스\" href=\"/services\" /></>}\n  trailing={<Button size=\"sm\">로그인</Button>}\n/>"
+    },
+    {
+      "name": "SideNavigation",
+      "category": "navigation",
+      "description": "A 220px-wide side navigation component with section headers and a list of selectable nav items.",
+      "import": "import { SideNavigation } from 'igt-design-system-v4'",
+      "props": {
+        "items": "SideNavItemData[]",
+        "activeId": "string",
+        "onSelect": "(id: string) => void",
+        "header": "string",
+        "size": "'sm' | 'md'",
+        "tone": "'neutral' | 'accent'",
+        "className": "string"
+      },
+      "example": "<SideNavigation\n  header=\"메인 메뉴\"\n  tone=\"neutral\"\n  activeId=\"dashboard\"\n  onSelect={setActiveNav}\n  items={[\n    { id: 'dashboard', label: '대시보드', icon: 'homeOutline2dp' },\n    { id: 'users', label: '사용자 관리', icon: 'personOutline2dp' }\n  ]}\n/>"
+    },
+    {
+      "name": "OrgTree",
+      "category": "navigation",
+      "description": "A hierarchical tree component with expandable and collapsible folder-style nodes.",
+      "import": "import { OrgTree } from 'igt-design-system-v4'",
+      "props": {
+        "items": "OrgTreeItem[]",
+        "selectedId": "string",
+        "onSelect": "(id: string) => void",
+        "expandedIds": "string[]",
+        "onExpandChange": "(id: string, expanded: boolean) => void",
+        "size": "'default' | 'lg'",
+        "className": "string"
+      },
+      "example": "<OrgTree\n  items={[{ id: 'root', label: '조직', count: 42, children: [{ id: 'team-a', label: '팀 A', count: 12 }] }]}\n  selectedId={selectedNode}\n  onSelect={setSelectedNode}\n/>"
+    },
+    {
+      "name": "Alert",
+      "category": "feedback",
+      "description": "Inline status notification for displaying important messages within a page or section.",
+      "import": "import { Alert } from 'igt-design-system-v4'",
+      "props": {
+        "type": "'error' | 'warning' | 'info' | 'success' | 'neutral'",
+        "title": "string",
+        "description": "string",
+        "hasLeading": "boolean",
+        "dismissible": "boolean",
+        "action": "ReactNode",
+        "onDismiss": "() => void",
+        "className": "string"
+      },
+      "example": "<Alert type=\"warning\" title=\"저장되지 않은 변경 사항이 있어요\" description=\"페이지를 떠나면 변경 사항이 사라져요.\" />"
+    },
+    {
+      "name": "Banner",
+      "category": "feedback",
+      "description": "Full-width alert banner that spans the top of a page or section.",
+      "import": "import { Banner } from 'igt-design-system-v4'",
+      "props": {
+        "type": "'error' | 'warning' | 'info' | 'success'",
+        "variant": "'subtle' | 'solid'",
+        "title": "string",
+        "description": "string",
+        "dismissible": "boolean",
+        "action": "ReactNode",
+        "onDismiss": "() => void",
+        "className": "string"
+      },
+      "example": "<Banner type=\"error\" variant=\"subtle\" title=\"서버 오류가 발생했어요\" />"
+    },
+    {
+      "name": "Toast",
+      "category": "feedback",
+      "description": "Temporary notification that floats at the bottom of the screen and auto-dismisses.",
+      "import": "import { Toast } from 'igt-design-system-v4'",
+      "props": {
+        "type": "'error' | 'warning' | 'info' | 'success' | 'neutral'",
+        "message": "string",
+        "dismissible": "boolean",
+        "action": "ReactNode",
+        "onDismiss": "() => void",
+        "className": "string"
+      },
+      "example": "<Toast type=\"success\" message=\"저장되었어요\" dismissible />"
+    },
+    {
+      "name": "StateView",
+      "category": "feedback",
+      "description": "Visualizes empty or error states with an icon, headline, body text, and optional action button.",
+      "import": "import { StateView } from 'igt-design-system-v4'",
+      "props": {
+        "variant": "'error' | 'empty'",
+        "density": "'standard' | 'compact'",
+        "headline": "string",
+        "body": "string",
+        "icon": "ReactNode",
+        "action": "ReactNode",
+        "className": "string"
+      },
+      "example": "<StateView\n  variant=\"empty\"\n  headline=\"데이터가 없어요\"\n  body=\"아직 등록된 항목이 없어요.\"\n  icon={<Icon name=\"documentPaperSolid\" size={40} />}\n/>"
+    },
+    {
+      "name": "Skeleton",
+      "category": "feedback",
+      "description": "Placeholder shimmer component that occupies space while content is loading.",
+      "import": "import { Skeleton } from 'igt-design-system-v4'",
+      "props": {
+        "size": "'xs' | 'sm' | 'md' | 'lg' | 'xl'",
+        "width": "string",
+        "className": "string"
+      },
+      "example": "<Skeleton size=\"xl\" width=\"200px\" />"
+    },
+    {
+      "name": "Dialog",
+      "category": "overlay",
+      "description": "Modal dialog with backdrop, header, body, and footer built on Radix UI Dialog.",
+      "import": "import { Dialog } from 'igt-design-system-v4'",
+      "props": {
+        "open": "boolean",
+        "onOpenChange": "(open: boolean) => void",
+        "size": "'sm' | 'md' | 'lg'",
+        "variation": "'primary' | 'neutral' | 'danger'",
+        "title": "string",
+        "description": "string",
+        "children": "ReactNode",
+        "primaryLabel": "string",
+        "onPrimary": "() => void",
+        "secondaryLabel": "string",
+        "onSecondary": "() => void",
+        "showCloseButton": "boolean"
+      },
+      "example": "<Dialog\n  open={isOpen}\n  onOpenChange={setIsOpen}\n  title=\"변경 사항을 저장할까요?\"\n  description=\"저장하지 않으면 변경 사항이 사라져요.\"\n  primaryLabel=\"저장\"\n  onPrimary={handleSave}\n  secondaryLabel=\"취소\"\n  onSecondary={() => setIsOpen(false)}\n/>"
+    },
+    {
+      "name": "Drawer",
+      "category": "overlay",
+      "description": "Slide-in panel overlay with backdrop, header, body, and footer built on Radix UI Dialog.",
+      "import": "import { Drawer } from 'igt-design-system-v4'",
+      "props": {
+        "open": "boolean",
+        "onOpenChange": "(open: boolean) => void",
+        "placement": "'left' | 'right'",
+        "size": "'sm' | 'md' | 'lg'",
+        "title": "string",
+        "description": "string",
+        "children": "ReactNode",
+        "primaryLabel": "string",
+        "onPrimary": "() => void",
+        "secondaryLabel": "string",
+        "onSecondary": "() => void",
+        "tertiaryLabel": "string",
+        "onTertiary": "() => void",
+        "footerVariation": "'primary' | 'neutral' | 'danger'",
+        "footerLayout": "'inlineEnd' | 'stack' | 'between'"
+      },
+      "example": "<Drawer\n  open={isOpen}\n  onOpenChange={setIsOpen}\n  title=\"설정\"\n  primaryLabel=\"저장\"\n  onPrimary={handleSave}\n  secondaryLabel=\"취소\"\n  onSecondary={handleCancel}\n>\n  <SettingsContent />\n</Drawer>"
+    },
+    {
+      "name": "Backdrop",
+      "category": "overlay",
+      "description": "Full-screen dark overlay used as background for Dialog, Drawer, and Modal components.",
+      "import": "import { Backdrop } from 'igt-design-system-v4'",
+      "props": {
+        "strength": "'default' | 'strong'",
+        "onClick": "() => void",
+        "className": "string"
+      },
+      "example": "<Backdrop strength=\"default\" onClick={handleClose} />"
+    },
+    {
+      "name": "Tooltip",
+      "category": "overlay",
+      "description": "Informational balloon overlay shown on hover, supporting basic and rich variants with 3 tones and 12 placement directions.",
+      "import": "import { Tooltip } from 'igt-design-system-v4'",
+      "props": {
+        "children": "ReactNode",
+        "label": "string",
+        "description": "string",
+        "variant": "'basic' | 'rich'",
+        "tone": "'inverse' | 'surface' | 'accent'",
+        "placement": "TooltipPlacement",
+        "arrow": "boolean",
+        "open": "boolean",
+        "onOpenChange": "(open: boolean) => void",
+        "delayDuration": "number"
+      },
+      "example": "<Tooltip label=\"저장\" tone=\"inverse\">\n  <Button>저장</Button>\n</Tooltip>"
+    },
+    {
+      "name": "HoverHint",
+      "category": "overlay",
+      "description": "An inline or block hint card with dark background shown on hover for informational purposes.",
+      "import": "import { HoverHint } from 'igt-design-system-v4'",
+      "props": {
+        "headline": "string",
+        "description": "string",
+        "layout": "'inline' | 'block'",
+        "className": "string"
+      },
+      "example": "<HoverHint layout=\"inline\" headline=\"알림 설정\" description=\"알림을 받을 방법을 선택하세요.\" />"
+    },
+    {
+      "name": "Popover",
+      "category": "overlay",
+      "description": "Popover with compound structure (PopoverSection, PopoverHeader, PopoverBody) supporting surface and inverse emphasis.",
+      "import": "import { Popover, PopoverSection, PopoverHeader, PopoverBody } from 'igt-design-system-v4'",
+      "props": {
+        "children": "ReactNode",
+        "content": "ReactNode",
+        "emphasis": "'surface' | 'inverse'",
+        "placement": "'top' | 'bottom' | 'left' | 'right'",
+        "sideOffset": "number",
+        "open": "boolean",
+        "onOpenChange": "(open: boolean) => void"
+      },
+      "example": "<Popover\n  content={\n    <PopoverSection>\n      <PopoverHeader>알림 안내</PopoverHeader>\n      <PopoverBody>일부 알림은 지연되어 도착할 수 있어요.</PopoverBody>\n    </PopoverSection>\n  }\n>\n  <Button>자세히 보기</Button>\n</Popover>"
+    },
+    {
+      "name": "Avatar",
+      "category": "base",
+      "description": "Displays a user profile image, initials, or icon with optional online status badge.",
+      "import": "import { Avatar } from 'igt-design-system-v4'",
+      "props": {
+        "size": "'xs' | 'sm' | 'md' | 'lg' | 'xl'",
+        "shape": "'circle' | 'rounded'",
+        "src": "string",
+        "alt": "string",
+        "initials": "string",
+        "statusBadge": "boolean",
+        "status": "'active' | 'attention' | 'inactive' | 'error'",
+        "surfaceContext": "'backgroundBase' | 'backgroundSubtle' | 'surfaceBase' | 'surfaceRaised' | 'surfaceOverlay'",
+        "className": "string"
+      },
+      "example": "<Avatar src=\"/profile.jpg\" alt=\"홍길동\" size=\"md\" shape=\"circle\" />"
+    },
+    {
+      "name": "Badge",
+      "category": "base",
+      "description": "Displays a numeric count for notifications, unread items, and similar indicators.",
+      "import": "import { Badge } from 'igt-design-system-v4'",
+      "props": {
+        "count": "number",
+        "tone": "'neutral' | 'accent' | 'urgent'",
+        "size": "'sm' | 'md' | 'lg'",
+        "max": "number",
+        "className": "string"
+      },
+      "example": "<Badge count={5} tone=\"urgent\" size=\"md\" />"
+    },
+    {
+      "name": "Label",
+      "category": "base",
+      "description": "Classification tag and category label with 8 color options and soft/outline tone variants.",
+      "import": "import { Label } from 'igt-design-system-v4'",
+      "props": {
+        "children": "ReactNode",
+        "size": "'xs' | 'sm' | 'md' | 'lg' | 'xl'",
+        "tone": "'soft' | 'outline'",
+        "color": "'grey' | 'yellow' | 'green' | 'teal' | 'blue' | 'red' | 'purple' | 'orange'",
+        "leadingIcon": "ReactNode",
+        "className": "string"
+      },
+      "example": "<Label color=\"blue\" tone=\"soft\" size=\"md\">진행중</Label>"
+    },
+    {
+      "name": "Accordion",
+      "category": "base",
+      "description": "Collapsible component for FAQs, description lists, and expandable content sections.",
+      "import": "import { Accordion, AccordionItem } from 'igt-design-system-v4'",
+      "props": {
+        "size": "'sm' | 'md' | 'lg'",
+        "variation": "'plain' | 'contained'",
+        "children": "ReactNode",
+        "className": "string"
+      },
+      "example": "<Accordion size=\"lg\" variation=\"plain\">\n  <AccordionItem title=\"자주 묻는 질문\">\n    답변 내용을 여기에 작성합니다.\n  </AccordionItem>\n</Accordion>"
+    },
+    {
+      "name": "Table",
+      "category": "base",
+      "description": "Data table component with row/column rendering, optional row selection, and empty state support.",
+      "import": "import { Table } from 'igt-design-system-v4'",
+      "props": {
+        "columns": "TableColumn[]",
+        "data": "Record<string, unknown>[]",
+        "size": "'md' | 'lg'",
+        "selectable": "boolean",
+        "selectedRows": "Set<number>",
+        "onRowSelect": "(index: number, selected: boolean) => void",
+        "rowKey": "keyof T | ((row: T, index: number) => string | number)",
+        "emptyState": "ReactNode",
+        "className": "string"
+      },
+      "example": "const columns = [\n  { key: 'name', header: '이름' },\n  { key: 'email', header: '이메일' }\n];\n\n<Table columns={columns} data={users} />"
+    },
+    {
+      "name": "Card",
+      "category": "base",
+      "description": "Content container with border-radius that automatically responds to the data-radius theme attribute.",
+      "import": "import { Card } from 'igt-design-system-v4'",
+      "props": {
+        "variant": "'bordered' | 'shadow'",
+        "title": "string",
+        "description": "string",
+        "children": "ReactNode",
+        "footer": "ReactNode"
+      },
+      "example": "<Card variant=\"bordered\" title=\"제목\" description=\"부제목\">\n  본문 내용\n</Card>"
+    },
+    {
+      "name": "KpiCard",
+      "category": "base",
+      "description": "Card component that emphasizes numeric KPIs with label, value, unit, and delta change display.",
+      "import": "import { KpiCard } from 'igt-design-system-v4'",
+      "props": {
+        "label": "string",
+        "value": "string | number",
+        "unit": "string",
+        "delta": "string",
+        "deltaType": "'positive' | 'negative' | 'neutral'"
+      },
+      "example": "<KpiCard label=\"총 매출\" value=\"1,284\" unit=\"만원\" delta=\"+12.3% 전월 대비\" deltaType=\"positive\" />"
+    },
+    {
+      "name": "Divider",
+      "category": "base",
+      "description": "Dividing line that visually separates content areas with configurable tone, emphasis, and orientation.",
+      "import": "import { Divider } from 'igt-design-system-v4'",
+      "props": {
+        "tone": "'neutral' | 'accent' | 'danger'",
+        "emphasis": "'weak' | 'default' | 'strong'",
+        "variant": "'solid' | 'dashed'",
+        "orientation": "'horizontal' | 'vertical'",
+        "inset": "'none' | 'sm' | 'md' | 'lg'"
+      },
+      "example": "<Divider tone=\"neutral\" emphasis=\"default\" />"
+    }
+  ]
 }
