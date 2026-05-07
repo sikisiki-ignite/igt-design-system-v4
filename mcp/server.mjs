@@ -165,7 +165,7 @@ server.tool(
             'This component has NOT been synced with Figma.',
             'You MUST complete Step 0 before editing any code:',
             '',
-            `  1. Find figmaNodeId in scripts/component-registry.json for "${name}"`,
+            `  1. Find figmaNodeId in igt-ai-studio-v4/scripts/component-registry.json (manufacturing repo) for "${name}"`,
             `  2. Call mcp__figma__get_figma_data(fileKey="VIUhZbtjMzxEHzkpSvfIDR", nodeId="<nodeId>")`,
             `  3. Write src/components/${name}/figma-spec.json with the extracted componentPropertyDefinitions`,
             `  4. Fill in propMapping (Figma property names → TypeScript prop names)`,

@@ -44,7 +44,7 @@ npm run fetch:icons
 ## 아이콘 사용 방법
 
 ```tsx
-import { Icon } from 'igt-design-system-v2';
+import { Icon } from 'igt-design-system-v4';
 
 // 기본
 <Icon name="arrowDownSolid" />
@@ -100,11 +100,8 @@ src/
     Icon/
       Icon.tsx            ← <Icon> 컴포넌트
 
-scripts/
-  fetch-icons.mjs         ← Figma API 호출 스크립트
-
-.env                      ← Figma 토큰 (git 제외)
-.env.example              ← 토큰 없는 템플릿 (git 포함)
+# fetch-icons.mjs 스크립트와 .env는
+# igt-ai-studio-v4/ (제작 스튜디오)에 위치합니다.
 ```
 
 ---

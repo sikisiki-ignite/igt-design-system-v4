@@ -15,15 +15,17 @@
   },
   "files": [
     "dist",
-    "src/ai-guide"
+    "mcp"
   ],
+  "bin": {
+    "igt-mcp": "./mcp/server.mjs"
+  },
   "scripts": {
     "prepare": "npm run build",
     "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist",
     "dev": "vite build --watch",
     "showcase": "vite --config vite.config.showcase.ts",
     "build:showcase": "vite build --config vite.config.showcase.ts",
-    "gen:spec": "node scripts/generate-figma-spec.mjs",
     "build:icons": "node scripts/build-icons.mjs",
     "fetch:icons": "node scripts/fetch-icons.mjs",
     "lint:css": "./node_modules/.bin/stylelint 'src/components/**/*.css'",

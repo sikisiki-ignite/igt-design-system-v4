@@ -1,0 +1,6 @@
+# 제작 아티팩트 — npm 패키지 제외
+**/figma-spec.json
+CLAUDE.md
+.claude/
+playground.html
+dist-showcase/
