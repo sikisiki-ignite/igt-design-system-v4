@@ -245,6 +245,77 @@ server.tool(
   }
 )
 
+// ── Tool 6: list_patterns ────────────────────────────
+server.tool(
+  'list_patterns',
+  'List all available IGT Design System page/screen patterns. Use this before building a full page to see if a matching pattern exists.',
+  {},
+  () => {
+    const patterns = registry.patterns || []
+    if (!patterns.length) {
+      return { content: [{ type: 'text', text: 'No patterns registered yet.' }] }
+    }
+    const lines = ['# IGT Design System — Page Patterns', '']
+    for (const p of patterns) {
+      lines.push(`## ${p.name}`)
+      lines.push(p.description)
+      lines.push(`**Components:** ${p.components.join(', ')}`)
+      lines.push('')
+    }
+    lines.push('Use `get_pattern` to see structure and full example code.')
+    return { content: [{ type: 'text', text: lines.join('\n') }] }
+  }
+)
+
+// ── Tool 7: get_pattern ──────────────────────────────
+server.tool(
+  'get_pattern',
+  'Get detailed structure and example code for a specific IGT Design System page pattern.',
+  {
+    name: z.string().describe('Pattern name (e.g. "BackofficeListPage")'),
+  },
+  ({ name }) => {
+    const patterns = registry.patterns || []
+    const pattern = patterns.find(p => p.name.toLowerCase() === name.toLowerCase())
+    if (!pattern) {
+      const names = patterns.map(p => p.name).join(', ')
+      return {
+        content: [{
+          type: 'text',
+          text: `Pattern "${name}" not found.\n\nAvailable patterns:\n${names || '(none)'}`,
+        }],
+        isError: true,
+      }
+    }
+
+    const structureLines = (pattern.structure || [])
+      .map(s => `- **${s.section}**: ${Array.isArray(s.components) ? s.components.join(' + ') : s.component}  \n  → ${s.note}`)
+      .join('\n')
+
+    const text = [
+      `# ${pattern.name}`,
+      `**Category:** ${pattern.category}`,
+      `**Figma Node:** \`${pattern.figmaNodeId}\``,
+      '',
+      '## Description',
+      pattern.description,
+      '',
+      '## Components Used',
+      pattern.components.map(c => `- \`${c}\``).join('\n'),
+      '',
+      '## Page Structure',
+      structureLines,
+      '',
+      '## Example Code',
+      '```tsx',
+      pattern.example,
+      '```',
+    ].join('\n')
+
+    return { content: [{ type: 'text', text }] }
+  }
+)
+
 // ── Start ────────────────────────────────────────────
 const transport = new StdioServerTransport()
 await server.connect(transport)
