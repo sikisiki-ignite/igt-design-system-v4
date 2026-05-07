@@ -46,7 +46,22 @@ npm install github:sikisiki-ignite/igt-design-system-v4
 
 화면을 만들 때 항상 이 순서를 따릅니다.
 
-### 1. 필요한 컴포넌트 파악
+### 1. 기존 패턴 확인 (필수 — 가장 먼저)
+
+```
+list_patterns
+```
+
+매칭되는 패턴이 있으면 상세 구조를 가져옵니다:
+
+```
+get_pattern BackofficeListPage
+```
+
+패턴이 있으면 그 구조와 예시 코드를 기반으로 화면을 만듭니다.  
+패턴이 없으면 2번으로 넘어갑니다.
+
+### 2. 필요한 컴포넌트 파악
 
 ```
 list_components
@@ -60,7 +75,7 @@ search_components 날짜
 search_components 모달
 ```
 
-### 2. 각 컴포넌트의 props 확인
+### 3. 각 컴포넌트의 props 확인
 
 ```
 get_component TextField
@@ -68,7 +83,7 @@ get_component Button
 get_component Dialog
 ```
 
-### 3. 코드 작성
+### 4. 코드 작성
 
 ```tsx
 import { TextField, Button } from 'igt-design-system-v4'

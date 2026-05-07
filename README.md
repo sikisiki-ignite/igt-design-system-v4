@@ -63,6 +63,33 @@ cp /여기에-클론한-경로/igt-design-system-v4/templates/CLAUDE.md ./CLAUDE
 
 ---
 
+## 화면 패턴 활용하기
+
+자주 사용되는 화면 구조는 패턴으로 등록되어 있습니다.  
+Claude에게 화면을 요청하기 전에 패턴이 있는지 먼저 확인하면, 구조와 컴포넌트 조합을 그대로 재사용할 수 있습니다.
+
+```
+list_patterns           ← 등록된 패턴 목록 확인
+get_pattern BackofficeListPage   ← 특정 패턴 상세 보기
+```
+
+### 현재 등록된 패턴
+
+| 패턴 | 설명 | 주요 컴포넌트 |
+|---|---|---|
+| `BackofficeListPage` | 백오피스 목록 조회 화면 — KPI 카드 + 상태 필터 + 기간/검색 + 테이블 | KpiCard, Checkbox, DatePicker, Table, Pagination |
+
+### 패턴 활용 예시 프롬프트
+
+```
+명의이전 조회 화면 만들어줘.
+BackofficeListPage 패턴 사용하고,
+KPI 카드는 전체/대기/요청대기/미등록/실패 5개,
+상태 필터는 Checkbox 7개로 구성해줘.
+```
+
+---
+
 ## Claude에게 화면 요청하는 방법
 
 ### 기본 요청 패턴
