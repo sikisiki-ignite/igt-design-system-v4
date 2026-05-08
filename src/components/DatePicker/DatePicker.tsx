@@ -199,14 +199,16 @@ export function DatePicker({
   const displayValue = isControlled ? (value ?? '') : internalValue
   const displayEndValue = isRangeControlled ? (endValue ?? '') : internalEndValue
 
-  const parsedStart = parseDate(displayValue)
+  const [rangePhase, setRangePhase] = useState<'start' | 'end'>('start')
+  const [pendingRangeStart, setPendingRangeStart] = useState<string | null>(null)
+
+  const effectiveStartDisplay = isRange && pendingRangeStart ? pendingRangeStart : displayValue
+  const parsedStart = parseDate(effectiveStartDisplay)
   const parsedEnd = parseDate(displayEndValue)
 
   const today = new Date()
   const [viewYear, setViewYear] = useState(parsedStart?.year ?? today.getFullYear())
   const [viewMonth, setViewMonth] = useState(parsedStart?.month ?? today.getMonth())
-
-  const [rangePhase, setRangePhase] = useState<'start' | 'end'>('start')
 
   const prevMonth = useCallback(() => {
     setViewMonth(m => {
@@ -233,22 +235,26 @@ export function DatePicker({
         if (!isControlled) setInternalValue(formatted)
         if (!isRangeControlled) setInternalEndValue('')
         onChange?.(formatted)
+        setPendingRangeStart(formatted)
         setRangePhase('end')
       } else {
-        const startMs = parsedStart ? dateToMs(parsedStart) : 0
+        const effectiveStart = pendingRangeStart ?? displayValue
+        const startMs = parseDate(effectiveStart) ? dateToMs(parseDate(effectiveStart)!) : 0
         const selectedMs = dateToMs(d)
         if (selectedMs < startMs) {
-          if (!isControlled) { setInternalValue(formatted); setInternalEndValue(displayValue) }
-          onRangeChange?.(formatted, displayValue)
+          if (!isControlled) { setInternalValue(formatted); setInternalEndValue(effectiveStart) }
+          onRangeChange?.(formatted, effectiveStart)
         } else {
+          if (!isControlled) setInternalValue(effectiveStart)
           if (!isRangeControlled) setInternalEndValue(formatted)
-          onRangeChange?.(displayValue, formatted)
+          onRangeChange?.(effectiveStart, formatted)
         }
+        setPendingRangeStart(null)
         setRangePhase('start')
         setOpen(false)
       }
     }
-  }, [isRange, isControlled, isRangeControlled, rangePhase, parsedStart, displayValue, onChange, onRangeChange])
+  }, [isRange, isControlled, isRangeControlled, rangePhase, pendingRangeStart, parsedStart, displayValue, onChange, onRangeChange])
 
   const iconSize = size === 'lg' ? 20 : 18
 
@@ -268,7 +274,13 @@ export function DatePicker({
         </span>
       )}
 
-      <Popover.Root open={open} onOpenChange={disabled || readOnly ? undefined : setOpen}>
+      <Popover.Root
+      open={open}
+      onOpenChange={disabled || readOnly ? undefined : (next) => {
+        if (next && isRange) { setRangePhase('start'); setPendingRangeStart(null) }
+        setOpen(next)
+      }}
+    >
         <Popover.Trigger asChild>
           <button
             type="button"
@@ -282,7 +294,7 @@ export function DatePicker({
           >
             <div className="dp__date-area">
               <DateSegmentInput
-                value={displayValue}
+                value={effectiveStartDisplay}
                 placeholder={placeholder}
                 disabled={disabled}
                 readOnly={readOnly}

@@ -1,0 +1,212 @@
+/* Composition component | figma-spec: 6135:126884 | 2026-05-08 */
+/* Canonical backoffice page layout reference */
+
+/* ── Full page layout ───────────────────────────── */
+/* Figma: LAYOUT frame — horizontal, LNB(250px) + main */
+
+.ttp-layout {
+  display: flex;
+  min-height: 100vh;
+  background: var(--sys-surface-static);
+}
+
+/* ── LNB sidebar ────────────────────────────────── */
+/* Figma: 250px wide, background --sys-background-subtle */
+
+.ttp-lnb {
+  width: 250px;
+  flex-shrink: 0;
+  background: var(--sys-background-subtle);
+  padding: var(--spacing-24);
+}
+
+/* ── Nav logo placeholder ───────────────────────── */
+
+.ttp-nav-logo {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  color: var(--sys-content-neutral-strong);
+}
+
+/* ── Main area (right of LNB) ───────────────────── */
+
+.ttp-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Content area ───────────────────────────────── */
+/* Figma: contents frame — vertical, gap 40, white bg */
+/* Figma position analysis: 48px inset on all sides (T/L/R/B) from LNB+TopNav boundary */
+
+.ttp-content {
+  flex: 1;
+  padding: var(--spacing-48);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-40);
+  background: var(--sys-background-base);
+}
+
+/* ── Title section ──────────────────────────────── */
+/* Figma: horizontal, space-between, height 40 */
+
+.ttp-title-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ttp-page-title {
+  margin: 0;
+  font-family: var(--semantic-heading-20-bold-fontFamily);
+  font-size: var(--semantic-heading-20-bold-fontSize);
+  line-height: var(--semantic-heading-20-bold-lineHeight);
+  font-weight: var(--semantic-heading-20-bold-fontWeight);
+  letter-spacing: var(--semantic-heading-20-bold-letterSpacing);
+  color: var(--sys-content-neutral-strong);
+}
+
+/* ── Filter section (Searchbox) ─────────────────── */
+/* Figma: Searchbox frame — --sys-background-subtle, borderRadius 4, padding 24, gap 16 */
+
+.ttp-section {
+  background: var(--sys-background-subtle);
+  border-radius: var(--radius-4);
+  padding: var(--spacing-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+/* ── Filter grid — 2-column from Figma spec ─────── */
+/* Figma: Dropdown Group Container, gap 20px rows, 60px cols */
+
+.ttp-filter-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.ttp-filter-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px; /* Figma: exactly 60px — no token available */
+  align-items: start;
+}
+
+/* Each field: label above input */
+.ttp-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+/* Field label — Figma: 112px wide, 16px height */
+.ttp-field-label {
+  font-family: var(--semantic-label-14-semibold-fontFamily);
+  font-size: var(--semantic-label-14-semibold-fontSize);
+  line-height: var(--semantic-label-14-semibold-lineHeight);
+  font-weight: var(--semantic-label-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-14-semibold-letterSpacing);
+  color: var(--sys-content-neutral-muted);
+}
+
+/* ── Button group — justifyContent: center from Figma ── */
+/* Divider: IGT Divider / inner group: IGT ButtonGroup */
+
+.ttp-button-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-8);
+}
+
+/* ── Count info container ───────────────────────── */
+/* Figma: Count Info Container — vertical, gap 12 */
+
+.ttp-count-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+}
+
+/* ── Table header bar ───────────────────────────── */
+/* Figma: Container — horizontal, space-between */
+
+.ttp-table-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Count info — "N개 · N개 선택" ──────────────── */
+/* Figma: Count Info — horizontal, gap 4 */
+
+.ttp-count-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.ttp-count-total {
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-14-semibold-letterSpacing);
+  color: var(--sys-content-neutral-default);
+}
+
+.ttp-count-bullet {
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  color: var(--sys-content-neutral-weak);
+}
+
+.ttp-count-selected {
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-14-semibold-letterSpacing);
+  color: var(--sys-content-brand-default);
+}
+
+/* ── Table action buttons ───────────────────────── */
+/* Figma: Frame — horizontal, gap 16 */
+
+.ttp-table-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+}
+
+/* ── Table + Pagination 그룹 ─────────────────────── */
+/* Figma: Table Container — table body + pagination bar, gap 0 */
+
+.ttp-table-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Table scroll wrapper ───────────────────────── */
+/* Table 컴포넌트 내부(table-wrapper)가 overflow-x: auto를 처리 — 외곽 border/radius 없음 */
+
+.ttp-table-scroll-wrapper {
+  overflow-x: auto;
+}
+
+/* ── Pagination bar ─────────────────────────────── */
+/* Figma: container — padding 24 top/bottom, center */
+
+.ttp-pagination-bar {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-24) 0;
+}

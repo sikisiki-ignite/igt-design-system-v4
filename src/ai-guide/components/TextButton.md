@@ -73,4 +73,4 @@
 
 - `state` prop — normal/hover/pressed/disabled는 CSS pseudo-class로 처리
 - `Focus` prop — CSS `:focus-visible`로 처리
-- trailing icon 커스터마이즈 — chevron variant는 항상 `monoChevronRight` 고정
+- trailing icon 커스터마이즈 — chevron variant는 항상 `chevronDownSmallOutline2dp` 고정 (↓ 드롭다운 방향)

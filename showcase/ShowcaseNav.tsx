@@ -91,6 +91,12 @@ const NAV_GROUPS: NavGroup[] = [
       { id: 'card', label: 'Card / KpiCard' },
     ],
   },
+  {
+    group: 'Pages',
+    items: [
+      { id: 'title-transfer', label: 'TitleTransferPage' },
+    ],
+  },
 ]
 
 const ALL_IDS = NAV_GROUPS.flatMap(g => g.items.map(i => i.id))

@@ -98,7 +98,7 @@ export function TableShowcase() {
         <h3>Table + Pagination</h3>
         {/* total은 전체 행 수가 아니라 전체 페이지 수임 */}
         <Table columns={columns} data={pagedData} rowKey="id" />
-        <div style={{ marginTop: 16, display: 'flex', justifyContent: 'center' }}>
+        <div style={{ padding: 'var(--spacing-24) 0', display: 'flex', justifyContent: 'center' }}>
           <Pagination page={page} total={totalPages} onChange={setPage} />
         </div>
       </section>

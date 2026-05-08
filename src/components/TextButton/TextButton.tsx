@@ -45,7 +45,7 @@ export function TextButton({
         <span className="text-btn__label">{children}</span>
         {variant === 'chevron' && (
           <span className="text-btn__trailing-icon" aria-hidden>
-            <Icon name="monoChevronRight" size={iconSize} />
+            <Icon name="chevronDownSmallOutline2dp" size={iconSize} />
           </span>
         )}
       </span>

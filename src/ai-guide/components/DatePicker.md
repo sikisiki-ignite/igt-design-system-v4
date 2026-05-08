@@ -58,6 +58,33 @@ const [end, setEnd] = useState('')
 
 All values use `YYYY.MM.DD` format (e.g., `"2026.05.04"`).
 
+## Range 모드 동작 방식
+
+`variation="range"` 일 때 선택은 2단계로 진행된다.
+
+1. **시작일 단계**: 팝오버를 열면 항상 시작일 선택 상태로 시작. 날짜 클릭 → 시작일이 즉시 입력 필드에 표기되고 팝오버 유지
+2. **종료일 단계**: 날짜 클릭 → 범위 확정, `onRangeChange` 호출, 팝오버 닫힘
+   - 선택한 종료일이 시작일보다 앞이면 자동으로 시작/종료를 교환
+
+팝오버를 종료일 선택 없이 닫으면 다음에 열 때 시작일 단계로 리셋된다.
+
+### Controlled 모드 패턴
+
+`value` / `endValue` 를 외부에서 제어할 때 `onChange` 없이 `onRangeChange` 만 전달해도 된다. 시작일 클릭 시 내부적으로 `pendingRangeStart` 에 임시 저장되어 즉시 화면에 반영되며, 종료일 클릭 시 `onRangeChange(start, end)` 로 한 번에 확정된다.
+
+```tsx
+// ✅ 올바른 controlled 패턴 — onChange 없이 onRangeChange만 사용
+<DatePicker
+  variation="range"
+  value={start}
+  endValue={end}
+  onRangeChange={(s, e) => { setStart(s); setEnd(e) }}
+/>
+
+// ❌ 잘못된 패턴 — start만 업데이트
+onRangeChange={(s) => setStart(s)}
+```
+
 ## NOT in Figma (avoid)
 
 - Time picker (no time variant in Figma)
