@@ -15,13 +15,18 @@
   },
   "files": [
     "dist",
-    "mcp"
+    "mcp",
+    "scripts/postinstall.mjs",
+    "src/tokens",
+    "src/fonts",
+    "src/ai-guide"
   ],
   "bin": {
     "igt-mcp": "./mcp/server.mjs"
   },
   "scripts": {
     "prepare": "npm run build",
+    "postinstall": "node scripts/postinstall.mjs",
     "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist",
     "dev": "vite build --watch",
     "showcase": "vite --config vite.config.showcase.ts",
