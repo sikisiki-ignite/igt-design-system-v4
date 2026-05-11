@@ -12,16 +12,16 @@ Figma: `6135:126884` | TSX: `showcase/TitleTransferPage.tsx` | CSS: `showcase/Ti
 ## 페이지 구조
 
 ```
-.ttp-layout (flex horizontal, min-height: 100vh, bg: --sys-surface-static)
-  .ttp-lnb (250px, bg: --sys-background-subtle)
-    └── SideNavigation tone="accent" size="md"
-  .ttp-main (flex column, flex: 1)
-    └── Navigation size="sm" layoutMode="full"
-    └── .ttp-content (flex column, gap: --spacing-40, padding: --spacing-24, bg: --sys-background-base)
-          ├── .ttp-title-section (heading-20-bold + ButtonGroup)
+.ttp-layout (flex column, min-height: 100vh, bg: --sys-surface-static)
+  └── Navigation size="sm" layoutMode="full"   ← 전체 너비
+  .ttp-body (flex horizontal, flex: 1)
+    ├── .ttp-lnb (250px, bg: --sys-background-subtle)
+    │     └── SideNavigation tone="accent" size="md"
+    └── .ttp-content (flex column, gap: --spacing-40, padding: --spacing-48, bg: --sys-background-base)
+          ├── .ttp-title-section (h1만 — 버튼 없음)
           ├── .ttp-section (필터 영역, bg: --sys-background-subtle, radius: --radius-4)
           └── .ttp-count-container (테이블 영역)
-                ├── .ttp-table-header-bar (카운트 + 액션)
+                ├── .ttp-table-header-bar (카운트 + 액션 버튼)
                 └── .ttp-table-group
                       ├── .ttp-table-scroll-wrapper (overflow-x: auto)
                       │     └── Table
@@ -144,10 +144,11 @@ useEffect(() => {
 
 | 클래스 | 역할 | 핵심 값 |
 |---|---|---|
-| `.ttp-layout` | 전체 flex row 컨테이너 | `--sys-surface-static` |
+| `.ttp-layout` | 전체 flex **column** 컨테이너 | `--sys-surface-static` |
+| `.ttp-body` | GNB 하단 가로 배치 영역 | `display: flex`, `flex: 1` |
 | `.ttp-lnb` | LNB 250px 고정 | `--sys-background-subtle`, padding: `--spacing-24` |
-| `.ttp-content` | 컨텐츠 영역 | gap: `--spacing-40`, padding: `--spacing-24`, bg: `--sys-background-base` |
-| `.ttp-title-section` | 페이지 타이틀 + 버튼 행 | `justify-content: space-between` |
+| `.ttp-content` | 컨텐츠 영역 | gap: `--spacing-40`, padding: `--spacing-48`, bg: `--sys-background-base` |
+| `.ttp-title-section` | 페이지 타이틀 h1만 | `justify-content: space-between` |
 | `.ttp-page-title` | 페이지 제목 h1 | `--semantic-heading-20-bold-*` 서브프로퍼티 전체 |
 | `.ttp-section` | 필터 박스 | bg: `--sys-background-subtle`, radius: `--radius-4`, padding: `--spacing-24` |
 | `.ttp-filter-grid-row` | 2열 필터 행 | `grid-template-columns: 1fr 1fr`, gap: `60px` |
@@ -166,6 +167,8 @@ useEffect(() => {
 
 ## NOT in Figma (avoid)
 
+- **액션 버튼(다운로드·업로드·일괄 처리)을 `.ttp-title-section`에 배치** — 반드시 `.ttp-table-actions`(table-header-bar 우측)에 위치
+- **`ttp-layout`을 `flex-direction: row`로 설정** — column이 맞음. LNB는 `.ttp-body` 안에 있어야 함
 - 필터 버튼 3개 이상 (전체초기화·조회하기 등) — `초기화 + 검색` 2개만
 - 페이지 사이즈에 `TextButton` 사용 — `Button secondary/outline/weak` + `Menu`
 - `Table`에 `selectedRows` prop 전달 — 비제어 모드 강제

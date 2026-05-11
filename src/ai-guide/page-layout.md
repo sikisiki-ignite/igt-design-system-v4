@@ -11,14 +11,41 @@
 ## 페이지 구조 패턴
 
 ```
-LAYOUT (horizontal)
-├── LNB (250px, padding 24)
-└── main (flex: 1, vertical)
-    ├── TopNavigation (56px)
+LAYOUT (vertical, min-height: 100vh)
+├── TopNavigation   ← 전체 너비 (LNB 포함)
+└── body (flex: 1, horizontal)
+    ├── LNB (250px, padding 24)
     └── contents (padding 48, gap 40)   ← 공통 컨텐츠 영역
-        ├── title section
+        ├── title section (h1만 — 버튼 없음)
         ├── section...
-        └── section...
+        └── count-container
+              ├── table-header-bar (카운트 + 액션 버튼)
+              └── table-group
+```
+
+> **핵심**: TopNavigation은 LNB와 나란히 있는 것이 아니라 **전체 너비 최상단**에 위치한다. LNB는 body 영역 안에서 contents와 가로로 배치된다.
+
+### CSS 구조
+
+```css
+.page-layout {
+  display: flex;
+  flex-direction: column;          /* ← 세로 배치: GNB → body */
+  min-height: 100vh;
+}
+
+.page-body {
+  display: flex;                   /* ← 가로 배치: LNB | contents */
+  flex: 1;
+  min-height: 0;
+}
+
+.page-lnb {
+  width: 250px;
+  flex-shrink: 0;
+  background: var(--sys-background-subtle);
+  padding: var(--spacing-24);
+}
 ```
 
 ### 컨텐츠 영역 공통 패딩: `--spacing-48`
@@ -38,32 +65,62 @@ LNB + TopNavigation 이후의 **컨텐츠 영역(contents frame)은 사방 48px 
 
 > **Figma 근거**: Figma node `6135:126884` 위치 분석. `contents` 프레임은 LNB 우측 경계 및 TopNavigation 하단으로부터 상하좌우 모두 48px 안쪽에 위치한다.
 
-### 페이지 셸 (`.page`)
+### 섹션 (필터 박스)
 
 ```css
-.page {
-  min-height: 100vh;
+.filter-section {
+  background: var(--sys-background-subtle);
+  border-radius: var(--radius-4);
   padding: var(--spacing-24);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-16);
-  background: var(--sys-background-subtle);   /* gray */
-}
-```
-
-### 섹션 (`.section`)
-
-```css
-.section {
-  background: var(--sys-background-base); /* white */
-  border: 1px solid var(--sys-border-neutral-subtle);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-20) var(--spacing-24);
 }
 ```
 
 **금지**: `box-shadow`로 섹션을 분리하지 않는다.
-**금지**: `background: white`를 하드코딩하지 않는다. 반드시 `var(--color-background-surface)` 사용.
+**금지**: `background: white`를 하드코딩하지 않는다. 반드시 토큰 사용.
+
+---
+
+## 버튼 배치 규칙
+
+### title section — h1만 위치
+
+```tsx
+/* ✅ 올바름 */
+<div className="page-title-section">
+  <h1 className="page-title">페이지 제목</h1>
+</div>
+
+/* ❌ 금지: 액션 버튼을 title section에 배치 */
+<div className="page-title-section">
+  <h1>페이지 제목</h1>
+  <ButtonGroup>...</ButtonGroup>   {/* ← 여기 넣으면 안 됨 */}
+</div>
+```
+
+**예외**: 신규 항목 생성 버튼("등록", "추가" 등 전역 액션)만 title section 우측에 위치 가능.
+
+### table-header-bar — 액션 버튼 위치
+
+테이블에 작용하는 모든 버튼(다운로드, 업로드, 일괄 처리 등)은 **table-header-bar 우측**에 위치한다.
+
+```tsx
+<div className="table-header-bar">
+  <div className="count-info">
+    <span>N건</span>
+  </div>
+  <div className="table-actions">
+    {/* 액션 버튼들이 여기 위치 */}
+    <Button>다운로드</Button>
+    <Button>일괄 업로드</Button>
+    <Button tone="primary">선택건 처리</Button>
+    {/* 페이지 사이즈 선택 — 항상 가장 우측 */}
+    <div ref={pageSizeRef}>...</div>
+  </div>
+</div>
+```
 
 ---
 

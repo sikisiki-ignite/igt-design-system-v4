@@ -1,4 +1,15 @@
 /* IGT Design System v2 — Primitive Tokens */
+
+/* CSS Reset — 모든 IGT 페이지에서 공통 적용 */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
   /* Collection: primitives / Mode: value */
 
