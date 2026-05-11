@@ -175,49 +175,42 @@ export function TitleTransferPage() {
 
   return (
     <div className="ttp-layout">
-      {/* LNB — Figma: 250px, background --sys-background-subtle, SideNavigation tone=accent size=md */}
-      <div className="ttp-lnb">
-        <SideNavigation
-          tone="accent"
-          size="md"
-          activeId="title-transfer"
-          onSelect={() => {}}
-          items={NAV_ITEMS}
-        />
-      </div>
+      {/* GNB — 전체 너비 */}
+      <Navigation
+        size="sm"
+        layoutMode="full"
+        logo={<span className="ttp-nav-logo">MGWrap</span>}
+        navItems={
+          <>
+            <NavItem label="명의이전" current />
+            <NavItem label="차량관리" />
+            <NavItem label="딜러관리" />
+            <NavItem label="고객관리" />
+            <NavItem label="정산" />
+          </>
+        }
+        trailing={
+          <Button tone="secondary" appearance="outline" emphasis="weak" size="sm">로그아웃</Button>
+        }
+      />
 
-      {/* Main content area */}
-      <div className="ttp-main">
-        {/* TopNavigation — Figma: size=sm, layoutMode=full, State=logout */}
-        <Navigation
-          size="sm"
-          layoutMode="full"
-          logo={<span className="ttp-nav-logo">MGWrap</span>}
-          navItems={
-            <>
-              <NavItem label="명의이전" current />
-              <NavItem label="차량관리" />
-              <NavItem label="딜러관리" />
-              <NavItem label="고객관리" />
-              <NavItem label="정산" />
-            </>
-          }
-          trailing={
-            <Button tone="secondary" appearance="outline" emphasis="weak" size="sm">로그아웃</Button>
-          }
-        />
+      <div className="ttp-body">
+        {/* LNB */}
+        <div className="ttp-lnb">
+          <SideNavigation
+            tone="accent"
+            size="md"
+            activeId="title-transfer"
+            onSelect={() => {}}
+            items={NAV_ITEMS}
+          />
+        </div>
 
         <div className="ttp-content">
 
-          {/* Title section — Figma: horizontal space-between, heading-20-bold + ButtonGroup */}
+          {/* Title section */}
           <div className="ttp-title-section">
             <h1 className="ttp-page-title">명의이전 신청 관리</h1>
-            {/* ButtonGroup — Figma: fill/weak + fill/weak + primary/fill/strong */}
-            <ButtonGroup size="md" direction="horizontal" distribution="content">
-              <Button tone="secondary" appearance="fill" emphasis="weak">일괄 반려</Button>
-              <Button tone="secondary" appearance="fill" emphasis="weak">일괄 취소</Button>
-              <Button tone="primary" appearance="fill" emphasis="strong">선택 처리</Button>
-            </ButtonGroup>
           </div>
 
           {/* Filter Section — Figma: Searchbox frame 6134:114625 */}
@@ -362,8 +355,12 @@ export function TitleTransferPage() {
                 <span className="ttp-count-bullet">·</span>
                 <span className="ttp-count-selected">{selectedCount}개 선택</span>
               </div>
-              {/* Actions — secondary Button + menu dropdown + 엑셀 다운로드 */}
               <div className="ttp-table-actions">
+                <ButtonGroup size="md" direction="horizontal" distribution="content">
+                  <Button tone="secondary" appearance="fill" emphasis="weak">일괄 반려</Button>
+                  <Button tone="secondary" appearance="fill" emphasis="weak">일괄 취소</Button>
+                  <Button tone="primary" appearance="fill" emphasis="strong">선택 처리</Button>
+                </ButtonGroup>
                 <div style={{ position: 'relative' }} ref={pageSizeRef}>
                   <Button
                     tone="secondary"

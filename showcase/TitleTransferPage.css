@@ -2,10 +2,11 @@
 /* Canonical backoffice page layout reference */
 
 /* ── Full page layout ───────────────────────────── */
-/* Figma: LAYOUT frame — horizontal, LNB(250px) + main */
+/* GNB 전체 너비 최상단, 하단에 LNB + content 가로 배치 */
 
 .ttp-layout {
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: var(--sys-surface-static);
 }
@@ -29,13 +30,12 @@
   color: var(--sys-content-neutral-strong);
 }
 
-/* ── Main area (right of LNB) ───────────────────── */
+/* ── Body area (GNB 하단 — LNB + content 가로 배치) ─ */
 
-.ttp-main {
-  flex: 1;
-  min-width: 0;
+.ttp-body {
   display: flex;
-  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
 /* ── Content area ───────────────────────────────── */
