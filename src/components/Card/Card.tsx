@@ -15,6 +15,10 @@ export interface KpiCardProps {
   unit?: string
   delta?: string
   deltaType?: 'positive' | 'negative' | 'neutral'
+  subInfo?: string
+  selectable?: boolean
+  selected?: boolean
+  onSelect?: () => void
 }
 
 export function Card({
@@ -44,9 +48,13 @@ export function KpiCard({
   unit,
   delta,
   deltaType = 'neutral',
+  subInfo,
+  selectable,
+  selected,
+  onSelect,
 }: KpiCardProps) {
-  return (
-    <div className="kpi-card">
+  const content = (
+    <>
       <p className="kpi-card__label">{label}</p>
       <p className="kpi-card__value">
         {value}
@@ -55,6 +63,24 @@ export function KpiCard({
       {delta && (
         <p className="kpi-card__delta" data-type={deltaType}>{delta}</p>
       )}
-    </div>
+      {subInfo && <p className="kpi-card__sub-info">{subInfo}</p>}
+    </>
   )
+
+  if (selectable) {
+    return (
+      <button
+        type="button"
+        className="kpi-card"
+        data-selectable="true"
+        data-selected={selected ? 'true' : undefined}
+        aria-pressed={selected}
+        onClick={onSelect}
+      >
+        {content}
+      </button>
+    )
+  }
+
+  return <div className="kpi-card">{content}</div>
 }
