@@ -73,14 +73,14 @@ IGT는 컴포넌트마다 CSS 클래스를 미리 정의해 두었다.
 
 | 컴포넌트 | HTML 클래스 | 예시 |
 |---------|-----------|------|
-| Button | \`.btn\` | \`<button class="btn" data-tone="primary" data-appearance="fill">\` |
-| IconButton | \`.ibtn\` | \`<button class="ibtn" data-tone="neutral" data-appearance="outline">\` |
+| Button | \`.btn\` | \`<button class="btn" data-tone="primary" data-appearance="fill" data-emphasis="strong">\` |
+| IconButton | \`.icon-btn\` | \`<button class="icon-btn" data-tone="neutral" data-appearance="outline">\` |
 | Badge | \`.badge\` | \`<span class="badge" data-tone="urgent" data-size="md">\` |
 | Chip (선택형) | \`.chip chip--choice\` | \`<button class="chip chip--choice" data-selected>\` |
 | Chip (필터형) | \`.chip chip--filter\` | \`<button class="chip chip--filter">\` |
 | Table | \`.table-wrapper > .table\` | \`<div class="table-wrapper"><table class="table">\` |
 | Card | \`.card\` | \`<div class="card">\` |
-| TextField | \`.text-field\` | \`<div class="text-field">\` |
+| TextField | \`.tf\` | \`<div class="tf">\` |
 
 클래스명이 불확실하면 \`./${pkgRef}/src/components/{이름}/{이름}.css\` 파일을 직접 열어 첫 번째 클래스 이름을 확인한다.
 
