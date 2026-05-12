@@ -1,8 +1,17 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)"
+    ]
+  },
   "mcpServers": {
     "igt-design-system": {
       "command": "node",
-      "args": ["./mcp/server.mjs"]
+      "args": [
+        "./mcp/server.mjs"
+      ]
     }
   }
 }

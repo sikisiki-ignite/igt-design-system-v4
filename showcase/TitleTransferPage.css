@@ -82,46 +82,101 @@
   gap: var(--spacing-16);
 }
 
-/* ── Filter grid — 2-column from Figma spec ─────── */
-/* Figma: Dropdown Group Container, gap 20px rows, 60px cols */
+/* ── Filter rows — single-column label+control layout ── */
+/* Figma: node 6170:2288 "Searchbox" 실측값 기준 */
+/* Dropdown Group Container gap=14, cont gap=8, label width=140, label paddingTop=11 */
 
-.ttp-filter-grid {
+.ttp-filter-rows {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-20);
+  gap: var(--spacing-14); /* Figma: Dropdown Group Container itemSpacing=14 */
 }
 
-.ttp-filter-grid-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px; /* Figma: exactly 60px — no token available */
-  align-items: start;
+.ttp-filter-row {
+  display: flex;
+  align-items: flex-start; /* 라벨이 paddingTop:11로 정렬 처리 */
+  gap: var(--spacing-8);   /* Figma: cont.itemSpacing=8 */
 }
 
-/* Each field: label above input */
-.ttp-filter-field {
+.ttp-filter-row-label {
+  width: 140px;            /* Figma: label frame width=140 */
+  flex-shrink: 0;
+  padding-top: 11px;       /* Figma: label paddingTop=11 (40px 인풋과 수직 정렬) */
+  /* Figma text node: fontSize=15, fontWeight=600, lineHeight=18, letterSpacing=tight */
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-15-semibold-letterSpacing);
+  /* Figma: VariableID:3:3 = --color-greyAlpha-800 = rgba(0,12,30,0.80) */
+  color: var(--sys-content-neutral-default);
+}
+
+.ttp-filter-row-control {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Search composite: Select(type) + TextField */
+.ttp-search-composite {
+  display: flex;
+  gap: var(--spacing-8);
+}
+
+.ttp-search-select {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+/* Date composite: Select(type) + DatePicker range */
+.ttp-date-composite {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.ttp-date-select {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+/* Status with tags: Select + TagInput below */
+.ttp-status-with-tags {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-8);
 }
 
-/* Field label — Figma: 112px wide, 16px height */
-.ttp-field-label {
-  font-family: var(--semantic-label-14-semibold-fontFamily);
-  font-size: var(--semantic-label-14-semibold-fontSize);
-  line-height: var(--semantic-label-14-semibold-lineHeight);
-  font-weight: var(--semantic-label-14-semibold-fontWeight);
-  letter-spacing: var(--semantic-label-14-semibold-letterSpacing);
-  color: var(--sys-content-neutral-muted);
+/* Setting RadioBox group */
+.ttp-radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-24);
 }
 
-/* ── Button group — justifyContent: center from Figma ── */
-/* Divider: IGT Divider / inner group: IGT ButtonGroup */
+.ttp-radio-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  cursor: pointer;
+}
+
+.ttp-radio-item-label {
+  /* Figma: 텍스트 노드 fontSize=15, fontWeight=600, lineHeight=22px → body-15-semibold */
+  font-family: var(--semantic-body-15-semibold-fontFamily);
+  font-size: var(--semantic-body-15-semibold-fontSize);
+  line-height: var(--semantic-body-15-semibold-lineHeight);
+  font-weight: var(--semantic-body-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-15-semibold-letterSpacing);
+  color: var(--sys-content-neutral-strong);
+}
+
+/* ── Button group — justifyContent: flex-end from Figma ── */
 
 .ttp-button-group {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   gap: var(--spacing-8);
 }
 
@@ -209,4 +264,56 @@
   display: flex;
   justify-content: center;
   padding: var(--spacing-24) 0;
+}
+
+/* ── Inline multi-select (Status 3 row) ─────────── */
+
+.ttp-multiselect-wrapper {
+  width: 100%;
+}
+
+.ttp-multiselect-trigger-area {
+  position: relative;
+}
+
+.ttp-multiselect-panel {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--sys-background-base);
+  border: 1px solid var(--sys-border-neutral-subtle);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-4) 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.ttp-multiselect-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-8) var(--spacing-12);
+  cursor: pointer;
+}
+
+.ttp-multiselect-item:hover {
+  background: var(--sys-background-subtle);
+}
+
+.ttp-multiselect-item-label {
+  /* Figma: 아이템 텍스트 노드 fontSize=14, fontWeight=600, lineHeight=20 → body-14-semibold */
+  font-family: var(--semantic-body-14-semibold-fontFamily);
+  font-size: var(--semantic-body-14-semibold-fontSize);
+  line-height: var(--semantic-body-14-semibold-lineHeight);
+  font-weight: var(--semantic-body-14-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-14-semibold-letterSpacing);
+  color: var(--sys-content-neutral-default);
+}
+
+.ttp-multiselect-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+  margin-top: var(--spacing-8);
 }

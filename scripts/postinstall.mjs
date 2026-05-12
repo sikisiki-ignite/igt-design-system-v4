@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { existsSync, writeFileSync } from 'fs'
+import { existsSync, writeFileSync, mkdirSync } from 'fs'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -139,3 +139,114 @@ border-color: #e2e8f0;
 
 writeFileSync(targetPath, content, 'utf8')
 console.log(`[IGT DS] ✓ CLAUDE.md created at ${targetPath}`)
+
+// backoffice-dev 스킬 생성
+const commandsDir = join(targetDir, '.claude', 'commands')
+const skillPath = join(commandsDir, 'backoffice-dev.md')
+
+if (existsSync(skillPath)) {
+  console.log(`[IGT DS] backoffice-dev.md already exists — skipped`)
+} else {
+  mkdirSync(commandsDir, { recursive: true })
+  const skillContent = `---
+name: backoffice-dev
+description: IGT Design System 컴포넌트로 백오피스 화면을 구현하는 전문 FE 개발자 스킬. 백오피스 화면·리스트 페이지·관리자 화면·폼·대시보드·필터/검색 UI를 구현하거나, 기획 스펙을 IGT 컴포넌트로 조립할 때 반드시 사용. Table, Input, Select, Button, Modal 등 IGT 컴포넌트 조합이 필요한 작업에서 자동 활성화.
+---
+
+# IGT 백오피스 개발자
+
+너는 IGT Design System으로 **백오피스 화면을 구현하는 전문 FE 개발자**야.
+기획 스펙을 받아 IGT 컴포넌트로 화면을 조립한다.
+
+---
+
+## 스펙 → 컴포넌트 매핑
+
+| 스펙 키워드 | 컴포넌트 |
+|------------|---------|
+| 검색 입력 (단일) | \`TextField\` + \`Icon\` |
+| 검색 입력 (다중 조건) | \`Search\` |
+| 텍스트 필터 | \`TextField\` |
+| 드롭다운 필터 (단일) | \`Select\` |
+| 날짜 필터 (단일) | \`DatePicker\` |
+| 날짜 필터 (범위) | \`DatePicker variation="range"\` |
+| 칩 필터 | \`FilterChip\` |
+| 목록 출력 | \`Table\` |
+| 페이지네이션 | \`Pagination\` |
+| 행 액션 | \`IconButton\` + \`Tooltip\` |
+| 상태 표시 | \`Badge\` |
+| 숫자/집계 카드 | \`KpiCard\` |
+| 삭제 확인 | \`Dialog\` |
+| 슬라이드 패널 | \`Drawer\` |
+| 토스트 알림 | \`Toast\` |
+| 빈/오류 상태 | \`StateView\` |
+| 로딩 | \`SkeletonRect\` / \`SkeletonText\` |
+
+---
+
+## 구현 전 필수 절차 (순서 엄수)
+
+코드를 한 줄도 쓰기 전에 아래를 완료한다.
+
+### Step 1 — 사용할 컴포넌트 목록 확정
+스펙의 각 UI 요소를 위 매핑 테이블에서 컴포넌트로 변환한다.
+매핑 테이블에 없는 요소가 있으면 **구현 불가 Gap**으로 분류하고 사용자에게 먼저 보고한다.
+
+### Step 2 — ai-guide 문서 읽기 (필수)
+확정한 컴포넌트마다 ai-guide 문서를 읽는다.
+읽지 않은 컴포넌트는 사용하지 않는다.
+
+**경로**: \`./${pkgRef}/src/ai-guide/components/{ComponentName}.md\`
+
+MCP가 활성화된 환경에서는 \`mcp__igt-design-system__get_component\` 우선 사용.
+MCP가 없으면 위 경로에서 직접 읽는다.
+
+### Step 3 — 컴포넌트 한계 확인
+아래 한계 목록을 확인하고, 스펙이 한계를 초과하면 **구현 전에 사용자에게 보고**한다.
+
+| 컴포넌트 | 할 수 없는 것 |
+|---------|-------------|
+| \`TopNavigation\` | 커스텀 로고 텍스트 불가 (\`brand: 'mgWrap'|'ignite'\` 또는 \`logoSrc\` 이미지만 지원) |
+| \`Table\` | 셀 내부 복잡한 레이아웃은 \`render\` 함수로 처리, 단 IGT 컴포넌트 사용 |
+| \`DatePicker\` | range 모드 값 타입: \`{ start?: Date, end?: Date }\` — string 아님 |
+
+---
+
+## 결과물 저장 위치
+
+구현한 화면은 프로젝트의 **\`src/pages/{화면명}/\`** 아래에 저장한다.
+
+\`\`\`
+src/pages/
+└── {화면명}/          ← 영문 소문자, 하이픈 구분 (예: user-management)
+    ├── {PageName}.tsx
+    └── {PageName}.css
+\`\`\`
+
+showcase/ 또는 node_modules/ 안에 추가하지 않는다.
+
+---
+
+## 핵심 규칙
+
+1. **색상** — \`var(--sys-*)\` 사용, hex/rgb 금지
+2. **폰트/반경** — \`var(--ref-font-size-*)\`, \`var(--radius-*)\` 사용
+3. **컨텐츠 영역 패딩** — 반드시 \`var(--spacing-48)\` 사용
+4. **HTML 인터랙티브 요소 금지** — \`<button>\` \`<input>\` \`<select>\` 대신 IGT 컴포넌트
+5. **인라인 스타일 금지** — \`style={{...}}\` 사용 금지. 레이아웃은 페이지 전용 .css에 클래스 추가
+6. **섹션 구분** — \`box-shadow\` 금지. \`background: var(--color-background-surface)\` + \`border: 1px solid var(--color-border-default)\` 사용
+7. **상태** — 텍스트 직접 출력 금지, \`Badge\` 또는 \`Label\` 사용
+
+## 자가 점검 (구현 완료 후)
+
+- [ ] \`style={{...}}\` 인라인 스타일 사용
+- [ ] hex/rgb 색상 직접 사용
+- [ ] \`<button>\` \`<input>\` \`<select>\` 등 HTML 인터랙티브 요소 직접 사용
+- [ ] ai-guide 읽지 않고 props 추측해서 사용
+- [ ] 컨텐츠 영역 패딩을 px 직접 지정 (\`var(--spacing-48)\` 강제)
+- [ ] 섹션 분리에 \`box-shadow\` 사용
+- [ ] showcase/ 또는 node_modules/ 안에 파일 추가
+`
+  writeFileSync(skillPath, skillContent, 'utf8')
+  console.log(`[IGT DS] ✓ backoffice-dev.md created at ${skillPath}`)
+}

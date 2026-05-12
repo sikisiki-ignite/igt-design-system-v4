@@ -104,23 +104,14 @@ prototypes/
 스펙의 각 UI 요소를 위 매핑 테이블에서 컴포넌트로 변환한다.
 매핑 테이블에 없는 요소가 있으면 **구현 불가 Gap**으로 분류하고 사용자에게 먼저 보고한다.
 
-### Step 2 — catalog 파일 읽기 (필수)
-확정한 컴포넌트 목록에서 관련 catalog 파일을 **모두** 읽는다.
+### Step 2 — ai-guide 문서 읽기 (필수)
+확정한 컴포넌트마다 ai-guide 문서를 읽는다.
 읽지 않은 컴포넌트는 사용하지 않는다.
 
-```
-사용 컴포넌트 → 읽어야 할 catalog
-─────────────────────────────────────────
-Input, Select, Autocomplete, DatePicker        →  catalog-inputs.md
-Button, IconButton, ButtonGroup              →  catalog-buttons.md
-Table, Searchbox, Pagination, Skeleton       →  catalog-table.md
-AppLayout, PageHeader, KpiCard, Card, Row    →  catalog-layout.md
-SideNavigation, TopNavigation, Tab, Pagination →  catalog-nav.md
-Badge, Label, Icon, DataList, StateView      →  catalog-display.md
-Checkbox, Select(multiple), FilterChip       →  catalog-selection.md
-ActionChip, InputChip, MetaChip, Tag         →  catalog-chips.md
-Modal, Drawer, Toast, Tooltip                →  catalog-overlay.md
-```
+**경로**: `IGTdesignsystem-v4/src/ai-guide/components/{ComponentName}.md`
+
+MCP가 활성화된 환경에서는 `mcp__igt-design-system__get_component` 우선 사용.
+MCP가 없으면 위 경로에서 직접 읽는다.
 
 ### Step 3 — 컴포넌트 한계 확인
 아래 한계 목록을 확인하고, 스펙이 한계를 초과하면 **구현 전에 사용자에게 보고**한다.

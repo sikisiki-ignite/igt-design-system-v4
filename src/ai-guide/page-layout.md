@@ -169,20 +169,41 @@ LNB + TopNavigation 이후의 **컨텐츠 영역(contents frame)은 사방 48px 
   gap: var(--spacing-16);
 }
 
-.filter-label {
+.filter-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-14); /* Figma 6170:2288 Dropdown Group Container itemSpacing=14 */
+}
+
+.filter-row {
+  display: flex;
+  align-items: flex-start; /* paddingTop:11로 수직 정렬 처리 */
+  gap: var(--spacing-8);   /* Figma: cont.itemSpacing=8 */
+}
+
+.filter-row-label {
+  width: 140px;            /* Figma: label frame width=140 */
   flex-shrink: 0;
-  width: 100px;
-  padding-top: var(--spacing-4);
-  font-weight: 600;
-  color: var(--color-text-secondary);
+  padding-top: 11px;       /* Figma: label paddingTop=11 — 모든 행 동일, 40px 인풋과 수직 정렬 */
+  /* Figma text node (6170:2293) 실측: fontSize=15, fontWeight=600, lineHeight=18 */
+  /* → --semantic-label-15-semibold */
+  font-family: var(--semantic-label-15-semibold-fontFamily);
+  font-size: var(--semantic-label-15-semibold-fontSize);
+  line-height: var(--semantic-label-15-semibold-lineHeight);
+  font-weight: var(--semantic-label-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-label-15-semibold-letterSpacing);
+  color: var(--sys-content-neutral-default); /* Figma: VariableID:3:3 = rgba(0,12,30,0.80) */
+}
+
+.filter-row-control {
+  flex: 1;
+  min-width: 0;
 }
 
 .filter-actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;   /* Figma: ButtonGroup justifyContent=flex-end */
   gap: var(--spacing-8);
-  padding-top: var(--spacing-4);
-  border-top: 1px solid var(--sys-border-neutral-subtle);
 }
 ```
 
@@ -260,6 +281,13 @@ IGT `Table` 컴포넌트는 내부적으로 `overflow-x: auto`를 처리한다. 
 ## NOT in design (피해야 할 패턴)
 
 ```css
+/* ❌ 수평 필터 행 라벨에 label-14-semibold 사용 */
+/* label-14-semibold(weight:600)는 인풋 위 필드 라벨 전용 */
+/* 수평 행 라벨은 body-14-regular(weight:400) 사용 */
+.filter-row-label {
+  font-family: var(--semantic-label-14-semibold-fontFamily); /* ← 금지 */
+}
+
 /* ❌ 테이블 wrapper에 외곽 border/radius 추가 */
 .table-scroll-wrapper {
   border: 1px solid var(--sys-border-neutral-subtle);

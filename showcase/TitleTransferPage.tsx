@@ -7,11 +7,13 @@ import { Label } from '../src/components/Label/Label'
 import { TextField } from '../src/components/TextField/TextField'
 import { Select } from '../src/components/Select/Select'
 import { Pagination } from '../src/components/Pagination/Pagination'
-import { ChoiceChip, ChipGroup } from '../src/components/Chip/Chip'
+import { ChoiceChip, ChipGroup, InputChip } from '../src/components/Chip/Chip'
 import { ButtonGroup } from '../src/components/ButtonGroup/ButtonGroup'
 import { Divider } from '../src/components/Divider/Divider'
 import { Icon } from '../src/components/Icon/Icon'
 import { DatePicker } from '../src/components/DatePicker/DatePicker'
+import { RadioBox } from '../src/components/RadioBox/RadioBox'
+import { Checkbox } from '../src/components/Checkbox/Checkbox'
 import { SideNavigation } from '../src/components/SideNavigation/SideNavigation'
 import type { SideNavItemData } from '../src/components/SideNavigation/SideNavigation'
 import { Navigation, NavItem } from '../src/components/Navigation/Navigation'
@@ -58,16 +60,37 @@ const STATUS_COLOR: Record<Exclude<TransferStatus, '전체'>, 'blue' | 'yellow' 
   반려: 'red',
 }
 
-const TRANSFER_TYPE_OPTIONS = [
-  { value: '명의이전', label: '명의이전' },
-  { value: '명의이전취소', label: '명의이전취소' },
-  { value: '임시번호판', label: '임시번호판' },
+const SEARCH_TYPE_OPTIONS = [
+  { value: 'dealerNo', label: 'Dealer No.' },
+  { value: 'vehicleNo', label: 'Vehicle No.' },
+  { value: 'name', label: 'Name' },
 ]
 
-const DEALER_GROUP_OPTIONS = [
+const BUSINESS_CHIPS = ['아이템1', '아이템2', '아이템3', '아이템4']
+
+const STATUS_1_OPTIONS = [
+  { value: 'pending', label: '접수' },
+  { value: 'processing', label: '처리중' },
+  { value: 'complete', label: '완료' },
+  { value: 'rejected', label: '반려' },
+]
+
+const STATUS_2_OPTIONS = [
+  { value: 'transfer', label: '명의이전' },
+  { value: 'cancel', label: '명의이전취소' },
+  { value: 'temp', label: '임시번호판' },
+]
+
+const STATUS_3_OPTIONS = [
   { value: 'a', label: 'A 그룹' },
   { value: 'b', label: 'B 그룹' },
   { value: 'c', label: 'C 그룹' },
+]
+
+const DATE_TYPE_OPTIONS = [
+  { value: 'updated', label: 'Updated date' },
+  { value: 'requested', label: 'Requested date' },
+  { value: 'processed', label: 'Processed date' },
 ]
 
 const NAV_ITEMS: SideNavItemData[] = [
@@ -85,16 +108,16 @@ const NAV_ITEMS: SideNavItemData[] = [
 const PAGE_SIZES = [10, 20, 50]
 
 export function TitleTransferPage() {
-  const [dealerNo, setDealerNo] = useState('')
-  const [statusFilter, setStatusFilter] = useState<TransferStatus>('전체')
-  const [vehicleNo, setVehicleNo] = useState('')
-  const [transferType, setTransferType] = useState('')
-  const [requestDateFrom, setRequestDateFrom] = useState('')
-  const [requestDateTo, setRequestDateTo] = useState('')
-  const [processDateFrom, setProcessDateFrom] = useState('')
-  const [processDateTo, setProcessDateTo] = useState('')
-  const [dealerGroup, setDealerGroup] = useState('')
-  const [assignee, setAssignee] = useState('')
+  const [searchType, setSearchType] = useState('dealerNo')
+  const [searchValue, setSearchValue] = useState('')
+  const [businessEnding, setBusinessEnding] = useState('아이템1')
+  const [status1, setStatus1] = useState('')
+  const [status2, setStatus2] = useState('')
+  const [selectedGroups, setSelectedGroups] = useState<string[]>([])
+  const [setting, setSetting] = useState<'all' | 'on' | 'off'>('all')
+  const [dateType, setDateType] = useState('updated')
+  const [dateFrom, setDateFrom] = useState('')
+  const [dateTo, setDateTo] = useState('')
 
   const [appliedFilter, setAppliedFilter] = useState({
     status: '전체' as TransferStatus,
@@ -105,6 +128,8 @@ export function TitleTransferPage() {
   const [pageSize, setPageSize] = useState(20)
   const [pageSizeOpen, setPageSizeOpen] = useState(false)
   const pageSizeRef = useRef<HTMLDivElement>(null)
+  const [groupsOpen, setGroupsOpen] = useState(false)
+  const groupsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!pageSizeOpen) return
@@ -116,6 +141,17 @@ export function TitleTransferPage() {
     document.addEventListener('mousedown', handler)
     return () => document.removeEventListener('mousedown', handler)
   }, [pageSizeOpen])
+
+  useEffect(() => {
+    if (!groupsOpen) return
+    const handler = (e: MouseEvent) => {
+      if (groupsRef.current && !groupsRef.current.contains(e.target as Node)) {
+        setGroupsOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [groupsOpen])
 
   const filteredData = useMemo(() => {
     return MOCK_DATA.filter(row => {
@@ -151,23 +187,29 @@ export function TitleTransferPage() {
     { key: 'processedAt', header: '처리일시', width: 140 },
   ]
 
+  const handleGroupToggle = (value: string) => {
+    setSelectedGroups(prev =>
+      prev.includes(value) ? prev.filter(v => v !== value) : [...prev, value]
+    )
+  }
+
   const handleSearch = () => {
-    setAppliedFilter({ status: statusFilter, vehicleNo })
+    setAppliedFilter({ status: '전체', vehicleNo: searchValue })
     setPage(1)
     setSelectedCount(0)
   }
 
   const handleReset = () => {
-    setDealerNo('')
-    setStatusFilter('전체')
-    setVehicleNo('')
-    setTransferType('')
-    setRequestDateFrom('')
-    setRequestDateTo('')
-    setProcessDateFrom('')
-    setProcessDateTo('')
-    setDealerGroup('')
-    setAssignee('')
+    setSearchType('dealerNo')
+    setSearchValue('')
+    setBusinessEnding('아이템1')
+    setStatus1('')
+    setStatus2('')
+    setSelectedGroups([])
+    setSetting('all')
+    setDateType('updated')
+    setDateFrom('')
+    setDateTo('')
     setAppliedFilter({ status: '전체', vehicleNo: '' })
     setPage(1)
     setSelectedCount(0)
@@ -208,121 +250,191 @@ export function TitleTransferPage() {
 
         <div className="ttp-content">
 
-          {/* Title section */}
+          {/* Title section — Figma: title + primary 추가 버튼 */}
           <div className="ttp-title-section">
             <h1 className="ttp-page-title">명의이전 신청 관리</h1>
+            <Button tone="primary" appearance="fill" emphasis="strong" size="md" leadingIcon={<Icon name="plusOutline2dp" size={16} />}>추가</Button>
           </div>
 
-          {/* Filter Section — Figma: Searchbox frame 6134:114625 */}
+          {/* Filter Section — Figma: node 6135:126884 updated */}
           <div className="ttp-section">
-            <div className="ttp-filter-grid">
+            <div className="ttp-filter-rows">
 
-              {/* Row 1: 딜러 번호 | 처리 상태 */}
-              <div className="ttp-filter-grid-row">
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">딜러 번호</span>
+              {/* Search: Select(type) + TextField(value) */}
+              <div className="ttp-filter-row">
+                <span className="ttp-filter-row-label">Search</span>
+                <div className="ttp-filter-row-control ttp-search-composite">
+                  <div className="ttp-search-select">
+                    <Select
+                      options={SEARCH_TYPE_OPTIONS}
+                      value={searchType}
+                      onChange={setSearchType}
+                      width="fill"
+                    />
+                  </div>
                   <TextField
                     size="md"
-                    placeholder="딜러 번호 입력"
-                    value={dealerNo}
-                    onChange={e => setDealerNo(e.target.value)}
+                    placeholder="이름"
+                    value={searchValue}
+                    onChange={e => setSearchValue(e.target.value)}
                   />
                 </div>
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">처리 상태</span>
+              </div>
+
+              {/* Business ending in: ChoiceChip 그룹 */}
+              <div className="ttp-filter-row">
+                <span className="ttp-filter-row-label">Business ending in</span>
+                <div className="ttp-filter-row-control">
                   <ChipGroup layout="wrap" size="md">
-                    {STATUS_FILTERS.map(status => (
+                    {BUSINESS_CHIPS.map(item => (
                       <ChoiceChip
-                        key={status}
-                        label={status}
+                        key={item}
+                        label={item}
                         size="md"
-                        selected={statusFilter === status}
-                        onClick={() => setStatusFilter(status)}
+                        selected={businessEnding === item}
+                        onClick={() => setBusinessEnding(businessEnding === item ? '' : item)}
                       />
                     ))}
                   </ChipGroup>
                 </div>
               </div>
 
-              {/* Row 2: 차량 번호 | 신청 유형 */}
-              <div className="ttp-filter-grid-row">
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">차량 번호</span>
-                  <TextField
-                    size="md"
-                    placeholder="차량 번호 입력"
-                    value={vehicleNo}
-                    onChange={e => setVehicleNo(e.target.value)}
-                  />
-                </div>
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">신청 유형</span>
+              {/* Status 1 */}
+              <div className="ttp-filter-row">
+                <span className="ttp-filter-row-label">Status</span>
+                <div className="ttp-filter-row-control">
                   <Select
-                    options={TRANSFER_TYPE_OPTIONS}
-                    placeholder="전체"
+                    options={STATUS_1_OPTIONS}
+                    placeholder="Select"
+                    value={status1}
+                    onChange={setStatus1}
                     width="fill"
-                    value={transferType}
-                    onChange={setTransferType}
                   />
                 </div>
               </div>
 
-              {/* Row 3: 신청일 | 처리일 — Figma: DatePicker variation=range */}
-              <div className="ttp-filter-grid-row">
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">신청일</span>
-                  <DatePicker
-                    variation="range"
-                    size="md"
-                    value={requestDateFrom}
-                    endValue={requestDateTo}
-                    onRangeChange={(s, e) => { setRequestDateFrom(s); setRequestDateTo(e) }}
-                    placeholder="시작일"
-                    endPlaceholder="종료일"
+              {/* Status 2 */}
+              <div className="ttp-filter-row">
+                <span className="ttp-filter-row-label">Status</span>
+                <div className="ttp-filter-row-control">
+                  <Select
+                    options={STATUS_2_OPTIONS}
+                    placeholder="Select"
+                    value={status2}
+                    onChange={setStatus2}
+                    width="fill"
                   />
                 </div>
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">처리일</span>
+              </div>
+
+              {/* Status 3 — 인라인 멀티셀렉트: Button(트리거) + Checkbox 드롭다운 */}
+              <div className="ttp-filter-row">
+                <span className="ttp-filter-row-label">Status</span>
+                <div className="ttp-filter-row-control">
+                  <div className="ttp-multiselect-wrapper" ref={groupsRef}>
+                    <div className="ttp-multiselect-trigger-area">
+                      <button
+                        type="button"
+                        className="select"
+                        data-appearance="outline"
+                        data-size="md"
+                        data-width="fill"
+                        onClick={() => setGroupsOpen(v => !v)}
+                      >
+                        <span className="select__value">
+                          <span data-placeholder="">선택해주세요.</span>
+                        </span>
+                        <span className="select__icon">
+                          <Icon name="chevronDownOutline2dp" size={16} aria-hidden />
+                        </span>
+                      </button>
+                      {groupsOpen && (
+                        <div className="ttp-multiselect-panel">
+                          {STATUS_3_OPTIONS.map(opt => (
+                            <label key={opt.value} className="ttp-multiselect-item">
+                              <Checkbox
+                                checked={selectedGroups.includes(opt.value)}
+                                size="md"
+                                onChange={() => handleGroupToggle(opt.value)}
+                              />
+                              <span className="ttp-multiselect-item-label">{opt.label}</span>
+                            </label>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    {selectedGroups.length > 0 && (
+                      <div className="ttp-multiselect-chips">
+                        {selectedGroups.map(val => {
+                          const opt = STATUS_3_OPTIONS.find(o => o.value === val)
+                          if (!opt) return null
+                          return (
+                            <InputChip
+                              key={val}
+                              label={opt.label}
+                              size="md"
+                              onRemove={() => handleGroupToggle(val)}
+                            />
+                          )
+                        })}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Setting: RadioBox (All / ON / OFF) */}
+              <div className="ttp-filter-row">
+                <span className="ttp-filter-row-label">Setting</span>
+                <div className="ttp-filter-row-control">
+                  <div className="ttp-radio-group">
+                    {(['all', 'on', 'off'] as const).map(val => (
+                      <label key={val} className="ttp-radio-item">
+                        <RadioBox
+                          checked={setting === val}
+                          onChange={() => setSetting(val)}
+                          name="setting"
+                          size="md"
+                        />
+                        <span className="ttp-radio-item-label">
+                          {val === 'all' ? 'All' : val === 'on' ? 'ON' : 'OFF'}
+                        </span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Status + Date: Select(날짜 유형) + DatePicker range */}
+              <div className="ttp-filter-row">
+                <span className="ttp-filter-row-label">Status</span>
+                <div className="ttp-filter-row-control ttp-date-composite">
+                  <div className="ttp-date-select">
+                    <Select
+                      options={DATE_TYPE_OPTIONS}
+                      value={dateType}
+                      onChange={setDateType}
+                      width="fill"
+                    />
+                  </div>
                   <DatePicker
                     variation="range"
                     size="md"
-                    value={processDateFrom}
-                    endValue={processDateTo}
-                    onRangeChange={(s, e) => { setProcessDateFrom(s); setProcessDateTo(e) }}
+                    value={dateFrom}
+                    endValue={dateTo}
+                    onRangeChange={(s, e) => { setDateFrom(s); setDateTo(e) }}
                     placeholder="시작일"
                     endPlaceholder="종료일"
                   />
                 </div>
               </div>
 
-              {/* Row 4: 딜러 그룹 | 담당자 */}
-              <div className="ttp-filter-grid-row">
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">딜러 그룹</span>
-                  <Select
-                    options={DEALER_GROUP_OPTIONS}
-                    placeholder="전체"
-                    width="fill"
-                    value={dealerGroup}
-                    onChange={setDealerGroup}
-                  />
-                </div>
-                <div className="ttp-filter-field">
-                  <span className="ttp-field-label">담당자</span>
-                  <TextField
-                    size="md"
-                    placeholder="담당자 이름"
-                    value={assignee}
-                    onChange={e => setAssignee(e.target.value)}
-                  />
-                </div>
-              </div>
             </div>
 
-            {/* Divider — Figma: Tone: neutral, Emphasis: default */}
+            {/* Divider */}
             <Divider tone="neutral" emphasis="default" />
 
-            {/* Button group — Figma: justifyContent: center, 2 buttons only */}
+            {/* Button group — Figma: justifyContent: flex-end */}
             <div className="ttp-button-group">
               <ButtonGroup size="md" direction="horizontal" distribution="content">
                 <Button
@@ -337,6 +449,7 @@ export function TitleTransferPage() {
                   tone="secondary"
                   appearance="fill"
                   emphasis="strong"
+                  leadingIcon={<Icon name="searchOutline2dp" size={16} />}
                   onClick={handleSearch}
                 >
                   검색
@@ -356,11 +469,6 @@ export function TitleTransferPage() {
                 <span className="ttp-count-selected">{selectedCount}개 선택</span>
               </div>
               <div className="ttp-table-actions">
-                <ButtonGroup size="md" direction="horizontal" distribution="content">
-                  <Button tone="secondary" appearance="fill" emphasis="weak">일괄 반려</Button>
-                  <Button tone="secondary" appearance="fill" emphasis="weak">일괄 취소</Button>
-                  <Button tone="primary" appearance="fill" emphasis="strong">선택 처리</Button>
-                </ButtonGroup>
                 <div style={{ position: 'relative' }} ref={pageSizeRef}>
                   <Button
                     tone="secondary"
