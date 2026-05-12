@@ -99,6 +99,12 @@ export function LoginPage() {
 }
 ```
 
+### 정적 HTML로 작성할 때 (React 없이)
+
+React 없이 단일 HTML 파일로 작성해야 하면, `dist/html-components.html`을 참조한다. 25개 다중 요소 컴포넌트(`Checkbox`, `Switch`, `Select`, `Dialog`, `Drawer`, `Pagination`, `Table` 등)의 **정확한 DOM 구조**가 build 시 자동 생성되어 복사 가능한 형태로 들어 있다.
+
+다중 요소 컴포넌트를 native HTML로 자체 작성하는 것은 금지 — `dist/html-components.html`의 스니펫을 그대로 복사하라.
+
 ---
 
 ## 레이아웃 규칙

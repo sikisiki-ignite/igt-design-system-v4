@@ -31,9 +31,10 @@ IGT Design System v4가 \`${pkgRef}/\`에 설치되어 있습니다.
 ## 중요: 작업 시작 전 확인 순서
 
 1. 이 파일 숙지
-2. 상세 가이드 확인: \`./${pkgRef}/CLAUDE.md\`
-3. 레이아웃 패턴 확인: \`./${pkgRef}/src/ai-guide/page-layout.md\`
-4. 실제 사용 예시: \`./${pkgRef}/playground.html\`
+2. **정확한 컴포넌트 HTML 스니펫**: \`./${pkgRef}/dist/html-components.html\` ← AI가 정적 HTML 작성 시 가장 먼저 볼 단일 소스
+3. 상세 가이드 확인: \`./${pkgRef}/CLAUDE.md\`
+4. 레이아웃 패턴 확인: \`./${pkgRef}/src/ai-guide/page-layout.md\`
+5. 테마 시연: \`./${pkgRef}/playground.html\`
 
 ---
 
@@ -82,7 +83,10 @@ IGT는 컴포넌트마다 CSS 클래스를 미리 정의해 두었다.
 | Card | \`.card\` | \`<div class="card">\` |
 | TextField | \`.tf\` | \`<div class="tf">\` |
 
-클래스명이 불확실하면 \`./${pkgRef}/src/components/{이름}/{이름}.css\` 파일을 직접 열어 첫 번째 클래스 이름을 확인한다.
+**컴포넌트 HTML 구조가 불확실할 때 가장 빠른 방법:**
+\`./${pkgRef}/dist/html-components.html\` 파일에서 해당 컴포넌트 섹션을 찾아 스니펫을 그대로 복사한다. 25개 컴포넌트의 모든 variant가 정확한 DOM 구조로 들어 있다.
+
+특히 다중 요소 컴포넌트 (\`Checkbox\`, \`Switch\`, \`Select\`, \`Dialog\`, \`Drawer\`, \`Pagination\`, \`Table\` 등)는 **절대 native HTML로 자체 작성하지 말고** 반드시 \`dist/html-components.html\`의 스니펫을 복사한다. 자체 \`<input type="checkbox">\` + 인라인 스타일로 작성하면 IGT 시스템 작동 안 함.
 
 ❌ **절대 금지 — 임의 발명 클래스:**
 \`\`\`html
