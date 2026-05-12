@@ -27,7 +27,7 @@
   "scripts": {
     "prepare": "npm run build",
     "postinstall": "node scripts/postinstall.mjs",
-    "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist && node scripts/build-css.mjs",
+    "build": "vite build && tsc --emitDeclarationOnly --declaration --outDir dist && node scripts/build-css.mjs && node scripts/generate-html-snippets.mjs",
     "dev": "vite build --watch",
     "showcase": "vite --config vite.config.showcase.ts",
     "build:showcase": "vite build --config vite.config.showcase.ts",

@@ -50,7 +50,7 @@ server.tool(
 // ── Tool 2: get_component ────────────────────────────
 server.tool(
   'get_component',
-  'Get detailed props, description, and usage example for a specific IGT Design System component.',
+  'Get full component documentation: props, usage examples, CSS classes, data attributes, and NOT-in-Figma warnings for a specific IGT Design System component.',
   {
     name: z.string().describe('Component name (e.g. "Button", "TextField", "Dialog")'),
   },
@@ -69,14 +69,24 @@ server.tool(
       }
     }
 
-    const propsLines = Object.entries(comp.props || {})
-      .map(([k, v]) => `  ${k}: ${v}`)
-      .join('\n')
-
     const specPath = join(__dir, '..', 'src', 'components', comp.name, 'figma-spec.json')
     const figmaGateWarning = existsSync(specPath)
       ? ''
-      : `\n⚠️ FIGMA GATE: figma-spec.json not found for ${comp.name}.\nThis data is CODE-DERIVED, NOT Figma-verified. Do not use as ground truth for props.\nRun Step 0: fetch mcp__figma__get_figma_data and create src/components/${comp.name}/figma-spec.json before making any changes.\n\n---\n`
+      : `⚠️ FIGMA GATE: figma-spec.json not found for ${comp.name}.\nThis data is CODE-DERIVED, NOT Figma-verified. Do not use as ground truth for props.\nRun Step 0: fetch mcp__figma__get_figma_data and create src/components/${comp.name}/figma-spec.json before making any changes.\n\n---\n\n`
+
+    const guidePath = join(__dir, '..', 'src', 'ai-guide', 'components', `${comp.name}.md`)
+    if (existsSync(guidePath)) {
+      const guideContent = readFileSync(guidePath, 'utf8')
+      const text = figmaGateWarning
+        + `## Import\n\`\`\`ts\n${comp.import}\n\`\`\`\n\n`
+        + guideContent
+      return { content: [{ type: 'text', text }] }
+    }
+
+    // Fallback: registry-only (ai-guide doc not yet created)
+    const propsLines = Object.entries(comp.props || {})
+      .map(([k, v]) => `  ${k}: ${v}`)
+      .join('\n')
 
     const text = [
       figmaGateWarning,
