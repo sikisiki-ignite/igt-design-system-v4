@@ -35,48 +35,56 @@ export function SideNavigationShowcase() {
 
       <h3>Size: md / Tone: neutral</h3>
       <div style={{ display: 'flex', gap: 24 }}>
-        <SideNavigation
-          header="메인 메뉴"
-          items={MAIN_ITEMS}
-          activeId={active1}
-          onSelect={setActive1}
-          size="md"
-          tone="neutral"
-        />
+        <div style={{ width: 220 }}>
+          <SideNavigation
+            header="메인 메뉴"
+            items={MAIN_ITEMS}
+            activeId={active1}
+            onSelect={setActive1}
+            size="md"
+            tone="neutral"
+          />
+        </div>
       </div>
 
       <h3>Size: sm / Tone: accent</h3>
       <div style={{ display: 'flex', gap: 24 }}>
-        <SideNavigation
-          header="메인 메뉴"
-          items={MAIN_ITEMS}
-          activeId={active2}
-          onSelect={setActive2}
-          size="sm"
-          tone="accent"
-        />
+        <div style={{ width: 220 }}>
+          <SideNavigation
+            header="메인 메뉴"
+            items={MAIN_ITEMS}
+            activeId={active2}
+            onSelect={setActive2}
+            size="sm"
+            tone="accent"
+          />
+        </div>
       </div>
 
       <h3>Nested items (depth 2)</h3>
       <div style={{ display: 'flex', gap: 24 }}>
-        <SideNavigation
-          header="분석 메뉴"
-          items={NESTED_ITEMS}
-          activeId={active3}
-          onSelect={setActive3}
-          size="md"
-          tone="neutral"
-        />
+        <div style={{ width: 220 }}>
+          <SideNavigation
+            header="분석 메뉴"
+            items={NESTED_ITEMS}
+            activeId={active3}
+            onSelect={setActive3}
+            size="md"
+            tone="neutral"
+          />
+        </div>
       </div>
 
       <h3>No header</h3>
       <div style={{ display: 'flex', gap: 24 }}>
-        <SideNavigation
-          items={MAIN_ITEMS.slice(0, 3)}
-          activeId="users"
-          size="md"
-          tone="neutral"
-        />
+        <div style={{ width: 220 }}>
+          <SideNavigation
+            items={MAIN_ITEMS.slice(0, 3)}
+            activeId="users"
+            size="md"
+            tone="neutral"
+          />
+        </div>
       </div>
     </section>
   )

@@ -18,7 +18,7 @@
   width: 250px;
   flex-shrink: 0;
   background: var(--sys-background-subtle);
-  padding: var(--spacing-24);
+  padding: var(--spacing-24) var(--spacing-12);
 }
 
 /* ── Nav logo placeholder ───────────────────────── */

@@ -6,6 +6,8 @@
 
 백오피스 페이지는 **border 기반 계층**을 사용한다. elevation(box-shadow)으로 섹션을 분리하지 않는다.
 
+백오피스 페이지의 `data-size` 기본값은 **`compact`**다. 데이터 밀도가 높은 어드민 환경 기준이며, `comfortable`은 서비스/마케팅 페이지용이다.
+
 ---
 
 ## 페이지 구조 패턴
@@ -44,7 +46,7 @@ LAYOUT (vertical, min-height: 100vh)
   width: 250px;
   flex-shrink: 0;
   background: var(--sys-background-subtle);
-  padding: var(--spacing-24);
+  padding: var(--spacing-24) var(--spacing-12);
 }
 ```
 

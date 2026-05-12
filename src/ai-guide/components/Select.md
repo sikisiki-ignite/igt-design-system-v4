@@ -59,6 +59,33 @@ const [val, setVal] = useState('')
 <Select options={options} size="sm" appearance="plain" />
 ```
 
+## Radix UI 제약 사항
+
+### `value=""` 빈 문자열 금지
+
+Radix UI Select는 `value=""`(빈 문자열)을 옵션 value로 허용하지 않습니다. 빈 문자열을 사용하면 컴포넌트가 충돌하며 흰 화면이 발생합니다.
+
+```tsx
+// ❌ 금지 — 흰 화면 발생
+const options = [
+  { value: '', label: '전체' },
+  { value: 'a', label: 'Option A' },
+]
+
+// ✅ 올바른 방법 — 의미 있는 sentinel 값 사용
+const options = [
+  { value: 'all', label: '전체' },
+  { value: 'a', label: 'Option A' },
+]
+
+// 필터 로직도 sentinel 값에 맞게 작성
+const filtered = selected === 'all' ? allData : allData.filter(d => d.key === selected)
+```
+
+**규칙**: "전체", "없음", "미선택" 의미의 옵션은 반드시 `'all'`, `'none'`, `'unset'` 등 비어 있지 않은 문자열을 사용한다.
+
+---
+
 ## Appearance Variants
 
 | appearance | Use case |
