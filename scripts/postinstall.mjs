@@ -41,47 +41,75 @@ IGT Design System v4가 \`${pkgRef}/\`에 설치되어 있습니다.
 
 사용자가 "HTML 파일로 화면 만들어줘"처럼 단일 HTML을 요청할 때 적용합니다.
 
-### 필수: CSS 토큰 연결
+### Step 1. HTML 위치 결정 (경로 계산 필수)
 
-\`<style>\` 안에 CSS 변수를 직접 정의하지 않습니다.
-반드시 아래 \`<link>\` 태그로 실제 토큰 파일을 연결합니다.
+HTML 파일은 **반드시 프로젝트 루트**에 만든다.
+서브 디렉토리(src/pages/ 등)에 만들면 CSS 경로가 깨진다.
+
+올바른 위치: \`{프로젝트 루트}/화면명.html\`
+금지 위치: \`src/pages/화면명/화면명.html\`
+
+### Step 2. CSS 1줄 연결 (필수)
+
+\`<style>\` 안에 CSS 변수를 직접 정의하지 않는다.
+**반드시 아래 1줄 \`<link>\`로 연결한다.** 토큰 + 모든 컴포넌트 CSS가 포함되어 있다.
 
 \`\`\`html
 <!DOCTYPE html>
 <html lang="ko" data-brand="default" data-theme="light" data-radius="default" data-size="comfortable">
 <head>
-  <link rel="stylesheet" href="./${pkgRef}/src/fonts/fonts.css">
-  <link rel="stylesheet" href="./${pkgRef}/src/tokens/primitives.css">
-  <link rel="stylesheet" href="./${pkgRef}/src/tokens/semantic.css">
-  <link rel="stylesheet" href="./${pkgRef}/src/tokens/themes.css">
-  <link rel="stylesheet" href="./${pkgRef}/src/tokens/typography.css">
-  <link rel="stylesheet" href="./${pkgRef}/src/tokens/effects.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./${pkgRef}/dist/igt.css">
   <style>
-    /* 여기서는 --sys-* 토큰만 사용. 새 CSS 변수 생성 금지. */
+    /* 레이아웃 전용 — 색상/폰트/반경은 var(--sys-*) 토큰 사용 */
   </style>
 </head>
 \`\`\`
 
-### 토큰 사용 규칙
+### Step 3. IGT 클래스명 사용 (핵심 규칙)
+
+IGT는 컴포넌트마다 CSS 클래스를 미리 정의해 두었다.
+**임의 클래스명을 만들지 않는다.** 반드시 아래 이름을 그대로 사용한다.
+
+| 컴포넌트 | HTML 클래스 | 예시 |
+|---------|-----------|------|
+| Button | \`.btn\` | \`<button class="btn" data-tone="primary" data-appearance="fill">\` |
+| IconButton | \`.ibtn\` | \`<button class="ibtn" data-tone="neutral" data-appearance="outline">\` |
+| Badge | \`.badge\` | \`<span class="badge" data-tone="urgent" data-size="md">\` |
+| Chip (선택형) | \`.chip chip--choice\` | \`<button class="chip chip--choice" data-selected>\` |
+| Chip (필터형) | \`.chip chip--filter\` | \`<button class="chip chip--filter">\` |
+| Table | \`.table-wrapper > .table\` | \`<div class="table-wrapper"><table class="table">\` |
+| Card | \`.card\` | \`<div class="card">\` |
+| TextField | \`.text-field\` | \`<div class="text-field">\` |
+
+클래스명이 불확실하면 \`./${pkgRef}/src/components/{이름}/{이름}.css\` 파일을 직접 열어 첫 번째 클래스 이름을 확인한다.
+
+❌ **절대 금지 — 임의 발명 클래스:**
+\`\`\`html
+<!-- ❌ .ds-btn, .my-button, .igt-btn 등 IGT에 없는 클래스 -->
+<button class="ds-btn ds-btn--primary">검색</button>
+
+<!-- ✅ IGT 클래스 그대로 사용 -->
+<button class="btn" data-tone="primary" data-appearance="fill">검색</button>
+\`\`\`
+
+### 토큰 사용 규칙 (레이아웃 CSS 작성 시)
 
 | 용도 | 사용할 토큰 | 금지 |
 |---|---|---|
 | 배경 (페이지) | \`var(--sys-background-subtle)\` | \`#f1f5f9\`, \`gray\` |
 | 배경 (섹션) | \`var(--sys-background-base)\` | \`#ffffff\`, \`white\` |
 | 구분선 | \`var(--sys-border-neutral-default)\` | \`#e2e8f0\` |
-| 구분선 (약한) | \`var(--sys-border-neutral-subtle)\` | |
 | 텍스트 (강조) | \`var(--sys-content-neutral-strong)\` | \`#0f172a\` |
 | 텍스트 (기본) | \`var(--sys-content-neutral-default)\` | \`#334155\` |
 | 텍스트 (보조) | \`var(--sys-content-neutral-muted)\` | \`#64748b\` |
 | 브랜드 색상 | \`var(--sys-container-brand-solid-default)\` | \`#3b5bdb\` |
 | 위험 색상 | \`var(--sys-container-status-danger-solid-default)\` | \`#ef4444\` |
 | 성공 색상 | \`var(--sys-container-status-success-solid-default)\` | \`#22c55e\` |
-| 경고 색상 | \`var(--sys-container-status-warning-solid-default)\` | \`#f97316\` |
 
 ### 페이지 레이아웃 (백오피스)
 
 \`\`\`css
-/* 페이지 배경 */
 .page { background: var(--sys-background-subtle); }
 
 /* 섹션 — border로 구분, box-shadow 금지 */
@@ -91,37 +119,18 @@ IGT Design System v4가 \`${pkgRef}/\`에 설치되어 있습니다.
   border-radius: var(--radius-md);
 }
 
-/* 컨텐츠 영역 패딩 */
 .page-content { padding: var(--spacing-48); }
-\`\`\`
-
-### HTML 파일에서 절대 하지 말아야 할 것
-
-\`\`\`css
-/* ❌ :root 안에 커스텀 변수 생성 */
-:root {
-  --color-surface: #ffffff;
-  --color-fg-default: #334155;
-}
-
-/* ❌ hex/rgb 하드코딩 */
-color: #334155;
-background: #f1f5f9;
-border-color: #e2e8f0;
-
-/* ❌ box-shadow로 섹션 구분 */
-.section { box-shadow: 0 2px 8px rgba(0,0,0,.1); }
 \`\`\`
 
 ---
 
 ## React / TypeScript 프로젝트 시
 
-자세한 가이드는 \`./${pkgRef}/CLAUDE.md\`를 참조합니다.
-요약:
-- \`import { Button } from 'igt-design-system-v4'\`
+\`import { Button } from 'igt-design-system-v4'\` — CSS 자동 주입됨, 별도 CSS import 불필요.
+
+- \`index.html\`의 \`<html>\` 태그에 루트 속성 추가 (아래 참고)
 - 커스텀 CSS, 인라인 스타일 금지
-- 컴포넌트 props는 MCP \`get_component\`로 확인
+- 컴포넌트 props는 MCP \`get_component\` 또는 \`./${pkgRef}/src/ai-guide/components/{이름}.md\` 확인
 
 ---
 

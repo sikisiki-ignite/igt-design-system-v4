@@ -1,4 +1,12 @@
 // IGT Design System v4 — Entry Point
+// Token CSS — must be imported so cssInjectedByJs bundles them into dist/index.js
+import './tokens/primitives.css'
+import './tokens/semantic.css'
+import './tokens/themes.css'
+import './tokens/typography.css'
+import './tokens/effects.css'
+import './tokens/component.css'
+
 export type { ThemeBrand, ThemeMode, ThemeRadius, ThemeSize, ThemeConfig } from './theme'
 export { applyTheme, THEME_PRESETS } from './theme'
 export { Button } from './components/Button/Button'
