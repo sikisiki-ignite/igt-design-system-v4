@@ -130,15 +130,24 @@
   flex-shrink: 0;
 }
 
-/* Date composite: Select(type) + DatePicker range */
+/* Date composite: Select(type) + DatePicker + preset chips — 가로 배치, 공간 부족 시 preset 그룹 전체가 줄바꿈 */
 .ttp-date-composite {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: var(--spacing-8);
 }
 
 .ttp-date-select {
   width: 160px;
+  flex-shrink: 0;
+}
+
+/* preset 칩 그룹 — 칩 내부 줄바꿈 없이 그룹 전체 단위로 이동 */
+.ttp-date-preset-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
   flex-shrink: 0;
 }
 
@@ -149,11 +158,12 @@
   gap: var(--spacing-8);
 }
 
-/* Setting RadioBox group */
+/* Setting RadioBox group — Figma: inline paddingTop/Bottom 8, gap 16 */
 .ttp-radio-group {
   display: flex;
   align-items: center;
-  gap: var(--spacing-24);
+  gap: var(--spacing-16);
+  padding: 8px 0;
 }
 
 .ttp-radio-item {
@@ -171,6 +181,32 @@
   font-weight: var(--semantic-body-15-semibold-fontWeight);
   letter-spacing: var(--semantic-body-15-semibold-letterSpacing);
   color: var(--sys-content-neutral-strong);
+}
+
+/* ── Checkbox multiselect (Business ending in 행) ────── */
+/* Figma: inline frame, horizontal, wrap, gap 8, paddingTop/Bottom 6 */
+
+.ttp-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+  padding: 6px 0;
+}
+
+.ttp-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  cursor: pointer;
+}
+
+.ttp-checkbox-item-label {
+  font-family: var(--semantic-body-15-semibold-fontFamily);
+  font-size: var(--semantic-body-15-semibold-fontSize);
+  line-height: var(--semantic-body-15-semibold-lineHeight);
+  font-weight: var(--semantic-body-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-15-semibold-letterSpacing);
+  color: var(--sys-content-neutral-default);
 }
 
 /* ── Button group — justifyContent: flex-end from Figma ── */
@@ -236,12 +272,19 @@
 }
 
 /* ── Table action buttons ───────────────────────── */
-/* Figma: Frame — horizontal, gap 16 */
+/* Figma: Container — horizontal, gap 16 (2 sub-groups) */
 
 .ttp-table-actions {
   display: flex;
   align-items: center;
   gap: var(--spacing-16);
+}
+
+/* Figma: Button container 1 / 2 — horizontal, gap 6 */
+.ttp-table-action-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
 }
 
 /* ── Table + Pagination 그룹 ─────────────────────── */

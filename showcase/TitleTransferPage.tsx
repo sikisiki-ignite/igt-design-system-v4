@@ -7,7 +7,7 @@ import { Label } from '../src/components/Label/Label'
 import { TextField } from '../src/components/TextField/TextField'
 import { Select } from '../src/components/Select/Select'
 import { Pagination } from '../src/components/Pagination/Pagination'
-import { ChoiceChip, ChipGroup, InputChip } from '../src/components/Chip/Chip'
+import { ChoiceChip, InputChip } from '../src/components/Chip/Chip'
 import { ButtonGroup } from '../src/components/ButtonGroup/ButtonGroup'
 import { Divider } from '../src/components/Divider/Divider'
 import { Icon } from '../src/components/Icon/Icon'
@@ -68,6 +68,13 @@ const SEARCH_TYPE_OPTIONS = [
 
 const BUSINESS_CHIPS = ['아이템1', '아이템2', '아이템3', '아이템4']
 
+const DATE_PRESETS = [
+  { value: 'today', label: '오늘' },
+  { value: '7d', label: '7일' },
+  { value: '1m', label: '1개월' },
+  { value: '6m', label: '6개월' },
+]
+
 const STATUS_1_OPTIONS = [
   { value: 'pending', label: '접수' },
   { value: 'processing', label: '처리중' },
@@ -110,7 +117,7 @@ const PAGE_SIZES = [10, 20, 50]
 export function TitleTransferPage() {
   const [searchType, setSearchType] = useState('dealerNo')
   const [searchValue, setSearchValue] = useState('')
-  const [businessEnding, setBusinessEnding] = useState('아이템1')
+  const [businessEndings, setBusinessEndings] = useState<string[]>([])
   const [status1, setStatus1] = useState('')
   const [status2, setStatus2] = useState('')
   const [selectedGroups, setSelectedGroups] = useState<string[]>([])
@@ -118,6 +125,7 @@ export function TitleTransferPage() {
   const [dateType, setDateType] = useState('updated')
   const [dateFrom, setDateFrom] = useState('')
   const [dateTo, setDateTo] = useState('')
+  const [datePreset, setDatePreset] = useState('')
 
   const [appliedFilter, setAppliedFilter] = useState({
     status: '전체' as TransferStatus,
@@ -193,6 +201,27 @@ export function TitleTransferPage() {
     )
   }
 
+  const handleBusinessToggle = (item: string) => {
+    setBusinessEndings(prev =>
+      prev.includes(item) ? prev.filter(v => v !== item) : [...prev, item]
+    )
+  }
+
+  const handleDatePreset = (value: string) => {
+    const next = value === datePreset ? '' : value
+    setDatePreset(next)
+    if (!next) return
+    const today = new Date()
+    const fmt = (d: Date) => d.toISOString().split('T')[0]
+    const end = fmt(today)
+    switch (next) {
+      case 'today': setDateFrom(end); setDateTo(end); break
+      case '7d': { const d = new Date(today); d.setDate(d.getDate() - 7); setDateFrom(fmt(d)); setDateTo(end); break }
+      case '1m': { const d = new Date(today); d.setMonth(d.getMonth() - 1); setDateFrom(fmt(d)); setDateTo(end); break }
+      case '6m': { const d = new Date(today); d.setMonth(d.getMonth() - 6); setDateFrom(fmt(d)); setDateTo(end); break }
+    }
+  }
+
   const handleSearch = () => {
     setAppliedFilter({ status: '전체', vehicleNo: searchValue })
     setPage(1)
@@ -202,7 +231,7 @@ export function TitleTransferPage() {
   const handleReset = () => {
     setSearchType('dealerNo')
     setSearchValue('')
-    setBusinessEnding('아이템1')
+    setBusinessEndings([])
     setStatus1('')
     setStatus2('')
     setSelectedGroups([])
@@ -210,6 +239,7 @@ export function TitleTransferPage() {
     setDateType('updated')
     setDateFrom('')
     setDateTo('')
+    setDatePreset('')
     setAppliedFilter({ status: '전체', vehicleNo: '' })
     setPage(1)
     setSelectedCount(0)
@@ -281,21 +311,22 @@ export function TitleTransferPage() {
                 </div>
               </div>
 
-              {/* Business ending in: ChoiceChip 그룹 */}
+              {/* Business ending in: Checkbox 멀티셀렉트 */}
               <div className="ttp-filter-row">
                 <span className="ttp-filter-row-label">Business ending in</span>
                 <div className="ttp-filter-row-control">
-                  <ChipGroup layout="wrap" size="md">
+                  <div className="ttp-checkbox-group">
                     {BUSINESS_CHIPS.map(item => (
-                      <ChoiceChip
-                        key={item}
-                        label={item}
-                        size="md"
-                        selected={businessEnding === item}
-                        onClick={() => setBusinessEnding(businessEnding === item ? '' : item)}
-                      />
+                      <label key={item} className="ttp-checkbox-item">
+                        <Checkbox
+                          checked={businessEndings.includes(item)}
+                          size="md"
+                          onChange={() => handleBusinessToggle(item)}
+                        />
+                        <span className="ttp-checkbox-item-label">{item}</span>
+                      </label>
                     ))}
-                  </ChipGroup>
+                  </div>
                 </div>
               </div>
 
@@ -405,7 +436,8 @@ export function TitleTransferPage() {
                 </div>
               </div>
 
-              {/* Status + Date: Select(날짜 유형) + DatePicker range */}
+              {/* Status + Date: Select(날짜 유형) + DatePicker range + 날짜 단축 버튼 */}
+              {/* Figma: 모두 가로 배치, 공간 부족 시 preset 그룹 전체가 다음 줄로 이동 */}
               <div className="ttp-filter-row">
                 <span className="ttp-filter-row-label">Status</span>
                 <div className="ttp-filter-row-control ttp-date-composite">
@@ -422,10 +454,21 @@ export function TitleTransferPage() {
                     size="md"
                     value={dateFrom}
                     endValue={dateTo}
-                    onRangeChange={(s, e) => { setDateFrom(s); setDateTo(e) }}
+                    onRangeChange={(s, e) => { setDateFrom(s); setDateTo(e); setDatePreset('') }}
                     placeholder="시작일"
                     endPlaceholder="종료일"
                   />
+                  <div className="ttp-date-preset-group">
+                    {DATE_PRESETS.map(p => (
+                      <ChoiceChip
+                        key={p.value}
+                        label={p.label}
+                        size="sm"
+                        selected={datePreset === p.value}
+                        onClick={() => handleDatePreset(p.value)}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -469,37 +512,47 @@ export function TitleTransferPage() {
                 <span className="ttp-count-selected">{selectedCount}개 선택</span>
               </div>
               <div className="ttp-table-actions">
-                <div style={{ position: 'relative' }} ref={pageSizeRef}>
+                {/* 필터/소팅 버튼 그룹 — Figma: Button container 1, gap 6 */}
+                <div className="ttp-table-action-group">
                   <Button
                     tone="secondary"
                     appearance="outline"
                     emphasis="weak"
                     size="md"
                     trailingIcon={<Icon name="chevronDownSmallOutline2dp" size={16} />}
-                    onClick={() => setPageSizeOpen(v => !v)}
                   >
-                    {pageSize}개씩
+                    텍스트 전체
                   </Button>
-                  {pageSizeOpen && (
-                    <div style={{ position: 'absolute', top: 'calc(100% + 4px)', left: 0, zIndex: 100 }}>
-                      <Menu size="md">
-                        {PAGE_SIZES.map(s => (
-                          <MenuItem key={s} onClick={() => { setPageSize(s); setPage(1); setPageSizeOpen(false) }}>
-                            {s}개씩
-                          </MenuItem>
-                        ))}
-                      </Menu>
-                    </div>
-                  )}
+                  <div style={{ position: 'relative' }} ref={pageSizeRef}>
+                    <Button
+                      tone="secondary"
+                      appearance="outline"
+                      emphasis="weak"
+                      size="md"
+                      trailingIcon={<Icon name="chevronDownSmallOutline2dp" size={16} />}
+                      onClick={() => setPageSizeOpen(v => !v)}
+                    >
+                      {pageSize}개씩
+                    </Button>
+                    {pageSizeOpen && (
+                      <div style={{ position: 'absolute', top: 'calc(100% + 4px)', left: 0, zIndex: 100 }}>
+                        <Menu size="md">
+                          {PAGE_SIZES.map(s => (
+                            <MenuItem key={s} onClick={() => { setPageSize(s); setPage(1); setPageSizeOpen(false) }}>
+                              {s}개씩
+                            </MenuItem>
+                          ))}
+                        </Menu>
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <Button
-                  tone="secondary"
-                  appearance="outline"
-                  emphasis="strong"
-                  size="md"
-                >
-                  엑셀 다운로드
-                </Button>
+                {/* 테이블 액션 버튼 그룹 — Figma: Button container 2, gap 6 */}
+                <div className="ttp-table-action-group">
+                  <Button tone="secondary" appearance="outline" emphasis="strong" size="md">버튼명</Button>
+                  <Button tone="secondary" appearance="outline" emphasis="strong" size="md">버튼명</Button>
+                  <Button tone="primary" appearance="fill" emphasis="strong" size="md">버튼명</Button>
+                </div>
               </div>
             </div>
 

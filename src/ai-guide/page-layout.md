@@ -109,7 +109,7 @@ LNB + TopNavigation 이후의 **컨텐츠 영역(contents frame)은 사방 48px 
 
 ### table-header-bar — 액션 버튼 위치
 
-테이블에 작용하는 모든 버튼(다운로드, 업로드, 일괄 처리 등)은 **table-header-bar 우측**에 위치한다.
+테이블에 작용하는 버튼은 **table-header-bar 우측**에 위치하며, **역할에 따라 2개 그룹으로 분리**한다.
 
 ```tsx
 <div className="table-header-bar">
@@ -117,15 +117,47 @@ LNB + TopNavigation 이후의 **컨텐츠 영역(contents frame)은 사방 48px 
     <span>N건</span>
   </div>
   <div className="table-actions">
-    {/* 액션 버튼들이 여기 위치 */}
-    <Button>다운로드</Button>
-    <Button>일괄 업로드</Button>
-    <Button tone="primary">선택건 처리</Button>
-    {/* 페이지 사이즈 선택 — 항상 가장 우측 */}
-    <div ref={pageSizeRef}>...</div>
+    {/* 그룹 1: 필터/소팅 — outline/weak + trailingIcon */}
+    <div className="table-action-group">
+      <Button tone="secondary" appearance="outline" emphasis="weak" size="md"
+        trailingIcon={<Icon name="chevronDownSmallOutline2dp" size={16} />}>
+        텍스트 전체
+      </Button>
+      <div ref={pageSizeRef}>
+        <Button tone="secondary" appearance="outline" emphasis="weak" size="md"
+          trailingIcon={<Icon name="chevronDownSmallOutline2dp" size={16} />}>
+          {pageSize}개씩
+        </Button>
+      </div>
+    </div>
+    {/* 그룹 2: 테이블 액션 — outline/strong, 마지막은 primary/fill/strong */}
+    <div className="table-action-group">
+      <Button tone="secondary" appearance="outline" emphasis="strong" size="md">버튼명</Button>
+      <Button tone="secondary" appearance="outline" emphasis="strong" size="md">버튼명</Button>
+      <Button tone="primary" appearance="fill" emphasis="strong" size="md">버튼명</Button>
+    </div>
   </div>
 </div>
 ```
+
+```css
+/* 두 그룹 사이 gap 16, 그룹 내 gap 6 */
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+}
+
+.table-action-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+```
+
+**그룹 구분 기준**:
+- 그룹 1 (필터/소팅): 뷰를 제어하는 드롭다운 — `outline/weak` + trailing chevron. 버튼 수는 기획에서 결정.
+- 그룹 2 (테이블 액션): 데이터에 작용하는 액션 — `outline/strong`. 가장 중요한 단일 액션은 `tone="primary" appearance="fill" emphasis="strong"`으로 맨 끝에 배치.
 
 ---
 
@@ -211,6 +243,133 @@ LNB + TopNavigation 이후의 **컨텐츠 영역(contents frame)은 사방 48px 
   gap: var(--spacing-8);
 }
 ```
+
+### 필터 행 컨트롤 패턴
+
+필터 섹션 내 `.filter-row`의 우측 컨트롤 영역에 사용하는 패턴이다.
+
+#### Checkbox 인라인 멀티셀렉트
+
+드롭다운 없이 체크박스를 행에 직접 나열하는 패턴. 옵션 수가 적고(~8개) 항상 노출해도 되는 경우 사용.
+
+```tsx
+<div className="checkbox-group">
+  {OPTIONS.map(item => (
+    <label key={item} className="checkbox-item">
+      <Checkbox
+        checked={selected.includes(item)}
+        size="md"
+        onChange={() => toggle(item)}
+      />
+      <span className="checkbox-item-label">{item}</span>
+    </label>
+  ))}
+</div>
+```
+
+```css
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-8);
+  padding: 6px 0;  /* Figma: inline frame paddingTop/Bottom 6 */
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  cursor: pointer;
+}
+
+.checkbox-item-label {
+  font-family: var(--semantic-body-15-semibold-fontFamily);
+  font-size: var(--semantic-body-15-semibold-fontSize);
+  line-height: var(--semantic-body-15-semibold-lineHeight);
+  font-weight: var(--semantic-body-15-semibold-fontWeight);
+  letter-spacing: var(--semantic-body-15-semibold-letterSpacing);
+  color: var(--sys-content-neutral-default);
+}
+```
+
+#### 날짜 범위 + 단축 선택
+
+DatePicker range와 단축 버튼(오늘/7일/1개월/6개월)을 같은 가로 행에 배치하는 패턴. 공간이 부족하면 단축 그룹 전체가 다음 줄로 이동한다(개별 칩이 쪼개지지 않음).
+
+```tsx
+<div className="filter-row-control date-composite">
+  <div className="date-select">
+    <Select options={DATE_TYPE_OPTIONS} value={dateType} onChange={setDateType} width="fill" />
+  </div>
+  <DatePicker
+    variation="range"
+    size="md"
+    value={dateFrom}
+    endValue={dateTo}
+    onRangeChange={(s, e) => { setDateFrom(s); setDateTo(e); setDatePreset('') }}
+    placeholder="시작일"
+    endPlaceholder="종료일"
+  />
+  <div className="date-preset-group">
+    {DATE_PRESETS.map(p => (
+      <ChoiceChip
+        key={p.value}
+        label={p.label}
+        size="sm"
+        selected={datePreset === p.value}
+        onClick={() => handleDatePreset(p.value)}
+      />
+    ))}
+  </div>
+</div>
+```
+
+```ts
+const DATE_PRESETS = [
+  { value: 'today', label: '오늘' },
+  { value: '7d',    label: '7일' },
+  { value: '1m',    label: '1개월' },
+  { value: '6m',    label: '6개월' },
+]
+```
+
+```css
+/* flex-wrap: wrap — 공간 부족 시 date-preset-group 전체가 다음 줄 */
+.date-composite {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.date-select {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+/* flex-shrink: 0 — 칩 그룹은 쪼개지지 않고 단위로 줄바꿈 */
+.date-preset-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  flex-shrink: 0;
+}
+```
+
+#### RadioBox 행 패딩
+
+RadioBox 행의 컨트롤 영역은 **상하 8px 패딩**을 갖는다. Figma inline 프레임 `paddingTop: 8, paddingBottom: 8`.
+
+```css
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-16);
+  padding: 8px 0;  /* Figma: inline frame paddingTop/Bottom 8 */
+}
+```
+
+---
 
 ### 테이블 헤더 바
 
