@@ -31,19 +31,17 @@ IGT Design System v4가 \`${pkgRef}/\`에 설치되어 있습니다.
 ## 중요: 작업 시작 전 확인 순서
 
 1. 이 파일 숙지
-2. **개별 컴포넌트 HTML 스니펫**: \`./${pkgRef}/dist/html-components.html\` — 단일 컴포넌트(Button, Checkbox, KpiCard, SideNavigation 등 29개)의 정확한 DOM 구조
-3. **페이지 조합 패턴**: \`./${pkgRef}/dist/composition-patterns.html\` — 페이지 골격, KPI 숏컷 그리드, 필터 섹션, 테이블 액션 바 등 **여러 컴포넌트가 조합되는 패턴의 정본**. 백오피스 페이지 작성 시 골격으로 사용
-4. 상세 가이드 확인: \`./${pkgRef}/CLAUDE.md\`
-5. 레이아웃 패턴 확인: \`./${pkgRef}/src/ai-guide/page-layout.md\`
+2. **페이지 정답 샘플 (필독)**: \`./${pkgRef}/showcase/TitleTransferPage.tsx\` + \`TitleTransferPage.css\` — 백오피스 페이지 캐노니컬 레퍼런스. 새 페이지 만들기 전에 반드시 이 파일을 먼저 읽고 같은 패턴을 따른다.
+3. **레이아웃 규칙**: \`./${pkgRef}/src/ai-guide/page-layout.md\`
+4. **컴포넌트 DOM 참고 스니펫**: \`./${pkgRef}/dist/html-components.html\` — 단일 컴포넌트(Button, Checkbox, KpiCard, SideNavigation 등 29개)의 DOM 구조 참고용. **페이지 조립용이 아님**.
+5. 상세 가이드: \`./${pkgRef}/CLAUDE.md\`
 6. 테마 시연: \`./${pkgRef}/playground.html\`
 
-**페이지 작업 순서**: composition-patterns.html에서 골격을 가져온 뒤, 내부 컴포넌트는 html-components.html의 정본 스니펫으로 채운다. 자체 클래스(.shortcut-card, .stat-card 등) 작성 금지.
+**페이지 작업 원칙**: 페이지 단위 결과물은 **React + Vite 환경에서 작성**한다. 빌드 환경이 없으면 셋업부터 진행한다. 정적 HTML로 페이지를 조립하면 컴포넌트 캡슐화·토큰 강제·레이아웃 패턴이 무너져 샘플과 다른 결과물이 나온다 (실제 사고 이력 있음, 2026-05-13).
 
 ---
 
-## HTML 파일 작업 시 (빌드 없는 프로토타이핑)
-
-사용자가 "HTML 파일로 화면 만들어줘"처럼 단일 HTML을 요청할 때 적용합니다.
+## (선택) HTML 단편 작업 시
 
 ### Step 1. HTML 위치 결정 (경로 계산 필수)
 
@@ -138,10 +136,14 @@ icon 이름은 컴포넌트(\`DatePicker\` 의 \`calendarSolid\`, \`SearchTrigge
 
 ### 토큰 사용 규칙 (레이아웃 CSS 작성 시)
 
+> **토큰 매핑은 \`showcase/TitleTransferPage.css\`가 정답**. 의심되면 그 파일을 본다.
+
 | 용도 | 사용할 토큰 | 금지 |
 |---|---|---|
-| 배경 (페이지) | \`var(--sys-background-subtle)\` | \`#f1f5f9\`, \`gray\` |
-| 배경 (섹션) | \`var(--sys-background-base)\` | \`#ffffff\`, \`white\` |
+| 페이지 외곽 배경 | \`var(--sys-surface-static)\` (흰색) | \`#ffffff\`, \`white\` 하드코딩 |
+| LNB 배경 | \`var(--sys-background-subtle)\` (옅은 회색) | 하드코딩 |
+| 컨텐츠 영역 배경 | \`var(--sys-background-base)\` (흰색) | 하드코딩 |
+| 섹션(필터 박스) 배경 | \`var(--sys-background-subtle)\` (옅은 회색, 서치박스 패턴) | \`#ffffff\` 카드, box-shadow |
 | 구분선 | \`var(--sys-border-neutral-default)\` | \`#e2e8f0\` |
 | 텍스트 (강조) | \`var(--sys-content-neutral-strong)\` | \`#0f172a\` |
 | 텍스트 (기본) | \`var(--sys-content-neutral-default)\` | \`#334155\` |
@@ -150,20 +152,36 @@ icon 이름은 컴포넌트(\`DatePicker\` 의 \`calendarSolid\`, \`SearchTrigge
 | 위험 색상 | \`var(--sys-container-status-danger-solid-default)\` | \`#ef4444\` |
 | 성공 색상 | \`var(--sys-container-status-success-solid-default)\` | \`#22c55e\` |
 
-### 페이지 레이아웃 (백오피스)
+### 페이지 레이아웃 (백오피스 — TitleTransferPage 캐노니컬 패턴)
 
 \`\`\`css
-.page { background: var(--sys-background-subtle); }
-
-/* 섹션 — border로 구분, box-shadow 금지 */
-.section {
-  background: var(--sys-background-base);
-  border: 1px solid var(--sys-border-neutral-subtle);
-  border-radius: var(--radius-md);
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: var(--sys-surface-static);  /* 페이지 외곽 = 흰색 */
 }
 
-.page-content { padding: var(--spacing-48); }
+.page-lnb {
+  background: var(--sys-background-subtle);  /* LNB = 옅은 회색 */
+  width: 250px;
+}
+
+.page-content {
+  background: var(--sys-background-base);  /* 컨텐츠 = 흰색 */
+  padding: var(--spacing-48);              /* 백오피스 공통 */
+  flex: 1;
+}
+
+/* 섹션 (필터 박스 등) — 서치박스 패턴, box-shadow/카드형 금지 */
+.section {
+  background: var(--sys-background-subtle);  /* 섹션 = 옅은 회색 */
+  border-radius: var(--radius-4);
+  padding: var(--spacing-24);
+}
 \`\`\`
+
+**금지 토큰명** (CSS에 존재하지 않음): \`--color-background-base\`, \`--color-background-surface\`, \`--color-border-default\`. 반드시 \`--sys-*\` 사용.
 
 ---
 
@@ -286,7 +304,7 @@ showcase/ 또는 node_modules/ 안에 추가하지 않는다.
 3. **컨텐츠 영역 패딩** — 반드시 \`var(--spacing-48)\` 사용
 4. **HTML 인터랙티브 요소 금지** — \`<button>\` \`<input>\` \`<select>\` 대신 IGT 컴포넌트
 5. **인라인 스타일 금지** — \`style={{...}}\` 사용 금지. 레이아웃은 페이지 전용 .css에 클래스 추가
-6. **섹션 구분** — \`box-shadow\` 금지. \`background: var(--color-background-surface)\` + \`border: 1px solid var(--color-border-default)\` 사용
+6. **섹션 구분** — \`box-shadow\` 금지. 페이지 외곽=\`--sys-surface-static\`(흰), LNB=\`--sys-background-subtle\`, 컨텐츠=\`--sys-background-base\`(흰), 섹션=\`--sys-background-subtle\` (서치박스 패턴). 정답 샘플: \`showcase/TitleTransferPage.css\`. **금지 토큰명**: \`--color-background-*\`, \`--color-border-default\`는 CSS에 없음
 7. **상태** — 텍스트 직접 출력 금지, \`Badge\` 또는 \`Label\` 사용
 8. **아이콘** — 사용자가 icon 이름을 명시하지 않으면 추가하지 않음. optional icon 슬롯은 비워두는 게 기본. \`<Icon name="..." />\` 이름은 IGT 카탈로그(\`src/components/Icon/Icon.tsx\`의 \`IconName\` 타입)에 있는 것만 사용 — 카탈로그에 없는 아이콘은 추측 금지, 사용자에게 묻기
 

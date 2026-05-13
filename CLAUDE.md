@@ -99,11 +99,13 @@ export function LoginPage() {
 }
 ```
 
-### 정적 HTML로 작성할 때 (React 없이)
+### 페이지는 React로 만든다 (정적 HTML 금지)
 
-React 없이 단일 HTML 파일로 작성해야 하면, `dist/html-components.html`을 참조한다. 25개 다중 요소 컴포넌트(`Checkbox`, `Switch`, `Select`, `Dialog`, `Drawer`, `Pagination`, `Table` 등)의 **정확한 DOM 구조**가 build 시 자동 생성되어 복사 가능한 형태로 들어 있다.
+페이지 단위 결과물은 **반드시 React 환경에서 작성한다.** 빌드 환경이 없으면 Vite + React + TypeScript 셋업부터 진행한다. 정적 HTML 파일로 페이지를 조립하면 컴포넌트 캡슐화·토큰 강제·레이아웃 패턴이 무너져 샘플(`showcase/TitleTransferPage.tsx`)과 다른 결과물이 나온다.
 
-다중 요소 컴포넌트를 native HTML로 자체 작성하는 것은 금지 — `dist/html-components.html`의 스니펫을 그대로 복사하라.
+페이지 레이아웃 정답 샘플: **`showcase/TitleTransferPage.tsx` + `TitleTransferPage.css`**.
+
+`dist/html-components.html`은 **개별 컴포넌트의 DOM 구조 참고용**으로만 사용한다. 페이지 조립용이 아니다.
 
 ---
 

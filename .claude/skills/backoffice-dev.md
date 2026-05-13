@@ -137,7 +137,7 @@ MCP가 없으면 위 경로에서 직접 읽는다.
 4. **HTML 인터랙티브 요소 금지** — `<button>` `<input>` `<select>` 대신 IGT 컴포넌트
 5. **인라인 스타일 금지** — `style={{...}}` 사용 금지. 레이아웃이 필요하면 페이지 전용 `.css` 파일에 클래스 추가
 6. **상태** — 텍스트 직접 출력 금지, `Badge` 또는 `Label` 사용
-7. **섹션 구분** — `box-shadow` 금지. `background: var(--color-background-surface)` + `border: 1px solid var(--color-border-default)` 조합 사용
+7. **섹션 구분** — `box-shadow` 금지. `background: var(--sys-background-subtle)` + `border-radius: var(--radius-4)` 조합 사용 (TitleTransferPage 서치박스 패턴). 페이지 외곽=`--sys-surface-static`(흰), LNB=`--sys-background-subtle`, 컨텐츠=`--sys-background-base`(흰), 섹션=`--sys-background-subtle`. **금지 토큰명**: `--color-background-*`, `--color-border-default`는 CSS에 존재하지 않음 — 반드시 `--sys-*` 사용
 8. **테이블 scroll wrapper** — 외곽 `border`, `border-radius`, `background` 추가 금지. `overflow-x: auto`만 적용
 
 ## 자가 점검 (구현 완료 후)

@@ -34,6 +34,7 @@ LAYOUT (vertical, min-height: 100vh)
   display: flex;
   flex-direction: column;          /* ← 세로 배치: GNB → body */
   height: 100vh;                   /* ← min-height 아님: 뷰포트 고정 */
+  background: var(--sys-surface-static);  /* ← 페이지 외곽 흰색 (TitleTransferPage 패턴) */
 }
 
 .page-body {
@@ -270,8 +271,10 @@ IGT `Table` 컴포넌트는 내부적으로 `overflow-x: auto`를 처리한다. 
 
 | 역할 | 토큰 | 값(기본 테마) |
 |------|------|-------------|
-| 페이지 배경 | `--sys-background-subtle` | `#f5f5f5` |
-| 섹션 배경 | `--sys-background-base` | `#ffffff` |
+| **페이지 외곽 배경** | `--sys-surface-static` | `#ffffff` (흰색) |
+| **LNB 배경** | `--sys-background-subtle` | `#f6f7f9` (옅은 회색) |
+| **컨텐츠 영역 배경** | `--sys-background-base` | `#ffffff` (흰색) |
+| **섹션(필터/서치박스) 배경** | `--sys-background-subtle` | `#f6f7f9` (옅은 회색) |
 | 기본 보더 | `--sys-border-neutral-subtle` | `rgba(0,0,0,0.08)` |
 | 강조 보더 | `--sys-border-neutral-muted` | `rgba(0,0,0,0.18)` |
 | 텍스트 강조 | `--sys-content-neutral-strong` | `#111111` |
