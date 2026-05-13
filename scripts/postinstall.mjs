@@ -31,10 +31,13 @@ IGT Design System v4가 \`${pkgRef}/\`에 설치되어 있습니다.
 ## 중요: 작업 시작 전 확인 순서
 
 1. 이 파일 숙지
-2. **정확한 컴포넌트 HTML 스니펫**: \`./${pkgRef}/dist/html-components.html\` ← AI가 정적 HTML 작성 시 가장 먼저 볼 단일 소스
-3. 상세 가이드 확인: \`./${pkgRef}/CLAUDE.md\`
-4. 레이아웃 패턴 확인: \`./${pkgRef}/src/ai-guide/page-layout.md\`
-5. 테마 시연: \`./${pkgRef}/playground.html\`
+2. **개별 컴포넌트 HTML 스니펫**: \`./${pkgRef}/dist/html-components.html\` — 단일 컴포넌트(Button, Checkbox, KpiCard, SideNavigation 등 29개)의 정확한 DOM 구조
+3. **페이지 조합 패턴**: \`./${pkgRef}/dist/composition-patterns.html\` — 페이지 골격, KPI 숏컷 그리드, 필터 섹션, 테이블 액션 바 등 **여러 컴포넌트가 조합되는 패턴의 정본**. 백오피스 페이지 작성 시 골격으로 사용
+4. 상세 가이드 확인: \`./${pkgRef}/CLAUDE.md\`
+5. 레이아웃 패턴 확인: \`./${pkgRef}/src/ai-guide/page-layout.md\`
+6. 테마 시연: \`./${pkgRef}/playground.html\`
+
+**페이지 작업 순서**: composition-patterns.html에서 골격을 가져온 뒤, 내부 컴포넌트는 html-components.html의 정본 스니펫으로 채운다. 자체 클래스(.shortcut-card, .stat-card 등) 작성 금지.
 
 ---
 
@@ -96,6 +99,42 @@ IGT는 컴포넌트마다 CSS 클래스를 미리 정의해 두었다.
 <!-- ✅ IGT 클래스 그대로 사용 -->
 <button class="btn" data-tone="primary" data-appearance="fill">검색</button>
 \`\`\`
+
+### Step 4. 아이콘 사용 규칙 (핵심)
+
+**사용자가 아이콘 이름을 명시하지 않으면 아이콘을 추가하지 않는다.**
+기억에서 SVG path를 짜내거나 "맥락에 어울려 보이는" SVG를 박지 말 것. AI가 임의로 추가한 SVG는 IGT 아이콘 카탈로그와 정합되지 않고, 시각·시멘틱 사고를 일으킨다.
+
+\`\`\`html
+<!-- ❌ AI가 임의로 박은 SVG (모든 메뉴에 동일한 햄버거 SVG, 맥락 무시) -->
+<button class="side-nav__item">
+  <svg width="16" height="16"><path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor"/></svg>
+  <span class="side-nav__item-label">명의이전 조회</span>
+</button>
+
+<!-- ✅ icon 슬롯이 optional 인 컴포넌트는 비워둠 (기본 상태) -->
+<button class="side-nav__item">
+  <span class="side-nav__item-label">명의이전 조회</span>
+</button>
+
+<!-- ✅ 사용자가 icon 이름을 명시한 경우만 — html-components.html의 스니펫 그대로 복사 -->
+<!-- ./${pkgRef}/dist/html-components.html → SideNavigation → "with explicit icons" variant -->
+\`\`\`
+
+**적용 범위 — icon 슬롯이 optional 인 모든 컴포넌트:**
+- \`SideNavigation\` 항목 icon
+- \`Button\` / \`Chip\` 의 leadingIcon / trailingIcon
+- \`Menu\` 의 leadingIcon
+- \`TextField\` / \`Select\` 의 prefix / suffix icon
+- 기타 모든 슬롯형 icon
+
+**규칙 4가지:**
+1. **기본은 비워둠** — icon 옵션이 optional 이면 디폴트는 icon 없음
+2. **사용자가 icon 이름을 명시한 경우에만 추가** — 예: "검색 버튼에 \`searchOutline2dp\` 넣어줘"
+3. **SVG는 직접 작성하지 않고** \`./${pkgRef}/dist/html-components.html\` 의 해당 variant 스니펫을 복사 (path 데이터가 IGT 카탈로그와 일치)
+4. **사용자 요청이 모호하면 추측 금지 — 어떤 아이콘을 원하는지 묻기**
+
+icon 이름은 컴포넌트(\`DatePicker\` 의 \`calendarSolid\`, \`SearchTrigger\` 의 \`searchOutline2dp\` 등) 기본값으로 이미 박혀 있다. 외부에서 별도 지정이 필요한 슬롯에만 위 규칙이 적용된다.
 
 ### 토큰 사용 규칙 (레이아웃 CSS 작성 시)
 
@@ -249,6 +288,7 @@ showcase/ 또는 node_modules/ 안에 추가하지 않는다.
 5. **인라인 스타일 금지** — \`style={{...}}\` 사용 금지. 레이아웃은 페이지 전용 .css에 클래스 추가
 6. **섹션 구분** — \`box-shadow\` 금지. \`background: var(--color-background-surface)\` + \`border: 1px solid var(--color-border-default)\` 사용
 7. **상태** — 텍스트 직접 출력 금지, \`Badge\` 또는 \`Label\` 사용
+8. **아이콘** — 사용자가 icon 이름을 명시하지 않으면 추가하지 않음. optional icon 슬롯은 비워두는 게 기본. \`<Icon name="..." />\` 이름은 IGT 카탈로그(\`src/components/Icon/Icon.tsx\`의 \`IconName\` 타입)에 있는 것만 사용 — 카탈로그에 없는 아이콘은 추측 금지, 사용자에게 묻기
 
 ## 자가 점검 (구현 완료 후)
 

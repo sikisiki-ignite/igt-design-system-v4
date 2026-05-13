@@ -92,6 +92,12 @@ const NAV_GROUPS: NavGroup[] = [
     ],
   },
   {
+    group: 'Foundation',
+    items: [
+      { id: 'icon', label: 'Icon (catalog)' },
+    ],
+  },
+  {
     group: 'Pages',
     items: [
       { id: 'title-transfer', label: 'TitleTransferPage' },

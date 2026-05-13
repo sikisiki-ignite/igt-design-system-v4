@@ -24,6 +24,43 @@ const __dir = dirname(fileURLToPath(import.meta.url))
 const noop = () => {}
 
 const components = [
+  // ── Actions ──────────────────────────────────
+  {
+    name: 'Button',
+    note: '기본 액션 버튼. data-tone(primary|secondary|danger|overlayDark) + data-appearance(fill|outline) + data-emphasis(strong|weak) + data-size(xs|sm|md|lg) 4축 조합. **leadingIcon / trailingIcon 슬롯에는 반드시 <span class="btn-icon btn-icon--leading"> 래퍼 + IGT Icon SVG 사용** — 텍스트 옆에 <svg> 직접 박는 패턴 금지. iconOnly=true 면 라벨 자리에 아이콘 단독 배치.',
+    variants: [
+      { label: 'primary fill strong (기본 CTA)', props: { children: '확인', onClick: noop } },
+      { label: 'secondary fill weak (보조 액션, 취소/초기화)', props: { tone: 'secondary', emphasis: 'weak', children: '초기화', onClick: noop } },
+      { label: 'secondary fill strong (백오피스 다크 CTA, 검색 버튼 톤)', props: { tone: 'secondary', emphasis: 'strong', children: '검색', onClick: noop } },
+      { label: 'secondary outline strong', props: { tone: 'secondary', appearance: 'outline', emphasis: 'strong', children: '다운로드', onClick: noop } },
+      { label: 'danger fill strong', props: { tone: 'danger', children: '삭제', onClick: noop } },
+      { label: 'with leadingIcon (검색 등 — 텍스트 앞 아이콘)', props: {
+        tone: 'secondary', emphasis: 'strong',
+        leadingIcon: h(IGT.Icon, { name: 'searchOutline2dp', size: 16 }),
+        children: '검색',
+        onClick: noop,
+      } },
+      { label: 'with trailingIcon (드롭다운 트리거 등)', props: {
+        tone: 'secondary', appearance: 'outline', emphasis: 'strong',
+        trailingIcon: h(IGT.Icon, { name: 'chevronDownSmallOutline2dp', size: 16 }),
+        children: '옵션',
+        onClick: noop,
+      } },
+      { label: 'iconOnly (아이콘 단독)', props: {
+        tone: 'secondary', appearance: 'outline', emphasis: 'strong',
+        iconOnly: true,
+        children: h(IGT.Icon, { name: 'settingOutline2dp', size: 16 }),
+        'aria-label': '설정',
+        onClick: noop,
+      } },
+      { label: 'size=sm', props: { size: 'sm', children: '저장', onClick: noop } },
+      { label: 'size=lg', props: { size: 'lg', children: '시작하기', onClick: noop } },
+      { label: 'disabled', props: { disabled: true, children: '비활성', onClick: noop } },
+      { label: 'loading', props: { isLoading: true, children: '저장중', onClick: noop } },
+    ],
+  },
+
+  // ── Form inputs ──────────────────────────────
   {
     name: 'Checkbox',
     note: '체크박스. native <input>을 직접 쓰지 말고 .checkbox 래퍼 구조를 그대로 사용.',
@@ -73,10 +110,13 @@ const components = [
   },
   {
     name: 'DatePicker',
-    note: '날짜 선택. <input type="date"> 직접 사용 아닌 IGT DatePicker 구조 사용.',
+    note: '날짜 선택. <input type="date"> 직접 사용 아닌 IGT DatePicker 구조 사용. trailing calendar 아이콘은 자동 포함 — 별도 SVG 작성 금지. **백오피스는 md가 기본 size.**',
     variants: [
-      { label: 'default', props: { value: '', onChange: noop, placeholder: 'YYYY-MM-DD' } },
-      { label: 'with value', props: { value: '2026-05-12', onChange: noop } },
+      { label: 'size=md (백오피스 기본, AI는 이 size 부터 사용)', props: { size: 'md', value: '', onChange: noop, placeholder: 'YYYY-MM-DD' } },
+      { label: 'size=md with value', props: { size: 'md', value: '2026-05-12', onChange: noop } },
+      { label: 'size=sm', props: { size: 'sm', value: '', onChange: noop, placeholder: 'YYYY-MM-DD' } },
+      { label: 'size=lg', props: { size: 'lg', value: '', onChange: noop, placeholder: 'YYYY-MM-DD' } },
+      { label: 'disabled', props: { size: 'md', value: '2026-05-12', disabled: true } },
     ],
   },
   {
@@ -268,6 +308,69 @@ const components = [
     ],
   },
   {
+    name: 'SideNavigation',
+    note: 'LNB(좌측 네비). items 배열에 {id, label, icon?, disabled?, children?} 전달. **icon은 사용자가 명시적으로 이름을 지정한 경우에만 사용** — AI가 임의로 SVG/icon 이름을 추가하지 말 것. 기본은 icon 생략. 자체 .side-nav__item-icon 안에 inline SVG 박는 패턴 금지.',
+    variants: [
+      { label: 'basic — no icons (DEFAULT, AI는 이 패턴부터 사용)', props: {
+        items: [
+          { id: 'a', label: '대시보드' },
+          { id: 'b', label: '주문 관리' },
+          { id: 'c', label: '정산 내역' },
+        ],
+        activeId: 'a',
+        onSelect: noop,
+      } },
+      { label: 'with group header', props: {
+        header: '매매 관리',
+        items: [
+          { id: 'a', label: '명의이전 조회 (판매)' },
+          { id: 'b', label: '명의이전 조회 (구매)' },
+          { id: 'c', label: '거래 내역' },
+        ],
+        activeId: 'a',
+        onSelect: noop,
+      } },
+      { label: 'with explicit icons (사용자가 icon 이름을 명시한 경우만)', props: {
+        items: [
+          { id: 'a', label: '문서', icon: 'documentOutline2dp' },
+          { id: 'b', label: '목록', icon: 'listOutline2dp' },
+          { id: 'c', label: '사용자', icon: 'personGroupOutline2dp' },
+          { id: 'd', label: '설정', icon: 'settingOutline2dp' },
+        ],
+        activeId: 'a',
+        onSelect: noop,
+      } },
+      { label: 'nested children (depth indent)', props: {
+        items: [
+          { id: 'a', label: '카테고리', children: [
+            { id: 'a1', label: '하위 항목 1' },
+            { id: 'a2', label: '하위 항목 2' },
+          ] },
+          { id: 'b', label: '독립 항목' },
+        ],
+        activeId: 'a2',
+        onSelect: noop,
+      } },
+      { label: 'size=sm', props: {
+        size: 'sm',
+        items: [
+          { id: 'a', label: '항목 1' },
+          { id: 'b', label: '항목 2' },
+        ],
+        activeId: 'a',
+        onSelect: noop,
+      } },
+      { label: 'with disabled item', props: {
+        items: [
+          { id: 'a', label: '활성 항목' },
+          { id: 'b', label: '비활성 항목', disabled: true },
+        ],
+        activeId: 'a',
+        onSelect: noop,
+      } },
+    ],
+  },
+  {
     name: 'Pagination',
     note: '페이지네이션. page/total/onChange 필수. 자체 .pagination + button 그룹 직접 작성 금지.',
     variants: [
@@ -442,6 +545,81 @@ const components = [
       { label: 'subtle appearance', props: { appearance: 'subtle', onClick: noop } },
       { label: 'size=sm', props: { size: 'sm', onClick: noop } },
       { label: 'disabled', props: { disabled: true } },
+    ],
+  },
+
+  // ── Cards (content container + KPI) ───────────
+  {
+    name: 'Card',
+    note: '제목/본문/푸터 슬롯을 가진 컨테이너 카드. variant=bordered(default)|shadow. 자체 div + border / box-shadow 작성 금지.',
+    variants: [
+      { label: 'bordered (default) — title only', props: {
+        title: '카드 제목',
+      } },
+      { label: 'with title + description', props: {
+        title: '카드 제목',
+        description: '카드 본문에 대한 부가 설명입니다',
+      } },
+      { label: 'with body children', props: {
+        title: '주문 정보',
+        children: '본문에 임의 콘텐츠를 넣을 수 있습니다',
+      } },
+      { label: 'with footer slot', props: {
+        title: '확인 필요',
+        description: '아래 액션을 검토하세요',
+        footer: h('button', { className: 'btn', 'data-tone': 'primary', 'data-appearance': 'fill', 'data-emphasis': 'strong', 'data-size': 'sm' }, '확인'),
+      } },
+      { label: 'shadow variant', props: {
+        variant: 'shadow',
+        title: '강조 카드',
+        description: 'box-shadow가 적용된 변형',
+      } },
+    ],
+  },
+  {
+    name: 'KpiCard',
+    note: '대시보드/조회 페이지의 통계(요약) 카드. label + value + (unit, delta, subInfo) 슬롯. **selectable=true 면 button 으로 렌더되며 selected=true 일 때 data-selected="true" + aria-pressed 로 활성 표시** — 백오피스 페이지의 "shortcut card" / "stat card" / "필터 숏컷" 패턴은 반드시 이 컴포넌트로 구현. 자체 .shortcut-card / .stat-card / button + border 조합 작성 금지.',
+    variants: [
+      { label: 'basic — label + value', props: {
+        label: '총 주문 수',
+        value: '247',
+      } },
+      { label: 'with unit + subInfo', props: {
+        label: '총 주문 수',
+        value: '247',
+        unit: '건',
+        subInfo: '용인 오토 허브 182 · 판교 CXP 65',
+      } },
+      { label: 'with delta (positive)', props: {
+        label: '월 매출',
+        value: '12,400,000',
+        unit: '원',
+        delta: '+8.2%',
+        deltaType: 'positive',
+      } },
+      { label: 'with delta (negative)', props: {
+        label: '환불 건수',
+        value: '14',
+        unit: '건',
+        delta: '-3건',
+        deltaType: 'negative',
+      } },
+      { label: 'selectable — unselected (필터 숏컷 기본)', props: {
+        label: '명의이전대기',
+        value: '38',
+        subInfo: '최근 1개월',
+        selectable: true,
+        selected: false,
+        onSelect: noop,
+      } },
+      { label: 'selectable — selected (활성 숏컷, AI는 이 구조 그대로 사용)', props: {
+        label: '전체',
+        value: '247',
+        subInfo: '용인 오토 허브 182 · 판교 CXP 65',
+        selectable: true,
+        selected: true,
+        onSelect: noop,
+      } },
     ],
   },
 ]

@@ -62,6 +62,7 @@ import { AccordionShowcase } from './AccordionShowcase'
 import { TableShowcase } from './TableShowcase'
 import { DividerShowcase } from './DividerShowcase'
 import { CardShowcase } from './CardShowcase'
+import { IconShowcase } from './IconShowcase'
 import { TitleTransferPage } from './TitleTransferPage'
 
 const HR = () => <hr style={{ margin: '48px 0', border: 'none', borderTop: '1px solid var(--sys-border-neutral-subtle, #e5e7eb)' }} />
@@ -176,6 +177,8 @@ function App() {
           <section id="divider"><DividerShowcase /></section>
           <HR />
           <section id="card"><CardShowcase /></section>
+          <HR />
+          <section id="icon"><IconShowcase /></section>
           <HR />
           <section id="title-transfer"><TitleTransferPage /></section>
         </main>
