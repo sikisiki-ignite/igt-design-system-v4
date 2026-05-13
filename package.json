@@ -19,7 +19,9 @@
     "scripts/postinstall.mjs",
     "src/tokens",
     "src/fonts",
-    "src/ai-guide"
+    "src/ai-guide",
+    "showcase/TitleTransferPage.tsx",
+    "showcase/TitleTransferPage.css"
   ],
   "bin": {
     "igt-mcp": "./mcp/server.mjs"
