@@ -66,8 +66,8 @@
 }
 
 
-/* size: comfortable (default) */
-:root {
+/* size: comfortable */
+[data-size="comfortable"] {
   --pattern-actionBase-common-borderWidth-xs: var(--borderWidth-1);
   --pattern-actionBase-common-borderWidth-sm: var(--borderWidth-1);
   --pattern-actionBase-common-borderWidth-md: var(--borderWidth-1);
@@ -281,7 +281,8 @@
   --sys-focus-ring-offset: var(--size-2);
 }
 
-/* size: compact */
+/* size: compact (default — IGT는 백오피스가 주 용도) */
+:root,
 [data-size="compact"] {
   --pattern-actionBase-common-borderWidth-xs: var(--borderWidth-1);
   --pattern-actionBase-common-borderWidth-sm: var(--borderWidth-1);

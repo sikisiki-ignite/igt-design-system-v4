@@ -58,7 +58,7 @@ HTML 파일은 **반드시 프로젝트 루트**에 만든다.
 
 \`\`\`html
 <!DOCTYPE html>
-<html lang="ko" data-brand="default" data-theme="light" data-radius="default" data-size="comfortable">
+<html lang="ko" data-brand="default" data-theme="light" data-radius="default" data-size="compact">
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="./${pkgRef}/dist/igt.css">
@@ -189,7 +189,9 @@ icon 이름은 컴포넌트(\`DatePicker\` 의 \`calendarSolid\`, \`SearchTrigge
 
 \`import { Button } from 'igt-design-system-v4'\` — CSS 자동 주입됨, 별도 CSS import 불필요.
 
-- \`index.html\`의 \`<html>\` 태그에 루트 속성 추가 (아래 참고)
+- **백오피스**: 시스템 디폴트가 \`compact\`이므로 \`data-size\` 속성이 없어도 자동으로 백오피스 크기 — 명시하고 싶다면 \`<html data-size="compact">\`
+- **서비스·마케팅 페이지**: 큰 컴포넌트가 필요하면 \`<html data-size="comfortable">\`로 명시
+- 기타 루트 속성은 아래 표 참고
 - 커스텀 CSS, 인라인 스타일 금지
 - 컴포넌트 props는 MCP \`get_component\` 또는 \`./${pkgRef}/src/ai-guide/components/{이름}.md\` 확인
 
@@ -202,9 +204,11 @@ icon 이름은 컴포넌트(\`DatePicker\` 의 \`calendarSolid\`, \`SearchTrigge
 | \`data-brand\` | \`default\` | 브랜드 변형 |
 | \`data-theme\` | \`light\` | \`light\` / \`dark\` |
 | \`data-radius\` | \`default\` | \`default\` / \`soft\` / \`friendly\` / \`playful\` / \`formal\` |
-| \`data-size\` | \`comfortable\` | \`comfortable\` / \`compact\` |
+| \`data-size\` | \`compact\` (백오피스용 시스템 디폴트) | \`comfortable\` (명시 시) / \`compact\` |
 
 속성이 없으면 테마 전환과 브랜드 컬러가 동작하지 않습니다.
+
+> **사이즈 정책**: 시스템 디폴트는 \`compact\` (IGT는 백오피스가 주 용도). 백오피스 페이지는 속성 없이도 자동 compact로 렌더됩니다. **서비스·마케팅 페이지**처럼 큰 컴포넌트가 필요하면 \`<html data-size="comfortable">\`로 명시하세요.
 `
 
 writeFileSync(targetPath, content, 'utf8')
@@ -299,17 +303,19 @@ showcase/ 또는 node_modules/ 안에 추가하지 않는다.
 
 ## 핵심 규칙
 
-1. **색상** — \`var(--sys-*)\` 사용, hex/rgb 금지
-2. **폰트/반경** — \`var(--ref-font-size-*)\`, \`var(--radius-*)\` 사용
-3. **컨텐츠 영역 패딩** — 반드시 \`var(--spacing-48)\` 사용
-4. **HTML 인터랙티브 요소 금지** — \`<button>\` \`<input>\` \`<select>\` 대신 IGT 컴포넌트
-5. **인라인 스타일 금지** — \`style={{...}}\` 사용 금지. 레이아웃은 페이지 전용 .css에 클래스 추가
-6. **섹션 구분** — \`box-shadow\` 금지. 페이지 외곽=\`--sys-surface-static\`(흰), LNB=\`--sys-background-subtle\`, 컨텐츠=\`--sys-background-base\`(흰), 섹션=\`--sys-background-subtle\` (서치박스 패턴). 정답 샘플: \`showcase/TitleTransferPage.css\`. **금지 토큰명**: \`--color-background-*\`, \`--color-border-default\`는 CSS에 없음
-7. **상태** — 텍스트 직접 출력 금지, \`Badge\` 또는 \`Label\` 사용
-8. **아이콘** — 사용자가 icon 이름을 명시하지 않으면 추가하지 않음. optional icon 슬롯은 비워두는 게 기본. \`<Icon name="..." />\` 이름은 IGT 카탈로그(\`src/components/Icon/Icon.tsx\`의 \`IconName\` 타입)에 있는 것만 사용 — 카탈로그에 없는 아이콘은 추측 금지, 사용자에게 묻기
+1. **사이즈는 compact (시스템 디폴트)** — IGT 시스템 디폴트가 \`compact\`이므로 \`<html>\`에 별도 속성 없이도 자동 compact. \`data-size="comfortable"\`을 임의로 추가하지 말 것 — 컴포넌트가 너무 커져 백오피스 레이아웃 무너짐
+2. **색상** — \`var(--sys-*)\` 사용, hex/rgb 금지
+3. **폰트/반경** — \`var(--ref-font-size-*)\`, \`var(--radius-*)\` 사용
+4. **컨텐츠 영역 패딩** — 반드시 \`var(--spacing-48)\` 사용
+5. **HTML 인터랙티브 요소 금지** — \`<button>\` \`<input>\` \`<select>\` 대신 IGT 컴포넌트
+6. **인라인 스타일 금지** — \`style={{...}}\` 사용 금지. 레이아웃은 페이지 전용 .css에 클래스 추가
+7. **섹션 구분** — \`box-shadow\` 금지. 페이지 외곽=\`--sys-surface-static\`(흰), LNB=\`--sys-background-subtle\`, 컨텐츠=\`--sys-background-base\`(흰), 섹션=\`--sys-background-subtle\` (서치박스 패턴). 정답 샘플: \`showcase/TitleTransferPage.css\`. **금지 토큰명**: \`--color-background-*\`, \`--color-border-default\`는 CSS에 없음
+8. **상태** — 텍스트 직접 출력 금지, \`Badge\` 또는 \`Label\` 사용
+9. **아이콘** — 사용자가 icon 이름을 명시하지 않으면 추가하지 않음. optional icon 슬롯은 비워두는 게 기본. \`<Icon name="..." />\` 이름은 IGT 카탈로그(\`src/components/Icon/Icon.tsx\`의 \`IconName\` 타입)에 있는 것만 사용 — 카탈로그에 없는 아이콘은 추측 금지, 사용자에게 묻기
 
 ## 자가 점검 (구현 완료 후)
 
+- [ ] 백오피스 페이지인데 \`<html data-size="comfortable">\`을 임의 추가 (시스템 디폴트 compact를 깨뜨림)
 - [ ] \`style={{...}}\` 인라인 스타일 사용
 - [ ] hex/rgb 색상 직접 사용
 - [ ] \`<button>\` \`<input>\` \`<select>\` 등 HTML 인터랙티브 요소 직접 사용

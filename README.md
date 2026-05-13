@@ -165,8 +165,10 @@ Vite + React + TypeScript 환경 만들고 igt-design-system-v4를 설치해줘.
 ```
 data-theme을 dark로 바꿔줘
 data-radius를 playful로 바꿔줘
-data-size를 compact로 바꿔줘
+data-size를 comfortable로 바꿔줘
 ```
+
+> **사이즈 정책 (BREAKING since 2026-05-13)**: 시스템 디폴트가 `compact`로 변경되었습니다. IGT는 백오피스가 주 용도이므로 `<html>`에 `data-size` 속성이 없어도 자동으로 백오피스 크기로 렌더됩니다. 이전처럼 큰 컴포넌트를 사용하려면 `<html data-size="comfortable">`을 명시하세요. 이전 버전을 사용 중이라면 `npm update` 후 마케팅·서비스 페이지에 명시적으로 `data-size="comfortable"`을 추가해야 합니다.
 
 ---
 
