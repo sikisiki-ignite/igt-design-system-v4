@@ -7,7 +7,7 @@
 .ttp-layout {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   background: var(--sys-surface-static);
 }
 
@@ -19,6 +19,7 @@
   flex-shrink: 0;
   background: var(--sys-background-subtle);
   padding: var(--spacing-24) var(--spacing-12);
+  overflow-y: auto;
 }
 
 /* ── Nav logo placeholder ───────────────────────── */
@@ -45,6 +46,7 @@
 .ttp-content {
   flex: 1;
   padding: var(--spacing-48);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-40);

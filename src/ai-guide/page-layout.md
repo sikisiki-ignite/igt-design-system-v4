@@ -33,13 +33,13 @@ LAYOUT (vertical, min-height: 100vh)
 .page-layout {
   display: flex;
   flex-direction: column;          /* ← 세로 배치: GNB → body */
-  min-height: 100vh;
+  height: 100vh;                   /* ← min-height 아님: 뷰포트 고정 */
 }
 
 .page-body {
   display: flex;                   /* ← 가로 배치: LNB | contents */
   flex: 1;
-  min-height: 0;
+  min-height: 0;                   /* ← flex 자식이 부모 height 초과 방지 */
 }
 
 .page-lnb {
@@ -47,6 +47,7 @@ LAYOUT (vertical, min-height: 100vh)
   flex-shrink: 0;
   background: var(--sys-background-subtle);
   padding: var(--spacing-24) var(--spacing-12);
+  overflow-y: auto;                /* ← LNB 항목이 많을 경우 내부 스크롤 */
 }
 ```
 
@@ -58,6 +59,7 @@ LNB + TopNavigation 이후의 **컨텐츠 영역(contents frame)은 사방 48px 
 .page-content {
   flex: 1;
   padding: var(--spacing-48);      /* ← 백오피스 공통 컨텐츠 패딩 */
+  overflow-y: auto;                /* ← 컨텐츠 영역만 스크롤, nav/LNB 고정 */
   display: flex;
   flex-direction: column;
   gap: var(--spacing-40);
@@ -300,6 +302,11 @@ IGT `Table` 컴포넌트는 내부적으로 `overflow-x: auto`를 처리한다. 
 /* ❌ 컨텐츠 영역 패딩을 24px로 사용 */
 .page-content {
   padding: var(--spacing-24); /* → var(--spacing-48) 사용 */
+}
+
+/* ❌ 레이아웃에 min-height 사용 — nav/LNB가 스크롤과 함께 사라짐 */
+.page-layout {
+  min-height: 100vh; /* → height: 100vh 사용. overflow-y:auto는 .page-content에 */
 }
 
 /* ❌ elevation으로 섹션 분리 */

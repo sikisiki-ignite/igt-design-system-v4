@@ -17,6 +17,11 @@
 | `trailing` | `ReactNode` | — | trailing |
 | `className` | `string` | — | — |
 
+## 동작
+
+- **`position: sticky; top: 0; z-index: 100`** — 스크롤 시 상단에 고정된다. 별도 prop 없이 컴포넌트 CSS에 내장.
+- 컨테이너가 `height: 100vh`인 백오피스 레이아웃에서는 문서 자체가 스크롤되지 않으므로 sticky 효과가 자연스럽게 적용된다 (page-layout.md 참조).
+
 ## 크기별 규격
 
 | size | 높이 | paddingInline |
